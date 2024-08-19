@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="UTF-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Site Metas -->
+  <link rel="shortcut icon" href="/Images/MainLogo2.png" type="">
+
+  <title>Maid To Project</title>
+
+  <!-- CSS Sheets -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <!--owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <!-- font awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+body,h1,h2,h3,h4,h5,h6 {font-family: "Aptos", sans-serif;}
+body, html {
+  height: 100%;
+  color: #000000;
+  line-height: 1.8;
+}
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  background-image: url('/Images/MainLogo2.png');
+  min-height: 100%;
+}
+/* Second image (Portfolio) */
+.bgimg-2 {
+  background-image: url('/Images/MainLogo2.png');
+  min-height: 400px;
+}
+/* Third image (Contact) */
+.bgimg-3 {
+  background-image: url('/Images/MainLogo2.png');
+  min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
+}
+</style>
+<!-- CONNECTS CSS -->
+<link rel="stylesheet" href="sitenav.css">
+</head>
+<body>
+<!-- CURSOR TESTING -->
+<div class="custom-cursor site-wide">
+  <div class="pointer"></div>
+</div>
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-text-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="/sitenav/index.html"     class="w3-bar-item w3-button"><b>MAIDTOPROJECT</b></a>
+    <a href="/sitenav/home.html"      class="w3-bar-item w3-button">Home</a>
+    <a href="/sitenav/about.html"     class="w3-bar-item w3-button w3-hide-medium"><i class="fa fa-user"></i> About</a>
+    <a href="/sitenav/portfolio.html" class="w3-bar-item w3-button w3-hide-medium"><i class="fa fa-th"></i> Portfolio</a>
+    <a href="/sitenav/contact.html"   class="w3-bar-item w3-button w3-hide-medium"><i class="fa fa-envelope"></i> Contact</a>
+<!--   <a href="login.html" class="w3-bar-item w3-button w3-hide-medium"><i class="fa fa-envelope"></i> Login</a>--> 
+   
+    <a href="#" class="w3-bar-item w3-button w3-hide-medium w3-right w3-hover-red">
+      <i class="fa fa-search"></i>
+    </a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="index.html" class="w3-bar-item w3-button"><b>MAIDTOPROJECT</b></a>
+    <a href="home.html" class="w3-bar-item w3-button">Home</a>
+    <a href="about.html" class="w3-bar-item w3-button w3-hide-medium"><i class="fa fa-user"></i> About</a>
+    <a href="portfolio.html" class="w3-bar-item w3-button w3-hide-medium"><i class="fa fa-th"></i> Portfolio</a>
+    <a href="contact.html" class="w3-bar-item w3-button w3-hide-medium"><i class="fa fa-envelope"></i> Contact</a>
+<!--   <a href="login.html" class="w3-bar-item w3-button w3-hide-medium"><i class="fa fa-envelope"></i> Login</a>--> 
+  </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"><b>MAID <span class="w3-hide-small">TO</span> PROJECT</b></span>
+  </div>
+</div>
+
+<!-- Second Parallax Image with Portfolio Text -->
+<div class="bgimg-2 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide"><b>PORTFOLIO</b></span>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div class="w3-content w3-container w3-padding-64" id="portfolio">
+  <h3 class="w3-center"><b>MY WORK</b></h3>
+  <p class="w3-center"><em>Here are some of my latest work<br> Click on the images to make them bigger</em></p><br>
+
+  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+  <div class="w3-row-padding w3-center">
+    <div class="w3-col m3">
+      <img src="/Images/MainLogo1.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Coming Soon - ECOMMERCE">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="/Images/MainLogo1.png"  style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Coming Soon - BLOG">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="/Images/MainLogo1.png"  style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Coming Soon - ">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="/Images/MainLogo1.png"  style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Coming Soon">
+    </div>
+  </div>
+
+  <div class="w3-row-padding w3-center w3-section">
+    <div class="w3-col m3">
+      <img src="/Images/MainLogo1.png"  style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Coming Soon">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="/Images/MainLogo1.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Coming Soon">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="/Images/MainLogo1.png"  style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Coming Soon">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="/Images/MainLogo1.png"  style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Coming Soon">
+    </div> 
+    <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">
+    <a href="https://sites.google.com/view/powerplatformdeveloper/home">LOAD MORE</a>     
+    </button>
+    
+  </div>
+</div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <a href="https://www.linkedin.com/in/tom-maidment-27577713a/" class="w3-button w3-light-grey"><i class="fa fa-arrow-right w3-margin-right"></i>To LinkedIn</a>
+  <div class="w3-xlarge w3-section">
+
+<!-- Footer         <i class="fa fa-facebook-official w3-hover-opacity"></i>    -->
+<!-- Footer         <i class="fa fa-instagram w3-hover-opacity"></i>            -->
+<!-- Footer         <i class="fa fa-snapchat w3-hover-opacity"></i>             --> 
+<!-- Footer         <i class="fa fa-pinterest-p w3-hover-opacity"></i>          --> 
+<!-- Footer         <i class="fa fa-twitter w3-hover-opacity"></i>              -->
+<!-- Footer -->     <i class="fa fa-linkedin w3-hover-opacity">
+  <a href="https://www.linkedin.com/in/tom-maidment-27577713a/"></a>
+</i>
+  </div>
+</footer>
+ 
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+<!-- CONNECTS JS -->
+<script src="sitenav.js"></script>
+</body>
+</html>
