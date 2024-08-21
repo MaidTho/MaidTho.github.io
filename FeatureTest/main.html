@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your Website</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="https://www.w3schools.com/lib/w3.js"></script>
+</head>
+<body>
+<!-- Include the navbar -->
+<div w3-include-html="navbar.html"></div>
+<script>
+  w3.includeHTML();
+</script>
+
+<div class="w3-row-padding w3-center">
+    <div class="w3-col m3">
+      <img src="/Images/MainLogo1.png" style="width:100%" onclick="onClick(this); window.open('https://sites.google.com/view/powerplatformdeveloper/home', '_blank');" class="w3-hover-opacity" alt="Coming Soon - ECOMMERCE">
+    </div>
+    <div class="w3-col m3">
+      <img src="/Images/MainLogo1.png" style="width:100%" onclick="onClick(this); window.open('https://sites.google.com/view/powerplatformdeveloper/home', '_blank');" class="w3-hover-opacity" alt="Coming Soon - ECOMMERCE">
+    </div>
+    <div class="w3-col m3">
+      <img src="/Images/MainLogo1.png" style="width:100%" onclick="onClick(this); window.open('https://sites.google.com/view/powerplatformdeveloper/home', '_blank');" class="w3-hover-opacity" alt="Coming Soon - ECOMMERCE">
+    </div>
+    <div class="w3-col m3">
+      <img src="/Images/MainLogo1.png" style="width:100%" onclick="onClick(this); window.open('https://sites.google.com/view/powerplatformdeveloper/home', '_blank');" class="w3-hover-opacity" alt="Coming Soon - ECOMMERCE">
+    </div>
+  </div>
+  
+  <script>
+  function onClick(element) {
+    // Enlarge the image on the current page
+    var modal = document.getElementById("modal01");
+    var modalImg = document.getElementById("img01");
+    modal.style.display = "block";
+    modalImg.src = element.src;
+  }
+  </script>
+  
+
+</body>
+</html>

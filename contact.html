@@ -9,9 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- Site Metas -->
   <link rel="shortcut icon" href="/Images/MainLogo2.png" type="">
-
   <title>Maid To Project</title>
-
   <!-- CSS Sheets -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
   <!-- fonts style -->
@@ -20,15 +18,15 @@
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
   <!-- font awesome style -->
   <link href="css/font-awesome.min.css" rel="stylesheet" />
-
   <!-- Custom styles for this template -->
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
-
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Calls the Navbar Script -->
+  <script src="https://www.w3schools.com/lib/w3.js"></script>
 <style>
 
 body,h1,h2,h3,h4,h5,h6 {font-family: "Aptos", sans-serif;}
@@ -79,24 +77,12 @@ body, html {
 <div class="custom-cursor site-wide">
   <div class="pointer"></div>
 </div>
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar" id="myNavbar">
-    <a class="w3-bar-item w3-button w3-hover-text-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-      <i class="fa fa-bars"></i>
-    </a>
-    <a href="index.html"     class="w3-bar-item w3-button"><b>MAIDTOPROJECT</b></a>
-    <a href="home.html"      class="w3-bar-item w3-button">Home</a>
-    <a href="about.html"     class="w3-bar-item w3-button w3-hide-medium"><i class="fa fa-user"></i> About</a>
-    <a href="portfolio.html" class="w3-bar-item w3-button w3-hide-medium"><i class="fa fa-th"></i> Portfolio</a>
-    <a href="contact.html"   class="w3-bar-item w3-button w3-hide-medium"><i class="fa fa-envelope"></i> Contact</a>
-<!--   <a href="login.html" class="w3-bar-item w3-button w3-hide-medium"><i class="fa fa-envelope"></i> Login</a>--> 
-    <a href="#" class="w3-bar-item w3-button w3-hide-medium w3-right w3-hover-red">
-      <i class="fa fa-search"></i>
-    </a>
-  </div>
-
-  <!-- Navbar on small screens -->
+<!-- Include the navbar -->
+<div w3-include-html="navbar.html"></div>
+<script>
+  w3.includeHTML();
+</script>
+<!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
     <a href="index.html"     class="w3-bar-item w3-button"><b>MAIDTOPROJECT</b></a>
     <a href="home.html"      class="w3-bar-item w3-button">Home</a>

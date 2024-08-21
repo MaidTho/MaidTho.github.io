@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <!-- Basic -->
   <meta charset="UTF-8"> 
@@ -69,14 +68,13 @@ body, html {
   }
 }
 </style>
-<!-- CONNECTS CSS -->
 <link rel="stylesheet" href="sitenav.css">
 </head>
 <body>
-<!-- CURSOR TESTING -->
 <div class="custom-cursor site-wide">
   <div class="pointer"></div>
 </div>
+
 <!-- Include the navbar -->
 <div w3-include-html="navbar.html"></div>
 <script>
@@ -84,13 +82,10 @@ body, html {
 </script>
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-    <a href="index.html"     class="w3-bar-item w3-button"><b>MAIDTOPROJECT</b></a>
-    <a href="home.html"      class="w3-bar-item w3-button">Home</a>
-    <a href="about.html"     class="w3-bar-item w3-button w3-hide-medium"><i class="fa fa-user"></i> About</a>
-    <a href="portfolio.html" class="w3-bar-item w3-button w3-hide-medium"><i class="fa fa-th"></i> Portfolio</a>
-    <a href="services.html" class="w3-bar-item w3-button w3-hide-medium"><i class="fa fa-th"></i> Services</a>
-    <a href="contact.html"   class="w3-bar-item w3-button w3-hide-medium"><i class="fa fa-envelope"></i> Contact</a>
-<!--   <a href="login.html" class="w3-bar-item w3-button w3-hide-medium"><i class="fa fa-envelope"></i> Login</a>--> 
+    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+    <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
+    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+    <a href="#" class="w3-bar-item w3-button">SEARCH</a>
   </div>
 </div>
 
@@ -104,57 +99,24 @@ body, html {
 <!-- Second Parallax Image with Portfolio Text -->
 <div class="bgimg-2 w3-display-container w3-opacity-min">
   <div class="w3-display-middle">
-    <span class="w3-xxlarge w3-text-white w3-wide"><b>PORTFOLIO</b></span>
+    <span class="w3-xxlarge w3-text-white w3-wide"><b>SERVICES</b></span>
   </div>
 </div>
 
-<!-- Container (Portfolio Section) -->
-<div class="w3-content w3-container w3-padding-64" id="portfolio">
-  <h3 class="w3-center"><b>MY WORK</b></h3>
-  <p class="w3-center"><em>Here are some of my latest work<br> Click on the images to make them bigger</em></p><br>
-  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
-  <div class="w3-row-padding w3-center">
-    <div class="w3-col m3">
-      <img src="/Images/MainLogo1.png" style="width:100%" onclick="onClick(this); window.open('/Portfolio-1/placeholder1.html', '_blank');" class="w3-hover-opacity" alt="Coming Soon - ECOMMERCE">
-    </div>
-    <div class="w3-col m3">
-      <img src="/Images/MainLogo1.png" style="width:100%" onclick="onClick(this); window.open('/Portfolio-2/placeholder2.html', '_blank');" class="w3-hover-opacity" alt="Coming Soon - ECOMMERCE">
-    </div>
-    <div class="w3-col m3">
-      <img src="/Images/MainLogo1.png" style="width:100%" onclick="onClick(this); window.open('/Portfolio-3/placeholder3.html', '_blank');" class="w3-hover-opacity" alt="Coming Soon - ECOMMERCE">
-    </div>
-    <div class="w3-col m3">
-      <img src="/Images/MainLogo1.png" style="width:100%" onclick="onClick(this); window.open('/Portfolio-4/placeholder4.html', '_blank');" class="w3-hover-opacity" alt="Coming Soon - ECOMMERCE">
+<!-- Container (Services Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+  <h3 class="w3-center"><b>Services</b></h3>
+  <p>
+  These are my services and prices.  
+  </p>
+<!-- Hide this text on small devices -->
+    <div class="w3-col m6 w3-hide-small w3-padding-large">
+      <p>
+         Welcome to my website. Welcome to my website. Welcome to my website. Welcome to my website. Welcome to my website. Welcome to my website.
+      </p>
     </div>
   </div>
   
-  <script>
-  function onClick(element) {
-    // Enlarge the image on the current page
-    var modal = document.getElementById("modal01");
-    var modalImg = document.getElementById("img01");
-    modal.style.display = "block";
-    modalImg.src = element.src;
-  }
-  </script>
-  
-    <div style="text-align: center; margin-top: 64px;">
-      <button class="w3-button w3-padding-large w3-light-grey">
-        <a href="https://sites.google.com/view/powerplatformdeveloper/home">LOAD MORE</a>
-      </button>
-    </div>
-  </div>
-</div>
-
-
-<!-- Modal for full size images on click-->
-<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
-  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-    <img id="img01" class="w3-image">
-    <p id="caption" class="w3-opacity w3-large"></p>
-  </div>
-</div>
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
   <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
@@ -171,16 +133,15 @@ body, html {
 </i>
   </div>
 </footer>
- 
+<!--Modal Image Gallery --> 
 <script>
-// Modal Image Gallery
+
 function onClick(element) {
   document.getElementById("img01").src = element.src;
   document.getElementById("modal01").style.display = "block";
   var captionText = document.getElementById("caption");
   captionText.innerHTML = element.alt;
 }
-
 // Change style of navbar on scroll
 window.onscroll = function() {myFunction()};
 function myFunction() {
