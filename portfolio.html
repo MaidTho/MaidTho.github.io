@@ -79,9 +79,7 @@ body, html {
 </div>
 <!-- Include the navbar -->
 <div w3-include-html="navbar.html"></div>
-<script>
-  w3.includeHTML();
-</script>
+<script>  w3.includeHTML(); </script>
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
     <a href="index.html"     class="w3-bar-item w3-button"><b>MAIDTOPROJECT</b></a>
@@ -93,21 +91,12 @@ body, html {
 <!--   <a href="login.html" class="w3-bar-item w3-button w3-hide-medium"><i class="fa fa-envelope"></i> Login</a>--> 
   </div>
 </div>
-
-<!-- First Parallax Image with Logo Text 
-<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
-  <div class="w3-display-middle" style="white-space:nowrap;">
-    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"><b>MAID <span class="w3-hide-small">TO</span> PROJECT</b></span>
-  </div>
-</div>-->
-
-<!-- Second Parallax Image with Portfolio Text -->
+<!-- Parallax Image with Portfolio Text -->
 <div class="bgimg-2 w3-display-container w3-opacity-min">
   <div class="w3-display-middle">
     <span class="w3-xxlarge w3-text-white w3-wide"><b>PORTFOLIO</b></span>
   </div>
 </div>
-
 <!-- Container (Portfolio Section) -->
 <div class="w3-content w3-container w3-padding-64" id="portfolio">
   <h3 class="w3-center"><b>MY WORK</b></h3>
@@ -115,19 +104,38 @@ body, html {
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
   <div class="w3-row-padding w3-center">
     <div class="w3-col m3">
-      <img src="/Images/MainLogo1.png" style="width:100%" onclick="onClick(this); window.open('/Portfolio-1/placeholder1.html', '_blank');" class="w3-hover-opacity" alt="Coming Soon - ECOMMERCE">
+      <img src="/Images/MainLogo1.png" 
+      style="width:100%" 
+      onclick="onClick(this); 
+      window.open('/Portfolio-1/placeholder1.html', '_blank');" 
+      class="w3-hover-opacity" 
+      alt="Coming Soon - ECOMMERCE">
     </div>
     <div class="w3-col m3">
-      <img src="/Images/MainLogo1.png" style="width:100%" onclick="onClick(this); window.open('/Portfolio-2/placeholder2.html', '_blank');" class="w3-hover-opacity" alt="Coming Soon - ECOMMERCE">
+      <img src="/Images/MainLogo1.png" 
+      style="width:100%" 
+      onclick="onClick(this); 
+      window.open('/Portfolio-2/placeholder2.html', '_blank');" 
+      class="w3-hover-opacity" 
+      alt="Coming Soon - BLOG SITE">
     </div>
     <div class="w3-col m3">
-      <img src="/Images/MainLogo1.png" style="width:100%" onclick="onClick(this); window.open('/Portfolio-3/placeholder3.html', '_blank');" class="w3-hover-opacity" alt="Coming Soon - ECOMMERCE">
+      <img src="/Images/MainLogo1.png" 
+      style="width:100%" 
+      onclick="onClick(this); 
+      window.open('/Portfolio-3/placeholder3.html', '_blank');" 
+      class="w3-hover-opacity" 
+      alt="Coming Soon - TBA">
     </div>
     <div class="w3-col m3">
-      <img src="/Images/MainLogo1.png" style="width:100%" onclick="onClick(this); window.open('/Portfolio-4/placeholder4.html', '_blank');" class="w3-hover-opacity" alt="Coming Soon - ECOMMERCE">
+      <img src="/Images/MainLogo1.png" 
+      style="width:100%" 
+      onclick="onClick(this); 
+      window.open('/Portfolio-4/placeholder4.html', '_blank');"
+      class="w3-hover-opacity" 
+      alt="Coming Soon - TBA">
     </div>
   </div>
-  
   <script>
   function onClick(element) {
     // Enlarge the image on the current page
@@ -137,7 +145,6 @@ body, html {
     modalImg.src = element.src;
   }
   </script>
-  
     <div style="text-align: center; margin-top: 64px;">
       <button class="w3-button w3-padding-large w3-light-grey">
         <a href="https://sites.google.com/view/powerplatformdeveloper/home">LOAD MORE</a>
@@ -145,8 +152,6 @@ body, html {
     </div>
   </div>
 </div>
-
-
 <!-- Modal for full size images on click-->
 <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
   <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
