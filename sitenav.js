@@ -27,9 +27,7 @@ window.addEventListener('scroll', function() {
     window.scrollTo(scrollX, scrollY);
 });
 
-
 document.addEventListener('mousemove', TrackCursor);
-
 document.addEventListener('mousedown', () => site_wide_cursor.classList.add('active'));
 document.addEventListener('mouseup', () => site_wide_cursor.classList.remove('active'));
 
@@ -57,7 +55,6 @@ for (let i = 0; i < boxes.length; i++) {
     });
     
     document.addEventListener('mousemove', TrackBoxCursor.bind(box));
-    
     document.addEventListener('mousedown', () => cursor.classList.add('active'));
     document.addEventListener('mouseup', () => cursor.classList.remove('active'));
 }
