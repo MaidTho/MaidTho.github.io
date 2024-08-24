@@ -17,3 +17,9 @@ Update 1.3. - About and Portfolio update.
     * Updated Portfolio slightly to properly match the pages.
     * Updated home about section to properly match about section.
 
+Update 1.4. - Services card and Socials Update.
+    * Updated the Services page with cards to describe prices and what they entail, still placeholder text until I decide on prices/services.
+    * Updated the footer to re-include the social media logos with working links. Only LinkedIn is fully functional for now.
+    * Test pending to see if small navbar is updated on Mobile after push. 
+    
+

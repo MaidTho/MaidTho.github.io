@@ -60,6 +60,15 @@ body, html {
 
 .w3-wide {letter-spacing: 10px;}
 .w3-hover-opacity {cursor: pointer;}
+.circle-image {
+    border-radius: 50%;
+  }
+  .justified-text {
+    text-align: justify;
+  }
+  .personal-attributes {
+    margin-top: 20px; /* Adjust the value as needed */
+  }
 
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1600px) {
@@ -82,13 +91,12 @@ body, html {
 <script>  w3.includeHTML(); </script>
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-    <a href="index.html"     class="w3-bar-item w3-button"><b>MAIDTOPROJECT</b></a>
-    <a href="home.html"      class="w3-bar-item w3-button">Home</a>
-    <a href="about.html"     class="w3-bar-item w3-button w3-hide-medium"><i class="fa fa-user"></i> About</a>
+    <a href="index.html" class="w3-bar-item w3-button"><b>MAIDTOPROJECT</b></a>
+    <a href="home.html" class="w3-bar-item w3-button">Home</a>
+    <a href="about.html" class="w3-bar-item w3-button w3-hide-medium"><i class="fa fa-user"></i> About</a>
     <a href="portfolio.html" class="w3-bar-item w3-button w3-hide-medium"><i class="fa fa-th"></i> Portfolio</a>
     <a href="services.html" class="w3-bar-item w3-button w3-hide-medium"><i class="fa fa-th"></i> Services</a>
-    <a href="contact.html"   class="w3-bar-item w3-button w3-hide-medium"><i class="fa fa-envelope"></i> Contact</a>
-<!--   <a href="login.html" class="w3-bar-item w3-button w3-hide-medium"><i class="fa fa-envelope"></i> Login</a>--> 
+    <a href="contact.html" class="w3-bar-item w3-button w3-hide-medium"><i class="fa fa-envelope"></i> Contact</a> 
   </div>
 </div>
 <!-- Parallax Image with Portfolio Text -->
@@ -104,7 +112,7 @@ body, html {
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
   <div class="w3-row-padding w3-center">
     <div class="w3-col m3">
-      <img src="/Images/MainLogo1.png" 
+      <img src="/Images/MainLogo1.png" class="w3-round w3-image w3-opacity w3-hover-opacity-off circle-image"
       style="width:100%" 
       onclick="onClick(this); 
       window.open('/Portfolio-1/placeholder1.html', '_blank');" 
@@ -112,7 +120,7 @@ body, html {
       alt="Coming Soon - ECOMMERCE">
     </div>
     <div class="w3-col m3">
-      <img src="/Images/MainLogo1.png" 
+      <img src="/Images/MainLogo1.png" class="w3-round w3-image w3-opacity w3-hover-opacity-off circle-image"
       style="width:100%" 
       onclick="onClick(this); 
       window.open('/Portfolio-2/placeholder2.html', '_blank');" 
@@ -120,7 +128,7 @@ body, html {
       alt="Coming Soon - BLOG SITE">
     </div>
     <div class="w3-col m3">
-      <img src="/Images/MainLogo1.png" 
+      <img src="/Images/MainLogo1.png"  class="w3-round w3-image w3-opacity w3-hover-opacity-off circle-image"
       style="width:100%" 
       onclick="onClick(this); 
       window.open('/Portfolio-3/placeholder3.html', '_blank');" 
@@ -128,7 +136,7 @@ body, html {
       alt="Coming Soon - TBA">
     </div>
     <div class="w3-col m3">
-      <img src="/Images/MainLogo1.png" 
+      <img src="/Images/MainLogo1.png"  class="w3-round w3-image w3-opacity w3-hover-opacity-off circle-image"
       style="width:100%" 
       onclick="onClick(this); 
       window.open('/Portfolio-4/placeholder4.html', '_blank');"
@@ -162,20 +170,33 @@ body, html {
 </div>
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
-  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-  <a href="https://www.linkedin.com/in/tom-maidment-27577713a/" class="w3-button w3-light-grey"><i class="fa fa-arrow-right w3-margin-right"></i>To LinkedIn</a>
-  <div class="w3-xlarge w3-section">
-
-<!-- Footer         <i class="fa fa-facebook-official w3-hover-opacity"></i>    -->
-<!-- Footer         <i class="fa fa-instagram w3-hover-opacity"></i>            -->
-<!-- Footer         <i class="fa fa-snapchat w3-hover-opacity"></i>             --> 
-<!-- Footer         <i class="fa fa-pinterest-p w3-hover-opacity"></i>          --> 
-<!-- Footer         <i class="fa fa-twitter w3-hover-opacity"></i>              -->
-<!-- Footer -->     <i class="fa fa-linkedin w3-hover-opacity">
-  <a href="https://www.linkedin.com/in/tom-maidment-27577713a/"></a>
-</i>
-  </div>
+  <a href="#home" target="">
+    <i class="fa fa-user w3-hover-opacity"></i>
+  </a>
+  <a href="https://www.facebook.com" target="_blank">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  </a>
+  <a href="https://www.instagram.com" target="_blank">
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+  </a>
+  <a href="https://www.snapchat.com" target="_blank">
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+  </a>
+  <a href="https://www.pinterest.com" target="_blank">
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  </a>
+  <a href="https://www.twitter.com" target="_blank">
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+  </a>
+  <a href="https://www.linkedin.com/in/tom-maidment-27577713a/" target="_blank">
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </a>
+  <a href="https://www.youtube.com" target="_blank">
+    <i class="fa fa-youtube w3-hover-opacity"></i>
+  </a>
+</div>
 </footer>
+
  
 <script>
 // Modal Image Gallery
