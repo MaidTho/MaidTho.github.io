@@ -20,6 +20,19 @@ Update 1.3. - About and Portfolio update.
 Update 1.4. - Services card and Socials Update.
     * Updated the Services page with cards to describe prices and what they entail, still placeholder text until I decide on prices/services.
     * Updated the footer to re-include the social media logos with working links. Only LinkedIn is fully functional for now.
-    * Test pending to see if small navbar is updated on Mobile after push. 
-    
+    * Turned Portfolio images into circles for stylistic choice.
+    * Code Clean Up.
+
+Update 1.5. To Do.
+    * Need to fix Mobile layout.
+    * Fix Cursor issues around the footer.
+    * 
+
+~ ~ ~ Future Features ~ ~ ~
+    * Contact form sends email to email address.
+    * Check out function for Services cards.
+    * Login functionality.
+    * User Database.
+
+
 
