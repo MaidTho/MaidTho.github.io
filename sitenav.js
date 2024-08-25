@@ -1,4 +1,3 @@
-// Site wide cursor
 const site_wide_cursor = document.querySelector('.custom-cursor.site-wide');
 
 document.addEventListener('mouseenter', () => {

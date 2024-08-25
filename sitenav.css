@@ -69,3 +69,14 @@ html, body {
     width: 150px;
     height: 75px;
 }
+.circle-image {
+    border-radius: 50%;
+    width: 250px; /* Adjust as needed */
+    height: 250px; /* Adjust as needed */
+}
+.justified-text {
+    text-align: justify;
+}
+.personal-attributes {
+    margin-top: 20px; /* Adjust the value as needed */
+}
