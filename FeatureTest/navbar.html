@@ -1,0 +1,111 @@
+<!-- navbar.html -->
+<div class="w3-top">
+    <div class="w3-bar" id="myNavbar">
+      <a class="w3-bar-item w3-button w3-hover-text-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+        <i class="fa fa-bars"></i>
+      </a>
+      <a href="index.html" class="w3-bar-item w3-button"><b>MAIDTOPROJECT</b></a>
+      <a href="home.html" class="w3-bar-item w3-button w3-hide-medium"><i class="fa fa-user"></i> Home</a>
+      <a href="about.html" class="w3-bar-item w3-button w3-hide-medium"><i class="fa fa-user"></i> About</a>
+      <a href="portfolio.html" class="w3-bar-item w3-button w3-hide-medium"><i class="fa fa-th"></i> Portfolio</a>
+      <a href="services.html" class="w3-bar-item w3-button w3-hide-medium"><i class="fa fa-th"></i> Services</a>
+      <a href="contact.html" class="w3-bar-item w3-button w3-hide-medium"><i class="fa fa-envelope"></i> Contact</a>
+      </a>
+    </div>
+  </div>
+  
+<!-- Navbar on small screens 
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="index.html" class="w3-bar-item w3-button"><b>MAIDTOPROJECT</b></a>
+    <a href="home.html" class="w3-bar-item w3-button">Home</a>
+    <a href="about.html" class="w3-bar-item w3-button w3-hide-medium"><i class="fa fa-user"></i> About</a>
+    <a href="portfolio.html" class="w3-bar-item w3-button w3-hide-medium"><i class="fa fa-th"></i> Portfolio</a>
+    <a href="services.html" class="w3-bar-item w3-button w3-hide-medium"><i class="fa fa-th"></i> Services</a>
+    <a href="contact.html" class="w3-bar-item w3-button w3-hide-medium"><i class="fa fa-envelope"></i> Contact</a>
+  </div>
+</div>-->
+
+<!--Modal Image Gallery --> 
+<script>
+  function onClick(element) {
+    document.getElementById("img01").src = element.src;
+    document.getElementById("modal01").style.display = "block";
+    var captionText = document.getElementById("caption");
+    captionText.innerHTML = element.alt;
+  }
+  // Change style of navbar on scroll
+  window.onscroll = function() {myFunction()};
+  function myFunction() {
+      var navbar = document.getElementById("myNavbar");
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+          navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+      } else {
+          navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+      }
+  }
+  // Used to toggle the menu on small screens when clicking on the menu button
+  function toggleFunction() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+      } else {
+          x.className = x.className.replace(" w3-show", "");
+      }
+  }
+  </script>
+  <style>
+    .bgimg-1 {
+      background-image: url('Images/MainLogo2.png');
+      min-height: 100%;
+      background-position: center;
+      background-size: cover;
+    }
+    /* Mobile devices */
+    @media only screen and (max-width: 600px) {
+      .w3-xlarge {
+        font-size: 24px;
+      }
+      .w3-padding-large {
+        padding: 8px 16px;
+      }
+    }
+    /* Tablets and small monitors */
+    @media only screen and (min-width: 601px) and (max-width: 1200px) {
+      .w3-xlarge {
+        font-size: 36px;
+      }
+      .w3-padding-large {
+        padding: 12px 24px;
+      }
+    }
+    /* Large monitors */
+    @media only screen and (min-width: 1201px) {
+      .w3-xlarge {
+        font-size: 48px;
+      }
+      .w3-padding-large {
+        padding: 16px 32px;
+      }
+    }
+  </style>
+ <script> 
+// Change style of navbar on scroll 
+ window.onscroll = function() {myFunction()};
+  function myFunction() {
+      var navbar = document.getElementById("myNavbar");
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+          navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+      } else {
+          navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+      }
+  }
+  // Used to toggle the menu on small screens when clicking on the menu button
+  function toggleFunction() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+      } else {
+          x.className = x.className.replace(" w3-show", "");
+      }
+  }
+</script>

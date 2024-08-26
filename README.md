@@ -23,10 +23,12 @@ Update 1.4. - Services card and Socials Update.
     * Turned Portfolio images into circles for stylistic choice.
     * Code Clean Up.
 
-Update 1.5. To Do.
+Update 1.5. - PHP Update
+    * PHP Installed, test run to see if contact works on live version.
+
+Update 1.6. To Do.
     * Need to fix Mobile layout.
     * Fix Cursor issues around the footer.
-    * 
 
 ~ ~ ~ Future Features ~ ~ ~
     * Contact form sends email to email address.
