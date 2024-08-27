@@ -3,9 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-html, body {
-    cursor: none;
-}
+/*html, body {
+    cursor: none; 
+}*/
 #background {
     position: absolute;
     top: 0;
@@ -18,12 +18,12 @@ html, body {
     z-index: -1; /* Ensure the background is behind other elements */
 }
 
-.custom-cursor {
+/* .custom-cursor {
     position: absolute;
     top: 0;
     left: 0;
     display: none;
-    pointer-events: none; /* Ensures the custom cursor doesn't interfere with other clickable elements */
+    pointer-events: none; /* Ensures the custom cursor doesn't interfere with other clickable elements 
 }
 .site-wide {
     width: 30px;
@@ -45,7 +45,7 @@ html, body {
 .site-wide.active .pointer {
     width: 20px;
     height: 20px;
-}
+} */
 .boxes {
     width: 100%;
     display: flex;
@@ -74,7 +74,7 @@ html, body {
 }
 .circle-image {
     border-radius: 50%;
-    width: 250px; /* Adjust as needed */
+    width: 333px; /* Adjust as needed */
     height: 250px; /* Adjust as needed */
 }
 .justified-text {

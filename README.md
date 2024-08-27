@@ -26,11 +26,21 @@ Update 1.4. - Services card and Socials Update.
 Update 1.5. - PHP Update
     * PHP Installed, test run to see if contact works on live version.
 
+Update 1.5.1. PHP Feature Test and Cursor removal
+    * Removed Custom Cursor for now.
+    * Played around with PHP starting to get a hang of it. Maybe make contact.html into contact.php?
+
 Update 1.6. To Do.
     * Need to fix Mobile layout.
     * Fix Cursor issues around the footer.
 
+~ ~ ~ Items need to be fixed ~ ~ ~ 
+    * Custom Cursor.
+    * Mobile Layout.    
+
 ~ ~ ~ Future Features ~ ~ ~
+    * BLOG SITE SHOWCASE.
+    * ECOMMERCE SITE SHOWCASE
     * Contact form sends email to email address.
     * Check out function for Services cards.
     * Login functionality.
