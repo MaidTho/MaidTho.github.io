@@ -3,7 +3,7 @@
 <head>
   <!-- Basic -->  
   <title>Maid To Project</title>  
-  <link rel="shortcut icon" href="/Images/BlackBG.png" type="">
+  <link rel="shortcut icon" href="/Images/MainLogo3.png" type="">
   <meta charset="UTF-8"> 
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <!-- Mobile Metas -->
@@ -49,7 +49,7 @@
     }
   }
     .bgimg-1 {
-      background-image: url('/Images/MainLogo2.png');
+      background-image: url('/Images/MainLogo3.png');
       min-height: 100%;
       background-position: center;
       background-size: cover;
@@ -81,6 +81,26 @@
         padding: 16px 32px;
       }
     }
+    /* Black screen and click text */
+    #blackScreen {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 1;
+      transition: opacity 1s;
+      z-index: 1000;
+    }
+    #clickText {
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+    }
   </style>
   <!-- Calls Sitenav.css file -->
   <link rel="stylesheet" href="sitenav.css">
@@ -94,6 +114,11 @@
   <div class="pointer"></div>
 </div>
 
+<!-- Black screen with click text -->
+<div id="blackScreen">
+  <div id="clickText">ENTER</div>
+</div>
+
 <!-- Parallax Image with Logo Text -->
 <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
   <div class="w3-display-middle" style="white-space:nowrap;">
@@ -102,5 +127,17 @@
 </div>
 <!-- CONNECTS JS -->
 <script src="sitenav.js"></script>
+<script>
+  document.getElementById('clickText').addEventListener('click', function() {
+    document.getElementById('blackScreen').style.opacity = '0';
+    setTimeout(function() {
+      document.getElementById('blackScreen').style.display = 'none';
+    }, 1000);
+  });
+
+  window.onload = function() {
+    document.getElementById('blackScreen').style.opacity = '1';
+  };
+</script>
 </body>
 </html>

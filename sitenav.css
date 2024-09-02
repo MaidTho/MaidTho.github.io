@@ -12,7 +12,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('/Images/BlackBG.png');
+    background-image: url('/Images/MainLogo3.png');
     background-size: cover;
     background-position: center;
     z-index: -1; /* Ensure the background is behind other elements */
@@ -74,8 +74,8 @@
 }
 .circle-image {
     border-radius: 50%;
-    width: 333px; /* Adjust as needed */
-    height: 250px; /* Adjust as needed */
+    width: 200px; /* Adjust as needed */
+    height: 200px; /* Adjust as needed */
 }
 .justified-text {
     text-align: justify;
