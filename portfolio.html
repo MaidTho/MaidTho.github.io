@@ -28,25 +28,125 @@
   <script src="https://www.w3schools.com/lib/w3.js"></script>
   <!-- CONNECTS CSS -->
   <link rel="stylesheet" href="sitenav.css">  
-<!-- Include the navbar -->
-<div w3-include-html="navbar.html"></div>
-<script> w3.includeHTML(); </script>
+
 </head>
 <body>
-<!-- CURSOR TESTING -->
+
+<!-- NAVBAR STARTS HERE -->
+
+<div w3-include-html="navbar.html"></div>
+<script> w3.includeHTML(); </script>
+
+<!-- NAVBAR ENDS HERE -->
+
+<!-- CUSTOM CURSOR STARTS HERE -->
+
 <div class="custom-cursor site-wide">
   <div class="pointer"></div>
 </div>
+
+<!-- CUSTOM CURSOR ENDS HERE -->
+
 <!-- Parallax Image with Portfolio Text -->
 <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
   <div class="w3-display-middle" style="white-space:nowrap;">
-    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"><b> PORTFOLIO <span class="w3-hide-small"> </span> </b></span>
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"><b> PORTFOLIO</b></span>
   </div>
 </div>
-<!-- Container (Portfolio Section) -->
+<!-- CALLS BUTTON CONTAINER START -->  
+<div class="button-container">
+  <button class="back-to-top" onclick="scrollToTop()">Back to Top</button>
+  <button class="dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</button>
+</div>
+<!-- CALLS BUTTON CONTAINER ENDS -->   
+
+
+<!-- FUNCTION BUTTON  START -->  
+<div class="content">
+<script> function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+    document.querySelector('header').classList.toggle('dark-mode');
+    document.querySelector('footer').classList.toggle('dark-mode');
+  }
+  window.onscroll = function() {
+    var backToTopButton = document.querySelector('.back-to-top');
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      backToTopButton.style.display = "block";
+    } else {
+      backToTopButton.style.display = "none";
+    }
+  };
+  function scrollToTop() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+</script>
+
+<!-- FUNCTION BUTTON ENDS -->  
+
+<!-- PORTFOLIO STARTS HERE -->
+
 <div class="w3-content w3-container w3-padding-64" id="portfolio">
   <h3 class="w3-center"><b>MY WORK</b></h3>
   <p class="w3-center"><em>Here are some of my latest work<br> Click on the images to make them bigger</em></p><br>
+  <style>
+  .carousel {
+      position: relative;
+      max-width: 100%;
+      margin: auto;
+      overflow: hidden;
+  }
+  .carousel img {
+      width: 100%;
+      transition: transform 0.5s ease-in-out;
+  }
+  .carousel-buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+  }
+  .carousel-button {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+  }
+</style>
+<div class="carousel">
+  <img src="/Images/MainLogo1.png" alt="Image 1" style="display:none;">
+  <img src="/Images/MainLogo2.png" alt="Image 2" style="display:none;">
+  <img src="/Images/MainLogo3.png" alt="Image 3" style="display:none;">
+  <div class="carousel-buttons">
+      <button class="carousel-button" onclick="prevSlide()">❮</button>
+      <button class="carousel-button" onclick="nextSlide()">❯</button>
+  </div>
+</div>
+<script>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.carousel img');
+
+  function showSlide(index) {
+      slides.forEach((slide, i) => {
+          slide.style.display = i === index ? 'block' : 'none';
+      });
+  }
+
+  function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+  }
+
+  function prevSlide() {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(currentSlide);
+  }
+
+  showSlide(currentSlide);
+</script>
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
   <div class="w3-row-padding w3-center">
     <div class="w3-col m3">
@@ -125,6 +225,9 @@
     <p id="caption" class="w3-opacity w3-large"></p>
   </div>
 </div>
+
+<!-- PORTFOLIO ENDS HERE -->
+
 <script>
 // Modal Image Gallery
 function onClick(element) {
@@ -133,6 +236,7 @@ function onClick(element) {
   var captionText = document.getElementById("caption");
   captionText.innerHTML = element.alt;
 }
+
 // Change style of navbar on scroll
 window.onscroll = function() {myFunction()};
 function myFunction() {
@@ -153,36 +257,23 @@ function toggleFunction() {
     }
 }
 </script>
+
+
+
 <!-- CONNECTS JS -->
 <script src="sitenav.js"></script>
-<footer class="footer-included">
-  <!-- Footer -->
-  <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
-    <a href="home.html" target="">
-      <i class="fa fa-user w3-hover-opacity" style="font-size: 45px;"></i>
-    </a>
-    <a href="https://www.facebook.com" target="_blank">
-      <i class="fa fa-facebook-official w3-hover-opacity" style="font-size: 45px;"></i>
-    </a>
-    <a href="https://www.instagram.com" target="_blank">
-      <i class="fa fa-instagram w3-hover-opacity" style="font-size: 45px;"></i>
-    </a>
-    <a href="https://www.snapchat.com" target="_blank">
-      <i class="fa fa-snapchat w3-hover-opacity" style="font-size: 45px;"></i>
-    </a>
-    <a href="https://www.pinterest.com" target="_blank">
-      <i class="fa fa-pinterest-p w3-hover-opacity" style="font-size: 45px;"></i>
-    </a>
-    <a href="https://www.twitter.com" target="_blank">
-      <i class="fa fa-twitter w3-hover-opacity" style="font-size: 45px;"></i>
-    </a>
-    <a href="https://www.linkedin.com/in/tom-maidment-27577713a/" target="_blank">
-      <i class="fa fa-linkedin w3-hover-opacity" style="font-size: 45px;"></i>
-    </a>
-    <a href="https://www.youtube.com" target="_blank">
-      <i class="fa fa-youtube w3-hover-opacity" style="font-size: 45px;"></i>
-    </a>
-  </div>
-  </footer>
+
+<!-- FOOTER STARTS HERE -->
+
+<div id="footer-container"></div>
+<script>
+  if (window.location.pathname === '/portfolio.html') {
+    document.getElementById('footer-container').innerHTML = '<div w3-include-html="footer.html"></div>';
+    w3.includeHTML();
+  }
+</script>
+
+<!-- FOOTER EMDS HERE -->
+
 </body>
 </html>

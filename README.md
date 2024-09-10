@@ -3,7 +3,7 @@
 Update 1.0. INITIAL LAUNCH
     * Launched with all sites and navigation working.
 
-Update 1.1. Flow Update
+Update 1.1. UI Flow Update
     * Improved UI.
 
 Update 1.2. - Services and Portfolio update
@@ -30,21 +30,41 @@ Update 1.5.1. PHP Feature Test and Cursor removal
     * Removed Custom Cursor for now.
     * Played around with PHP starting to get a hang of it. Maybe make contact.html into contact.php?
 
-Update 1.6. To Do.
-    * Need to fix Mobile layout.
-    * Fix Cursor issues around the footer.
+Update 1.6.
+    * Improved Mobile layout.
+    * Fixed Cursor issues around the footer.
+    * New Logo display.
+    * Added a fade in transition when users come in.
 
+Update 1.6.1. - Graphical and Code Clean Up.
+    * General Code Clean Up.
+    * Added Dark Mode which works across all pages. Just need to fix Services card with Dark Mode.
+    * Services Card clicks on home page now.
+    * Moved Footer into new html file to save code space.
+    * Began work on Blog site.
+    * Implemented Back to Top feature, works on Home and Services page, need to get it working on other pages.
+
+Update 1.6.2 - Required Work.
+    * Continue Code Clean Up. (Remove Duplicate Code).
+    * Solve Back to Top Feature.
+    * Fix Dark Mode Services Card.
+    * Continue Blog Site work.
+
+
+Update 1.7 Task List
+    - Blog Site.
+    - Archive List for Blog Site.
+    - << Previous and Next >> functionality for blogs.
+    
 ~ ~ ~ Items need to be fixed ~ ~ ~ 
-    * Custom Cursor.
-    * Mobile Layout.    
+    * Custom Cursor.  
 
 ~ ~ ~ Future Features ~ ~ ~
     * BLOG SITE SHOWCASE.
-    * ECOMMERCE SITE SHOWCASE
+    * PODCAST SITE SHOWCASE.
+    * ECOMMERCE SITE SHOWCASE.
+    * SOCIAL MEDIA SITE SHOWCASE.
     * Contact form sends email to email address.
     * Check out function for Services cards.
     * Login functionality.
     * User Database.
-
-
-

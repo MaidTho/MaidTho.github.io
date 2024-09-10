@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic -->
+    <title>AIBlog</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Site Metas -->
+    <link rel="shortcut icon" href="/Images/MainLogo2.png" type="">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        body.dark-mode {
+            background-color: #333;
+            color: #f4f4f4;
+        }
+        header {
+            background-color: #ffffff;
+            color: #000000;
+            text-align: center;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        header.dark-mode {
+            background-color: #444;
+            color: #f4f4f4;
+        }
+        nav {
+            background-color: #1c4d82;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #163d6b;
+            border-radius: 5px;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .container.dark-mode {
+            background-color: #444;
+        }
+        article {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+        article.dark-mode {
+            background-color: #555;
+            border-color: #666;
+        }
+        aside {
+            flex: 1;
+            background-color: #f9f9f9;
+            padding: 25px;
+            margin-left: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        aside.dark-mode {
+            background-color: #555;
+        }
+        footer {
+            background-color: #242424;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        footer.dark-mode {
+            background-color: #333;
+        }
+        .dark-mode-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #1c4d82;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .dark-mode-toggle:hover {
+            background-color: #163d6b;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #1c4d82;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            display: none;
+            transition: background-color 0.3s;
+        }
+        .back-to-top:hover {
+            background-color: #163d6b;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>AIBlog</h1>
+    <p>Your home for Artificial Intelligence news... yes just news.</p>
+</header>
+<style>
+   .carousel {
+       position: relative;
+       max-width: 25%;
+       margin: auto;
+       overflow: hidden;
+   }
+   .carousel img {
+       width: 100%;
+       transition: transform 0.5s ease-in-out;
+   }
+   .carousel-buttons {
+       position: absolute;
+       top: 50%;
+       width: 100%;
+       display: flex;
+       justify-content: space-between;
+       transform: translateY(-50%);
+   }
+   .carousel-button {
+       background-color: rgba(0, 0, 0, 0.5);
+       color: white;
+       border: none;
+       padding: 10px;
+       cursor: pointer;
+   }
+</style>
+<div class="carousel">
+   <img src="/Images/MainLogo1.png" alt="Image 1">
+   <img src="/Images/MainLogo2.png" alt="Image 2" style="display:none;">
+   <img src="/Images/MainLogo3.png" alt="Image 3" style="display:none;">
+   <div class="carousel-buttons">
+       <button class="carousel-button" onclick="prevSlide()">❮</button>
+       <button class="carousel-button" onclick="nextSlide()">❯</button>
+   </div>
+</div>
+<script>
+   let currentSlide = 0;
+   const slides = document.querySelectorAll('.carousel img');
+
+   function showSlide(index) {
+       slides.forEach((slide, i) => {
+           slide.style.display = i === index ? 'block' : 'none';
+       });
+   }
+
+   function nextSlide() {
+       currentSlide = (currentSlide + 1) % slides.length;
+       showSlide(currentSlide);
+   }
+
+   function prevSlide() {
+       currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+       showSlide(currentSlide);
+   }
+
+   showSlide(currentSlide);
+</script>
+<script>
+   document.querySelectorAll('nav a').forEach(anchor => {
+       anchor.addEventListener('click', function(e) {
+           e.preventDefault();
+           document.querySelector(this.getAttribute('href')).scrollIntoView({
+               behavior: 'smooth'
+           });
+       });
+   });
+</script>
+<nav>
+    <a href="#Home">Home</a>
+    <a href="#Gemini">Gemini</a>
+    <a href="#ChatGPT">ChatGPT</a>
+    <a href="#CoPilot">CoPilot</a>
+    <a href="#GenAI">GenAI</a>
+</nav>
+<div class="container">
+    <main>
+        <article>
+            <h2>Gemini</h2>
+            <p class="post-meta">Published on Septxxxxx XX, XXXX by NotAnAIRobot.</p>
+            <p>HTML stands for HyperText Markup Language...</p>
+        </article>
+        <article>
+            <h2>ChatGPT</h2>
+            <p class="post-meta">Published on Septxxxxx XX, XXXX by NotAnAIRobot.</p>
+            <p>CSS (Cascading Style Sheets) is used to style web pages...</p>
+        </article>
+        <article>
+            <h2>Co-Pilot</h2>
+            <p class="post-meta">Published on Septxxxxx XX, XXXX by NotAnAIRobot.</p>
+            <p>JavaScript (JS) is the most popular lightweight...</p>
+        </article>
+        <article>
+            <h2>GenAI</h2>
+            <p class="post-meta">Published on Septxxxxx XX, XXXX by NotAnAIRobot.</p>
+            <p>ReactJS is a declarative, efficient, and flexible JavaScript library...</p>
+        </article>
+    </main>
+    <aside>
+        <h2>Recent Posts</h2>
+        <ul>
+            <li><a href="#Gemini">Gemini</a></li>
+            <li><a href="#ChatGPT">ChatGPT</a></li>
+            <li><a href="#CoPilot">CoPilot</a></li>
+            <li><a href="#GenAI">GenAI</a></li>
+        </ul>
+    </aside>
+</div>
+<footer>
+    <p>© 2024 AIBlog. All rights reserved.</p>
+</footer>
+<button class="dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</button>
+<button class="back-to-top" onclick="scrollToTop()">Back to Top</button>
+<script>
+   function toggleDarkMode() {
+       document.body.classList.toggle('dark-mode');
+       document.querySelector('header').classList.toggle('dark-mode');
+       document.querySelector('.container').classList.toggle('dark-mode');
+       document.querySelectorAll('article').forEach(article => article.classList.toggle('dark-mode'));
+       document.querySelector('aside').classList.toggle('dark-mode');
+       document.querySelector('footer').classList.toggle('dark-mode');
+   }
+
+   window.addEventListener('scroll', function() {
+       const backToTopButton = document.querySelector('.back-to-top');
+       if (window.scrollY > 300) {
+           backToTopButton.style.display = 'block';
+       } else {
+           backToTopButton.style.display = 'none';
+       }
+   });
+
+   function scrollToTop() {
+       window.scrollTo({
+           top: 0,
+           behavior: 'smooth'
+       });
+   }
+</script>
+
+
+</body>
+</html>

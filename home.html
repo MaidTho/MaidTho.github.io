@@ -24,101 +24,145 @@
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="https://www.w3schools.com/lib/w3.js"></script>
-<style>
-  .footer-included {
-    display: none;
-  }
-</style>
-<link rel="stylesheet" href="sitenav.css">
-<!-- Include the navbar -->
-<div w3-include-html="navbar.html"></div>
-<script> w3.includeHTML(); </script>
+  <script src="https://www.w3schools.com/lib/w3.js"></script>
+
+  <!-- CUSTOM CSS STARTS HERE -->
+  <link rel="stylesheet" href="sitenav.css">
+  <!-- CUSTOM CSS ENDS HERE -->
 </head>
 <body>
-<div class="custom-cursor site-wide">
-  <div class="pointer"></div>
-</div>
+
+<!-- NAVBAR STARTS HERE -->
+
+    <div w3-include-html="navbar.html"></div>
+    <script> w3.includeHTML(); </script>
+
+<!-- NAVBAR ENDS HERE -->
+
+<!-- CUSTOM CURSOR STARTS HERE -->
+
+    <div class="custom-cursor site-wide">
+      <div class="pointer"></div>
+    </div>
+
+<!-- CUSTOM CURSOR ENDS HERE -->
+
+    <!--  Parallax Image MAID TO PROJECT SQUARE --> 
+    <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+      <div class="w3-display-middle" style="white-space:nowrap;">
+        <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"><b> MAID TO <span class="w3-hide-small"> </span> PROJECT </b></span>
+      </div>
+    </div>
+  <!-- CALLS BUTTON CONTAINER START -->  
+    <div class="button-container">
+      <button class="back-to-top" onclick="scrollToTop()">Back to Top</button>
+      <button class="dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</button>
+    </div>
+  <!-- CALLS BUTTON CONTAINER ENDS -->   
+
+
+  <!-- FUNCTION BUTTON  START -->  
+    <div class="content">
+    <script> function toggleDarkMode() {
+        document.body.classList.toggle('dark-mode');
+        document.querySelector('header').classList.toggle('dark-mode');
+        document.querySelector('footer').classList.toggle('dark-mode');
+      }
+      window.onscroll = function() {
+        var backToTopButton = document.querySelector('.back-to-top');
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          backToTopButton.style.display = "block";
+        } else {
+          backToTopButton.style.display = "none";
+        }
+      };
+      function scrollToTop() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+
+    <!-- FUNCTION BUTTON ENDS -->  
+    
+<!-- ABOUT ME STARTS HERE -->
+    
+    <div w3-include-html="about.html"></div>
+    <script> w3.includeHTML(); </script>
+
+<!-- ABOUT ME ENDS HERE -->
+    
+<!-- PORTFOLIO STARTS HERE -->
+
+    <div w3-include-html="portfolio.html"></div>
+    <script> w3.includeHTML(); </script>
+    <!-- Modal for full size images on click-->
+    <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+      <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+        <img id="img01" class="w3-image">
+        <p id="caption" class="w3-opacity w3-large"></p>
+      </div>
+    </div>
+
+    <!-- ENABLES PORTFOLIO TO BE ACCESSED -->  
+    <script>  
+      function onClick(element) {
+        // Enlarge the image on the current page
+        var modal = document.getElementById("modal01");
+        var modalImg = document.getElementById("img01");
+        modal.style.display = "block";
+        modalImg.src = element.src;
+      }
+    </script>
+  </div>
+
+<!-- PORTFOLIO ENDS HERE -->
+    
+<!-- SERVICES STARTS HERE -->
+
+    <div w3-include-html="services.html"></div>
+    <script>
+      w3.includeHTML(function() {
+        document.getElementById('card1').addEventListener('click', function() {
+          alert('Service 1 clicked!');
+        });
+
+        document.getElementById('card2').addEventListener('click', function() {
+          alert('Service 2 clicked!');
+        });
+
+        document.getElementById('card3').addEventListener('click', function() {
+          alert('Service 3 clicked!');
+        });
+      });
+    </script>
+        
+<!-- SERVICES ENDS HERE -->
+
+    
+<!-- CONTACT STARTS HERE -->
+
+    <div w3-include-html="contact.html"></div>
+    <script> w3.includeHTML(); </script>
+
+        
+<!-- CONTACT ENDS HERE -->
+
+    
+<!-- FOOTER STARTS HERE -->
+
+<div id="footer-container"></div>
+<script>
+  if (window.location.pathname === '/home.html') {
+    document.getElementById('footer-container').innerHTML = '<div w3-include-html="footer.html"></div>';
+    w3.includeHTML();
+  }
+</script>
+
+<!-- FOOTER ENDS HERE -->
+
 <!-- CONNECTS JS -->
 <script src="sitenav.js"></script>
-<!--  Parallax Image with Home Text --> 
-<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
-  <div class="w3-display-middle" style="white-space:nowrap;">
-    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"><b> MAID TO <span class="w3-hide-small"> </span> PROJECT </b></span>
-  </div>
-</div>
-<!-- Container (About Section) -->
-<!-- Include the About Section -->
-<div w3-include-html="about.html"></div>
-<script> w3.includeHTML(); </script>
-</div>  
-<!-- Container (Portfolio Section) -->
-<!-- Include the Portfolio Section -->
-<div w3-include-html="portfolio.html"></div>
-<script> w3.includeHTML(); </script>
-<!-- Modal for full size images on click-->
-<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
-  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-    <img id="img01" class="w3-image">
-    <p id="caption" class="w3-opacity w3-large"></p>
-  </div>
-</div>
-<!-- Include the Services Section -->
-<div w3-include-html="services.html"></div>
-  <script> w3.includeHTML(); </script>
-  <script>
-    document.getElementById('card1').addEventListener('click', function() {
-      alert('Service 1 clicked!');
-    });
 
-    document.getElementById('card2').addEventListener('click', function() {
-      alert('Service 2 clicked!');
-    });
-
-    document.getElementById('card3').addEventListener('click', function() {
-      alert('Service 3 clicked!');
-    });
-  </script> 
-<!-- Include the Contact Section -->
-<div w3-include-html="contact.html"></div>
-  <script> w3.includeHTML(); </script>
-  <script>
-  function onClick(element) {
-    // Enlarge the image on the current page
-    var modal = document.getElementById("modal01");
-    var modalImg = document.getElementById("img01");
-    modal.style.display = "block";
-    modalImg.src = element.src;
-  }
-  </script>
-<!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
-  <a href="#home" target="">
-    <i class="fa fa-user w3-hover-opacity" style="font-size: 45px;"></i>
-  </a>
-  <a href="https://www.facebook.com" target="_blank">
-    <i class="fa fa-facebook-official w3-hover-opacity" style="font-size: 45px;"></i>
-  </a>
-  <a href="https://www.instagram.com" target="_blank">
-    <i class="fa fa-instagram w3-hover-opacity" style="font-size: 45px;"></i>
-  </a>
-  <a href="https://www.snapchat.com" target="_blank">
-    <i class="fa fa-snapchat w3-hover-opacity" style="font-size: 45px;"></i>
-  </a>
-  <a href="https://www.pinterest.com" target="_blank">
-    <i class="fa fa-pinterest-p w3-hover-opacity" style="font-size: 45px;"></i>
-  </a>
-  <a href="https://www.twitter.com" target="_blank">
-    <i class="fa fa-twitter w3-hover-opacity" style="font-size: 45px;"></i>
-  </a>
-  <a href="https://www.linkedin.com/in/tom-maidment-27577713a/" target="_blank">
-    <i class="fa fa-linkedin w3-hover-opacity" style="font-size: 45px;"></i>
-  </a>
-  <a href="https://www.youtube.com" target="_blank">
-    <i class="fa fa-youtube w3-hover-opacity" style="font-size: 45px;"></i>
-  </a>
-</div>
-</footer>
-</body>
-</html>
+  </body>
+  </html>
