@@ -26,8 +26,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Calls the Navbar Script -->
   <script src="https://www.w3schools.com/lib/w3.js"></script>
-  <!-- CONNECTS CSS -->
-  <link rel="stylesheet" href="sitenav.css">  
+  
+  <!-- CUSTOM CSS STARTS HERE -->
+  <link rel="stylesheet" href="sitenav.css">
+  <!-- CUSTOM CSS ENDS HERE -->
 
 </head>
 <body>
@@ -58,31 +60,36 @@
   <button class="back-to-top" onclick="scrollToTop()">Back to Top</button>
   <button class="dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</button>
 </div>
+  <!-- CALLS BUTTON CONTAINER START -->  
+  <div class="button-container">
+    <button class="back-to-top" onclick="scrollToTop()">Back to Top</button>
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</button>
+  </div>
 <!-- CALLS BUTTON CONTAINER ENDS -->   
 
 
 <!-- FUNCTION BUTTON  START -->  
-<div class="content">
-<script> function toggleDarkMode() {
-    document.body.classList.toggle('dark-mode');
-    document.querySelector('header').classList.toggle('dark-mode');
-    document.querySelector('footer').classList.toggle('dark-mode');
-  }
-  window.onscroll = function() {
-    var backToTopButton = document.querySelector('.back-to-top');
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-      backToTopButton.style.display = "block";
-    } else {
-      backToTopButton.style.display = "none";
+  <div class="content">
+  <script> function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+      document.querySelector('header').classList.toggle('dark-mode');
+      document.querySelector('footer').classList.toggle('dark-mode');
     }
-  };
-  function scrollToTop() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-  }
-</script>
+    window.onscroll = function() {
+      var backToTopButton = document.querySelector('.back-to-top');
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        backToTopButton.style.display = "block";
+      } else {
+        backToTopButton.style.display = "none";
+      }
+    };
+    function scrollToTop() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
 
-<!-- FUNCTION BUTTON ENDS -->  
+  <!-- FUNCTION BUTTON ENDS -->  
 
 <!-- PORTFOLIO STARTS HERE -->
 
@@ -147,6 +154,7 @@
 
   showSlide(currentSlide);
 </script>
+<br>
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
   <div class="w3-row-padding w3-center">
     <div class="w3-col m3">
@@ -198,7 +206,7 @@
     </div>
   </div>
 </div>
-<!-- Remove Feature or place in Portfolio? -->
+<!-- REVIEW LINE FEATURE -->
 <div class="w3-row w3-center w3-dark-grey w3-padding-16">
   <div class="w3-quarter w3-section">
     <span class="w3-xlarge">4.1</span><br>
@@ -273,7 +281,7 @@ function toggleFunction() {
   }
 </script>
 
-<!-- FOOTER EMDS HERE -->
+<!-- FOOTER ENDS HERE -->
 
 </body>
 </html>

@@ -62,3 +62,20 @@ function TrackBoxCursor (evt) {
     console.log(this);
     const box = this;
 }
+  function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+    document.querySelector('header').classList.toggle('dark-mode');
+    document.querySelector('footer').classList.toggle('dark-mode');
+  }
+  window.onscroll = function() {
+    var backToTopButton = document.querySelector('.back-to-top');
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      backToTopButton.style.display = "block";
+    } else {
+      backToTopButton.style.display = "none";
+    }
+  };
+  function scrollToTop() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }

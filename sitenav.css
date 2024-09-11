@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-body,h1,h2,h3,h4,h5,h6 {font-family: "Roberto", sans-serif;}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
   body, html {
   height: 100%;
   color: #000000;
@@ -19,16 +19,16 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Roberto", sans-serif;}
     line-height: 1.8;
     transition: background-color 0.3s, color 0.3s;
   }
-  /* Create a Parallax Effect */
+  .w3-wide {letter-spacing: 10px;}
+  .w3-hover-opacity {cursor: pointer;}
+/* Create a Parallax Effect */
   .bgimg-1, .bgimg-2, .bgimg-3 {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
-  .w3-wide {letter-spacing: 10px;}
-  .w3-hover-opacity {cursor: pointer;}
-  /* Turn off parallax scrolling for tablets and phones */
+/* Turn off parallax scrolling for tablets and phones */
   @media only screen and (max-device-width: 1600px) {
     .bgimg-1, .bgimg-2, .bgimg-3 {
       background-attachment: scroll;
@@ -41,7 +41,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Roberto", sans-serif;}
       background-position: center;
       background-size: cover;
   }
-  /* Mobile devices */
+/* MOBILE DEVICES */
   @media only screen and (max-width: 600px) {
     .w3-xlarge {
       font-size: 24px;
@@ -50,7 +50,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Roberto", sans-serif;}
       padding: 8px 16px;
     }
   }
-  /* Tablets and small monitors */
+/* TABLETS / SMALL MONITORS */
   @media only screen and (min-width: 601px) and (max-width: 1200px) {
     .w3-xlarge {
       font-size: 36px;
@@ -59,7 +59,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Roberto", sans-serif;}
       padding: 12px 24px;
     }
   }
-  /* Large monitors */
+/* LARGE MONITORS */
   @media only screen and (min-width: 1201px) {
     .w3-xlarge {
       font-size: 48px;
@@ -68,20 +68,41 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Roberto", sans-serif;}
       padding: 16px 32px;
     }
   }
+/*  DARK MODE AREAS  */
+  body.dark-mode {
+    background-color: #333;
+    color: #f4f4f4;
+  }   
+  header.dark-mode {
+    background-color: #444;
+    color: #f4f4f4;
+  }     
+  footer.dark-mode {
+    background-color: #333;
+  }
+  navbar.dark-mode {
+    background-color: #444;
+    color: #f4f4f4;
+  }   
   .services-cards {
     display: flex;
     justify-content: space-around;
     margin-top: 10px;
-    }
+  }
+  .services-cards.dark-mode {
+    background-color: #444;
+    color: #f4f4f4;
+  }
   .card {
-    background-color: #f1f1f1;
+    background-color: #ffffff;
+    color: black;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 45%;
     text-align: center;
     }
-  /* Black screen and click text */
+/* Black screen and click text */
   #blackScreen {
     position: absolute;
     top: 0;
@@ -112,50 +133,45 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Roberto", sans-serif;}
       background-position: center;
       z-index: -1; /* Ensure the background is behind other elements */
   }
-  body.dark-mode {
-    background-color: #333;
-    color: #f4f4f4;
-  }  
+/*  BUTTONS ENABLED  */
+.button-container {
+  position: fixed;
+  bottom: 20px; /* Move to the bottom */
+  right: 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px; /* Adjust the gap between buttons as needed */
+  z-index: 2; /* Ensure buttons are above footer */
+}
 
-  .button-container {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    display: flex;
-    justify-content: flex-end;
-    gap: 100px; /* Adjust the gap between buttons as needed */
-    z-index: 2; /* Ensure buttons are above footer */
-  }
-  
-  .back-to-top {
-    background-color: #1c4d82;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    display: none;
-    transition: background-color 0.3s;
-  }
-  
-  .back-to-top:hover {
-    background-color: #163d6b;
-  }
-  
-  .dark-mode-toggle {
-    background-color: #1c4d82;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-  }
-  
-  .dark-mode-toggle:hover {
-    background-color: #163d6b;
-  }
-  
+.back-to-top {
+  background-color: #1c4d82;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  display: none; /* Initially hidden */
+  transition: background-color 0.3s;
+}
+
+.back-to-top:hover {
+  background-color: #163d6b;
+}
+
+.dark-mode-toggle {
+  background-color: #1c4d82;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.dark-mode-toggle:hover {
+  background-color: #163d6b;
+}
   header {
     background-color: #ffffff;
     color: #000000;
@@ -163,19 +179,12 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Roberto", sans-serif;}
     padding: 20px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
-  header.dark-mode {
-    background-color: #444;
-    color: #f4f4f4;
-  }
   footer {
     background-color: #000; /* Adjust the background color as needed */    
     color: #fff; /* Adjust the text color as needed */    
     margin-top: auto;
     padding: 20px;
     text-align: center;
-  }
-  footer.dark-mode {
-    background-color: #333;
   }
   .footer-included {
     display: none;
@@ -235,9 +244,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Roberto", sans-serif;}
       height: 75px;
   }
   .circle-image {
-      border-radius: 50%;
-      width: 200px; /* Adjust as needed */
-      height: 200px; /* Adjust as needed */
+      border-radius: 100%;
+      width: 150px; /* Adjust as needed */
+      height: 150px; /* Adjust as needed */
   }
   .justified-text {
       text-align: justify;
@@ -245,15 +254,3 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Roberto", sans-serif;}
   .personal-attributes {
       margin-top: 20px; /* Adjust the value as needed */
   }
-  header {
-    background-color: #ffffff;
-    color: #000000;
-    text-align: center;
-    padding: 20px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  header.dark-mode {
-    background-color: #444;
-    color: #f4f4f4;
-  }
-

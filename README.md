@@ -44,12 +44,14 @@ Update 1.6.1. - Graphical and Code Clean Up.
     * Began work on Blog site.
     * Implemented Back to Top feature, works on Home and Services page, need to get it working on other pages.
 
-Update 1.6.2 - Required Work.
+Update 1.6.2 - Code Clean Up & Button Resolved. 11/08/24
     * Continue Code Clean Up. (Remove Duplicate Code).
-    * Solve Back to Top Feature.
-    * Fix Dark Mode Services Card.
-    * Continue Blog Site work.
+    * Solved Back to Top Feature.
+    * Fixed Dark Mode Services Card.
 
+Update 1.6.3 - Required Work
+    * Continue Blog Site work.
+    * Move BTT Button to bottom of page for About & Home Pages.
 
 Update 1.7 Task List
     - Blog Site.
