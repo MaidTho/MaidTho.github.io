@@ -46,12 +46,13 @@ Update 1.6.1. - Graphical and Code Clean Up.
 
 Update 1.6.2 - Code Clean Up & Button Resolved. 11/08/24
     * Continue Code Clean Up. (Remove Duplicate Code).
-    * Solved Back to Top Feature.
+    * Successfully configured Back to Top Feature to work across all pages and be down the bottom next to Dark Mode feature.
     * Fixed Dark Mode Services Card.
+    * Connected AI Blog to be showcased when clicked!
+    
 
 Update 1.6.3 - Required Work
     * Continue Blog Site work.
-    * Move BTT Button to bottom of page for About & Home Pages.
 
 Update 1.7 Task List
     - Blog Site.

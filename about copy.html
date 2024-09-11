@@ -24,77 +24,127 @@
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- Calls the Navbar Script -->
+  <!-- Calls the Navbar Script-->
   <script src="https://www.w3schools.com/lib/w3.js"></script>
-  
+
   <!-- CUSTOM CSS STARTS HERE -->
   <link rel="stylesheet" href="sitenav.css">
   <!-- CUSTOM CSS ENDS HERE -->
+
   <style>
-    /* General Styles */
-    body {
-      font-family: 'Roboto', sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
+  /* General Styles */
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+  /* Container */
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+  }
+  /* Padding */
+  .padding-64 {
+    padding: 64px 0;
+  }
+  /* Center Text */
+  .center {
+    text-align: center;
+  }
+  /* Justified Text */
+  .justified-text {
+    text-align: justify;
+  }
+  /* Row */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -16px;
+  }
+  /* Column */
+  .col {
+    flex: 50%;
+    padding: 0 16px;
+  }
+  /* Circle Image */
+  .circle-image {
+    border-radius: 10%;
+    width: 100%;
+    max-width: 200%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+  /* Hover Effect */
+  .hover-opacity-off:hover {
+    opacity: 0.8;
+  }
+  /* Margin Right */
+  .margin-right {
+    margin-right: 8px;
+  }
+  /* Personal Attributes */
+  .personal-attributes {
+    margin-top: 20px;
+  }
+
+  body.dark-mode {
+      background-color: #333;
+      color: #f4f4f4;
     }
-    /* Container */
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      overflow: hidden;
-      padding: 0 20px;
-    }
-    /* Padding */
-    .padding-64 {
-      padding: 64px 0;
-    }
-    /* Center Text */
-    .center {
+    header {
+      background-color: #ffffff;
+      color: #000000;
       text-align: center;
+      padding: 20px 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
-    /* Justified Text */
-    .justified-text {
-      text-align: justify;
+    header.dark-mode {
+      background-color: #444;
+      color: #f4f4f4;
     }
-    /* Row */
-    .row {
-      display: flex;
-      flex-wrap: wrap;
-      margin: 0 -16px;
+    .footer-included {
+      display: none;
     }
-    /* Column */
-    .col {
-      flex: 50%;
-      padding: 0 16px;
+    .dark-mode-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #1c4d82;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s;
     }
-    /* Circle Image */
-    .circle-image {
-      border-radius: 10%;
-      width: 100%;
-      max-width: 200%;
-      height: 100%;
-      display: block;
-      margin: 0 auto;
+    .dark-mode-toggle:hover {
+      background-color: #163d6b;
     }
-    /* Hover Effect */
-    .hover-opacity-off:hover {
-      opacity: 0.8;
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #1c4d82;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      display: none;
+      transition: background-color 0.3s;
     }
-    /* Margin Right */
-    .margin-right {
-      margin-right: 8px;
+    .back-to-top:hover {
+      background-color: #163d6b;
     }
-    /* Personal Attributes */
-    .personal-attributes {
-      margin-top: 20px;
-    }
-    </style>
+  </style>
 </head>
 <body>
-
 <!-- NAVBAR STARTS HERE -->
 
 <div w3-include-html="navbar.html"></div>
@@ -167,8 +217,6 @@
     </div>
   </div>
 </div>
-<br>
-<br>
 
 <!--Modal Image Gallery --> 
 <script>

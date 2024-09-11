@@ -19,6 +19,41 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
     line-height: 1.8;
     transition: background-color 0.3s, color 0.3s;
   }
+/*  DARK MODE AREAS  */
+  body.dark-mode {
+    background-color: #333;
+    color: #f4f4f4;
+  }   
+  header.dark-mode {
+    background-color: #444;
+    color: #f4f4f4;
+  }     
+  footer.dark-mode {
+    background-color: #333;
+  }
+  /*  NAVBAR DM MODE TO BE ADDED   */
+  navbar.dark-mode {
+    background-color: #444;
+    color: #f4f4f4;
+  }   
+  .services-cards {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+  }
+  .services-cards.dark-mode {
+    background-color: #444;
+    color: #f4f4f4;
+  }
+  .card {
+    background-color: #ffffff;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 45%;
+    text-align: center;
+    }
   .w3-wide {letter-spacing: 10px;}
   .w3-hover-opacity {cursor: pointer;}
 /* Create a Parallax Effect */
@@ -68,40 +103,6 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
       padding: 16px 32px;
     }
   }
-/*  DARK MODE AREAS  */
-  body.dark-mode {
-    background-color: #333;
-    color: #f4f4f4;
-  }   
-  header.dark-mode {
-    background-color: #444;
-    color: #f4f4f4;
-  }     
-  footer.dark-mode {
-    background-color: #333;
-  }
-  navbar.dark-mode {
-    background-color: #444;
-    color: #f4f4f4;
-  }   
-  .services-cards {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 10px;
-  }
-  .services-cards.dark-mode {
-    background-color: #444;
-    color: #f4f4f4;
-  }
-  .card {
-    background-color: #ffffff;
-    color: black;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 45%;
-    text-align: center;
-    }
 /* Black screen and click text */
   #blackScreen {
     position: absolute;
@@ -134,44 +135,44 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
       z-index: -1; /* Ensure the background is behind other elements */
   }
 /*  BUTTONS ENABLED  */
-.button-container {
-  position: fixed;
-  bottom: 20px; /* Move to the bottom */
-  right: 20px;
-  display: flex;
-  justify-content: flex-end;
-  gap: 20px; /* Adjust the gap between buttons as needed */
-  z-index: 2; /* Ensure buttons are above footer */
-}
+  .button-container {
+    position: fixed;
+    bottom: 20px; /* Move to the bottom */
+    right: 20px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px; /* Adjust the gap between buttons as needed */
+    z-index: 2; /* Ensure buttons are above footer */
+  }
 
-.back-to-top {
-  background-color: #1c4d82;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5px;
-  display: none; /* Initially hidden */
-  transition: background-color 0.3s;
-}
+  .back-to-top {
+    background-color: #181e24;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: none; /* Initially hidden */
+    transition: background-color 0.3s;
+  }
 
-.back-to-top:hover {
-  background-color: #163d6b;
-}
+  .back-to-top:hover {
+    background-color: #163d6b;
+  }
 
-.dark-mode-toggle {
-  background-color: #1c4d82;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
+  .dark-mode-toggle {
+    background-color: #181e24;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
 
-.dark-mode-toggle:hover {
-  background-color: #163d6b;
-}
+  .dark-mode-toggle:hover {
+    background-color: #163d6b;
+  }
   header {
     background-color: #ffffff;
     color: #000000;
