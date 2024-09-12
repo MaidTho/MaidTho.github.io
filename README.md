@@ -44,14 +44,19 @@ Update 1.6.1. - Graphical and Code Clean Up.
     * Began work on Blog site.
     * Implemented Back to Top feature, works on Home and Services page, need to get it working on other pages.
 
-Update 1.6.2 - Code Clean Up & Button Resolved. 11/08/24
+Update 1.6.2 - Code Clean Up & Button Resolved.     @ 11/08/24
     * Continue Code Clean Up. (Remove Duplicate Code).
     * Successfully configured Back to Top Feature to work across all pages and be down the bottom next to Dark Mode feature.
     * Fixed Dark Mode Services Card.
     * Connected AI Blog to be showcased when clicked!
-    
 
-Update 1.6.3 - Required Work
+Update 1.6.3 - Navbar Mini Update   @   12/09/24    8.00PM to 9.30PM
+    * NAVBAR:   Centered all items, made navbar ahead of all items. 
+    * NAVBAR:   Added logo to top, on click takes users back to index load-in feature/page.      
+
+Update 1.6.4 - Required Work
+    * ABOUT ME / HOME:  Fix About me picture issue (both images should be in same place).
+    * SHOWCASE:         Center all 3 showcase previews.
     * Continue Blog Site work.
 
 Update 1.7 Task List

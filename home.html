@@ -93,6 +93,13 @@
     <div w3-include-html="contact.html"></div>
     <script> w3.includeHTML(); </script>        
 <!-- CONTACT ENDS HERE -->
+    <script> // Allows hamburger menu to work.
+      function toggleMenu() {
+        const menu = document.querySelector('.navbar .menu');
+        menu.classList.toggle('show');
+      }
+    </script>
+
 <!-- CONNECTS JS -->
     <script src="sitenav.js"></script>   
 <!-- FOOTER STARTS HERE -->

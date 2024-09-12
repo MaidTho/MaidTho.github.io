@@ -120,7 +120,7 @@
 </div>
 <!-- Black screen with click text -->
 <div id="blackScreen">
-  <div id="clickText">ENTER</div>
+  <div id="clickText"> CLICK TO ENTER </div>
 </div>
 <!-- Parallax Image with Logo Text -->
 <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
@@ -128,6 +128,12 @@
     <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"><b> MAID TO <span class="w3-hide-small"> </span> PROJECT </b></span>
   </div>
 </div>
+<script> // Allows hamburger menu to work.
+  function toggleMenu() {
+    const menu = document.querySelector('.navbar .menu');
+    menu.classList.toggle('show');
+  }
+</script>
 <!-- CONNECTS JS -->
 <script src="sitenav.js"></script>
 <script>
