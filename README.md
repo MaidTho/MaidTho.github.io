@@ -54,9 +54,17 @@ Update 1.6.3 - Navbar Mini Update   @   12/09/24    8.00PM to 9.30PM
     * NAVBAR:   Centered all items, made navbar ahead of all items. 
     * NAVBAR:   Added logo to top, on click takes users back to index load-in feature/page.      
 
-Update 1.6.4 - Required Work
+Update 1.6.4 - Graphical Update      @   13/09/24    10.30PM to 11.30 PM
+    * HOME:         Fix Graphical spazzing out Glitch. 
+            - Resolved at 11.30PM.
+
+    * NAVBAR HOME:  Resolve navbar doubling issue.      
+            - Same issue causing Graphical Spazzing out glitch. Resolved @ 11.30PM
+    * NAVBAR:       Made Navbar Smaller on Mobile.
+
+Update 1.6.5 - Required Work
     * ABOUT ME / HOME:  Fix About me picture issue (both images should be in same place).
-    * SHOWCASE:         Center all 3 showcase previews.
+    * PORTFOLIO:    Center Showcase Previews.
     * Continue Blog Site work.
 
 Update 1.7 Task List

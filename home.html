@@ -29,86 +29,92 @@
   <!-- CUSTOM CSS STARTS HERE -->
   <link rel="stylesheet" href="sitenav.css">
   <!-- CUSTOM CSS ENDS HERE -->
+   
 </head>
 <body>
-<!-- NAVBAR STARTS HERE -->
-    <div w3-include-html="navbar.html"></div>
-    <script> w3.includeHTML(); </script>
-<!-- NAVBAR ENDS HERE -->
-<!-- CUSTOM CURSOR STARTS HERE -->
-    <div class="custom-cursor site-wide">
-      <div class="pointer"></div>
-    </div>
-<!-- CUSTOM CURSOR ENDS HERE -->
-<!--  Parallax Image MAID TO PROJECT SQUARE --> 
-    <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
-      <div class="w3-display-middle" style="white-space:nowrap;">
-        <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"><b> MAID TO <span class="w3-hide-small"> </span> PROJECT </b></span>
-      </div>
-    </div>
-<!-- ABOUT ME STARTS HERE -->
-    <div w3-include-html="about.html"></div>
-    <script> w3.includeHTML(); </script>
-<!-- ABOUT ME ENDS HERE -->
-<!-- PORTFOLIO STARTS HERE -->
-    <div w3-include-html="portfolio.html"></div>
-    <script> w3.includeHTML(); </script>
-<!-- Modal for full size images on click-->
-    <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-      <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
-      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-        <img id="img01" class="w3-image">
-        <p id="caption" class="w3-opacity w3-large"></p>
-      </div>
-</div>
-<!-- ENABLES PORTFOLIO TO BE ACCESSED -->  
-    <script> function onClick(element) {
-        // Enlarge the image on the current page
-          var modal = document.getElementById("modal01");
-          var modalImg = document.getElementById("img01");
-          modal.style.display = "block";
-          modalImg.src = element.src;
-        }
-    </script>
-    </div>
-<!-- PORTFOLIO ENDS HERE -->    
-<!-- SERVICES STARTS HERE -->
-    <div w3-include-html="services.html"></div><script>
-    w3.includeHTML(function() {
-      document.getElementById('card1').addEventListener('click', function() {
-        alert('Service 1 clicked!');
-        });
-
-      document.getElementById('card2').addEventListener('click', function() {
-        alert('Service 2 clicked!');
-        });
-
-      document.getElementById('card3').addEventListener('click', function() {
-        alert('Service 3 clicked!');
-        });
+  <!-- NAVBAR STARTS HERE -->
+  <div id="navbar"></div>
+  <script>
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
       });
-    </script>
-<!-- SERVICES ENDS HERE -->
-<!-- CONTACT STARTS HERE -->
-    <div w3-include-html="contact.html"></div>
-    <script> w3.includeHTML(); </script>        
-<!-- CONTACT ENDS HERE -->
-    <script> // Allows hamburger menu to work.
-      function toggleMenu() {
-        const menu = document.querySelector('.navbar .menu');
-        menu.classList.toggle('show');
-      }
-    </script>
+  </script>
 
-<!-- CONNECTS JS -->
-    <script src="sitenav.js"></script>   
-<!-- FOOTER STARTS HERE -->
-    <div id="footer-container"></div><script>
-      if (window.location.pathname === '/home.html') {
-        document.getElementById('footer-container').innerHTML = '<div w3-include-html="footer.html"></div>';
-        w3.includeHTML();
-      }
-    </script>
-<!-- FOOTER ENDS HERE -->
+  <script> // Allows hamburger menu to work.
+    function toggleMenu() {
+      const menu = document.querySelector('.navbar .menu');
+      menu.classList.toggle('show');
+    }
+  </script>
+
+  <!-- NAVBAR ENDS HERE -->
+
+  <!-- Parallax Image MAID TO PROJECT SQUARE --> 
+  <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+    <div class="w3-display-middle" style="white-space:nowrap;">
+      <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"><b> MAID TO <span class="w3-hide-small"> </span> PROJECT </b></span>
+    </div>
+  </div>
+
+  <!-- ABOUT ME STARTS HERE -->
+  <div id="about"></div>
+  <script>
+    fetch('about.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('about').innerHTML = data;
+      });
+  </script>
+  <!-- ABOUT ME ENDS HERE -->
+
+  <!-- PORTFOLIO STARTS HERE -->
+  <div id="portfolio"></div>
+  <script>
+    fetch('portfolio.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('portfolio').innerHTML = data;
+      });
+  </script>
+  <!-- PORTFOLIO ENDS HERE -->
+
+  <!-- SERVICES STARTS HERE -->
+  <div id="services"></div>
+  <script>
+    fetch('services.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('services').innerHTML = data;
+      });
+  </script>
+
+  <!-- SERVICES ENDS HERE -->
+
+  <!-- CONTACT STARTS HERE -->
+  <div id="contact"></div>
+  <script>
+    fetch('contact.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('contact').innerHTML = data;
+      });
+  </script>
+  <!-- CONTACT ENDS HERE -->
+
+  <!-- FOOTER STARTS HERE -->
+  <div id="footer"></div>
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
+  </script>
+  <!-- FOOTER ENDS HERE -->
+
+  <!-- CONNECTS JS -->
+  <script src="sitenav.js"></script>
 </body>
 </html>
