@@ -41,24 +41,20 @@
         document.getElementById('navbar').innerHTML = data;
       });
   </script>
-
   <script> // Allows hamburger menu to work.
     function toggleMenu() {
       const menu = document.querySelector('.navbar .menu');
       menu.classList.toggle('show');
     }
   </script>
-
-  <!-- NAVBAR ENDS HERE -->
-
+  <!-- 0.1. NAVBAR ENDS HERE -->
   <!-- Parallax Image MAID TO PROJECT SQUARE --> 
   <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
     <div class="w3-display-middle" style="white-space:nowrap;">
       <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"><b> MAID TO <span class="w3-hide-small"> </span> PROJECT </b></span>
     </div>
   </div>
-
-  <!-- ABOUT ME STARTS HERE -->
+  <!-- 1.0 - ABOUT ME STARTS HERE -->
   <div id="about"></div>
   <script>
     fetch('about.html')
@@ -68,31 +64,56 @@
       });
   </script>
   <!-- ABOUT ME ENDS HERE -->
-
-  <!-- PORTFOLIO STARTS HERE -->
+  <!-- 2.0. - PORTFOLIO STARTS HERE -->
   <div id="portfolio"></div>
   <script>
-    fetch('portfolio.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('portfolio').innerHTML = data;
-      });
-  </script>
+    document.addEventListener('DOMContentLoaded', function() {
+      fetch('portfolio.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('portfolio').innerHTML = data;
+  
+          // Attach event listeners after the content is loaded
+          document.querySelectorAll('.w3-col img').forEach((img, index) => {
+            img.addEventListener('click', function() {
+              const links = [
+                '/Portfolio-1/placeholder1.html',
+                '/Portfolio-2/placeholder2.html',
+                '/Portfolio-3/AIBlog.html'
+              ];
+              window.open(links[index], '_blank');
+            });
+          });
+        });
+    });
+  </script> 
   <!-- PORTFOLIO ENDS HERE -->
-
-  <!-- SERVICES STARTS HERE -->
+  <!-- 3.0. - SERVICES STARTS HERE -->
   <div id="services"></div>
   <script>
-    fetch('services.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('services').innerHTML = data;
-      });
+    document.addEventListener('DOMContentLoaded', function() {
+      fetch('services.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('services').innerHTML = data;
+  
+          // Attach event listeners after the content is loaded
+          document.getElementById('card1').addEventListener('click', function() {
+            alert('Service 1 clicked!');
+          });
+  
+          document.getElementById('card2').addEventListener('click', function() {
+            alert('Service 2 clicked!');
+          });
+  
+          document.getElementById('card3').addEventListener('click', function() {
+            alert('Service 3 clicked!');
+          });
+        });
+    });
   </script>
-
   <!-- SERVICES ENDS HERE -->
-
-  <!-- CONTACT STARTS HERE -->
+  <!-- 4.0. - CONTACT STARTS HERE -->
   <div id="contact"></div>
   <script>
     fetch('contact.html')
@@ -102,7 +123,6 @@
       });
   </script>
   <!-- CONTACT ENDS HERE -->
-
   <!-- FOOTER STARTS HERE -->
   <div id="footer"></div>
   <script>
@@ -113,7 +133,6 @@
       });
   </script>
   <!-- FOOTER ENDS HERE -->
-
   <!-- CONNECTS JS -->
   <script src="sitenav.js"></script>
 </body>

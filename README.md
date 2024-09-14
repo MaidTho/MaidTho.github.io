@@ -62,9 +62,13 @@ Update 1.6.4 - Graphical Update      @   13/09/24    10.30PM to 11.30 PM
             - Same issue causing Graphical Spazzing out glitch. Resolved @ 11.30PM
     * NAVBAR:       Made Navbar Smaller on Mobile.
 
-Update 1.6.5 - Required Work
-    * ABOUT ME / HOME:  Fix About me picture issue (both images should be in same place).
-    * PORTFOLIO:    Center Showcase Previews.
+Update 1.6.5 - Graphical Update      @   14/09/24    10.00PM to 11.00 PM
+    * ABOUT ME / HOME:  Fix About me picture issue (both images should be in same place).   - Resolved @ 10.53PM
+    * PORTFOLIO:    Center Showcase Previews.       - Resolved @ 11.00PM
+    * PORTFOLIO:    Links to work on home again.    - Resolved @ 10.30PM, 10.15 Start.
+    * SERVICES:     Card on home to work again.     - Resolved @ 10.30PM, 10.15 Start.
+
+Update 1.6.6 - Required Work
     * Continue Blog Site work.
 
 Update 1.7 Task List

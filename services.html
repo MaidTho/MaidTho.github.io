@@ -32,20 +32,25 @@
   <!-- CUSTOM CSS ENDS HERE -->
 </head>
 <body>  
-<!-- NAVBAR STARTS HERE -->
+  <!-- NAVBAR STARTS HERE -->
+  <div id="navbar"></div>
+  <script>
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+      });
+  </script>
 
-<div w3-include-html="navbar.html"></div>
-<script> w3.includeHTML(); </script>
+  <script> // Allows hamburger menu to work.
+    function toggleMenu() {
+      const menu = document.querySelector('.navbar .menu');
+      menu.classList.toggle('show');
+    }
+  </script>
 
-<!-- NAVBAR ENDS HERE -->
+  <!-- NAVBAR ENDS HERE -->
 
-
-<!-- CUSTOM CURSOR STARTS HERE -->
-<div class="custom-cursor site-wide">
-  <div class="pointer"></div>
-</div>
-
-<!-- CUSTOM CURSOR ENDS HERE -->
 
 <!-- Parallax Image with Services Text -->
 <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">

@@ -26,182 +26,162 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Calls the Navbar Script -->
   <script src="https://www.w3schools.com/lib/w3.js"></script>
-  
   <!-- CUSTOM CSS STARTS HERE -->
   <link rel="stylesheet" href="sitenav.css">
   <!-- CUSTOM CSS ENDS HERE -->
-
 </head>
 <body>
-
-<!-- NAVBAR STARTS HERE -->
-
-<div w3-include-html="navbar.html"></div>
-<script> w3.includeHTML(); </script>
-
-<!-- NAVBAR ENDS HERE -->
-
-<!-- CUSTOM CURSOR STARTS HERE -->
-
-<div class="custom-cursor site-wide">
-  <div class="pointer"></div>
-</div>
-
-<!-- CUSTOM CURSOR ENDS HERE -->
-
-<!-- Parallax Image with Portfolio Text -->
-<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
-  <div class="w3-display-middle" style="white-space:nowrap;">
-    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"><b> PORTFOLIO</b></span>
+  <!-- NAVBAR STARTS HERE -->
+  <div id="navbar"></div>
+  <script>
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+      });
+  </script>
+  <script> // Allows hamburger menu to work.
+    function toggleMenu() {
+      const menu = document.querySelector('.navbar .menu');
+      menu.classList.toggle('show');
+    }
+  </script>
+  <!-- NAVBAR ENDS HERE -->
+  <!-- Parallax Image with Portfolio Text -->
+  <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+    <div class="w3-display-middle" style="white-space:nowrap;">
+      <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"><b> PORTFOLIO</b></span>
+    </div>
   </div>
-</div>
-<!-- CALLS BUTTON CONTAINER START -->  
-<div class="button-container">
-  <button class="back-to-top" onclick="scrollToTop()">Back to Top</button>
-  <button class="dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</button>
-</div>
   <!-- CALLS BUTTON CONTAINER START -->  
   <div class="button-container">
     <button class="back-to-top" onclick="scrollToTop()">Back to Top</button>
     <button class="dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</button>
   </div>
-<!-- CALLS BUTTON CONTAINER ENDS -->   
-
-
-<!-- FUNCTION BUTTON  START -->  
+  <!-- CALLS BUTTON CONTAINER ENDS -->   
+  <!-- FUNCTION BUTTON START -->  
   <div class="content">
-  <script> function toggleDarkMode() {
-      document.body.classList.toggle('dark-mode');
-      document.querySelector('header').classList.toggle('dark-mode');
-      document.querySelector('footer').classList.toggle('dark-mode');
-    }
-    window.onscroll = function() {
-      var backToTopButton = document.querySelector('.back-to-top');
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        backToTopButton.style.display = "block";
-      } else {
-        backToTopButton.style.display = "none";
+    <script> 
+      function toggleDarkMode() {
+        document.body.classList.toggle('dark-mode');
+        document.querySelector('header').classList.toggle('dark-mode');
+        document.querySelector('footer').classList.toggle('dark-mode');
       }
-    };
-    function scrollToTop() {
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
-    }
-  </script>
-
+      window.onscroll = function() {
+        var backToTopButton = document.querySelector('.back-to-top');
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          backToTopButton.style.display = "block";
+        } else {
+          backToTopButton.style.display = "none";
+        }
+      };
+      function scrollToTop() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+  </div>
   <!-- FUNCTION BUTTON ENDS -->  
+  <!-- PORTFOLIO STARTS HERE -->
+  <div class="w3-content w3-container w3-padding-64" id="portfolio">
+    <h3 class="w3-center"><b>MY WORK</b></h3>
+    <p class="w3-center"><em>Here are some of my latest work<br> Click on the images to make them bigger</em></p><br>
+    <style>
+      .carousel {
+        position: relative;
+        max-width: 100%;
+        margin: auto;
+        overflow: hidden;
+      }
+      .carousel img {
+        width: 100%;
+        transition: transform 0.5s ease-in-out;
+      }
+      .carousel-buttons {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
+      }
+      .carousel-button {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+      }
+      .portfolio-images {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+      .portfolio-images img {
+        width: 75%;
+        max-width: 200px; /* Set a maximum width */
+        border-radius: 50%;
+        opacity: 0.8;
+        transition: opacity 0.3s;
+      }
+      .portfolio-images img:hover {
+        opacity: 1;
+      }
+    </style>  
+    <div class="carousel">
+      <!-- CHANGE IMAGES HERE -->
+      <img src="/Images/MainLogo1.png" alt="Image 1" style="display:none;">
+      <img src="/Images/MainLogo2.png" alt="Image 2" style="display:none;">
+      <img src="/Images/MainLogo3.png" alt="Image 3" style="display:none;">
+      <div class="carousel-buttons">
+        <button class="carousel-button" onclick="prevSlide()">❮</button>
+        <button class="carousel-button" onclick="nextSlide()">❯</button>
+      </div>
+    </div>
+    <script>
+      let currentSlide = 0;
+      const slides = document.querySelectorAll('.carousel img');
 
-<!-- PORTFOLIO STARTS HERE -->
-
-<div class="w3-content w3-container w3-padding-64" id="portfolio">
-  <h3 class="w3-center"><b>MY WORK</b></h3>
-  <p class="w3-center"><em>Here are some of my latest work<br> Click on the images to make them bigger</em></p><br>
-  <style>
-  .carousel {
-      position: relative;
-      max-width: 100%;
-      margin: auto;
-      overflow: hidden;
-  }
-  .carousel img {
-      width: 100%;
-      transition: transform 0.5s ease-in-out;
-  }
-  .carousel-buttons {
-      position: absolute;
-      top: 50%;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      transform: translateY(-50%);
-  }
-  .carousel-button {
-      background-color: rgba(0, 0, 0, 0.5);
-      color: white;
-      border: none;
-      padding: 10px;
-      cursor: pointer;
-  }
-</style>
-<div class="carousel">
-  <!-- CHANGE IMAGES HERE -->
-  <img src="/Images/MainLogo1.png" alt="Image 1" style="display:none;">
-  <img src="/Images/MainLogo2.png" alt="Image 2" style="display:none;">
-  <img src="/Images/MainLogo3.png" alt="Image 3" style="display:none;">
-  <div class="carousel-buttons">
-      <button class="carousel-button" onclick="prevSlide()">❮</button>
-      <button class="carousel-button" onclick="nextSlide()">❯</button>
-  </div>
-</div>
-<script>
-  let currentSlide = 0;
-  const slides = document.querySelectorAll('.carousel img');
-
-  function showSlide(index) {
-      slides.forEach((slide, i) => {
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
           slide.style.display = i === index ? 'block' : 'none';
-      });
-  }
+        });
+      }
 
-  function nextSlide() {
-      currentSlide = (currentSlide + 1) % slides.length;
+      function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+      }
+
+      function prevSlide() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+      }
+
       showSlide(currentSlide);
-  }
-
-  function prevSlide() {
-      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-      showSlide(currentSlide);
-  }
-
-  showSlide(currentSlide);
-</script>
-<br>
-  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
-  <div class="w3-row-padding w3-center">
-    <div class="w3-col m3">
-      <img src="/Images/MainLogo1.png" class="w3-round w3-image w3-opacity w3-hover-opacity-off circle-image"
-      style="width:75%" 
-      onclick="onClick(this); 
-      window.open('/Portfolio-1/placeholder1.html', '_blank');" 
-      class="w3-hover-opacity" 
-      alt="Coming Soon - E-Commerce Site">
+    </script>
+    <br>
+    <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+    <div class="portfolio-images">
+      <img src="/Images/MainLogo1.png" 
+           onclick="onClick(this); window.open('/Portfolio-1/placeholder1.html', '_blank');" 
+           alt="Coming Soon - E-Commerce Site">
+      <img src="/Images/MainLogo1.png" 
+           onclick="onClick(this); window.open('/Portfolio-2/placeholder2.html', '_blank');" 
+           alt="Coming Soon - Podcast">
+      <img src="/Images/AIBlog.png" 
+           onclick="onClick(this); window.open('/Portfolio-3/AIBlog.html', '_blank');" 
+           alt="Coming Soon - AI Blog Site">
     </div>
-    <div class="w3-col m3">
-      <img src="/Images/MainLogo1.png" class="w3-round w3-image w3-opacity w3-hover-opacity-off circle-image"
-      style="width:75%" 
-      onclick="onClick(this); 
-      window.open('/Portfolio-2/placeholder2.html', '_blank');" 
-      class="w3-hover-opacity" 
-      alt="Coming Soon - Podcast">
-    </div>
-    <div class="w3-col m3">
-      <img src="/Images/AIBlog.png"  class="w3-round w3-image w3-opacity w3-hover-opacity-off circle-image"
-      style="width:75%" 
-      onclick="onClick(this); 
-      window.open('/Portfolio-3/AIBlog.html', '_blank');" 
-      class="w3-hover-opacity" 
-      alt="Coming Soon - AI Blog Site">
-    </div>
-<!--  PAUSED FOR NOW
-
-      <div class="w3-col m3">
-      <img src="/Images/MainLogo1.png"  class="w3-round w3-image w3-opacity w3-hover-opacity-off circle-image"
-      style="width:100%" 
-      onclick="onClick(this); 
-      window.open('/Portfolio-4/placeholder4.html', '_blank');"
-      class="w3-hover-opacity" 
-      alt="Coming Soon - TBA">
-    </div>  -->
-  </div>
-  <script>
-  function onClick(element) {
-    // Enlarge the image on the current page
-    var modal = document.getElementById("modal01");
-    var modalImg = document.getElementById("img01");
-    modal.style.display = "block";
-    modalImg.src = element.src;
-  }
-  </script>
+    <script>
+      function onClick(element) {
+        // Enlarge the image on the current page
+        var modal = document.getElementById("modal01");
+        var modalImg = document.getElementById("img01");
+        modal.style.display = "block";
+        modalImg.src = element.src;
+      }
+    </script>
     <div style="text-align: center; margin-top: 64px;">
       <button class="w3-button w3-padding-large w3-light-grey">
         <a href="https://sites.google.com/view/powerplatformdeveloper/home">POWER PLATFORM SHOWCASE</a>
@@ -209,25 +189,47 @@
     </div>
   </div>
 </div>
-<!-- REVIEW LINE FEATURE -->
-<div class="w3-row w3-center w3-dark-grey w3-padding-16">
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">4.1</span><br>
+
+<!-- REVIEW LINE FEATURE STARTS-->
+<div class="review-container">
+  <div class="review-item">
+    <span class="review-value">4.1</span><br>
     <b>Star Reviews</b>
   </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">3+</span><br>
+  <div class="review-item">
+    <span class="review-value">3+</span><br>
     <b>Completed Projects</b>
   </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">3+</span><br>
+  <div class="review-item">
+    <span class="review-value">3+</span><br>
     <b>Clients</b>
   </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">150+</span><br>
+  <div class="review-item">
+    <span class="review-value">150+</span><br>
     <b>Coffees Consumed</b>
   </div>
 </div>
+<style>
+  .review-container {
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    color: #fff;
+    padding: 16px;
+    text-align: center;
+  }
+  .review-item {
+    flex: 1;
+    margin: 0 10px;
+  }
+  .review-value {
+    font-size: 2em;
+    display: block;
+    margin-bottom: 8px;
+  }
+</style>
+<!-- REVIEW LINE FEATURE ENDS-->
+
 <!-- Modal for full size images on click-->
 <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
   <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
@@ -236,52 +238,10 @@
     <p id="caption" class="w3-opacity w3-large"></p>
   </div>
 </div>
-
 <!-- PORTFOLIO ENDS HERE -->
-
-<script>
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
-
-// Change style of navbar on scroll
-window.onscroll = function() {myFunction()};
-function myFunction() {
-    var navbar = document.getElementById("myNavbar");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
-    } else {
-        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
-    }
-}
-// Used to toggle the menu on small screens when clicking on the menu button
-function toggleFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else {
-        x.className = x.className.replace(" w3-show", "");
-    }
-}
-</script>
-
-<script> // Allows hamburger menu to work.
-  function toggleMenu() {
-    const menu = document.querySelector('.navbar .menu');
-    menu.classList.toggle('show');
-  }
-</script>
-
-
 <!-- CONNECTS JS -->
 <script src="sitenav.js"></script>
-
 <!-- FOOTER STARTS HERE -->
-
 <div id="footer-container"></div>
 <script>
   if (window.location.pathname === '/portfolio.html') {
@@ -289,8 +249,6 @@ function toggleFunction() {
     w3.includeHTML();
   }
 </script>
-
 <!-- FOOTER ENDS HERE -->
-
 </body>
 </html>

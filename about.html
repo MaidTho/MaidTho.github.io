@@ -73,9 +73,9 @@
     /* Circle Image */
     .circle-image {
       border-radius: 10%;
-      width: 100%;
-      max-width: 200%;
-      height: 100%;
+      width: 150px;
+      max-width: 100%;
+      height: 150px;
       display: block;
       margin: 0 auto;
     }
@@ -94,15 +94,22 @@
     </style>
 </head>
 <body>
-
-<!-- NAVBAR STARTS HERE -->
-
-<div w3-include-html="navbar.html"></div>
-<script> w3.includeHTML(); </script>
-
+  <!-- NAVBAR STARTS HERE -->
+  <div id="navbar"></div>
+  <script>
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+      });
+  </script>
+  <script> // Allows hamburger menu to work.
+    function toggleMenu() {
+      const menu = document.querySelector('.navbar .menu');
+      menu.classList.toggle('show');
+    }
+  </script>
 <!-- NAVBAR ENDS HERE -->
-
-
 <!-- Parallax Image with About Me Text -->
 <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
   <div class="w3-display-middle" style="white-space:nowrap;">
@@ -142,17 +149,16 @@
   <p class="center"><em>Front-End Developer</em></p>
   <p class="justified-text">
     Welcome to my portfolio! I am a passionate and dedicated Front-End Developer with over 2 years of programming experience at a top Fortune 500 company. 
-    My journey in the tech world has been driven by a commitment to writing clean, efficient code and a continuous desire to learn and master new technologies.</p>
-  
+    My journey in the tech world has been driven by a commitment to writing clean, efficient code and a continuous desire to learn and master new technologies.</p> 
   <div class="row">
     <div class="col m6 justify padding-large">
       <p><b><i class="margin-right: 150px;"></i>Tom Maidment</b></p><br>
-      <img src='/Images/BlackBG.png' 
+      <img src='/Images/BlackBG.png'
            width="150" 
            height="150" 
            class="circle-image hover-opacity-off" 
            alt="About Image" 
-           style="border: 5px solid #aca10a; border-radius: 5%; margin-bottom: 20px;">
+           style="border: 5px solid #aca10a; border-radius: 100%; margin-bottom: 20px;">
     </div>
     <div class="col m6">
       <p class="justified-text" style="margin-top: 50px;"><b>Professional Summary</b>
@@ -169,7 +175,6 @@
 </div>
 <br>
 <br>
-
 <!--Modal Image Gallery --> 
 <script>
 function onClick(element) {
@@ -198,19 +203,15 @@ function toggleFunction() {
     }
 }
 </script>
-
 <script> // Allows hamburger menu to work.
   function toggleMenu() {
     const menu = document.querySelector('.navbar .menu');
     menu.classList.toggle('show');
   }
 </script>
-
 <!-- CONNECTS JS -->
 <script src="sitenav.js"></script>
-
 <!-- FOOTER STARTS HERE -->
-
 <div id="footer-container"></div>
 <script>
   if (window.location.pathname === '/about.html') {
@@ -218,7 +219,6 @@ function toggleFunction() {
     w3.includeHTML();
   }
 </script>
-
 <!-- FOOTER ENDS HERE -->
 </body>
 </html>

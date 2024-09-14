@@ -98,7 +98,6 @@ background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
 }
-
 /* Black screen and click text */
 #blackScreen {
 position: absolute;
@@ -206,7 +205,7 @@ transition: width 0.1s ease-in-out, height 0.1s ease-in-out;
 }
 .box-bound.active {
 width: 150px;
-height: 75px;
+height: 150px;
 }
 .circle-image {
 border-radius: 100%;
