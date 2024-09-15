@@ -26,7 +26,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Calls the Navbar Script -->
   <script src="https://www.w3schools.com/lib/w3.js"></script>
-
   <!-- CUSTOM CSS STARTS HERE -->
   <link rel="stylesheet" href="sitenav.css">
   <!-- CUSTOM CSS ENDS HERE -->
@@ -41,16 +40,13 @@
         document.getElementById('navbar').innerHTML = data;
       });
   </script>
-
   <script> // Allows hamburger menu to work.
     function toggleMenu() {
       const menu = document.querySelector('.navbar .menu');
       menu.classList.toggle('show');
     }
   </script>
-
-  <!-- NAVBAR ENDS HERE -->
-
+<!-- NAVBAR ENDS HERE -->
 <!--  Parallax Image with Contact Text -->
 <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
   <div class="w3-display-middle" style="white-space:nowrap;">
@@ -63,8 +59,6 @@
     <button class="dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</button>
   </div>
 <!-- CALLS BUTTON CONTAINER ENDS -->   
-
-
 <!-- FUNCTION BUTTON  START -->  
   <div class="content">
   <script> function toggleDarkMode() {
@@ -85,10 +79,7 @@
       document.documentElement.scrollTop = 0;
     }
   </script>
-
-  <!-- FUNCTION BUTTON ENDS -->  
-
-
+<!-- FUNCTION BUTTON ENDS -->  
 <!-- Container (Contact Section) -->
 <div class="w3-content w3-container w3-padding-64" id="contact">
   <h3 class="w3-center"><b>Get in Touch!</b></h3>
@@ -167,18 +158,15 @@ function toggleFunction() {
     }
 }
 </script>
-
 <script> // Allows hamburger menu to work.
   function toggleMenu() {
     const menu = document.querySelector('.navbar .menu');
     menu.classList.toggle('show');
   }
 </script>
-
 <!-- CONNECTS JS -->
 <script src="sitenav.js"></script>
 <!-- FOOTER STARTS HERE -->
-
 <div id="footer-container"></div>
 <script>
   if (window.location.pathname === '/contact.html') {
