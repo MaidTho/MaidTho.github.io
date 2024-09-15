@@ -74,19 +74,39 @@
           document.getElementById('portfolio').innerHTML = data;
   
           // Attach event listeners after the content is loaded
-          document.querySelectorAll('.w3-col img').forEach((img, index) => {
-            img.addEventListener('click', function() {
-              const links = [
-                '/Portfolio-1/placeholder1.html',
-                '/Portfolio-2/placeholder2.html',
-                '/Portfolio-3/AIBlog.html'
-              ];
-              window.open(links[index], '_blank');
+        
+          let currentSlide = 0;
+          const slides = document.querySelectorAll('.carousel img');
+          
+          function showSlide(index) {
+            slides.forEach((slide, i) => {
+              slide.style.display = i === index ? 'block' : 'none';
             });
+          }
+          
+          function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+          }
+          
+          function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+          }
+          showSlide(currentSlide);
+
           });
         });
-    });
-  </script> 
+  </script>
+<script>
+  function onClick(element) {
+    // Enlarge the image on the current page
+    var modal = document.getElementById("modal01");
+    var modalImg = document.getElementById("img01");
+    modal.style.display = "block";
+    modalImg.src = element.src;
+  }
+</script>
   <!-- PORTFOLIO ENDS HERE -->
   <!-- 3.0. - SERVICES STARTS HERE -->
   <div id="services"></div>
@@ -100,22 +120,22 @@
           // Attach event listeners after the content is loaded
           document.getElementById('card1').addEventListener('click', function() {
           alert('You have selected 1 Basic Package!');
-        });
-        document.getElementById('card2').addEventListener('click', function() {
-          alert('You have selected 1 Standard Package!');
-        });
-        document.getElementById('card3').addEventListener('click', function() {
-          alert('You have selected 1 Premium Package!');
-        });
-        document.getElementById('card4').addEventListener('click', function() {
-          alert('You have selected 1 Hourly Rate!');
-        });
-        document.getElementById('card5').addEventListener('click', function() {
-          alert('You have selected 1 Flat Rate Fees!');
-        });
-        document.getElementById('card6').addEventListener('click', function() {
-          alert('You have selected 1 Project Scope Rates!');
-        });
+          });
+          document.getElementById('card2').addEventListener('click', function() {
+            alert('You have selected 1 Standard Package!');
+          });
+          document.getElementById('card3').addEventListener('click', function() {
+            alert('You have selected 1 Premium Package!');
+          });
+          document.getElementById('card4').addEventListener('click', function() {
+            alert('You have selected 1 Hourly Rate!');
+          });
+          document.getElementById('card5').addEventListener('click', function() {
+            alert('You have selected 1 Flat Rate Fees!');
+          });
+          document.getElementById('card6').addEventListener('click', function() {
+            alert('You have selected 1 Project Scope Rates!');
+          });
         });
     });
   </script>

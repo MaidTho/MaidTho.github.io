@@ -29,6 +29,53 @@
   <!-- CUSTOM CSS STARTS HERE -->
   <link rel="stylesheet" href="sitenav.css">
   <!-- CUSTOM CSS ENDS HERE -->
+    <style>
+      .carousel {
+        position: relative;
+        max-width: 100%;
+        margin: auto;
+        overflow: hidden;
+      }
+      .carousel img {
+        position: relative;
+        min-height: 150px;
+        max-height: 500px;
+        width: 100%;
+        transition: transform 0.5s ease-in-out;
+      }
+      .carousel-buttons {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
+      }
+      .carousel-button {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+      }
+      .portfolio-images {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+      }
+      .portfolio-images img {
+        min-width: 200px;
+        min-height: 200px;
+        max-width: 200px; /* Set a maximum width */
+        max-height: 250px;
+        border-radius: 65%;
+        opacity: 0.8;
+        transition: opacity 0.3s;
+      }
+      .portfolio-images img:hover {
+        opacity: 1;
+      }
+    </style>   
 </head>
 <body>
   <!-- NAVBAR STARTS HERE -->
@@ -86,80 +133,41 @@
   <div class="w3-content w3-container w3-padding-64" id="portfolio">
     <h3 class="w3-center"><b>MY WORK</b></h3>
     <p class="w3-center"><em>Here are some of my latest work<br> Click on the images to make them bigger</em></p><br>
-    <style>
-      .carousel {
-        position: relative;
-        max-width: 100%;
-        margin: auto;
-        overflow: hidden;
-      }
-      .carousel img {
-        width: 100%;
-        transition: transform 0.5s ease-in-out;
-      }
-      .carousel-buttons {
-        position: absolute;
-        top: 50%;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        transform: translateY(-50%);
-      }
-      .carousel-button {
-        background-color: rgba(0, 0, 0, 0.5);
-        color: white;
-        border: none;
-        padding: 10px;
-        cursor: pointer;
-      }
-      .portfolio-images {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-      }
-      .portfolio-images img {
-        width: 75%;
-        max-width: 200px; /* Set a maximum width */
-        border-radius: 50%;
-        opacity: 0.8;
-        transition: opacity 0.3s;
-      }
-      .portfolio-images img:hover {
-        opacity: 1;
-      }
-    </style>  
-    <div class="carousel">
-      <!-- CHANGE IMAGES HERE -->
-      <img src="/Images/MainLogo1.png" alt="Image 1" style="display:none;">
-      <img src="/Images/MainLogo2.png" alt="Image 2" style="display:none;">
-      <img src="/Images/MainLogo3.png" alt="Image 3" style="display:none;">
-      <div class="carousel-buttons">
-        <button class="carousel-button" onclick="prevSlide()">❮</button>
-        <button class="carousel-button" onclick="nextSlide()">❯</button>
-      </div>
-    </div>
-    <script>
-      let currentSlide = 0;
-      const slides = document.querySelectorAll('.carousel img');
+<!-- CALL CAROUSEL HERE -->
+<div class="carousel">
+  <!-- CHANGE IMAGES HERE -->
+  <img src="/Images/MainLogo1.png" alt="Image 1" style="display:none;">
+  <img src="/Images/MainLogo2.png" alt="Image 2" style="display:none;">
+  <img src="/Images/MainLogo3.png" alt="Image 3" style="display:none;">
+  <div class="carousel-buttons">
+    <button class="carousel-button" onclick="prevSlide()">❮</button>
+    <button class="carousel-button" onclick="nextSlide()">❯</button>
+  </div>
+  </div>
+  <script>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.carousel img');
+  
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.style.display = i === index ? 'block' : 'none';
+    });
+  }
+  
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+  
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+  }
+  showSlide(currentSlide);
+  </script>
 
-      function showSlide(index) {
-        slides.forEach((slide, i) => {
-          slide.style.display = i === index ? 'block' : 'none';
-        });
-      }
 
-      function nextSlide() {
-        currentSlide = (currentSlide + 1) % slides.length;
-        showSlide(currentSlide);
-      }
 
-      function prevSlide() {
-        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-        showSlide(currentSlide);
-      }
-
-      showSlide(currentSlide);
-    </script>
     <br>
     <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
     <div class="portfolio-images">
