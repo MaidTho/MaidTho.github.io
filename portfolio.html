@@ -29,20 +29,35 @@
   <!-- CUSTOM CSS STARTS HERE -->
   <link rel="stylesheet" href="sitenav.css">
   <!-- CUSTOM CSS ENDS HERE -->
+  <!-- CSS FOR FIXED IMAGE SIZE, BUTTON Z-INDEX, AND ANCHOR CLICKABILITY -->
     <style>
+      .carousel img {
+        width: 500px;  /* Set your preferred width */
+        height: 300px; /* Set your preferred height */
+        object-fit: cover; /* Ensures image fits within the defined dimensions */
+      }
       .carousel {
         position: relative;
-        max-width: 100%;
-        margin: auto;
-        overflow: hidden;
-      }
-      .carousel img {
-        position: relative;
-        min-height: 150px;
-        max-height: 500px;
         width: 100%;
-        transition: transform 0.5s ease-in-out;
+        max-width: 500px; /* Adjust based on desired container size */
+        margin: auto;
       }
+
+      /* Ensure the anchor fully covers the image */
+      .carousel a {
+        display: block;
+        position: relative;
+        width: 100%; 
+        height: 100%;
+        z-index: 1; /* Keep the anchor above the image but below the buttons */
+      }
+      .carousel a img {
+        display: block; /* Ensure image fills the anchor area */
+        width: 100%;
+        height: 100%;
+      }
+
+      /* Position carousel buttons with a higher z-index */
       .carousel-buttons {
         position: absolute;
         top: 50%;
@@ -50,32 +65,41 @@
         display: flex;
         justify-content: space-between;
         transform: translateY(-50%);
+        z-index: 2; /* Buttons appear above the anchor links */
       }
+
       .carousel-button {
-        background-color: rgba(0, 0, 0, 0.5);
+        background: rgba(0, 0, 0, 0.5);
         color: white;
         border: none;
         padding: 10px;
+        font-size: 18px;
         cursor: pointer;
       }
-      .portfolio-images {
-        display: flex;
-        justify-content: center;
-        gap: 25px;
+
+      .carousel-button:hover {
+        background: rgba(0, 0, 0, 0.8);
       }
-      .portfolio-images img {
-        min-width: 200px;
-        min-height: 200px;
-        max-width: 200px; /* Set a maximum width */
-        max-height: 250px;
-        border-radius: 65%;
-        opacity: 0.8;
-        transition: opacity 0.3s;
+  /* Container */
+      .container {
+        max-width: 1200px;
+        margin: auto;
+        overflow: hidden;
+        padding: 0 20px;
       }
-      .portfolio-images img:hover {
-        opacity: 1;
+      /* Padding */
+      .padding-64 {
+        padding: 64px 0;
       }
-    </style>   
+      /* Center Text */
+      .center {
+        text-align: center;
+      }
+      /* Justified Text */
+      .justified-text {
+        text-align: justify;
+      }
+    </style>
 </head>
 <body>
   <!-- NAVBAR STARTS HERE -->
@@ -130,119 +154,51 @@
   </div>
   <!-- FUNCTION BUTTON ENDS -->  
   <!-- PORTFOLIO STARTS HERE -->
-  <div class="w3-content w3-container w3-padding-64" id="portfolio">
-    <h3 class="w3-center"><b>MY WORK</b></h3>
-    <p class="w3-center"><em>Here are some of my latest work<br> Click on the images to make them bigger</em></p><br>
-<!-- CALL CAROUSEL HERE -->
-<div class="carousel">
-  <!-- CHANGE IMAGES HERE -->
-  <img src="/Images/MainLogo1.png" alt="Image 1" style="display:none;">
-  <img src="/Images/MainLogo2.png" alt="Image 2" style="display:none;">
-  <img src="/Images/MainLogo3.png" alt="Image 3" style="display:none;">
-  <div class="carousel-buttons">
-    <button class="carousel-button" onclick="prevSlide()">❮</button>
-    <button class="carousel-button" onclick="nextSlide()">❯</button>
-  </div>
+  <div class="content container padding-64" id="portfolio">
+    <h1 class="center"><b>MY LATEST WORK</b></h1>
+    <p class="center-text"> Here is some of my latest work!
+      <br> Click on the images in the slideshow to visit the pages!
+    </p> 
+  <br>
+  <!-- CALL CAROUSEL HERE -->
+  <div class="carousel">
+    <!-- UPDATE ANCHOR TAGS AND IMAGES HERE -->
+    <a href="home.html" target="_blank">
+      <img src="/Images/MainLogo1.png" alt="Image 1">
+    </a>
+    <a href="/Portfolio-2/placeholder2.html" target="_blank">
+      <img src="/Images/MainLogo2.png" alt="Image 2">
+    </a>
+    <a href="/Portfolio-3/AIBlog.html" target="_blank">
+      <img src="/Images/MainLogo3.png" alt="Image 3">
+    </a>
+    <div class="carousel-buttons">
+      <button class="carousel-button prev" onclick="prevSlide()">❮</button>
+      <button class="carousel-button next" onclick="nextSlide()">❯</button>
+    </div>
   </div>
   <script>
   let currentSlide = 0;
-  const slides = document.querySelectorAll('.carousel img');
-  
+  const slides = document.querySelectorAll('.carousel a');
+
   function showSlide(index) {
     slides.forEach((slide, i) => {
       slide.style.display = i === index ? 'block' : 'none';
     });
   }
-  
+
   function nextSlide() {
     currentSlide = (currentSlide + 1) % slides.length;
     showSlide(currentSlide);
   }
-  
+
   function prevSlide() {
     currentSlide = (currentSlide - 1 + slides.length) % slides.length;
     showSlide(currentSlide);
   }
+
   showSlide(currentSlide);
   </script>
-
-
-
-    <br>
-    <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
-    <div class="portfolio-images">
-      <img src="/Images/MainLogo1.png" 
-           onclick="onClick(this); window.open('/Portfolio-1/placeholder1.html', '_blank');" 
-           alt="Coming Soon - E-Commerce Site">
-      <img src="/Images/MainLogo1.png" 
-           onclick="onClick(this); window.open('/Portfolio-2/placeholder2.html', '_blank');" 
-           alt="Coming Soon - Podcast">
-      <img src="/Images/AIBlog.png" 
-           onclick="onClick(this); window.open('/Portfolio-3/AIBlog.html', '_blank');" 
-           alt="Coming Soon - AI Blog Site">
-    </div>
-    <script>
-      function onClick(element) {
-        // Enlarge the image on the current page
-        var modal = document.getElementById("modal01");
-        var modalImg = document.getElementById("img01");
-        modal.style.display = "block";
-        modalImg.src = element.src;
-      }
-    </script>
-    <div style="text-align: center; margin-top: 64px;">
-      <button class="w3-button w3-padding-large w3-light-grey">
-        <a href="https://sites.google.com/view/powerplatformdeveloper/home">POWER PLATFORM SHOWCASE</a>
-      </button>
-    </div>
-  </div>
-</div>
-<!-- REVIEW LINE FEATURE STARTS-->
-<div class="review-container">
-  <div class="review-item">
-    <span class="review-value">4.1</span><br>
-    <b>Star Reviews</b>
-  </div>
-  <div class="review-item">
-    <span class="review-value">3+</span><br>
-    <b>Completed Projects</b>
-  </div>
-  <div class="review-item">
-    <span class="review-value">3+</span><br>
-    <b>Clients</b>
-  </div>
-  <div class="review-item">
-    <span class="review-value">150+</span><br>
-    <b>Coffees Consumed</b>
-  </div>
-</div>
-<style>
-  .review-container {
-    display: flex;
-    justify-content: space-around;
-    background-color: #333;
-    color: #fff;
-    padding: 16px;
-    text-align: center;
-  }
-  .review-item {
-    flex: 1;
-    margin: 0 10px;
-  }
-  .review-value {
-    font-size: 2em;
-    display: block;
-    margin-bottom: 8px;
-  }
-</style>
-<!-- REVIEW LINE FEATURE ENDS-->
-<!-- Modal for full size images on click-->
-<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
-  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-    <img id="img01" class="w3-image">
-    <p id="caption" class="w3-opacity w3-large"></p>
-  </div>
 </div>
 <!-- PORTFOLIO ENDS HERE -->
 <!-- CONNECTS JS -->

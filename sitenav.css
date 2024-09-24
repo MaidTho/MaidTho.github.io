@@ -153,7 +153,7 @@ footer.dark-mode {
   background-position: center;
   z-index: -1; /* Ensure the background is behind other elements */
 }
-/* BUTTONS ENABLED */
+/* SITE BUTTONS (Dark Mode, Back to Top) */
 .button-container {
   position: fixed;
   bottom: 20px; /* Move to the bottom */
@@ -177,7 +177,6 @@ footer.dark-mode {
   z-index: 100; /* Ensures it's above other elements */
   transition: background-color 0.3s;
 }
-
 .back-to-top:hover {
   background-color: #163d6b;
 }
@@ -201,8 +200,8 @@ header {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 footer {
-  background-color: #000; /* Adjust the background color as needed */    
-  color: #fff; /* Adjust the text color as needed */    
+  background-color: #000;  
+  color: #fff;   
   margin-top: auto;
   padding: 20px;
   text-align: center;
@@ -236,14 +235,31 @@ footer {
   width: 150px;
   height: 150px;
 }
-.circle-image {
-  border-radius: 100%;
-  width: 150px; /* Adjust as needed */
-  height: 150px; /* Adjust as needed */
+/* Centering Content - About Me*/
+.center-text {
+  text-align: center;
 }
 .justified-text {
   text-align: justify;
+  margin: 0 auto;
+  max-width: 600px; /* Limits the width for better readability on desktop */
 }
-.personal-attributes {
-  margin-top: 20px; /* Adjust the value as needed */
+.circle-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Adjustments for Mobile Devices */
+@media screen and (max-width: 768px) {
+  .center-text,
+  .justified-text {
+    max-width: 95%; /* Reduces width to add space on the sides */
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  /* Adjust image size on mobile for better fit */
+  .circle-image {
+    width: 400px;
+    height: 400px;
+  }
 }

@@ -25,11 +25,9 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://www.w3schools.com/lib/w3.js"></script>
-
   <!-- CUSTOM CSS STARTS HERE -->
   <link rel="stylesheet" href="sitenav.css">
   <!-- CUSTOM CSS ENDS HERE -->
-   
 </head>
 <body>
   <!-- NAVBAR STARTS HERE -->
@@ -71,42 +69,49 @@
       fetch('portfolio.html')
         .then(response => response.text())
         .then(data => {
+          // Inject the portfolio content
           document.getElementById('portfolio').innerHTML = data;
-  
+
           // Attach event listeners after the content is loaded
-        
           let currentSlide = 0;
           const slides = document.querySelectorAll('.carousel img');
+          const nextButton = document.querySelector('.carousel-button.next');
+          const prevButton = document.querySelector('.carousel-button.prev');
           
           function showSlide(index) {
             slides.forEach((slide, i) => {
               slide.style.display = i === index ? 'block' : 'none';
             });
           }
-          
+
           function nextSlide() {
             currentSlide = (currentSlide + 1) % slides.length;
             showSlide(currentSlide);
           }
-          
+
           function prevSlide() {
             currentSlide = (currentSlide - 1 + slides.length) % slides.length;
             showSlide(currentSlide);
           }
+
+          // Show the first slide
           showSlide(currentSlide);
 
-          });
+          // Attach event listeners to buttons
+          nextButton.addEventListener('click', nextSlide);
+          prevButton.addEventListener('click', prevSlide);
         });
+    });
   </script>
-<script>
-  function onClick(element) {
-    // Enlarge the image on the current page
-    var modal = document.getElementById("modal01");
-    var modalImg = document.getElementById("img01");
-    modal.style.display = "block";
-    modalImg.src = element.src;
-  }
-</script>
+  <!-- Optional Modal for Enlarging Images -->
+  <script>
+    function onClick(element) {
+      var modal = document.getElementById("modal01");
+      var modalImg = document.getElementById("img01");
+      modal.style.display = "block";
+      modalImg.src = element.src;
+    }
+  </script>
   <!-- PORTFOLIO ENDS HERE -->
   <!-- 3.0. - SERVICES STARTS HERE -->
   <div id="services"></div>
@@ -149,7 +154,9 @@
         document.getElementById('contact').innerHTML = data;
       });
   </script>
-  <!-- CONTACT ENDS HERE -->
+  <!-- CONTACT ENDS HERE -->  
+  <!-- CONNECTS JS -->
+  <script src="sitenav.js"></script>
   <!-- FOOTER STARTS HERE -->
   <div id="footer"></div>
   <script>
@@ -160,8 +167,5 @@
       });
   </script>
   <!-- FOOTER ENDS HERE -->
-  <!-- CONNECTS JS -->
-  <script src="sitenav.js"></script>
-  
 </body>
 </html>

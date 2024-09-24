@@ -7,12 +7,24 @@ while also acting as a page front for clients to contact me to order a website t
 
 2.0.    Latest Release Notes.
 
-Update 1.6.5 - Graphical Update      @   14/09/24    10.00PM to 11.00 PM
+Update 1.6.7 - UI Update    @   24/09/24    1.30PM to 3.00PM
 
-    * ABOUT ME / HOME:  Fix About me picture issue (both images should be in same place).   - Resolved @ 10.53PM
-    * PORTFOLIO:    Center Showcase Previews.       - Resolved @ 11.00PM
-    * PORTFOLIO:    Links to work on home again.    - Resolved @ 10.30PM, 10.15 Start.
-    * SERVICES:     Card on home to work again.     - Resolved @ 10.30PM, 10.15 Start.
+    •   ABOUT ME:   Cleaner User Interface. Added profile picture provided better padding for mobile users.
+        •   START TIME: 		1.30 PM 	24/9/24
+        •   RESOLVE TIME: 		1.45 PM		24/9/24
+        •   LABOR TIME: 		15 Minutes
+
+    •   PORTFOLIO:  Updated Carousel to send user to website on click, removed other images / PowerApps button.
+        •   START TIME: 		2.00 PM 	24/9/24
+        •   RESOLVE TIME: 		2.45 PM		24/9/24
+        •   LABOR TIME: 		45 Minutes
+
+    •   SERVICES:   Corrected grammar error, commented out service codes, pricing set! • Resolved: 3PM
+        •   START TIME: 		2.45 PM 	24/9/24
+        •   RESOLVE TIME: 		3.00 PM		24/9/24
+        •   LABOR TIME: 		15 Minutes
+    
+    •   General Code Clean Up.
 
 3.0.    Future / Ongoing notes.
 
@@ -30,6 +42,6 @@ Update 1.6.5 - Graphical Update      @   14/09/24    10.00PM to 11.00 PM
         * SOCIAL MEDIA SITE SHOWCASE.
         * Contact form sends email to email address.
         * Check out function for Services cards for payment method.
-        * Login functionality?
-        * User Database?
+        * Login functionality.
+        * User Database.
         * SEO Optimization.
