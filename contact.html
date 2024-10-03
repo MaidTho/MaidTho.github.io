@@ -29,6 +29,58 @@
   <!-- CUSTOM CSS STARTS HERE -->
   <link rel="stylesheet" href="sitenav.css">
   <!-- CUSTOM CSS ENDS HERE -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      padding: 2rem;
+    }
+
+    form {
+      background: #fff;
+      border-radius: 8px;
+      padding: 2rem;
+      max-width: 400px;
+      margin: auto;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin-top: 0.3rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    button {
+      background: #007bff;
+      color: #fff;
+      padding: 0.8rem 1.2rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-top: 1rem;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
 </head>
 <body>
   <!-- NAVBAR STARTS HERE -->
@@ -84,7 +136,7 @@
 <div class="w3-content w3-container w3-padding-64" id="contact">
   <h3 class="w3-center"><b>Get in Touch!</b></h3>
   <p class="w3-center"><em></em></p>
-
+<!-- MAP API -->
   <div class="w3-center">
     <iframe 
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3271.1178995796627!2d138.59744747662646!3d-34.928579974728855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ab0ced86732f663%3A0x452e8ee9c3909e4c!2sVictoria%20Square%2C%20Adelaide%20SA%205000!5e0!3m2!1sen!2sau!4v1694494437968!5m2!1sen!2sau" 
@@ -96,6 +148,7 @@
     referrerpolicy="no-referrer-when-downgrade">
     </iframe>
 </div>
+<!-- Contact Details -->
   <div class="w3-row w3-padding-32 w3-section">
     <div class="w3-col m3 w3-container">
     </div>
@@ -105,65 +158,26 @@
         <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i>       (+61) 0414 372 810<br>
         <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i>    tom.w.maidment@outlook.com<br>
       </div>
-<!-- WORK IN PROGRESS - PHP FORM TO SEND EMAIL.
-      <form action="send_email.php" method="POST">
-        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-          <div class="w3-half">
-            <input class="w3-input w3-border" 
-            type="text" 
-            placeholder="Name" 
-            required name="name">
-          </div>
-          <div class="w3-half">
-            <input class="w3-input w3-border" 
-            type="email" 
-            placeholder="Email" 
-            required name="email">
-          </div>
-        </div>
-        <input class="w3-input w3-border" type="text" placeholder="Message" required name="message">
-        <button class="w3-button w3-black w3-right w3-section" type="submit">
-          <i class="fa fa-paper-plane"></i> SEND MESSAGE
-        </button>
-      </form> -->
 
+      <form action="https://formspree.io/f/xkgnwnoq" method="POST">
+        <label for="email">Your email:</label>
+        <input type="email" id="email" name="email" required>
+    
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" name="first_name" required>
+    
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" name="last_name" required>
+    
+        <label for="message">Your message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+    
+        <button type="submit">Send</button>
+      </form>
+      
     </div>
   </div>
 </div>
-<script>
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
-// Change style of navbar on scroll
-window.onscroll = function() {myFunction()};
-function myFunction() {
-    var navbar = document.getElementById("myNavbar");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
-    } else {
-        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
-    }
-}
-// Used to toggle the menu on small screens when clicking on the menu button
-function toggleFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else {
-        x.className = x.className.replace(" w3-show", "");
-    }
-}
-</script>
-<script> // Allows hamburger menu to work.
-  function toggleMenu() {
-    const menu = document.querySelector('.navbar .menu');
-    menu.classList.toggle('show');
-  }
-</script>
 <!-- CONNECTS JS -->
 <script src="sitenav.js"></script>
 <!-- FOOTER STARTS HERE -->
