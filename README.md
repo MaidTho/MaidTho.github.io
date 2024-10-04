@@ -7,17 +7,17 @@ while also acting as a page front for clients to contact me to order a website t
 
 2.0.    Latest Release Notes.
 
-• Update 1.7.0 - Contact Form Update    @   03/10/24    9.30PM to 10.00PM
+• Update 1.7.1 - Contact Form Update    @   04/10/24    6.30PM to 7.00PM
 
-    •   Contact: Added Contact Form, with functionality!
-        •   START TIME: 		9.30 PM 	03/10/24
-        •   RESOLVE TIME: 		10.00 PM	03/10/24
-        •   LABOR TIME: 		30 Minutes
+    •   CONTACT.html: Updated Graphics of Form, created contactform.css.
+        •   START TIME: 		6.30 PM 	04/10/24
+        •   RESOLVE TIME: 		6.45 PM	    04/10/24
+        •   LABOR TIME: 		15 Minutes
 
-    •   PORTFOLIO:  Updated Carousel to include newer AIBlog image.
-        •   START TIME: 		10.30 PM 	03/10/24
-        •   RESOLVE TIME: 		10.35 PM	03/10/24
-        •   LABOR TIME: 		5 Minutes
+    •   HOME.html:  Resolved graphical issue with homepage.
+        •   START TIME: 		6.45 PM 	04/10/24
+        •   RESOLVE TIME: 		7.00 PM	    04/10/24
+        •   LABOR TIME: 		15 Minutes
     
     •   General Code Clean Up.
 

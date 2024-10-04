@@ -27,60 +27,8 @@
   <!-- Calls the Navbar Script -->
   <script src="https://www.w3schools.com/lib/w3.js"></script>
   <!-- CUSTOM CSS STARTS HERE -->
-  <link rel="stylesheet" href="sitenav.css">
+  <link rel="stylesheet" type="text/css" href="contactform.css">
   <!-- CUSTOM CSS ENDS HERE -->
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
-      padding: 2rem;
-    }
-
-    form {
-      background: #fff;
-      border-radius: 8px;
-      padding: 2rem;
-      max-width: 400px;
-      margin: auto;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    label {
-      display: block;
-      margin-bottom: 1rem;
-      font-weight: bold;
-    }
-
-    input[type="email"],
-    textarea {
-      width: 100%;
-      padding: 0.8rem;
-      margin-top: 0.3rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box;
-    }
-
-    textarea {
-      resize: vertical;
-    }
-
-    button {
-      background: #007bff;
-      color: #fff;
-      padding: 0.8rem 1.2rem;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 1rem;
-      margin-top: 1rem;
-      transition: background 0.3s;
-    }
-
-    button:hover {
-      background: #0056b3;
-    }
-  </style>
 </head>
 <body>
   <!-- NAVBAR STARTS HERE -->
@@ -159,21 +107,25 @@
         <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i>    tom.w.maidment@outlook.com<br>
       </div>
 
-      <form action="https://formspree.io/f/xkgnwnoq" method="POST">
-        <label for="email">Your email:</label>
-        <input type="email" id="email" name="email" required>
-    
-        <label for="first-name">First Name:</label>
-        <input type="text" id="first-name" name="first_name" required>
-    
-        <label for="last-name">Last Name:</label>
-        <input type="text" id="last-name" name="last_name" required>
-    
-        <label for="message">Your message:</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-    
-        <button type="submit">Send</button>
-      </form>
+      <div class="contact-form-container">
+        <h3>Get in Touch!</h3>
+        <form action="https://formspree.io/f/xkgnwnoq" method="POST">
+          <label for="email">Your email:</label>
+          <input type="email" id="email" name="email" required>
+      
+          <label for="first-name">First Name:</label>
+          <input type="text" id="first-name" name="first_name" required>
+      
+          <label for="last-name">Last Name:</label>
+          <input type="text" id="last-name" name="last_name" required>
+      
+          <label for="message">Your message:</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+      
+          <button type="submit">Send</button>
+        </form>
+      </div>
+      
       
     </div>
   </div>

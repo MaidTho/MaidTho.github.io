@@ -1,0 +1,95 @@
+/* General Styles for Contact Form */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Form Container */
+.contact-form-container {
+  width: 90%;
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Heading */
+.contact-form-container h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+/* Labels */
+.contact-form-container label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+/* Inputs & Textarea */
+.contact-form-container input[type="text"],
+.contact-form-container input[type="email"],
+.contact-form-container textarea {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.contact-form-container input:focus,
+.contact-form-container textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+  outline: none;
+}
+
+/* Textarea */
+.contact-form-container textarea {
+  resize: vertical;
+  height: 150px;
+}
+
+/* Submit Button */
+.contact-form-container button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.1s;
+}
+
+.contact-form-container button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.contact-form-container button[type="submit"]:active {
+  transform: translateY(2px);
+}
+
+/* Responsiveness */
+@media (max-width: 600px) {
+  .contact-form-container {
+    padding: 15px;
+  }
+
+  .contact-form-container h3 {
+    font-size: 1.5rem;
+  }
+}
