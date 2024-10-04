@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <!-- Basic -->
   <meta charset="UTF-8"> 
@@ -7,165 +7,423 @@
   <!-- Mobile Metas -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Site Metas -->
-  <link rel="shortcut icon" href="/Images/MainLogo2.png" type="">
+  <link rel="shortcut icon" href="/Images/MainLogo3.png" type="">
   <title>Maid To Project</title>
   <!-- CSS Sheets -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-  <!-- fonts style -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-  <!--owl slider stylesheet -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-  <!-- font awesome style -->
-  <link href="css/font-awesome.min.css" rel="stylesheet" />
-  <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
-  <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://www.w3schools.com/lib/w3.js"></script>
-  <!-- CUSTOM CSS STARTS HERE -->
-  <link rel="stylesheet" href="sitenav.css">
-  <!-- CUSTOM CSS ENDS HERE -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- CONTACTFORM CSS -->
+  <link rel="stylesheet" type="text/css" href="contactform.css">
+  <style>
+    body {
+        font-family: 'Roboto', sans-serif;
+    }
+    .navbar {
+        background: linear-gradient(to right, #000000, #6610f2);
+    }
+    #about, #portfolio, #services, #blog, #contact {
+        padding: 60px 0;
+    }
+    #about {
+        background-color: #f8f9fa;
+    }
+    #portfolio img, #about img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s;
+    }
+    #portfolio img:hover, #about img:hover {
+        transform: scale(1.05);
+    }
+    .card {
+        border: none;
+        transition: transform 0.3s;
+    }
+    .card:hover {
+        transform: scale(1.05);
+    }
+    .service-icon {
+        font-size: 3rem;
+        color: #007bff;
+        margin-bottom: 15px;
+    }
+    footer {
+        background: linear-gradient(to left, #000000, #6610f2);
+        color: white;
+    }
+    footer a {
+        color: #adb5bd;
+        text-decoration: none;
+    }
+    footer a:hover {
+        color: #ffffff;
+    }
+    /* Ensure the contact form has sufficient margin */
+    #contact {
+        margin-top: 60px;
+    }
+/* Start of About section */
+    /* Center Text */
+    .center {
+        text-align: center;
+    }
+    /* Justified Text */
+    .justified-text {
+        text-align: justify;
+    }
+    /* Row */
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -16px;
+    }
+    /* Column */
+    .col {
+        flex: 50%;
+        padding: 0 16px;
+    }
+    /* Circle Image */
+    .circle-image {
+        border-radius: 10%;
+        width: 250px;
+        max-width: 100%;
+        height: 250px;
+        display: block;
+        margin: 0 auto;
+    }
+    /* Hover Effect */
+    .hover-opacity-off:hover {
+        opacity: 0.8;
+    }
+    /* Margin Right */
+    .margin-right {
+        margin-right: 8px;
+    }
+    /* Personal Attributes */
+    .personal-attributes {
+        margin-top: 20px;
+    }
+/* End of About section */
+    .icon-color {
+        color: #4305af; 
+    }
+/* Parallax Section */
+    .parallax {
+        background-image: url("Images/MainLogo3.png"); /* Replace with your actual image path */
+        height: 100vh; /* Full-screen height */
+        background-attachment: fixed; /* Creates the parallax effect */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+
+    .parallax-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        white-space: nowrap;
+        text-align: center;
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+        color: #fff;
+        font-size: 2rem;
+        font-weight: bold;
+        letter-spacing: 2px;
+        animation: fadeIn 2s ease-in-out; /* Optional animation for fade-in effect */
+    }
+
+    /* Keyframe Animation */
+        @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+        }
+  </style>
 </head>
 <body>
-  <!-- NAVBAR STARTS HERE -->
-  <div id="navbar"></div>
-  <script>
-    fetch('navbar.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('navbar').innerHTML = data;
-      });
-  </script>
-  <script> // Allows hamburger menu to work.
-    function toggleMenu() {
-      const menu = document.querySelector('.navbar .menu');
-      menu.classList.toggle('show');
-    }
-  </script>
-  <!-- 0.1. NAVBAR ENDS HERE -->
-  <!-- Parallax Image MAID TO PROJECT SQUARE --> 
-  <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
-    <div class="w3-display-middle" style="white-space:nowrap;">
-      <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"><b> MAID TO <span class="w3-hide-small"> </span> PROJECT </b></span>
+<!-- NAVIGATION BAR -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Maid To Project</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
     </div>
   </div>
-  <!-- 1.0 - ABOUT ME STARTS HERE -->
-  <div id="about"></div>
-  <script>
-    fetch('about.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('about').innerHTML = data;
-      });
-  </script>
-  <!-- ABOUT ME ENDS HERE -->
-  <!-- 2.0. - PORTFOLIO STARTS HERE -->
-  <div id="portfolio"></div>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      fetch('portfolio.html')
-        .then(response => response.text())
-        .then(data => {
-          // Inject the portfolio content
-          document.getElementById('portfolio').innerHTML = data;
+</nav>
+<!-- PARALLAX IMAGE EFFECT -->
+<div class="parallax" id="home">
+    <div class="parallax-content">
+      <span><b>MAID TO PROJECT</b></span>
+    </div>
+  </div> 
+<!-- ABOUT ME SECTION -->
+<section id="about">
+    <div class="content container padding-64" id="about">
+        <h1 class="center"><b>ABOUT ME</b></h1>
+        <h3 class="center"><b>Tom Maidment</b></h3>
+        <p class="justified-text">
+            Welcome to my portfolio! I am a passionate and dedicated Front-End Developer with over 2 years of programming experience at a top Fortune 500 company. 
+            My journey in the tech world has been driven by a commitment to writing clean, efficient code and a continuous desire to learn and master new technologies.
+        </p>
+        <br>
+        <!-- Image Centered -->
+        <div class="center">
+            <img src="/Images/Me.png" 
+                class="circle-image hover-opacity-off"
+                alt="Me" 
+                style="border: 5px solid #4305af; margin-bottom: 20px; width:450px; height:450px;">
+        </div>      
+        <!-- Professional Summary and Personal Attributes -->
+        <div class="center-text">
+            <h1 class="center"><b>Front-End Developer</b></h1>
+            <h3 class="center"><b>Professional Summary</b></h3>
+            <p class="justified-text">
+                A proven track record of developing and maintaining responsive web pages using HTML, CSS, and JavaScript. 
+                Nationally recognized Certificate IV in Information IT holder, and Microsoft PL 400 Certified (Power Apps). 
+                My expertise lies in creating interactive features and dynamic content to enhance user experience and engagement. 
+                I am proficient in utilizing GitHub for version control and collaborating on code changes, ensuring seamless project management.
+            </p>
+            <h3 class="center"><b>Personal Attributes</b></h3>
+            <p class="justified-text">
+                I pride myself on being professional and punctual in all my endeavors. 
+                My analytical mindset and problem-solving skills enable me to tackle complex challenges effectively. 
+                I am customer-centric and always strive to deliver the best possible user experience.
+            </p>
+        </div>
+    </div>
+</section>
+<!-- PORTFOLIO SECTION -->
+<section id="portfolio" class="bg-light">
+  <div class="container">
+    <div class="text-center">
+      <h1><b>PORTFOLIO</b></h1>
+      <p>Here are some of my recent works.</p>
+    </div>
+    <div class="row g-4">
+      <!-- Portfolio Item 1-->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="Images/AIBlog.png" class="card-img-top" alt="Project 1">
+          <div class="card-body">
+            <h5 class="card-title">Project 1 - AIBlog</h5>
+            <p class="card-text">Just a simple blogsite about Artificial Intelligence.</p>
+          </div>
+        </div>
+      </div>
 
-          // Attach event listeners after the content is loaded
-          let currentSlide = 0;
-          const slides = document.querySelectorAll('.carousel img');
-          const nextButton = document.querySelector('.carousel-button.next');
-          const prevButton = document.querySelector('.carousel-button.prev');
-          
-          function showSlide(index) {
-            slides.forEach((slide, i) => {
-              slide.style.display = i === index ? 'block' : 'none';
-            });
-          }
+      <!-- Portfolio Item 2-->
+      <div class="col-md-4">
+        <div class="card">
+<!--          <img src="Images/" class="card-img-top" alt="Project 2">  -->
+          <div class="card-body">
+            <h5 class="card-title">Project 2 - Podcast Site</h5>
+            <p class="card-text">Coming Soon - A simple podcast site.</p>
+          </div>
+        </div>
+      </div>      
 
-          function nextSlide() {
-            currentSlide = (currentSlide + 1) % slides.length;
-            showSlide(currentSlide);
-          }
+      <!-- Portfolio Item 3-->
+      <div class="col-md-4">
+        <div class="card">
+<!--          <img src="Images/" class="card-img-top" alt="Project 3">  -->
+          <div class="card-body">
+            <h5 class="card-title">Project 3 - E-Commerce Site</h5>
+            <p class="card-text">Coming soon - A basic E-Commerce site where you can create an account and add items to chart.</p>
+          </div>
+        </div>
+      </div>
 
-          function prevSlide() {
-            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-            showSlide(currentSlide);
-          }
+    </div>
+  </div>
+</section>
+<!-- SERVICES SECTION -->
+<section id="services">
+    <div class="container">
+        <div class="text-center">
+            <h1><b>SERVICES</b></h1>
+            <p>My expertise covers a wide range of skills and services.</p>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card text-center shadow-sm">
+                    <div class="card-body">
+                        <div class="service-icon mb-3"><i class="fas fa-code fa-3x icon-color"></i></div>
+                        <h4 class="card-title"><b>Web Development</b></h4>
+                        <p class="card-text">High-quality and responsive websites built using modern frameworks.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center shadow-sm">
+                    <div class="card-body">
+                        <div class="service-icon mb-3"><i class="fas fa-paint-brush fa-3x icon-color"></i></div>
+                        <h4 class="card-title"><b>UI/UX Design</b></h4>
+                        <p class="card-text">Creative user interface designs for an engaging user experience.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center shadow-sm">
+                    <div class="card-body">
+                        <div class="service-icon mb-3"><i class="fas fa-cog fa-3x icon-color"></i></div>
+                        <h4 class="card-title"><b>Code Cleaning</b></h4>
+                        <p class="card-text">Got a working product but messy code? Contact me and I'll tidy things up and make it easier to understand!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Language Expertise -->
+    <div class="container">
+        <div class="text-center">
+            <br><br>
+            <h1><b>LANGUAGES</b></h1>
+            <p>These are the languages I am well versed in.</p>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card text-center shadow-sm">
+                    <div class="card-body">
+                        <div class="service-icon mb-3"><i class="fas fa-code fa-3x icon-color"></i></div>
+                        <h4 class="card-title"><b>HTML / HTML5</b></h4>
+                        <p class="card-text"> </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center shadow-sm">
+                    <div class="card-body">
+                        <div class="service-icon mb-3"><i class="fas fa-paint-brush fa-3x icon-color"></i></div>
+                        <h4 class="card-title"><b>CSS / CSS3</b></h4>
+                        <p class="card-text"> </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center shadow-sm">
+                    <div class="card-body">
+                        <div class="service-icon mb-3"><i class="fas fa-code fa-3x icon-color"></i></div>
+                        <h4 class="card-title"><b>Java / JavaScript</b></h4>
+                        <p class="card-text"> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- BLOG SECTION -->
+<section id="blog" class="bg-light">
+  <div class="container">
+    <div class="text-center">
+        <h1><b>BLOGS</b></h1>
+      <p> This is where I will post latest updates on this site, GitHub releases, etc.</p>
+    </div>
+<!-- BLOG ITEM 1 -->    
+    <div class="row">
+      <div class="col-md-11 mb-4">
+        <div class="card">
+          <img src="Images/AIBlog.png" class="card-img-top" alt="Blog Post 1">
+          <div class="card-body">
+            <h5 class="card-title">Blog Post 1- AI Blog out now!</h5>
+            <p class="card-text">AI Blog Site is now up and running! Click the button to check it out!</p>
+            <a href="/AIBlog.html" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+<br>
+<!-- BLOG ITEM 2 --> 
+<br> 
+    <div class="row">
+        <div class="col-md-11 mb-4">
+          <div class="card">
+            <img src="Images/MainLogo3.png" class="card-img-top" alt="New Logo">
+            <div class="card-body">
+              <h5 class="card-title">Blog Post 0.1- New Logo!</h5>
+              <p class="card-text">We have a cool new logo for the site! Check it out!</p>
+              <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+<!-- NEW BLOG ITEM --> 
+<!-- ^^^ COPY ABOVE CLASS AND EDIT -->
 
-          // Show the first slide
-          showSlide(currentSlide);
-
-          // Attach event listeners to buttons
-          nextButton.addEventListener('click', nextSlide);
-          prevButton.addEventListener('click', prevSlide);
-        });
-    });
-  </script>
-  <!-- Optional Modal for Enlarging Images -->
-  <script>
-    function onClick(element) {
-      var modal = document.getElementById("modal01");
-      var modalImg = document.getElementById("img01");
-      modal.style.display = "block";
-      modalImg.src = element.src;
-    }
-  </script>
-  <!-- PORTFOLIO ENDS HERE -->
-  <!-- 3.0. - SERVICES STARTS HERE -->
-  <div id="services"></div>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      fetch('services.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('services').innerHTML = data;
+  </div>
+</section>
+<!-- CONTACT SECTION -->
+<section id="contact"> 
+    <div class="text-center"><h1><b>CONTACT</b></h1></div>
+  <div class="contact-form-container">
+    <h3>Get in Touch!</h3>
+    <form action="https://formspree.io/f/xkgnwnoq" method="POST">
+      <label for="email">Your email:</label>
+      <input type="email" id="email" name="email" required>
   
-          // Attach event listeners after the content is loaded
-          document.getElementById('card1').addEventListener('click', function() {
-          alert('You have selected 1 Basic Package!');
-          });
-          document.getElementById('card2').addEventListener('click', function() {
-            alert('You have selected 1 Standard Package!');
-          });
-          document.getElementById('card3').addEventListener('click', function() {
-            alert('You have selected 1 Flat Rate Fees!');
-          });
-          document.getElementById('card4').addEventListener('click', function() {
-            alert('You have selected 1 Project Scope Rates!');
-          });
-//          document.getElementById('card5').addEventListener('click', function() {
-//            alert('You have selected 1 Flat Rate Fees!');
-//          });
-//          document.getElementById('card6').addEventListener('click', function() {
-//            alert('You have selected 1 Project Scope Rates!');
-//          });
+      <label for="first-name">First Name:</label>
+      <input type="text" id="first-name" name="first_name" required>
+  
+      <label for="last-name">Last Name:</label>
+      <input type="text" id="last-name" name="last_name" required>
+  
+      <label for="message">Your message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+  
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</section>
+<!-- FOOTER -->
+<footer id="footer" class="text-center py-4">
+  <div class="container">
+    <p>&copy; 2024 Maid To Project. All Rights Reserved.</p>
+    <p>Follow me on:
+    <a href="#" class="mx-2" target="_blank">
+        <i class="fab fa-facebook-f" style="font-size: 25px;"></i></a>
+
+    <a href="https://www.linkedin.com/in/tom-maidment-27577713a/" class="mx-2" target="_blank">
+        <i class="fab fa-linkedin-in" style="font-size: 25px;"></i></a>  
+
+    <a href="https://github.com/MaidTho" class="mx-2" target="_blank">
+        <i class="fab fa-github" style="font-size: 25px;"></i></a>
+
+    </p>
+  </div>
+</footer>
+<!-- JS Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Smooth scrolling with offset for Contact section
+  document.querySelectorAll('a.nav-link').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        window.scrollTo({
+          top: target.offsetTop - 100, // Offset to adjust for fixed navbar
+          behavior: 'smooth'
         });
+      }
     });
-  </script>
-  <!-- SERVICES ENDS HERE -->
-  <!-- 4.0. - CONTACT STARTS HERE -->
-  <div id="contact"></div>
-  <script>
-    fetch('contact.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('contact').innerHTML = data;
-      });
-  </script>
-  <!-- CONTACT ENDS HERE -->  
-  <!-- CONNECTS JS -->
-  <script src="sitenav.js"></script>
-  <!-- FOOTER STARTS HERE -->
-  <div id="footer"></div>
-  <script>
-    fetch('footer.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('footer').innerHTML = data;
-      });
-  </script>
-  <!-- FOOTER ENDS HERE -->
+  });
+</script>
 </body>
 </html>
