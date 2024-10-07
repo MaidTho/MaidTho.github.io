@@ -4,7 +4,7 @@
         1.0. Project Introduction.
 ---------------------------------------------------
 
-"Maid To Project" is made to be a showcase piece to "project" my skills to recruiters, hiring managers, and potential clients my skills as a web developer.
+"Maid To Project" is made to be a showcase piece to "project" my skills as a web developer to recruiters, hiring managers, and potential clients.
 
 ---------------------------------------------------
         2.0. Latest Release Notes.
