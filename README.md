@@ -1,14 +1,13 @@
 # MaidTho.github.io
 
 ---------------------------------------------------
-        Project Introduction.
+        1.0. Project Introduction.
 ---------------------------------------------------
 
-"Maid to Project" as a project is essentialy projects within a project. Overall it is a website to showcase my skills as a web developer,
-while also acting as a page front for clients to contact me to order a website to be made. 
+"Maid To Project" is made to be a showcase piece to "project" my skills to recruiters, hiring managers, and potential clients my skills as a web developer.
 
 ---------------------------------------------------
-        Latest Release Notes.
+        2.0. Latest Release Notes.
 ---------------------------------------------------
 
 • Update 1.7.3 - Graphics Update    @   05/10/24    3.30 PM to 4.00PM
@@ -21,7 +20,7 @@ while also acting as a page front for clients to contact me to order a website t
     •   General Code Clean Up.
     
 ---------------------------------------------------
-        Future Features.
+        3.0. Future Features.
 ---------------------------------------------------
 
     ~ ~ ~ Future Features ~ ~ ~
