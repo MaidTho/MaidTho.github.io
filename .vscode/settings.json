@@ -12,6 +12,6 @@
             "name": "MyDBConnection",
             "database": "PersonalSite",
             "username": "Admin"
-        }
+        } 
     ]
 }

@@ -66,7 +66,7 @@ function TrackBoxCursor (evt) {
     document.body.classList.toggle('dark-mode');
     document.querySelector('header').classList.toggle('dark-mode');
     document.querySelector('footer').classList.toggle('dark-mode');
-  }
+  } 
   window.onscroll = function() {
     var backToTopButton = document.querySelector('.back-to-top');
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
