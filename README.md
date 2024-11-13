@@ -17,7 +17,7 @@
         •   RESOLVE TIME: 		4.00 PM	    05/10/24
         •   LABOR TIME: 		30 Minutes
     
-    •   General Code Clean Up.
+    •   General Code Clean Up. 
     
 ---------------------------------------------------
         3.0. Future Features.

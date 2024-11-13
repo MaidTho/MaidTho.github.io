@@ -33,7 +33,7 @@ background-image: url('/Images/MainLogo3.png');
 min-height: 100%;
 background-position: center;
 background-size: cover;
-}
+} 
 /* MOBILE DEVICES */
 @media only screen and (max-width: 600px) {
   .w3-xlarge {
