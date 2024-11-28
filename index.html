@@ -20,139 +20,13 @@
   <link rel="stylesheet" type="text/css" href="contactform.css">
   <!-- ICON CSS -->
   <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-  <style>
-    body {
-        font-family: 'Roboto', sans-serif;
-    }
-    .navbar {
-        background: linear-gradient(to right, #000000, #6610f2);
-    }
-    #about, #portfolio, #services, #blog, #contact {
-        padding: 60px 0;
-    }
-    #about {
-        background-color: #f8f9fa;
-    }
-    #portfolio img, #about img {
-        width: 100%;
-        height: auto;
-        transition: transform 0.3s;
-    }
-    #portfolio img:hover, #about img:hover {
-        transform: scale(1.05);
-    }
-    .card {
-        border: none;
-        transition: transform 0.3s;
-    }
-    .card:hover {
-        transform: scale(1.05);
-    }
-    .service-icon {
-        font-size: 3rem;
-        color: #007bff;
-        margin-bottom: 15px;
-    }
-    footer {
-        background: linear-gradient(to left, #000000, #6610f2);
-        color: white;
-    }
-    footer a {
-        color: #adb5bd;
-        text-decoration: none;
-    }
-    footer a:hover {
-        color: #ffffff;
-    }
-    /* Ensure the contact form has sufficient margin */
-    #contact {
-        margin-top: 60px;
-    }
-/* Start of About section */
-    /* Center Text */
-    .center {
-        text-align: center;
-    }
-    /* Justified Text */
-    .justified-text {
-        text-align: justify;
-    }
-    /* Row */
-    .row {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 0 -16px;
-    }
-    /* Column */
-    .col {
-        flex: 50%;
-        padding: 0 16px;
-    }
-    /* Circle Image */
-    .circle-image {
-        border-radius: 10%;
-        width: 250px;
-        max-width: 100%;
-        height: 250px;
-        display: block;
-        margin: 0 auto;
-    }
-    /* Hover Effect */
-    .hover-opacity-off:hover {
-        opacity: 0.8;
-    }
-    /* Margin Right */
-    .margin-right {
-        margin-right: 8px;
-    }
-    /* Personal Attributes */
-    .personal-attributes {
-        margin-top: 20px;
-    }
-/* End of About section */
-    .icon-color {
-        color: #4305af; 
-    }
-/* Parallax Section */
-    .parallax {
-        background-image: url("Images/MainLogo3.png"); /* Replace with your actual image path */
-        height: 100vh; /* Full-screen height */
-        background-attachment: fixed; /* Creates the parallax effect */
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
-    }
-
-    .parallax-content {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        white-space: nowrap;
-        text-align: center;
-        padding: 20px;
-        background: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
-        color: #fff;
-        font-size: 2rem;
-        font-weight: bold;
-        letter-spacing: 2px;
-        animation: fadeIn 2s ease-in-out; /* Optional animation for fade-in effect */
-    }
-
-    /* Keyframe Animation */
-        @keyframes fadeIn {
-        0% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 1;
-        }
-        }
-  </style>
+  <!-- CARD CSS -->
+  <link rel="stylesheet" type="text/css" href="sitenav.css">
 </head>
 <body>
-<!-- NAVIGATION BAR -->
+<!-- # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+     #                                        NAVBAR SECTION                                                 #
+     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - # -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
   <div class="container">
     <a class="navbar-brand" href="#">Maid To Project</a>
@@ -176,40 +50,36 @@
       <span><b>MAID TO PROJECT</b></span>
     </div>
   </div> 
-<!-- ABOUT ME SECTION -->
+<!-- # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+     #                                        ABOUT SECTION                                                  #
+     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - # -->
 <section id="about">
     <div class="content container padding-64" id="about">
         <h1 class="center"><b>ABOUT ME</b></h1>
-        <h3 class="center"><b>Tom Maidment</b></h3>
-        <p class="justified-text">
-            Welcome to my portfolio! I am a passionate and dedicated Front-End Developer with over 2 years of programming experience at a top Fortune 500 company. 
-            My journey in the tech world has been driven by a commitment to writing clean, efficient code and a continuous desire to learn and master new technologies.
-        </p>
-        <br>
         <!-- Image Centered -->
         <div class="center">
             <img src="/Images/Me.png" 
                 class="circle-image hover-opacity-off"
                 alt="Me" 
-                style="border: 5px solid #4305af; margin-bottom: 20px; width:450px; height:450px;">
+                style="border: 10px solid #4305af; 
+                margin-top: 50px; 
+                margin-bottom: 50px; 
+                width:450px; 
+                height:450px;
+                border-radius: 50%;">
         </div>      
-        <!-- Professional Summary and Personal Attributes -->
-        <div class="center-text">
-            <h1 class="center"><b>Front-End Developer</b></h1>
-            <h3 class="center"><b>Professional Summary</b></h3>
-            <p class="justified-text">
-                A proven track record of developing and maintaining responsive web pages using HTML, CSS, and JavaScript. 
-                Nationally recognized Certificate IV in Information IT holder, and Microsoft PL 400 Certified (Power Apps). 
-                My expertise lies in creating interactive features and dynamic content to enhance user experience and engagement. 
-                I am proficient in utilizing GitHub for version control and collaborating on code changes, ensuring seamless project management.
-            </p>
-            <h3 class="center"><b>Personal Attributes</b></h3>
-            <p class="justified-text">
-                I pride myself on being professional and punctual in all my endeavors. 
-                My analytical mindset and problem-solving skills enable me to tackle complex challenges effectively. 
-                I am customer-centric and always strive to deliver the best possible user experience.
-            </p>
-        </div>
+
+        <h3 class="center"><b>Tom Maidment</b></h3>
+        <p class="justified-text">
+Welcome to my portfolio! I am a passionate and dedicated Developer with over 2 years of programming experience at a top Fortune 500 company.
+I am committed to writing clean, efficient code and possess a continuous desire to learn and master new technologies. 
+I specialize in crafting intuitive and responsive user interfaces using HTML, CSS, and JavaScript, ensuring seamless user experiences across various devices and platforms.
+In addition to my technical skills, I pride myself on my ability to collaborate effectively with cross-functional teams, including designers, back-end developers, front-end developers, clients, and product managers. 
+This collaborative spirit has enabled me to contribute to successful projects, from initial concept to final deployment.
+I am always eager to take on new challenges and stay updated with the latest industry trends. My portfolio showcases a selection of my best work, highlighting my expertise in front-end development and my passion for creating visually appealing and user-friendly web, and software applications.
+Thank you for taking the time to explore my portfolio. I look forward to the opportunity to work with you and bring your digital vision to life!
+        </p>
+        <br>
         <!-- Language Expertise -->
 <div class="container">
   <div class="text-center">
@@ -218,114 +88,114 @@
       <p>These are the languages I am well versed in.</p>
   </div>
   <div class="row">
-<!-- HTML5 -->
-<div class="col-md-4">
-  <div class="card text-center shadow-sm">
+      <!-- HTML5 -->
+      <div class="col-md-4">
+        <div class="card text-center shadow-sm">
+            <div class="card-body">
+                <div class="service-icon mb-3">
+                    <i class="devicon-html5-plain colored fa-2x"></i>
+                </div>
+                <h4 class="card-title"><b>HTML5</b></h4>
+                <p class="card-text"></p>
+            </div>
+        </div>
+      </div>
+      <!-- CSS3 -->
+      <div class="col-md-4">
+      <div class="card text-center shadow-sm">
+          <div class="card-body">
+              <div class="service-icon mb-3">
+                  <i class="devicon-css3-plain colored fa-2x"></i>
+              </div>
+              <h4 class="card-title"><b>CSS3</b></h4>
+              <p class="card-text"></p>
+          </div>
+      </div>
+      </div>
+      <!-- JavaScript -->
+      <div class="col-md-4">
+      <div class="card text-center shadow-sm">
+        <div class="card-body">
+            <div class="service-icon mb-3">
+                <i class="devicon-javascript-plain colored fa-2x"></i>
+            </div>
+            <h4 class="card-title"><b>JavaScript</b></h4>
+            <p class="card-text"></p>
+        </div>
+      </div>
+      </div>
+      <!-- Java -->
+      <div class="col-md-4">
+      <div class="card text-center shadow-sm">
+          <div class="card-body">
+              <div class="service-icon mb-3">
+                  <i class="devicon-java-plain colored fa-2x"></i>
+              </div>
+              <h4 class="card-title"><b>Java</b></h4>
+              <p class="card-text"></p>
+          </div>
+      </div>
+      </div>
+      <!-- Python -->
+      <div class="col-md-4">
+      <div class="card text-center shadow-sm">
+        <div class="card-body">
+            <div class="service-icon mb-3">
+                <i class="devicon-python-plain colored fa-2x"></i>
+            </div>
+            <h4 class="card-title"><b>Python</b></h4>
+            <p class="card-text"></p>
+        </div>
+      </div>
+      </div>
+      <!-- SQL -->
+      <div class="col-md-4">
+      <div class="card text-center shadow-sm">
       <div class="card-body">
           <div class="service-icon mb-3">
-              <i class="devicon-html5-plain colored fa-2x"></i>
+              <i class="devicon-azuresqldatabase-plain colored fa-2x"></i>
           </div>
-          <h4 class="card-title"><b>HTML5</b></h4>
+          <h4 class="card-title"><b>SQL</b></h4>
           <p class="card-text"></p>
       </div>
-  </div>
-</div>
-<!-- CSS3 -->
-<div class="col-md-4">
-<div class="card text-center shadow-sm">
-    <div class="card-body">
-        <div class="service-icon mb-3">
-            <i class="devicon-css3-plain colored fa-2x"></i>
-        </div>
-        <h4 class="card-title"><b>CSS3</b></h4>
-        <p class="card-text"></p>
-    </div>
-</div>
-</div>
-<!-- JavaScript -->
-<div class="col-md-4">
-<div class="card text-center shadow-sm">
-  <div class="card-body">
-      <div class="service-icon mb-3">
-          <i class="devicon-javascript-plain colored fa-2x"></i>
       </div>
-      <h4 class="card-title"><b>JavaScript</b></h4>
-      <p class="card-text"></p>
-  </div>
-</div>
-</div>
-<!-- Java -->
-<div class="col-md-4">
-<div class="card text-center shadow-sm">
-    <div class="card-body">
-        <div class="service-icon mb-3">
-            <i class="devicon-java-plain colored fa-2x"></i>
-        </div>
-        <h4 class="card-title"><b>Java</b></h4>
-        <p class="card-text"></p>
-    </div>
-</div>
-</div>
-<!-- Python -->
-<div class="col-md-4">
-<div class="card text-center shadow-sm">
-  <div class="card-body">
-      <div class="service-icon mb-3">
-          <i class="devicon-python-plain colored fa-2x"></i>
       </div>
-      <h4 class="card-title"><b>Python</b></h4>
-      <p class="card-text"></p>
-  </div>
-</div>
-</div>
-<!-- SQL -->
-<div class="col-md-4">
-<div class="card text-center shadow-sm">
-<div class="card-body">
-    <div class="service-icon mb-3">
-        <i class="devicon-azuresqldatabase-plain colored fa-2x"></i>
-    </div>
-    <h4 class="card-title"><b>SQL</b></h4>
-    <p class="card-text"></p>
-</div>
-</div>
-</div>
-<!-- Bootstrap 5 -->
-<div class="col-md-4">
-  <div class="card text-center shadow-sm">
+      <!-- Bootstrap 5 -->
+      <div class="col-md-4">
+        <div class="card text-center shadow-sm">
+            <div class="card-body">
+                <div class="service-icon mb-3">
+                    <i class="devicon-bootstrap-plain colored fa-2x"></i>
+                </div>
+                <h4 class="card-title"><b>Bootstrap</b></h4>
+                <p class="card-text"></p>
+            </div>
+        </div>
+      </div>
+      <!-- PHP -->
+      <div class="col-md-4">
+      <div class="card text-center shadow-sm">
+          <div class="card-body">
+              <div class="service-icon mb-3">
+                  <i class="devicon-php-plain colored fa-2x"></i>
+              </div>
+              <h4 class="card-title"><b>PHP</b></h4>
+              <p class="card-text"></p>
+          </div>
+      </div>
+      </div>
+      <!-- .Net -->
+      <div class="col-md-4">
+    <div class="card text-center shadow-sm">
       <div class="card-body">
           <div class="service-icon mb-3">
-              <i class="devicon-bootstrap-plain colored fa-2x"></i>
+              <i class="devicon-dotnetcore-plain colored fa-2x"></i>
           </div>
-          <h4 class="card-title"><b>Bootstrap</b></h4>
+          <h4 class="card-title"><b>.Net</b></h4>
           <p class="card-text"></p>
       </div>
-  </div>
-</div>
-<!-- PHP -->
-<div class="col-md-4">
-<div class="card text-center shadow-sm">
-    <div class="card-body">
-        <div class="service-icon mb-3">
-            <i class="devicon-php-plain colored fa-2x"></i>
-        </div>
-        <h4 class="card-title"><b>PHP</b></h4>
-        <p class="card-text"></p>
     </div>
-</div>
-</div>
-<!-- .Net -->
-<div class="col-md-4">
-<div class="card text-center shadow-sm">
-  <div class="card-body">
-      <div class="service-icon mb-3">
-          <i class="devicon-dotnetcore-plain colored fa-2x"></i>
-      </div>
-      <h4 class="card-title"><b>.Net</b></h4>
-      <p class="card-text"></p>
-  </div>
-</div>
-</div>
+    </div>
   </div>
 </div>
 <!-- Language Expertise -->
@@ -335,85 +205,116 @@
     <h1><b>TECH STACK</b></h1>
     <p>Here are the programs I use to make magic!</p>
 </div>
-<div class="row">
-<!-- VISUAL STUDIO CODE -->
-<div class="col-md-4">
-<div class="card text-center shadow-sm">
-    <div class="card-body">
-        <div class="service-icon mb-3">            
-            <i class="devicon-vscode-plain-wordmark colored fa-2x"></i>
+  <div class="row">
+    <!-- VISUAL STUDIO CODE -->
+    <div class="col-md-4">
+    <div class="card text-center shadow-sm">
+        <div class="card-body">
+            <div class="service-icon mb-3">            
+                <i class="devicon-vscode-plain-wordmark colored fa-2x"></i>
+            </div>
+            <h4 class="card-title"><b>Visual Studio Code</b></h4>
+            <p class="card-text"></p>
         </div>
-        <h4 class="card-title"><b>Visual Studio Code</b></h4>
+    </div>
+    </div>
+    <!-- GITHUB -->
+    <div class="col-md-4">
+    <div class="card text-center shadow-sm">
+      <div class="card-body">
+          <div class="service-icon mb-3">
+              <i class="devicon-github-original-wordmark colored fa-2x"></i>     
+          </div>
+          <h4 class="card-title"><b>GitHub Version Control</b></h4>
+          <p class="card-text"></p>
+      </div>
+    </div>
+    </div>
+    <!-- GIMP -->
+    <div class="col-md-4">
+    <div class="card text-center shadow-sm">
+    <div class="card-body">
+        <div class="service-icon mb-3">
+            <i class="devicon-gimp-plain colored fa-2x"></i>
+        </div>
+        <h4 class="card-title"><b>GIMP</b></h4>
         <p class="card-text"></p>
     </div>
-</div>
-</div>
-<!-- GITHUB -->
-<div class="col-md-4">
-<div class="card text-center shadow-sm">
-  <div class="card-body">
-      <div class="service-icon mb-3">
-          <i class="devicon-github-original-wordmark colored fa-2x"></i>     
-      </div>
-      <h4 class="card-title"><b>GitHub Version Control</b></h4>
-      <p class="card-text"></p>
-  </div>
-</div>
-</div>
-<!-- GIMP -->
-<div class="col-md-4">
-<div class="card text-center shadow-sm">
-<div class="card-body">
-    <div class="service-icon mb-3">
-        <i class="devicon-gimp-plain colored fa-2x"></i>
     </div>
-    <h4 class="card-title"><b>GIMP</b></h4>
-    <p class="card-text"></p>
-</div>
-</div>
-</div>
-</div>
+    </div>
+  </div>
 </div>
     </div>
 </section>
-<!-- PORTFOLIO SECTION -->
+<!-- # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+     #                                      PORTFOLIO SECTION                                                #
+     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - # -->
 <section id="portfolio" class="bg-light">
+
+    <!-- Carousel Section -->    
+    <section id="carousel" class="py-5">
+      <div id="featureCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+              <button type="button" data-bs-target="#featureCarousel" data-bs-slide-to="0" class="active"></button>
+              <button type="button" data-bs-target="#featureCarousel" data-bs-slide-to="1"></button>
+              <button type="button" data-bs-target="#featureCarousel" data-bs-slide-to="2"></button>
+              <button type="button" data-bs-target="#featureCarousel" data-bs-slide-to="3"></button>
+          </div>
+          <div class="carousel-inner">
+              <div class="carousel-item active">
+                  <img src="Images/BG.png" class="d-block w-100" alt="Feature 1">
+                  <div class="carousel-caption d-none d-md-block">
+                      <h5>First Slide</h5>
+                      <p>Showcasing the first amazing feature.</p>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                  <img src="Images/FG.png" class="d-block w-100" alt="Feature 2">
+                  <div class="carousel-caption d-none d-md-block">
+                      <h5>Second Slide</h5>
+                      <p>Exploring the second feature in style.</p>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                  <img src="Images/BlackBG.png" class="d-block w-100" alt="Feature 3">
+                  <div class="carousel-caption d-none d-md-block">
+                      <h5>Third Slide</h5>
+                      <p>Final look at what makes this great.</p>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                <img src="Images/MainLogo3.png" class="d-block w-100" alt="Feature 4">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Fourth Slide</h5>
+                    <p>Final look at what makes this great.</p>
+                </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#featureCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#featureCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+          </button>
+      </div>
+  </section>
+
+
   <div class="container">
     <div class="text-center">
       <h1><b>PORTFOLIO</b></h1>
       <p>Here are some of my recent works.</p>
     </div>
     <div class="row g-4">
-
       <!-- Portfolio Item 1-->
       <div class="col-md-4">
         <div class="card">
           <img src="Images/FG.png" class="card-img-top" alt="Python Project 1">
           <div class="card-body">
-            <h5 class="card-title"><b>PYTHON</b> Fishing Game Revamped</h5>
-            <p class="card-text">...</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Portfolio Item 1-->
-      <div class="col-md-4">
-        <div class="card">
-          <img src="Images/BG.png" class="card-img-top" alt="PHP Project 1">
-          <div class="card-body">
-            <h5 class="card-title"><b>PHP</b> Button Game Project</h5>
-            <p class="card-text">...</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Portfolio Item 1-->
-      <div class="col-md-4">
-        <div class="card">
-          <img src="Images/AIBlog.png" class="card-img-top" alt="Project 1">
-          <div class="card-body">
-            <h5 class="card-title">Project 1 - AIBlog</h5>
-            <p class="card-text">Just a simple blogsite about Artificial Intelligence.</p>
+            <h5 class="card-title"><b>PYTHON PROJECT 1 - Fishing Game Revamped</b> </h5>
+            <p class="card-text">A revised Terminal based Fishing Game done within a GUI equipped with login / leaderboard feature.</p>
           </div>
         </div>
       </div>
@@ -421,29 +322,61 @@
       <!-- Portfolio Item 2-->
       <div class="col-md-4">
         <div class="card">
-<!--          <img src="Images/" class="card-img-top" alt="Project 2">  -->
+          <img src="Images/BG.png" class="card-img-top" alt="PHP Project 1">
           <div class="card-body">
-            <h5 class="card-title">Project 2 - Podcast Site</h5>
-            <p class="card-text">Coming Soon - A simple podcast site.</p>
-          </div>
-        </div>
-      </div>      
-
-      <!-- Portfolio Item 3-->
-      <div class="col-md-4">
-        <div class="card">
-<!--          <img src="Images/" class="card-img-top" alt="Project 3">  -->
-          <div class="card-body">
-            <h5 class="card-title">Project 3 - E-Commerce Site</h5>
-            <p class="card-text">Coming soon - A basic E-Commerce site where you can create an account and add items to chart.</p>
+            <h5 class="card-title"><b>PHP PROJECT 1 - Button Game Project</b></h5>
+            <p class="card-text">A simple button game built using PHP, XAMPP and SQL where you increase score each time you press the button with user login and leaderboard capabilities.</p>
           </div>
         </div>
       </div>
 
+      <!-- Portfolio Item 3-->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="Images/AIBlog.png" class="card-img-top" alt="Project 1">
+          <div class="card-body">
+            <h5 class="card-title"><b>HTML/CSS/JavaScript Project 1 - AIBlog</b></h5>
+            <p class="card-text">Just a simple blog-site about Artificial Intelligence.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+            <div class="card-img-top"></div>
+            <div class="card-body">
+                <h5 class="card-title"><b>HTML/CSS/JavaScript Project 1 - Podcast Site</b></h5>
+                <p class="card-text">Coming Soon - A responsive podcasters site.</p>
+            </div>
+        </div>
+    </div>   
+
+    <div class="col-md-4">
+      <div class="card">
+          <div class="card-img-top"></div>
+          <div class="card-body">
+              <h5 class="card-title"><b>HTML/CSS/JavaScript Project 2 - E-Commerce Site</b></h5>
+              <p class="card-text">Coming Soon - A responsive E-Commerce site.</p>
+          </div>
+      </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card">
+        <div class="card-img-top"></div>
+        <div class="card-body">
+            <h5 class="card-title"><b>HTML/CSS/JavaScript Project 3</b></h5>
+            <p class="card-text">Coming Soon...</p>
+        </div>
+    </div>
+  </div>
     </div>
   </div>
 </section>
-<!-- SERVICES SECTION -->
+
+<!-- # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+     #                                      SERVICES SECTION                                                 #
+     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - # -->
 <section id="services">
     <div class="container">
         <div class="text-center">
@@ -475,25 +408,28 @@
                     <div class="card-body">
                         <div class="service-icon mb-3"><i class="fas fa-cog fa-2x icon-color"></i></div>
                         <h4 class="card-title"><b>Code Cleaning</b></h4>
-                        <p class="card-text">Got a working product but messy code? Contact me and I'll tidy things up and make it easier to understand!</p>
+                        <p class="card-text">Got a working product but messy code? Contact me and I'll make it easier to read!</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<!-- BLOG SECTION -->
+<!-- # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+     #                                        BLOG SECTION                                                   #
+     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - # -->
+
 <section id="blog" class="bg-light">
   <div class="container">
     <div class="text-center">
       <h1><b>BLOGS</b></h1>
       <p>This is where I will post latest updates on this site, GitHub releases, etc.</p>
     </div>
-       <!-- BLOG ITEM 3 -->
+       <!-- LATEST BLOG -->
        <div class="row justify-content-center">
         <div class="col-md-6 mb-4">
           <div class="card mx-auto">
-            <img src="Images/FG.png" class="card-img-top" alt="Blog Post 1">
+            <img src="Images/FG.png" class="card-img-top" alt="Latest Blog">
             <div class="card-body">
               <h5 class="card-title"><b>LATEST BLOG:  </b>Python Fishing Game Revamped!</h5>
               <p class="card-text"> Hey everyone! Here is all the work I have done in one week from November 1 - November 8.
@@ -505,7 +441,7 @@
       </div>
       <br>
 
-    <!-- BLOG ITEM 3 -->
+    <!-- BLOG ITEM 1 -->
        <div class="row justify-content-center">
         <div class="col-md-6 mb-4">
           <div class="card mx-auto">
@@ -519,12 +455,13 @@
           </div>
         </div>
       </div>
+
       <br>
     <!-- BLOG ITEM 2 -->
     <div class="row justify-content-center">
       <div class="col-md-6 mb-4">
         <div class="card mx-auto">
-          <img src="Images/AIBlog.png" class="card-img-top" alt="Blog Post 1">
+          <img src="Images/AIBlog.png" class="card-img-top" alt="Blog Post 2">
           <div class="card-body">
             <h5 class="card-title"><b>Blog 2:</b> AI Blog out now!</h5>
             <p class="card-text">AI Blog Site is now up and running! Click the button to check it out!</p>
@@ -538,7 +475,7 @@
     <div class="row justify-content-center">
       <div class="col-md-6 mb-4">
         <div class="card mx-auto">
-          <img src="Images/MainLogo3.png" class="card-img-top" alt="New Logo">
+          <img src="Images/MainLogo3.png" class="card-img-top" alt="Blog Post 3">
           <div class="card-body">
             <h5 class="card-title"><b>Blog 1:</b> Hello World! I have a New Logo!</h5>
             <p class="card-text">We have a cool new logo for the site! Check it out!</p>
@@ -551,7 +488,9 @@
     <!-- ^^^ COPY ABOVE CLASS AND EDIT -->
   </div>
 </section>
-<!-- CONTACT SECTION -->
+<!-- # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+     #                                      CONTACT SECTION                                                  #
+     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - # -->
 <section id="contact"> 
     <div class="text-center"><h1><b>CONTACT</b></h1></div>
   <div class="contact-form-container">
@@ -573,7 +512,9 @@
     </form>
   </div>
 </section>
-<!-- FOOTER -->
+<!-- # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+     #                                      FOOTER SECTION                                                   #
+     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - # -->
 <footer id="footer" class="text-center py-4">
   <div class="container">
     <p>&copy; 2024 Maid To Project. All Rights Reserved.</p>
@@ -590,8 +531,12 @@
     </p>
   </div>
 </footer>
-<!-- JS Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- JS Scripts -->
+<!-- # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+     #                                    JAVASCRIPT SECTION                                                 #
+     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - # --> 
+
 <script>
   // Smooth scrolling with offset for Contact section
   document.querySelectorAll('a.nav-link').forEach(anchor => {

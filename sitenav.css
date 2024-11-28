@@ -1,265 +1,170 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
-body, html {
-height: 100%;
-max-width: 100%;
-overflow-x: hidden; /* Prevent horizontal overflow */
-color: #000000;
-line-height: 1.8;
-} 
 body {
-font-family: 'Roboto', sans-serif;
-margin: 0;
-padding: 0;
-height: 100%;
-background-color: #f4f4f4;
-color: #333;
-line-height: 1.8;
-transition: background-color 0.3s, color 0.3s;
+  font-family: 'Roboto', sans-serif;
 }
-/* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1600px) {
-.bgimg-1, .bgimg-2, .bgimg-3 {
-  background-attachment: scroll;
-  min-height: 400px;
+.navbar {
+  background: linear-gradient(to right, #000000, #6610f2);
 }
+#about, #portfolio, #services, #blog, #contact {
+  padding: 60px 0;
 }
-.bgimg-1 {
-background-image: url('/Images/MainLogo3.png');
-min-height: 100%;
-background-position: center;
-background-size: cover;
-} 
-/* MOBILE DEVICES */
-@media only screen and (max-width: 600px) {
-  .w3-xlarge {
-    font-size: 24px;
-  }
-  .w3-padding-large {
-    padding: 8px 16px;
-  }
-  /* Make the cards stack on top of each other */
-  .services-cards {
-    flex-direction: column;
-    align-items: center;
-  }
-  .card {
-    width: 90%; /* Full width with some padding */
-    margin-bottom: 10px;
-  }
+#about {
+  background-color: #f8f9fa;
 }
-/* TABLETS / SMALL MONITORS */
-@media only screen and (min-width: 601px) and (max-width: 1200px) {
-  .w3-xlarge {
-    font-size: 36px;
-  }
-  .w3-padding-large {
-    padding: 12px 24px;
-  }
-  /* Adjust card widths for larger screens */
-  .services-cards {
-    flex-direction: row;
-  }
-  .card {
-    width: 45%;
-  }
+#portfolio img, #about img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s;
 }
-/* LARGE MONITORS */
-@media only screen and (min-width: 1201px) {
-  .w3-xlarge {
-    font-size: 48px;
-  }
-  .w3-padding-large {
-    padding: 16px 32px;
-  }
-  /* Ensure cards are side-by-side */
-  .services-cards {
-    justify-content: space-around;
-  }
+#portfolio img:hover, #about img:hover {
+  transform: scale(1.05);
 }
-/* DARK MODE AREAS */
-body.dark-mode {
-  background-color: #333;
-  color: #f4f4f4;
-} 
-
-header.dark-mode {
-  background-color: #444;
-  color: #f4f4f4;
-}     
-footer.dark-mode {
-  background-color: #333;
-}
-/* SERVICE CARDS */
-.services-cards {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 10px;
-}
-.services-cards.dark-mode {
-  background-color: #444;
-  color: #f4f4f4;
+#featureCarousel .carousel-inner img {
+    height: 650px; /* Set desired height */
+    object-fit: contain; /* Ensure images are fully visible without cropping */
+    width: 100%; /* Ensure full width */
+    background-color: black; /* Optional: Adds a background to fill any gaps */
 }
 .card {
-  background-color: #ffffff;
-  color: black;
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  width: 45%;
-  text-align: center;
+transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);
+cursor:           pointer;
+overflow:         hidden;
+position:         relative;
+display:          flex;
+flex-direction:   column;
+align-items:      center;
+justify-content:  space-between;
+font-family:      'Arial', sans-serif;    
+text-align:       center;
+padding: 20px;
+border: solid black;  
+border:         none;
+border-radius:  15px;
+width:          100%;
+height:         100%;
+min-width:      100px;
+min-height:     100px;
+max-width:      1000px;
+max-height:     1000px;
+margin:         10px;
+box-shadow: 0 8px 16px rgba(0, 0, 0, 10.1);
+
+}  
+.card:hover {
+transform: translateY(-10px); /* Slight lift effect on hover */
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Thicker shadow */
+background-color: darkblue; /* Background color change on hover */
+color:azure;
 }
-.w3-wide {letter-spacing: 10px;}
-.w3-hover-opacity {cursor: pointer;}
-/* Create a Parallax Effect */
-.bgimg-1, .bgimg-2, .bgimg-3 {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-/* Black screen and click text */
-#blackScreen {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 1;
-  transition: opacity 1s;
-  z-index: 1000;
-}
-#clickText {
-  color: white;
-  font-size: 24px;
-  cursor: pointer;
-}
-#background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('/Images/MainLogo3.png');
-  background-size: cover;
-  background-position: center;
-  z-index: -1; /* Ensure the background is behind other elements */
-}
-/* SITE BUTTONS (Dark Mode, Back to Top) */
-.button-container {
-  position: fixed;
-  bottom: 20px; /* Move to the bottom */
-  right: 20px;
-  display: flex;
-  justify-content: flex-end;
-  gap: 20px; /* Adjust the gap between buttons as needed */
-  z-index: 2; /* Ensure buttons are above footer */
-}
-.back-to-top {
-  background-color: #181e24;
-  color: #ffffff;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5px;
-  display: block; /* Always visible */
-  position: fixed;
-  bottom: 20px;
-  right: 140px;
-  z-index: 100; /* Ensures it's above other elements */
-  transition: background-color 0.3s;
-}
-.back-to-top:hover {
-  background-color: #163d6b;
-}
-.dark-mode-toggle {
-  background-color: #181e24;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-.dark-mode-toggle:hover {
-  background-color: #163d6b;
-}
-header {
-  background-color: #ffffff;
-  color: #000000;
-  text-align: center;
-  padding: 20px 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+
+.card-img-top {
+  height: 300px;                /* Same height as other images */
+  width: 100%;                  /* Ensure full width */
+  object-fit: cover;
+  background-color: #f8f9fa;  /* Matches Bootstrap's default card background */
+} 
+
 footer {
-  background-color: #000;  
-  color: #fff;   
-  margin-top: auto;
-  padding: 20px;
+  background: linear-gradient(to left, #000000, #6610f2);
+  color: white;
+}
+footer a {
+  color: #adb5bd;
+  text-decoration: none;
+}
+footer a:hover {
+  color: #ffffff;
+}
+/* Ensure the contact form has sufficient margin */
+#contact {
+  margin-top: 60px;
+}
+
+/*  # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+#                   ABOUT SECTION STYLING                   #
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #   */
+/* Center Text */
+.center {
   text-align: center;
 }
-.footer-included {
-  display: none;
-}
-.boxes {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-.boxes .box {
-  position: relative;
-  width: 300px;
-  height: 300px;
-  overflow: hidden;
-}
-.box-bound {
-  display: block;
-  width: 100px;
-  height: 50px;
-  background-position: top left;
-  background-size: contain;
-  background-repeat: no-repeat;
-  transition: width 0.1s ease-in-out, height 0.1s ease-in-out;
-}
-.box-bound.active {
-  width: 150px;
-  height: 150px;
-}
-/* Centering Content - About Me*/
-.center-text {
-  text-align: center;
-}
+/* Justified Text */
 .justified-text {
   text-align: justify;
-  margin: 0 auto;
-  max-width: 600px; /* Limits the width for better readability on desktop */
 }
+/* Row */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+/* Column */
+.col {
+  flex: 50%;
+  padding: 0 16px;
+}
+/* Circle Image */
 .circle-image {
+  border-radius: 10%;
+  width: 250px;
+  max-width: 100%;
+  height: 250px;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
-/* Adjustments for Mobile Devices */
-@media screen and (max-width: 768px) {
-  .center-text,
-  .justified-text {
-    max-width: 95%; /* Reduces width to add space on the sides */
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-  /* Adjust image size on mobile for better fit */
-  .circle-image {
-    width: 400px;
-    height: 400px;
-  }
+/* Hover Effect */
+.hover-opacity-off:hover {
+  opacity: 0.8;
 }
+/* Margin Right */
+.margin-right {
+  margin-right: 8px;
+}
+/* Personal Attributes */
+.personal-attributes {
+  margin-top: 20px;
+}
+/*  # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+#                   SERVICE SECTION STYLING                 #
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #   */
+.icon-color {
+  color: #000000; 
+}
+/*  # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+#                     PARALLAX STYLING                      #
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #   */
+.parallax {
+  background-image: url("Images/MainLogo3.png"); /* Replace with your actual image path */
+  height: 100vh; /* Full-screen height */
+  background-attachment: fixed; /* Creates the parallax effect */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.parallax-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  animation: fadeIn 2s ease-in-out; /* Optional animation for fade-in effect */
+}
+
+/* Keyframe Animation */
+  @keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+  }
