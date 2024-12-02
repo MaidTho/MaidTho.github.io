@@ -17,16 +17,62 @@ body {
 }
 #portfolio img:hover, #about img:hover {
   transform: scale(1.05);
+  object-fit: contain;          /* Ensure images are fully visible without cropping */
+
 }
 #featureCarousel .carousel-inner img {
-    height: 650px; /* Set desired height */
-    object-fit: contain; /* Ensure images are fully visible without cropping */
-    width: 100%; /* Ensure full width */
-    background-color: black; /* Optional: Adds a background to fill any gaps */
+    height: 650px;                /* Set desired height */
+    object-fit: contain;          /* Ensure images are fully visible without cropping */
+    width: 100%;                  /* Ensure full width */
+    background-color: black;    /* Optional: Adds a background to fill any gaps */
 }
+.carousel-caption{
+  background-color: #000000;
+  border-radius: 50px;
+
+  color: #BA9653;;       
+}
+.carousel-control-prev{
+  background-color: #0000002a;
+}
+
+.carousel-control-next{
+  background-color: #0000002a;
+}
+
+.service-icon i {
+  font-size: 4rem; /* Adjust the size as needed */
+}
+
+.accordion-header {
+  text-align: center;
+}
+
+.accordion-button {
+  font-size: 1.5rem; /* Adjust font size as needed */
+  justify-content: center; /* Centers button contents */
+}
+.accordion-header2 {
+  text-align: center;
+}
+
+.accordion-button2{
+  font-size: 1.5rem; /* Adjust font size as needed */
+  justify-content: center; /* Centers button contents */
+}
+
+.accordion-header3 {
+  text-align: center;
+}
+
+.accordion-button3{
+  font-size: 1.5rem; /* Adjust font size as needed */
+  justify-content: center; /* Centers button contents */
+}
+/*   LANGUAGE CARD SECTION     */
 .card {
 transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
-background-color: rgb(255, 255, 255);
+background-color: azure;
 color: rgb(0, 0, 0);
 cursor:           pointer;
 overflow:         hidden;
@@ -36,54 +82,237 @@ flex-direction:   column;
 align-items:      center;
 justify-content:  space-between;
 font-family:      'Arial', sans-serif;    
-text-align:       center;
-padding: 20px;
-border: solid black;  
-border:         none;
-border-radius:  15px;
-width:          100%;
-height:         100%;
+text-align:       justify;
+padding-top:    0%;
+padding-bottom: 0%;
+border:         solid;
+border-color: #000000;
+border-radius:  20px;
+width:          400px;
+height:         175px;
 min-width:      100px;
 min-height:     100px;
 max-width:      1000px;
 max-height:     1000px;
-margin:         10px;
+margin:         20px;
 box-shadow: 0 8px 16px rgba(0, 0, 0, 10.1);
 
-}  
+} 
+.card-title{
+  padding-top:    0%;
+  padding-left:   0%;
+  padding-right:  0%;
+  padding-bottom: 0%;
+} 
 .card:hover {
 transform: translateY(-10px); /* Slight lift effect on hover */
 box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Thicker shadow */
-background-color: darkblue; /* Background color change on hover */
-color:azure;
+background-color: azure; /* Background color change on hover */
+border-color: #BA9653;
+color:#BA9653;
 }
-
+/* VVV PLACEHOLDER IN PORTFOLIO CARD VVV */
 .card-img-top {
   height: 300px;                /* Same height as other images */
   width: 100%;                  /* Ensure full width */
   object-fit: cover;
   background-color: #f8f9fa;  /* Matches Bootstrap's default card background */
 } 
-
+/*   TECH STACK CARD SECTION     */
+.card1 {
+  transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  background-color: azure;
+  color: rgb(0, 0, 0);
+  cursor:           pointer;
+  overflow:         hidden;
+  position:         relative;
+  display:          flex;
+  flex-direction:   column;
+  align-items:      center;
+  justify-content:  space-between;
+  font-family:      'Arial', sans-serif;    
+  text-align:       center;
+  padding-top:    10%;
+  padding-bottom: 0%;
+  border:         solid;
+  border-color: #000000;
+  border-radius:  20px;
+  min-width:      100px;
+  min-height:     100px;
+  max-width:      1000px;
+  max-height:     1000px;
+  margin:         10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 10.1);  
+  }  
+.card1:hover {
+  transform: translateY(-10px); /* Slight lift effect on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Thicker shadow */
+  background-color: azure; /* Background color change on hover */
+  border-color: #BA9653;
+  color:#BA9653;
+  }
+.card1-img-top {
+    height: 20px;                /* Same height as other images */
+    width: 100%;                  /* Ensure full width */
+    object-fit: cover;
+    background-color: #f8f9fa;  /* Matches Bootstrap's default card background */
+  } 
+/*    PORTFOLIO CARD SECTION     */
+.card2 {
+  transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  background-color:azure;
+  color: rgb(0, 0, 0);
+  cursor:           pointer;
+  overflow:         hidden;
+  position:         relative;
+  display:          flex;
+  flex-direction:   column;
+  align-items:      center;
+  justify-content:  space-between;
+  font-family:      'Arial', sans-serif;    
+  text-align:       center;
+  padding-top:    10%;
+  padding-left:   10%;
+  padding-right:  10%;
+  padding-bottom: 10%;
+  border:         solid;
+  border-color: #000000;
+  border-radius:  20px;
+  min-width:      100px;
+  min-height:     650px;
+  max-width:      1000px;
+  max-height:     1000px;
+  margin:         10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 10.1);  
+  }  
+.card2-title{
+  padding-top: 20%;
+}  
+.card2-text{
+  padding-top: 5%;
+  padding-bottom: 5%;
+}  
+.card2:hover {
+  transform: translateY(-10px); /* Slight lift effect on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Thicker shadow */
+  background-color: rgb(32, 32, 32); /* Background color change on hover */
+  border-color: #BA9653;
+  color:#BA9653;
+  } 
+.card2-img-top {
+  height: 20px;                /* Same height as other images */
+  width: 100%;                  /* Ensure full width */
+  object-fit: cover;
+  background-color: #f8f9fa;  /* Matches Bootstrap's default card background */
+  } 
+/*    SERVICES CARD SECTION     */
+.icon-color {
+  color: #FFD700; 
+}
+.card3 {
+  transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  background-color: rgb(66, 0, 94);
+  color:#FFD700;
+  cursor:           pointer;
+  overflow:         hidden;
+  position:         relative;
+  display:          flex;
+  flex-direction:   column;
+  align-items:      center;
+  justify-content:  space-between;
+  font-family:      'Arial', sans-serif;    
+  text-align:       center;
+  padding-top:    10%;
+  padding-bottom: 10%;
+  border:         solid;
+  border-color: #000000;
+  border-radius:  20px;
+  min-width:      100px;
+  min-height:     100px;
+  max-width:      1000px;
+  max-height:     1000px;
+  margin:         10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 10.1);  
+  }     
+.card3:hover {
+  transform: translateY(-10px); /* Slight lift effect on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Thicker shadow */
+  background-color: rgba(105, 0, 150, 0.773); /* Background color change on hover */
+  border-color: #FFD700;
+  color: #FFD700;
+  } 
+.card3-img-top {
+  height: 20px;                /* Same height as other images */
+  width: 100%;                  /* Ensure full width */
+  object-fit: cover;
+  background-color: #f8f9fa;  /* Matches Bootstrap's default card background */
+  } 
+/*    BLOG CARD SECTION     */
+.card4 {
+  transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  background-color: azure;
+  color: black;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content: space-between;
+  font-family: 'Arial', sans-serif;    
+  text-align: center;
+  padding-top:    10%;
+  padding-left:   10%;
+  padding-right:  10%;
+  padding-bottom: 10%;
+  border:         solid;
+  border-color: black;
+  border-radius:  20px;
+  min-width:      100px;
+  min-height:     100px;
+  max-width:      1000px;
+  max-height:     1000px;
+  margin:         10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 10.1);  
+  }    
+.card4-title{
+  padding-top: 5%;
+  }  
+.card4-text{
+  padding-top: 5%;
+  padding-bottom: 5%;
+  }    
+.card4:hover {
+  transform: translateY(-10px); /* Slight lift effect on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Thicker shadow */
+  background-color:  rgb(32, 32, 32); /* Background color change on hover */
+  border-color: #BA9653;
+  color:        #BA9653;
+  }   
+.card4-img-top {
+  height: 20px;                /* Same height as other images */
+  width: 100%;                  /* Ensure full width */
+  object-fit: cover;
+  background-color: #f8f9fa;  /* Matches Bootstrap's default card background */
+  } 
 footer {
   background: linear-gradient(to left, #000000, #6610f2);
   color: white;
-}
+  }
 footer a {
   color: #adb5bd;
   text-decoration: none;
-}
+  }
 footer a:hover {
   color: #ffffff;
-}
+  }
 /* Ensure the contact form has sufficient margin */
 #contact {
-  margin-top: 60px;
+  margin-top: 30px;
 }
-
-/*  # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
-#                   ABOUT SECTION STYLING                   #
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #   */
+/*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+#                   ABOUT SECTION STYLING                       #
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #   */
 /* Center Text */
 .center {
   text-align: center;
@@ -124,13 +353,7 @@ footer a:hover {
 .personal-attributes {
   margin-top: 20px;
 }
-/*  # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
-#                   SERVICE SECTION STYLING                 #
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #   */
-.icon-color {
-  color: #000000; 
-}
-/*  # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+/*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 #                     PARALLAX STYLING                      #
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #   */
 .parallax {
