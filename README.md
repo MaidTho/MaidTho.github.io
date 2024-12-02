@@ -27,13 +27,17 @@
 
 ---------------------------------------------------
 
-• Update 1.7.3 - Graphics Update    @   05/10/24    3.30 PM to 4.00PM
+• Update 1.7.5 - Graphical Responsiveness Update    @   28/11/24    9.30 AM to 11.30AM
 
-    •   Index.html: Added Devicon icons into About section to showcase the languages / tech stack I utilize.
-        •   START TIME: 		3.30 PM 	05/10/24
-        •   RESOLVE TIME: 		4.00 PM	    05/10/24
-        •   LABOR TIME: 		30 Minutes
-    
+    •   Index.html
+        •   START TIME: 		9.30 AM 	28/11/24
+        •   RESOLVE TIME: 		11.30 AM    28/11/24
+        •   LABOR TIME: 		2 Hours
+        Improved website responsiveness.
+        Added Carousel feature for portfolio
+        Updated Cards.
+        
+    •   Updated Sitenav.css.    
     •   General Code Clean Up. 
     
 ---------------------------------------------------
@@ -41,7 +45,7 @@
 
 <p align="center">
     
-    • ABOUT ME SECTION.
+    • ABOUT ME SECTION.          (NEWLY UPDATED)
     • PORTFOLIO SECTION.         (NEWLY UPDATED)
     • SERVICES SECTION.
     • BLOG SECTION.              (NEWLY UPDATED!)
@@ -55,9 +59,6 @@
 
     ~ ~ ~ Future Features ~ ~ ~
         •  Custom Cursor.  
-        •  BLOG SITE SHOWCASE. 
-            •   Archive List for Blog Site.
-            •  << Previous and Next >> functionality for blogs.
         •  PODCAST SITE SHOWCASE.
         •  ECOMMERCE SITE SHOWCASE.
               •  Check out function for Services cards for payment method.
