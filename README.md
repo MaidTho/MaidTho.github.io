@@ -1,5 +1,9 @@
 # MaidTho.github.io
 
+
+## https://roadmap.sh/projects/single-page-cv
+
+
 <br>
 <br>
 
@@ -27,22 +31,16 @@
 
 ---------------------------------------------------
 
-• Update 1.7.6 - Graphical Responsiveness Update 2   @   02/12/24    5.00 PM to 8.30PM
+• Update 1.7.7 - CV Page added   @   03/12/24    7.30 PM to 9.30PM
 
     •   Index.html
-        •   START TIME: 		5.00 PM 	   02/12/24
-        •   RESOLVE TIME: 		8.30 PM        02/12/24
-        •   LABOR TIME: 		3.5 Hours
+        •   START TIME: 		7.30 PM 	   03/12/24
+        •   RESOLVE TIME: 		9.30 PM        03/12/24
+        •   LABOR TIME: 		2 Hours
         
-        - Improved website responsiveness.
-        - Added Carousel feature for portfolio
-        - Added Accordions to sections and added the previous content into them.
-        - Updated Card UI.
-        - Updated Contact Form UI.
-        
-        
-    •   Updated Sitenav.css.   
-    •   Added New Fishing Game Image.
+        - Added CV Feature at bottom of About Me Page.
+       
+
     •   General Code Clean Up. 
     
 ---------------------------------------------------
@@ -64,7 +62,7 @@
 
     ~ ~ ~ Future Features ~ ~ ~
         •  Custom Cursor.  
-        •  Single-Page CV.
+        •  Single-Page CV. (DONE!) 
         •  Changelog Component. 
         •  Testimonial Cards.
         •  Application Page.
