@@ -1,9 +1,5 @@
 # MaidTho.github.io
 
-
-## https://roadmap.sh/projects/single-page-cv
-
-
 <br>
 <br>
 
@@ -57,6 +53,11 @@
 </p>
 <br>
 <br>
+---------------------------------------------------
+<h1 align="center"> ROADMAP CHECKLIST </h1>
+
+## https://roadmap.sh/projects/single-page-cv [ x ] COMPLETED 03/12/24 Update 1.7.7
+
 
 ---------------------------------------------------
 
