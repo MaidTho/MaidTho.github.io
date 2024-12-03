@@ -27,22 +27,16 @@
 
 ---------------------------------------------------
 
-• Update 1.7.6 - Graphical Responsiveness Update 2   @   02/12/24    5.00 PM to 8.30PM
+• Update 1.7.7 - CV Page added   @   03/12/24    7.30 PM to 9.30PM
 
     •   Index.html
-        •   START TIME: 		5.00 PM 	   02/12/24
-        •   RESOLVE TIME: 		8.30 PM        02/12/24
-        •   LABOR TIME: 		3.5 Hours
+        •   START TIME: 		7.30 PM 	   03/12/24
+        •   RESOLVE TIME: 		9.30 PM        03/12/24
+        •   LABOR TIME: 		2 Hours
         
-        - Improved website responsiveness.
-        - Added Carousel feature for portfolio
-        - Added Accordions to sections and added the previous content into them.
-        - Updated Card UI.
-        - Updated Contact Form UI.
-        
-        
-    •   Updated Sitenav.css.   
-    •   Added New Fishing Game Image.
+        - Added CV Feature at bottom of About Me Page.
+       
+
     •   General Code Clean Up. 
     
 ---------------------------------------------------
@@ -60,11 +54,33 @@
 <br>
 <br>
 
+
+---------------------------------------------------
+<h1 align="center"> ROADMAP CHECKLIST </h1>
+
+## https://roadmap.sh/projects/single-page-cv         [x] COMPLETED 03/12/24 Update 1.7.7
+
+## https://roadmap.sh/projects/basic-html-website     [ ] 
+## https://roadmap.sh/projects/portfolio-website      [ ]
+## https://roadmap.sh/projects/changelog-component    [ ]
+## https://roadmap.sh/projects/testimonial-cards      [ ]
+## https://roadmap.sh/projects/datepicker-ui          [ ]
+## https://roadmap.sh/projects/accessible-form-ui     [ ]
+## https://roadmap.sh/projects/image-grid             [ ]
+## https://roadmap.sh/projects/tooltip-ui             [ ]
+## https://roadmap.sh/projects/simple-tabs            [ ]
+## https://roadmap.sh/projects/cookie-consent         [ ]
+## https://roadmap.sh/projects/restricted-textarea    [ ]
+## https://roadmap.sh/projects/accordion              [ ]
+## https://roadmap.sh/projects/age-calculator         [ ]
+## https://roadmap.sh/projects/flash-cards            [ ]
+
+
 ---------------------------------------------------
 
     ~ ~ ~ Future Features ~ ~ ~
         •  Custom Cursor.  
-        •  Single-Page CV.
+        •  Single-Page CV. (DONE!) 
         •  Changelog Component. 
         •  Testimonial Cards.
         •  Application Page.
