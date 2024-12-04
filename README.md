@@ -5,7 +5,7 @@
 
 ---------------------------------------------------
 <h1 align="center">PROJECT INTRODUCTION</h1>
-<p align="center"> "MaidToProject" is my own personal portfolio page where I display my knowledge on various different languages and continue on web development, deployment and hosting! </p>
+<p align="center"> "MadeToProject" is my own personal portfolio page where I display my knowledge on various different languages and continue on web development, deployment and hosting! </p>
 <br>
 <br>
 
