@@ -27,14 +27,16 @@
 
 ---------------------------------------------------
 
-• Update 1.7.7 - CV Page added   @   03/12/24    7.30 PM to 9.30PM
+• Update 1.7.9 - Changelog Component added   @   04/12/24    4.00 PM to 5.00PM
 
     •   Index.html
-        •   START TIME: 		7.30 PM 	   03/12/24
-        •   RESOLVE TIME: 		9.30 PM        03/12/24
-        •   LABOR TIME: 		2 Hours
+        •   START TIME: 		4.00 PM 	   04/12/24
+        •   RESOLVE TIME: 		5.00 PM        04/12/24
+        •   LABOR TIME: 		1 Hours
         
-        - Added CV Feature at bottom of About Me Page.
+        - Added Changelog Component Feature.
+        - Updated Buttons for more uniformity.
+        
        
 
     •   General Code Clean Up. 
