@@ -51,6 +51,42 @@ body {
   font-size: 1.5rem; /* Adjust font size as needed */
   justify-content: center; /* Centers button contents */
 }
+
+.custom-btn {
+  padding: 20px 20px;
+  height: 60px;
+  width:  200px;
+  font-size: 1rem;
+  color: #fff;
+  background: linear-gradient(135deg, #000000, #6610f2); /* Gradient background */
+  border: none;
+  border-radius: 30px;
+  text-decoration: none; /* Removes underline from the link */
+  display: inline-block;
+  text-align: center;
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+  cursor: pointer;
+}
+
+.custom-btn:hover {
+  background: linear-gradient(135deg, #ffa633, #6610f2); /* Lighter gradient on hover */
+  transform: translateY(-3px); /* Slight lifting effect on hover */
+  text-shadow: 0 1px 0 #000000;
+  color:whitesmoke;
+  border: solid;
+  border-color: #BA9653;
+}
+
+.custom-btn:active {
+  transform: translateY(1px); /* Button pushes down slightly on click */
+}
+
+.custom-btn:focus {
+  outline: none; /* Removes the focus outline */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Adds a shadow when focused */
+}
+
+
 /*   LANGUAGE CARD SECTION     */
 .card {
   transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
@@ -379,6 +415,7 @@ color:#BA9653;
 
 .changelog-button:hover {
   background: linear-gradient(135deg,#ffa633, #6610f2); /* Lighter gradient on hover */
+  text-shadow: 0 2px 0 black;
 }
 
 
@@ -449,15 +486,6 @@ footer a:hover {
   flex: 50%;
   padding: 0 16px;
 }
-/* Circle Image */
-.circle-image {
-  border-radius: 10%;
-  width: 250px;
-  max-width: 100%;
-  height: 250px;
-  display: block;
-  margin: 0 auto;
-}
 /* Hover Effect */
 .hover-opacity-off:hover {
   opacity: 0.8;
@@ -465,10 +493,6 @@ footer a:hover {
 /* Margin Right */
 .margin-right {
   margin-right: 8px;
-}
-/* Personal Attributes */
-.personal-attributes {
-  margin-top: 20px;
 }
 /*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 #                     PARALLAX STYLING                      #
