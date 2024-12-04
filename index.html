@@ -12,9 +12,9 @@
   
   <!-- Site Metas -->
   <link rel="shortcut icon" href="/Images/MainLogo3.png" type="">
-  <title>Maid To Project</title>
+  <title>MadeToProject</title>
    <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="Maid To Project">
+  <meta property="og:title" content="MadeToProject">
   <meta property="og:description" content="Explore my education, skills, and career history.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="http://example.com/your-cv">
@@ -34,12 +34,10 @@
   <link rel="stylesheet" type="text/css" href="sitenav.css">
 </head>
 <body>
-<!-- # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
-     #                                        NAVBAR SECTION                                                 #
-     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - # -->
+<!-- //////////////////////////////////  NAVBAR SECTION \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
   <div class="container">
-    <a class="navbar-brand" href="#">Maid To Project</a>
+    <a class="navbar-brand" href="#">MadeToProject</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -49,6 +47,7 @@
         <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
         <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
         <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="#changelog-component">Changelog</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
       </ul>
     </div>
@@ -57,15 +56,17 @@
 <!-- PARALLAX IMAGE EFFECT -->
 <div class="parallax" id="home">
     <div class="parallax-content">
-      <span><b>MAID TO PROJECT</b></span>
+      <span><b>MadeToProject</b></span>
     </div>
   </div> 
-<!-- # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
-     #                                        ABOUT SECTION                                                  #
-     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - # -->
-<section id="about">
+
+<!-- ////////////////////////////////////  ABOUT SECTION \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+<!-- START OF ABOUT SECTION ID -->
+<section id="about" class="bg-light">
     <div class="content container padding-64" id="about">
         <h1 class="center"><b>WELCOME!</b></h1>
+        <br><br>        
         <h3 class="center"><b>Tom Maidment</b></h3>
         <p class="justified-text">
 Welcome to my portfolio! I am a passionate and dedicated Developer with over 2 years of programming experience at a top Fortune 500 company.
@@ -76,6 +77,7 @@ This collaborative spirit has enabled me to contribute to successful projects, f
 I am always eager to take on new challenges and stay updated with the latest industry trends. My portfolio showcases a selection of my best work, highlighting my expertise in front-end development and my passion for creating visually appealing and user-friendly web, and software applications.
 Thank you for taking the time to explore my portfolio. I look forward to the opportunity to work with you and bring your digital vision to life!
         </p>
+        <br>
         <div class="button">
           <button onclick="location.href='CV.html'">View CV</button>
       </div>
@@ -87,137 +89,137 @@ Thank you for taking the time to explore my portfolio. I look forward to the opp
 <section id="Accordion" class="py-5">
   <div class="container">
     <h2 class="text-center mb-4"><b>ABOUT ME</b></h2>
-    <div class="accordion" id="AboutAccordion">
+    <div class="accordion" id="Accordion">
         <div class="accordion-item1">
-          <h2 class="accordion-header" id="aboutOne">
+          <h2 class="accordion-header" id="AccordionOne">
             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
               <b>LANGUAGES</b>
             </button>
           </h2>
-          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#AboutAccordion">
+          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#Accordion">
             <div class="accordion-body center">
                 Below are the languages I use.
                 <div class="row">
-<!-- HTML5 -->
-<div class="col-md-4">
-                    <div class="card text-center shadow-sm">
+                <!-- HTML5 -->
+                <div class="col-md-4">
+                                    <div class="card text-center shadow-sm">
+                                        <div class="card-body">
+                                            <div class="service-icon mb-3">
+                                                <i class="devicon-html5-plain colored fa-2x"></i>
+                                            </div>
+                                            <h4 class="card-title"><b>HTML5</b></h4>
+                                            <p class="card-text"></p>
+                                        </div>
+                                    </div>
+                </div>
+                <!-- CSS3 -->
+                <div class="col-md-4">
+                  <div class="card text-center shadow-sm">
+                                      <div class="card-body">
+                                          <div class="service-icon mb-3">
+                                              <i class="devicon-css3-plain colored fa-2x"></i>
+                                          </div>
+                                          <h4 class="card-title"><b>CSS3</b></h4>
+                                          <p class="card-text"></p>
+                                      </div>
+                  </div>
+                </div>
+                <!-- JavaScript -->
+                <div class="col-md-4">
+                                  <div class="card text-center shadow-sm">
+                                    <div class="card-body">
+                                        <div class="service-icon mb-3">
+                                            <i class="devicon-javascript-plain colored fa-2x"></i>
+                                        </div>
+                                        <h4 class="card-title"><b>JavaScript</b></h4>
+                                        <p class="card-text"></p>
+                                    </div>
+                                  </div>
+                </div>       
+                <!-- Java -->
+                <div class="col-md-4">
+                        <div class="card text-center shadow-sm">
+                            <div class="card-body">
+                                <div class="service-icon mb-3">
+                                    <i class="devicon-java-plain colored fa-2x"></i>
+                                </div>
+                                <h4 class="card-title"><b>Java</b></h4>
+                                <p class="card-text"></p>
+                            </div>
+                        </div>
+                </div>
+                <!-- Python -->
+                <div class="col-md-4">
+                        <div class="card text-center shadow-sm">
+                          <div class="card-body">
+                              <div class="service-icon mb-3">
+                                  <i class="devicon-python-plain colored fa-2x"></i>
+                              </div>
+                              <h4 class="card-title"><b>Python</b></h4>
+                              <p class="card-text"></p>
+                          </div>
+                        </div>
+                </div>
+                <!-- SQL -->
+                <div class="col-md-4">
+                        <div class="card text-center shadow-sm">
                         <div class="card-body">
                             <div class="service-icon mb-3">
-                                <i class="devicon-html5-plain colored fa-2x"></i>
+                                <i class="devicon-azuresqldatabase-plain colored fa-2x"></i>
                             </div>
-                            <h4 class="card-title"><b>HTML5</b></h4>
+                            <h4 class="card-title"><b>SQL</b></h4>
                             <p class="card-text"></p>
                         </div>
-                    </div>
-</div>
-<!-- CSS3 -->
-<div class="col-md-4">
-                  <div class="card text-center shadow-sm">
-                      <div class="card-body">
-                          <div class="service-icon mb-3">
-                              <i class="devicon-css3-plain colored fa-2x"></i>
-                          </div>
-                          <h4 class="card-title"><b>CSS3</b></h4>
-                          <p class="card-text"></p>
-                      </div>
-                  </div>
-</div>
-<!-- JavaScript -->
-<div class="col-md-4">
-                  <div class="card text-center shadow-sm">
-                    <div class="card-body">
-                        <div class="service-icon mb-3">
-                            <i class="devicon-javascript-plain colored fa-2x"></i>
                         </div>
-                        <h4 class="card-title"><b>JavaScript</b></h4>
-                        <p class="card-text"></p>
-                    </div>
-                  </div>
-</div>       
-<!-- Java -->
-<div class="col-md-4">
-        <div class="card text-center shadow-sm">
-            <div class="card-body">
-                <div class="service-icon mb-3">
-                    <i class="devicon-java-plain colored fa-2x"></i>
                 </div>
-                <h4 class="card-title"><b>Java</b></h4>
-                <p class="card-text"></p>
-            </div>
-        </div>
-</div>
-<!-- Python -->
-<div class="col-md-4">
-        <div class="card text-center shadow-sm">
-          <div class="card-body">
-              <div class="service-icon mb-3">
-                  <i class="devicon-python-plain colored fa-2x"></i>
-              </div>
-              <h4 class="card-title"><b>Python</b></h4>
-              <p class="card-text"></p>
-          </div>
-        </div>
-</div>
-<!-- SQL -->
-<div class="col-md-4">
-        <div class="card text-center shadow-sm">
-        <div class="card-body">
-            <div class="service-icon mb-3">
-                <i class="devicon-azuresqldatabase-plain colored fa-2x"></i>
-            </div>
-            <h4 class="card-title"><b>SQL</b></h4>
-            <p class="card-text"></p>
-        </div>
-        </div>
-</div>
-<!-- Bootstrap 5 -->
-<div class="col-md-4">
-          <div class="card text-center shadow-sm">
-              <div class="card-body">
-                  <div class="service-icon mb-3">
-                      <i class="devicon-bootstrap-plain colored fa-2x"></i>
-                  </div>
-                  <h4 class="card-title"><b>Bootstrap</b></h4>
-                  <p class="card-text"></p>
-              </div>
-          </div>
-</div>
-<!-- PHP -->
-<div class="col-md-4">
-        <div class="card text-center shadow-sm">
-            <div class="card-body">
-                <div class="service-icon mb-3">
-                    <i class="devicon-php-plain colored fa-2x"></i>
+                <!-- Bootstrap 5 -->
+                <div class="col-md-4">
+                          <div class="card text-center shadow-sm">
+                              <div class="card-body">
+                                  <div class="service-icon mb-3">
+                                      <i class="devicon-bootstrap-plain colored fa-2x"></i>
+                                  </div>
+                                  <h4 class="card-title"><b>Bootstrap</b></h4>
+                                  <p class="card-text"></p>
+                              </div>
+                          </div>
                 </div>
-                <h4 class="card-title"><b>PHP</b></h4>
-                <p class="card-text"></p>
-            </div>
-        </div>
-</div>
-<!-- .Net -->
-<div class="col-md-4">
-      <div class="card text-center shadow-sm">
-        <div class="card-body">
-            <div class="service-icon mb-3">
-                <i class="devicon-dotnetcore-plain colored fa-2x"></i>
-            </div>
-            <h4 class="card-title"><b>.Net</b></h4>
-            <p class="card-text"></p>
-        </div>
-      </div>
-</div>
+                <!-- PHP -->
+                <div class="col-md-4">
+                        <div class="card text-center shadow-sm">
+                            <div class="card-body">
+                                <div class="service-icon mb-3">
+                                    <i class="devicon-php-plain colored fa-2x"></i>
+                                </div>
+                                <h4 class="card-title"><b>PHP</b></h4>
+                                <p class="card-text"></p>
+                            </div>
+                        </div>
+                </div>
+                <!-- .Net -->
+                <div class="col-md-4">
+                      <div class="card text-center shadow-sm">
+                        <div class="card-body">
+                            <div class="service-icon mb-3">
+                                <i class="devicon-dotnetcore-plain colored fa-2x"></i>
+                            </div>
+                            <h4 class="card-title"><b>.Net</b></h4>
+                            <p class="card-text"></p>
+                        </div>
+                      </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
   <div class="accordion-item2">
-    <h2 class="accordion-header" id="aboutTwo">
+    <h2 class="accordion-header" id="AccordionTwo">
       <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
         <b>TECH STACK</b>
       </button>
     </h2>
-    <div id="collapseTwo" class="accordion-collapse collapse show" data-bs-parent="#AboutAccordion">
+    <div id="collapseTwo" class="accordion-collapse collapse show" data-bs-parent="#Accordion">
       <div class="accordion-body center">
         Below are the programs I use to make magic
           <div class="row">
@@ -261,31 +263,33 @@ Thank you for taking the time to explore my portfolio. I look forward to the opp
       </div>
   </div>
 </div>
-</section>
-<!-- # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
-     #                                      PORTFOLIO SECTION                                                #
-     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - # -->
- <section id="portfolio" class="bg-light"> 
+
+</section>  <!-- END OF ABOUT ACCORDION SECTION ID -->
+
+</section>                                
+<!--  END OF ABOUT SECTION ID -->
+
+<!-- ///////////////////////////////////  PORTFILIO SECTION \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+<!-- START OF PORTFOLIO SECTION ID -->
+<section id="portfolio" class="bg-light"> 
   <div class="container">
     <div class="text-center">
       <h1><b>PORTFOLIO</b></h1>
     </div>
 
-<!-- START OF ACCORDION   -->
-
-<section id="Accordion2" class="py-5">
-  <div class="container">
-    <div class="accordion-item3">
-      <h2 class="accordion-header2" id="aboutThree">
-        <button class="accordion-button2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
-          <b>PORTFOLIO</b>
-        </button>
-      </h2>
-      <div id="collapseThree" class="accordion-collapse collapse show" data-bs-parent="#AboutAccordion">
-        <div class="accordion-body center">
-          Below are some of the latest projects I have completed / been working on!
-            <div class="row">
-              <div class="row g-4">
+    <!-- START OF PORTFOLIO ACCORDION -->
+    <div class="accordion" id="PortfolioAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="portfolioHeading">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#portfolioCollapse" aria-expanded="true" aria-controls="portfolioCollapse">
+            <b>PROJECTS</b>
+          </button>
+        </h2>
+        <div id="portfolioCollapse" class="accordion-collapse collapse show" data-bs-parent="#PortfolioAccordion">
+          <div class="accordion-body center">
+            Below are some of the latest projects I have completed or been working on!
+            <div class="row g-4">
                 <!-- Portfolio Item 1-->
                 <div class="col-md-4">
                   <div class="card2">
@@ -343,129 +347,142 @@ Thank you for taking the time to explore my portfolio. I look forward to the opp
                   </div>
               </div>
             </div>
-            <!-- Carousel Section -->    
-            <section id="carousel" class="py-5">
-                <div id="featureCarousel" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#featureCarousel" data-bs-slide-to="0" class="active"></button>
-                        <button type="button" data-bs-target="#featureCarousel" data-bs-slide-to="1"></button>
-                        <button type="button" data-bs-target="#featureCarousel" data-bs-slide-to="2"></button>
-                        <button type="button" data-bs-target="#featureCarousel" data-bs-slide-to="3"></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="Images/FGFull.png" class="d-block w-100" alt="Feature 1">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5><b>Fishing-Game-Revamped</b></h5>
-                                <p>Showcasing my Fishing Game!.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="Images/BG.png" class="d-block w-100" alt="Feature 2">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5><b>PHP Button Game</b></h5>
-                                <p>Showcasing my Button Game made in PHP</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="Images/AIBlog.png" class="d-block w-100" alt="Feature 3">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5><b>AIBlog</b></h5>
-                                <p>Here's a preview of my AI Blogsite</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                          <img src="Images/MainLogo3.png" class="d-block w-100" alt="Feature 4">
-                          <div class="carousel-caption d-none d-md-block">
-                              <h5><b>Website Logo!</b></h5>
-                              <p>Showcasing my website logo!</p>
-                          </div>
-                      </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#featureCarousel" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#featureCarousel" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+                  </div>
                 </div>
-            </section>
-            </div>     
-          </div>
-      </div>
-      </div>
+              </div>
+            </div>
     </div>
   </div>
-</section>
-</section>
-<!-- # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
-     #                                      SERVICES SECTION                                                 #
-     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - # -->
-<section id="services">
+      </div>
+    </div>
+    <!-- END OF ACCORDION -->
+  </div>
+
+<!-- Carousel Section -->    
+<section id="carousel" class="py-5">
+  <div id="featureCarousel" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#featureCarousel" data-bs-slide-to="0" class="active"></button>
+                      <button type="button" data-bs-target="#featureCarousel" data-bs-slide-to="1"></button>
+                      <button type="button" data-bs-target="#featureCarousel" data-bs-slide-to="2"></button>
+                      <button type="button" data-bs-target="#featureCarousel" data-bs-slide-to="3"></button>
+                  </div>
+                  <div class="carousel-inner">
+                      <div class="carousel-item active">
+                          <img src="Images/FGFull.png" class="d-block w-100" alt="Feature 1">
+                          <div class="carousel-caption d-none d-md-block">
+                              <h5><b>Fishing-Game-Revamped</b></h5>
+                              <p>Showcasing my Fishing Game!.</p>
+                          </div>
+                      </div>
+                      <div class="carousel-item">
+                          <img src="Images/BG.png" class="d-block w-100" alt="Feature 2">
+                          <div class="carousel-caption d-none d-md-block">
+                              <h5><b>PHP Button Game</b></h5>
+                              <p>Showcasing my Button Game made in PHP</p>
+                          </div>
+                      </div>
+                      <div class="carousel-item">
+                          <img src="Images/AIBlog.png" class="d-block w-100" alt="Feature 3">
+                          <div class="carousel-caption d-none d-md-block">
+                              <h5><b>AIBlog</b></h5>
+                              <p>Here's a preview of my AI Blogsite</p>
+                          </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="Images/MainLogo3.png" class="d-block w-100" alt="Feature 4">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5><b>Website Logo!</b></h5>
+                            <p>Showcasing my website logo!</p>
+                        </div>
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#featureCarousel" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#featureCarousel" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                  </button>
+  </div>
+</section> <!-- END OF CAROUSEL SECTION ID  -->
+</section>                               
+<!--  END OF PORTFOLIO SECTION ID -->
+
+<!-- ///////////////////////////////////  SERVICES SECTION \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+<!-- START OF SERVICES SECTION ID -->
+<section id="services" class="bg-light">                   
     <div class="container">
         <div class="text-center">
             <h1><b>SERVICES</b></h1>
             <p>My expertise covers these range of skills and services.</p>
         </div>
+        <!-- START OF ACCORDION   -->
+        <section id="Accordion" class="py-5">
+          <div class="container">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="AccordionFour">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                  <b>SERVICES</b>
+                </button>
+              </h2>
 
-<!-- START OF ACCORDION   -->
-
-<section id="Accordion3" class="py-5">
-  <div class="container">
-    <div class="accordion-item3">
-      <h2 class="accordion-header3" id="aboutFour">
-        <button class="accordion-button4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
-          <b>SERVICES</b>
-        </button>
-      </h2>
-
-      <div id="collapseFour" class="accordion-collapse collapse show" data-bs-parent="#AboutAccordion">
-        <div class="accordion-body center">
-          Below are the services I can provide for you / your company if you require assistance, reach out to me via Contact form further down!
-          <div class="row">
-            <div class="col-md-4">
-                <div class="card3 text-center shadow-sm">
-                    <div class="card-body">
-                        <div class="service-icon mb-3">
-                          <i class="fas fa-code fa-2x icon-color"></i></div>
-                        <h4 class="card-title"><b>Web Development</b></h4>
-                        <p class="card-text">High-quality and responsive websites built using modern frameworks.</p>
+              <div id="collapseFour" class="accordion-collapse collapse show" data-bs-parent="#Accordion">
+                <div class="accordion-body center">
+                  Below are the services I can provide for you / your company if you require assistance, reach out to me via Contact form further down!
+                 
+                  <div class="row">
+                    <!-- Service 1 -->
+                    <div class="col-md-4">
+                        <div class="card3 text-center shadow-sm">
+                            <div class="card-body">
+                                <div class="service-icon mb-3">
+                                  <i class="fas fa-code fa-2x icon-color"></i>
+                                </div>
+                                <h4 class="card-title"><b>Web Development</b></h4>
+                                <p class="card-text">I can create high-quality & responsive websites built using modern frameworks.</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card3 text-center shadow-sm">
-                    <div class="card-body">
-                        <div class="service-icon mb-3"><i class="fas fa-paint-brush fa-2x icon-color"></i></div>
-                        <h4 class="card-title"><b>UI/UX Design</b></h4>
-                        <p class="card-text">Creative user interface designs for an engaging user experience.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card3 text-center shadow-sm">
-                    <div class="card-body">
-                        <div class="service-icon mb-3"><i class="fas fa-cog fa-2x icon-color"></i></div>
-                        <h4 class="card-title"><b>Code Cleaning</b></h4>
-                        <p class="card-text">Got a working product but messy code? Contact me and I'll make it easier to read!</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-  </div>
-    </div>
-  </div>
 
-</section>
+                    <!-- Service 2 -->
+                    <div class="col-md-4">
+                        <div class="card3 text-center shadow-sm">
+                            <div class="card-body">
+                                <div class="service-icon mb-3"><i class="fas fa-paint-brush fa-2x icon-color"></i></div>
+                                <h4 class="card-title"><b>UI/UX Design</b></h4>
+                                <p class="card-text">Creative user interface designs for an engaging user experience.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="col-md-4">
+                        <div class="card3 text-center shadow-sm">
+                            <div class="card-body">
+                                <div class="service-icon mb-3"><i class="fas fa-cog fa-2x icon-color"></i></div>
+                                <h4 class="card-title"><b>Code Cleaning</b></h4>
+                                <p class="card-text">Got a working product but messy code? Contact me and I'll make it easier to read!</p>
+                            </div>
+                        </div>
+                    </div>
+                  </div><!-- End of Row -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>  <!-- END OF ACCORDION SECTION ID-->
+        
       </div>
     </div>
-</section>
-<!-- # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
-     #                                        BLOG SECTION                                                   #
-     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - # -->
+</section>                                
+<!--  END OF SERVICES SECTION ID -->
+
+<!-- /////////////////////////////////////  BLOG SECTION \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+<!-- START OF BLOG SECTION ID -->
 <section id="blog" class="bg-light">
   <div class="container">
     <div class="text-center">
@@ -535,10 +552,58 @@ Thank you for taking the time to explore my portfolio. I look forward to the opp
     <!-- ^^^ COPY ABOVE CLASS AND EDIT -->
   </div>
 </section>
-<!-- # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
-     #                                      CONTACT SECTION                                                  #
-     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - # -->
-<section id="contact"> 
+<!--  END OF BLOG SECTION ID -->
+
+<!-- ///////////////////////////////  CHANGELOG COMPONENT SECTION \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+<!-- START OF CHANGELOG COMPONENT SECTION ID -->
+<section id="changelog-component">
+  <div class="changelog">
+    <h2 class="changelog-title"><b>CHANGELOG</b></h2>
+    <p class="changelog-subtitle">Here are all the changes I have made to the website!</p>
+    <ul class="changelog-timeline">
+      <li class="timeline-item">
+        <span class="timeline-date">December 4, 2024</span>
+        <span class="timeline-description">Changelog Added!</span>
+      </li>
+      <li class="timeline-item">
+        <span class="timeline-date">October 3, 2024</span>
+        <span class="timeline-description">Contact Form goes live!</span>
+      </li>
+      <li class="timeline-item">
+        <span class="timeline-date">September XX, 2024</span>
+        <span class="timeline-description">...</span>
+      </li>
+      <li class="timeline-item">
+        <span class="timeline-date">September XX, 2024</span>
+        <span class="timeline-description">...</span>
+      </li>
+      <li class="timeline-item">
+        <span class="timeline-date">August XX, 2024</span>
+        <span class="timeline-description">...</span>
+      </li>
+      <li class="timeline-item">
+        <span class="timeline-date">August XX, 2024</span>
+        <span class="timeline-description">....</span>
+      </li>
+      <li class="timeline-item">
+        <span class="timeline-date">August 1, 2024</span>
+        <span class="timeline-description">Website goes live!</span>
+      </li>
+    </ul>
+    <a href="https://github.com/MaidTho/MaidTho.github.io/releases" target="_blank" class="changelog-button-link">
+      <button class="changelog-button">Visit Complete Changelog</button>
+    </a>
+    
+    
+  </div>
+</section>
+<!--  END OF CHANGELOG COMPONENT SECTION ID -->
+
+<!-- ///////////////////////////////////  CONTACT SECTION \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+<!-- START OF CONTACT SECTION ID -->
+ <section id="contact" class="bg-light"> 
     <div class="text-center"><h1><b>CONTACT</b></h1></div>
   <div class="contact-form-container">
     <h3>Get in Touch!</h3>
@@ -559,12 +624,14 @@ Thank you for taking the time to explore my portfolio. I look forward to the opp
     </form>
   </div>
 </section>
-<!-- # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
-     #                                      FOOTER SECTION                                                   #
-     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - # -->
+<!--  END OF CONTACT SECTION ID -->
+
+<!-- //////////////////////////////////  FOOTER SECTION \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+<!-- START OF FOOTER SECTION ID --> 
 <footer id="footer" class="text-center py-4">
   <div class="container">
-    <p>&copy; 2024 Maid To Project. All Rights Reserved.</p>
+    <p>&copy; 2024 MadeToProject. All Rights Reserved.</p>
     <p>Follow me on:
     <a href="#" class="mx-2" target="_blank">
         <i class="fab fa-facebook-f" style="font-size: 25px;"></i></a>
@@ -575,6 +642,9 @@ Thank you for taking the time to explore my portfolio. I look forward to the opp
     </p>
   </div>
 </footer>
+
+<!--  END OF FOOTER SECTION ID -->
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <!-- JS Scripts -->
 <!-- # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
