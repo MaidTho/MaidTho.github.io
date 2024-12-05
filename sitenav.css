@@ -8,10 +8,7 @@ body {
   padding: 60px 0;
 }
 #about {
-  padding-top:    5%;
-  padding-left:   5%;
-  padding-right:  5%;
-  padding-bottom: 5%;
+  padding: 5% 5% 5% 5%;
 }
 #portfolio img, #about img {
   width: 100%;
@@ -115,10 +112,7 @@ body {
 
 } 
 .card-title{
-  padding-top:    0%;
-  padding-left:   0%;
-  padding-right:  0%;
-  padding-bottom: 0%;
+  padding: 0% 0% 0% 0%;
 } 
 .card:hover {
 transform: translateY(-10px); /* Slight lift effect on hover */
@@ -187,10 +181,7 @@ color:#BA9653;
   justify-content:  space-between;
   font-family:      'Arial', sans-serif;    
   text-align:       center;
-  padding-top:    10%;
-  padding-left:   10%;
-  padding-right:  10%;
-  padding-bottom: 10%;
+  padding: 10% 10% 10% 10%;
   border:         solid;
   border-color: #000000;
   border-radius:  20px;
@@ -223,12 +214,13 @@ color:#BA9653;
   } 
 /*    SERVICES CARD SECTION     */
 .icon-color {
-  color: #FFD700; 
+  color: #BA9653; 
+  box-shadow: #000000;
 }
 .card3 {
   transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
-  background-color: rgb(66, 0, 94);
-  color:#FFD700;
+  background-color:azure;
+  color: rgb(0, 0, 0);
   cursor:           pointer;
   overflow:         hidden;
   position:         relative;
@@ -238,8 +230,7 @@ color:#BA9653;
   justify-content:  space-between;
   font-family:      'Arial', sans-serif;    
   text-align:       center;
-  padding-top:    10%;
-  padding-bottom: 10%;
+  padding: 10% 10% 10% 10%;
   border:         solid;
   border-color: #000000;
   border-radius:  20px;
@@ -253,16 +244,99 @@ color:#BA9653;
 .card3:hover {
   transform: translateY(-10px); /* Slight lift effect on hover */
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Thicker shadow */
-  background-color: rgba(105, 0, 150, 0.773); /* Background color change on hover */
-  border-color: #FFD700;
-  color: #FFD700;
+  background-color: rgb(32, 32, 32); /* Background color change on hover */
+  border-color: #BA9653;
+  color:#BA9653;
   } 
 .card3-img-top {
   height: 20px;                /* Same height as other images */
   width: 100%;                  /* Ensure full width */
   object-fit: cover;
   background-color: #f8f9fa;  /* Matches Bootstrap's default card background */
-  } 
+  }
+  
+/* General styles for the testimonial section */
+#testimonial {
+  background-color: rgba(126, 126, 126, 0.629);
+  width: 100%;
+  max-width: 2000px;
+  padding: 20px 20px 20px 20px;
+  text-align: center;
+  margin: 50px auto;
+  position: relative;
+  overflow: hidden;
+  border: solid black;
+}
+
+/* The container that holds all testimonials */
+.testimonial-container {
+  display: flex;
+  width: 500%; /* Make this width the same as 100% per card times number of cards */
+  animation: slide 20s infinite; /* Adjusted time for smoother transition */
+}
+
+/* Individual testimonial card styling */
+.testimonial-card {
+  flex: 0 0 20%; /* Each card takes 20% of the container width */
+  text-align: center;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.testimonial-card img {
+  width:  100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+}
+
+.testimonial-text {
+  font-size: 16px;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.testimonial-author {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Keyframes for sliding effect */
+@keyframes slide {
+  0%, 10% {
+      transform: translateX(0); /* Show the first card */
+  }
+  10%, 20% {
+      transform: translateX(-20%); /* Slide to the second card */
+  }
+  20%, 30% {
+      transform: translateX(-40%); /* Slide to the third card */
+  }
+  30%, 40% {
+      transform: translateX(-60%); /* Slide to the fourth card */
+  }
+  40%, 50% {
+      transform: translateX(-80%); /* Slide to the fifth card */
+  }
+  50%, 60% {
+      transform: translateX(-100%); /* Reset to the first card */
+  }
+  60%, 70% {
+      transform: translateX(-120%); /* Show the first card again */
+  }
+  70%, 80% {
+      transform: translateX(-140%); /* Slide to the second card */
+  }
+  80%, 90% {
+      transform: translateX(-160%); /* Slide to the third card */
+  }
+  90%, 100% {
+      transform: translateX(-180%); /* Slide to the fourth card */
+  }
+}
+
+
 /*    BLOG CARD SECTION     */
 .card4 {
   transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
@@ -277,10 +351,7 @@ color:#BA9653;
   justify-content: space-between;
   font-family: 'Arial', sans-serif;    
   text-align: center;
-  padding-top:    10%;
-  padding-left:   10%;
-  padding-right:  10%;
-  padding-bottom: 10%;
+  padding: 10% 10% 10% 10%;
   border:         solid;
   border-color: black;
   border-radius:  20px;
