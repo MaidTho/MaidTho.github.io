@@ -5,7 +5,7 @@
 
 ---------------------------------------------------
 <h1 align="center">PROJECT INTRODUCTION</h1>
-<p align="center"> "MaidToProject" is my own personal portfolio page where I display my knowledge on various different languages and continue on web development, deployment and hosting! </p>
+<p align="center"> "MadeToProject" is my own personal portfolio page where I display my knowledge on various different languages and continue on web development, deployment and hosting! </p>
 <br>
 <br>
 
@@ -27,14 +27,16 @@
 
 ---------------------------------------------------
 
-• Update 1.7.7 - CV Page added   @   03/12/24    7.30 PM to 9.30PM
+• Update 1.7.9 - Changelog Component added   @   04/12/24    4.00 PM to 5.00PM
 
     •   Index.html
-        •   START TIME: 		7.30 PM 	   03/12/24
-        •   RESOLVE TIME: 		9.30 PM        03/12/24
-        •   LABOR TIME: 		2 Hours
+        •   START TIME: 		4.00 PM 	   04/12/24
+        •   RESOLVE TIME: 		5.00 PM        04/12/24
+        •   LABOR TIME: 		1 Hours
         
-        - Added CV Feature at bottom of About Me Page.
+        - Added Changelog Component Feature.
+        - Updated Buttons for more uniformity.
+        
        
 
     •   General Code Clean Up. 
@@ -48,6 +50,7 @@
     • PORTFOLIO SECTION.         (NEWLY UPDATED!)
     • SERVICES SECTION.          (NEWLY UPDATED!) 
     • BLOG SECTION.              (NEWLY UPDATED!)
+    • CHANGELOG COMPONENT.       (NEWLY ADDED! @ 04/12/24)
     • CONTACT FORM.              (NEWLY UPDATED!)(try it out to send an email!)
     
 </p>
@@ -59,19 +62,19 @@
 <h1 align="center"> ROADMAP CHECKLIST </h1>
 
 ## https://roadmap.sh/projects/single-page-cv         [x] COMPLETED 03/12/24 Update 1.7.7
+## https://roadmap.sh/projects/basic-html-website     [x] 
+## https://roadmap.sh/projects/portfolio-website      [x]
+## https://roadmap.sh/projects/changelog-component    [x]
+## https://roadmap.sh/projects/accordion              [x]
+## https://roadmap.sh/projects/simple-tabs            [x]
 
-## https://roadmap.sh/projects/basic-html-website     [ ] 
-## https://roadmap.sh/projects/portfolio-website      [ ]
-## https://roadmap.sh/projects/changelog-component    [ ]
 ## https://roadmap.sh/projects/testimonial-cards      [ ]
 ## https://roadmap.sh/projects/datepicker-ui          [ ]
 ## https://roadmap.sh/projects/accessible-form-ui     [ ]
 ## https://roadmap.sh/projects/image-grid             [ ]
 ## https://roadmap.sh/projects/tooltip-ui             [ ]
-## https://roadmap.sh/projects/simple-tabs            [ ]
 ## https://roadmap.sh/projects/cookie-consent         [ ]
 ## https://roadmap.sh/projects/restricted-textarea    [ ]
-## https://roadmap.sh/projects/accordion              [ ]
 ## https://roadmap.sh/projects/age-calculator         [ ]
 ## https://roadmap.sh/projects/flash-cards            [ ]
 
@@ -81,7 +84,7 @@
     ~ ~ ~ Future Features ~ ~ ~
         •  Custom Cursor.  
         •  Single-Page CV. (DONE!) 
-        •  Changelog Component. 
+        •  Changelog Component. (DONE!)
         •  Testimonial Cards.
         •  Application Page.
         •  Task Tracker.
