@@ -61,7 +61,7 @@ body {
 /* Textarea */
 .contact-form-container textarea {
   resize: vertical;
-  height: 150px;
+  height: 200px;
   width: 100%;
 }
 

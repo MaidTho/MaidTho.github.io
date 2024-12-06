@@ -639,28 +639,23 @@ Thank you for taking the time to explore my portfolio. I look forward to the opp
 <!-- ///////////////////////////////////  CONTACT SECTION \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
 
 <!-- START OF CONTACT SECTION ID -->
-    <div class="textarea-container">
-      <textarea id="restricted-message" maxlength="500" placeholder="Start typing ..."></textarea>
-      <div class="char-count" id="restricted-charCount">0 / 500</div>
-    </div>
-
     <section id="contact" class="bg-light">
         <div class="text-center"><h1><b>CONTACT</b></h1></div>
         <div class="contact-form-container">
             <h3>Get in Touch!</h3>
             <form action="https://formspree.io/f/xkgnwnoq" method="POST">
                 <label for="email">Your email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" placeholder="Enter Email Address" required>
       
                 <label for="first-name">First Name:</label>
-                <input type="text" id="first-name" name="first_name" required>
+                <input type="text" id="first-name" name="first_name" placeholder="Enter First Name" required>
       
                 <label for="last-name">Last Name:</label>
-                <input type="text" id="last-name" name="last_name" required>
+                <input type="text" id="last-name" name="last_name"  placeholder="Enter Last Name"required>
       
                 <label for="contact-message">Your message:</label>
-                <textarea id="contact-message" name="message" placeholder="type your message" maxlength="500" required></textarea>
-                <div class="char-count" id="contact-charCount">0 / 500</div>
+                <textarea id="restricted-message" maxlength="500" placeholder="Type your message... (max 500 char)"></textarea>
+                <div class="char-count" id="restricted-charCount">0 / 500</div>
       
                 <button type="submit">Send</button>
             </form>
