@@ -257,22 +257,24 @@ color:#BA9653;
   
 /* General styles for the testimonial section */
 #testimonial {
-  background-color: rgba(126, 126, 126, 0.629);
+  background-color: whitesmoke;
   width: 100%;
+  height: 400px;
   max-width: 2000px;
   padding: 20px 20px 20px 20px;
   text-align: center;
   margin: 50px auto;
   position: relative;
   overflow: hidden;
-  border: solid black;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Thicker shadow */
+
 }
 
 /* The container that holds all testimonials */
 .testimonial-container {
   display: flex;
   width: 500%; /* Make this width the same as 100% per card times number of cards */
-  animation: slide 20s infinite; /* Adjusted time for smoother transition */
+  animation: slide 30s infinite; /* Adjusted time for smoother transition */
 }
 
 /* Individual testimonial card styling */
@@ -520,6 +522,7 @@ color:#BA9653;
 
 /*  CHANGELOG STYLING ENDS */
 
+
 footer {
   background: linear-gradient(to left, #000000, #6610f2);
   color: white;
@@ -531,10 +534,7 @@ footer a {
 footer a:hover {
   color: #ffffff;
   }
-/* Ensure the contact form has sufficient margin */
-#contact {
-  margin-top: 30px;
-}
+
 /*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 #                   ABOUT SECTION STYLING                       #
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #   */

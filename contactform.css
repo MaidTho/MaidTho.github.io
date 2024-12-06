@@ -87,6 +87,31 @@ body {
   transform: translateY(2px);
 }
 
+#contact textarea {
+  width: 100%;
+  font-size: 16px;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+#contact textarea.limit-reached {
+  border-color: red;
+  color: red;
+}
+
+#contact .char-count {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #555;
+}
+
+#contact .char-count.limit-reached {
+  color: red;
+}
+
 /* Responsiveness */
 @media (max-width: 600px) {
   .contact-form-container {
