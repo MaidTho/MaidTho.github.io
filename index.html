@@ -59,6 +59,52 @@
     </div>
   </div> 
 
+<!-- ////////////////////////////////////  COOKIES SECTION \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+<!-- START OF COOKIES SECTION ID -->
+
+<div id="cookieConsent">
+  <span id="closeButton">&times;</span> <!-- Close button (X) -->
+  <i class="fas fa-cookie-bite cookie-icon"></i> <!-- FontAwesome Cookie Icon -->
+  <p>We use cookies to improve your experience. By using our site, you accept our <a href="#" style="color: #4caf50; text-decoration: underline;">cookie policy</a>.</p>
+  <button id="acceptCookies">Accept</button>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    console.log("DOM loaded");
+
+    const cookieConsent = document.getElementById("cookieConsent");
+    const acceptButton = document.getElementById("acceptCookies");
+    const closeButton = document.getElementById("closeButton");
+
+    // Check if consent is already given
+    const consent = localStorage.getItem("cookieConsent");
+    console.log("cookieConsent value: ", consent);
+
+    if (consent !== "true") {
+      console.log("Consent not yet given. Showing banner.");
+      cookieConsent.classList.add("show");  // Add fade-in effect
+    } else {
+      console.log("Consent already given. Not showing banner.");
+    }
+
+    // Handle consent acceptance
+    acceptButton.addEventListener("click", () => {
+      console.log("User accepted cookies.");
+      localStorage.setItem("cookieConsent", "true");  // Store consent in localStorage
+      cookieConsent.classList.remove("show");  // Hide the banner with fade-out effect
+    });
+
+    // Handle close button click
+    closeButton.addEventListener("click", () => {
+      console.log("User closed the banner.");
+      cookieConsent.classList.remove("show");  // Hide the banner with fade-out effect
+    });
+  });
+</script>
+
+<!--  END OF COOKIES SECTION ID -->
 <!-- ////////////////////////////////////  ABOUT SECTION \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
 
 <!-- START OF ABOUT SECTION ID -->
@@ -598,6 +644,11 @@ Thank you for taking the time to explore my portfolio. I look forward to the opp
     <p class="changelog-subtitle">Here are all the changes I have made to the website!</p>
     <ul class="changelog-timeline">
       <li class="timeline-item">
+
+      <li class="timeline-item">
+        <span class="timeline-date">December 6, 2024</span>
+        <span class="timeline-description">Added Cookie Consent & Restricted Textarea</span>
+      </li>
         <span class="timeline-date">December 5, 2024</span>
         <span class="timeline-description">Testimonial Cards added </span>
       </li>      
@@ -608,11 +659,6 @@ Thank you for taking the time to explore my portfolio. I look forward to the opp
       <li class="timeline-item">
         <span class="timeline-date">October 3, 2024</span>
         <span class="timeline-description">Contact Form goes live!</span>
-      </li>
-
-      <li class="timeline-item">
-        <span class="timeline-date">September XX, 2024</span>
-        <span class="timeline-description">...</span>
       </li>
       <li class="timeline-item">
         <span class="timeline-date">August XX, 2024</span>

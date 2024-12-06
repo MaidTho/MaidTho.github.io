@@ -27,14 +27,22 @@
 
 ---------------------------------------------------
 
-• Update 1.8.1 - Restricted Text Area in contact form added   @   06/12/24    10.15 AM to 11.15 AM
+• Update 1.8.1 - Restricted Text Area in contact form added   @   06/12/24    10.15 AM to 11.15 AM / 2.45PM to 3.15PM
 
     •   Index.html
         •   START TIME: 		10.15 AM 06/12/24
         •   RESOLVE TIME: 		11.15 AM 06/12/24
         •   LABOR TIME: 		1 Hours
+    
+    - Added Restricted Text Area in contact form.
+    
+    •   Index.html
+        •   START TIME: 		2.45 PM 06/12/24
+        •   RESOLVE TIME: 		3.15 PM 06/12/24
+        •   LABOR TIME: 		0.5 Hours
+    
+    - Added Cookie permission    
         
-        - Added Restricted Text Area in contact form.
      
     •   General Code Clean Up. 
     
