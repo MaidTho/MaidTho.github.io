@@ -45,7 +45,18 @@
         
      
     •   General Code Clean Up. 
+
+• Update 1.8.2 - Tooltip UI added   @   07/12/24   6.00PM to 6.15PM 
+        
+    •   Index.html
+        •   START TIME: 		6.00PM 07/12/24
+        •   RESOLVE TIME: 		6.15PM 07/12/24
+        •   LABOR TIME: 		15 Minutes.
+        
+    •   General UI theme formatting. 
     
+
+
 ---------------------------------------------------
 <h1 align="center">FEATURES INCLUDED</h1>
 
@@ -74,12 +85,13 @@
 ## https://roadmap.sh/projects/testimonial-cards      [x] COMPLETED 05/12/24 Update 1.8.0
 ## https://roadmap.sh/projects/restricted-textarea    [x] COMPLETED 06/12/24 Update 1.8.1
 ## https://roadmap.sh/projects/cookie-consent         [x] COMPLETED 06/12/24 Update 1.8.1
+## https://roadmap.sh/projects/tooltip-ui             [x] COMPLETED 07/12/24 Update 1.8.2
+
 <br>
 
 ## https://roadmap.sh/projects/datepicker-ui          [ ]
 ## https://roadmap.sh/projects/accessible-form-ui     [ ]
 ## https://roadmap.sh/projects/image-grid             [ ]
-## https://roadmap.sh/projects/tooltip-ui             [ ]
 ## https://roadmap.sh/projects/age-calculator         [ ]
 ## https://roadmap.sh/projects/flash-cards            [ ]
 
