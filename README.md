@@ -73,13 +73,13 @@
 ## https://roadmap.sh/projects/simple-tabs            [x] COMPLETED PRIOR Update 1.7.7
 ## https://roadmap.sh/projects/testimonial-cards      [x] COMPLETED 05/12/24 Update 1.8.0
 ## https://roadmap.sh/projects/restricted-textarea    [x] COMPLETED 06/12/24 Update 1.8.1
+## https://roadmap.sh/projects/cookie-consent         [x] COMPLETED 06/12/24 Update 1.8.1
 <br>
 
 ## https://roadmap.sh/projects/datepicker-ui          [ ]
 ## https://roadmap.sh/projects/accessible-form-ui     [ ]
 ## https://roadmap.sh/projects/image-grid             [ ]
 ## https://roadmap.sh/projects/tooltip-ui             [ ]
-## https://roadmap.sh/projects/cookie-consent         [ ]
 ## https://roadmap.sh/projects/age-calculator         [ ]
 ## https://roadmap.sh/projects/flash-cards            [ ]
 
@@ -91,7 +91,7 @@
         •  Single-Page CV.       (DONE!) 
         •  Changelog Component.  (DONE!)
         •  Testimonial Cards.    (DONE!)
-        •  Cookie consent 
+        •  Cookie consent        (DONE!)
         •  Restricted textarea   (DONE!)
         •  Application Page.
         •  Task Tracker.
