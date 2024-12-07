@@ -3,9 +3,53 @@ body {
 }
 .navbar {
   background: linear-gradient(to right, #000000, #6610f2);
+  height: 100px;
+  font-size: 20px;
+  color: whitesmoke;
 }
+
+/* General Tooltip Styles */
+.nav-item {
+  position: relative; /* Ensure tooltips are positioned relative to the nav items */
+}
+
+.tooltip {
+  position: absolute;
+  bottom: -100%; /* Position above the nav link */
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: white;
+  padding: 10px 10px;
+  border-radius: 20px;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+}
+
+.nav-item:hover .tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-5px); /* Add slight animation */
+}
+
+/* Tooltip Arrow */
+.tooltip::after {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: #33333310 transparent transparent transparent;
+}
+
+
 #about, #portfolio, #services, #blog, #contact {
-  padding: 60px 0;
+  padding: 30px 0;
 }
 #about {
   padding: 5% 5% 5% 5%;
@@ -21,25 +65,32 @@ body {
 
 }
 #featureCarousel .carousel-inner img {
-    height: 650px;                /* Set desired height */
-    object-fit: contain;          /* Ensure images are fully visible without cropping */
-    width: 100%;                  /* Ensure full width */
-    background-color: black;    /* Optional: Adds a background to fill any gaps */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Adds a shadow when focused */
+    height:500px;                /* Set desired height */
+    object-fit: contain;         /* Ensure images are fully visible without cropping */
+    width: 100px;                /* Ensure full width */
+    background-color: black;   /* Optional: Adds a background to fill any gaps */
 }
 .carousel-caption{
-  background-color: #000000;
-  border-radius: 50px;
-
-  color: #BA9653;;       
+  position: absolute;         
+  top:  90%;                     
+  left: 50%;         
+  transform: translate(-50%, -80%); 
+  height:100px;
+  width: 500px;
+  background-color: rgba(0, 0, 0, 0.7);          
+  border: 4px goldenrod solid;  
+  border-radius: 60px;        
+  text-align: center;       
+  color: goldenrod;          
 }
-.carousel-control-prev{
+.carousel-control-prev, 
+.carousel-control-next {
   background-color: #0000002a;
-}
-.carousel-control-next{
-  background-color: #0000002a;
-}
-.service-icon i {
-  font-size: 4rem; /* Adjust the size as needed */
+  border: solid 5px goldenrod;
+  color: goldenrod;
+  height: 100%;
+  width: 100px;
 }
 .accordion-header {
   text-align: center;
@@ -48,23 +99,22 @@ body {
   font-size: 1.5rem; /* Adjust font size as needed */
   justify-content: center; /* Centers button contents */
 }
-
 .custom-btn {
   padding: 20px 20px;
   height: 60px;
   width:  200px;
   font-size: 1rem;
   color: #fff;
+  text-shadow: 0 1px 0 #000000;
+  text-align: center;
   background: linear-gradient(135deg, #000000, #6610f2); /* Gradient background */
   border: none;
   border-radius: 30px;
   text-decoration: none; /* Removes underline from the link */
   display: inline-block;
-  text-align: center;
   transition: all 0.3s ease; /* Smooth transition for hover effect */
   cursor: pointer;
 }
-
 .custom-btn:hover {
   background: linear-gradient(135deg, #ffa633, #6610f2); /* Lighter gradient on hover */
   transform: translateY(-3px); /* Slight lifting effect on hover */
@@ -73,11 +123,9 @@ body {
   border: solid;
   border-color: #BA9653;
 }
-
 .custom-btn:active {
   transform: translateY(1px); /* Button pushes down slightly on click */
 }
-
 .custom-btn:focus {
   outline: none; /* Removes the focus outline */
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Adds a shadow when focused */
@@ -102,32 +150,27 @@ body {
   height: 300px;
   max-height: 500px;
 }
-
 #cookieConsent.show {
   display: block;
   opacity: 1;
 }
-
 #cookieConsent .cookie-icon {
   font-size: 40px;
   color: whitesmoke;
   margin: 20px 20px 20px 20px; 
   vertical-align: middle;
 }
-
 #cookieConsent .cookie-icon:hover {
   font-size: 60px;
   color:goldenrod;
   margin: 20px 20px 20px 20px; 
   vertical-align: middle;
 }
-
 #cookieConsent p {
   display: inline-block;
   margin: 0;
   font-size: 16px;
 }
-
 #cookieConsent button {
   background-color: whitesmoke;
   color: black;
@@ -138,13 +181,11 @@ body {
   border-radius: 25px;
   margin: 20px 20px 20px 20px; 
 }
-
 #cookieConsent button:hover {
   background-color: whitesmoke;
   border: 2px solid goldenrod;
 }
-
-/* Close Button */
+/*    CookieConsent Close Button   */
 #closeButton {
   position: absolute;
   top:  5%;
@@ -153,12 +194,9 @@ body {
   color: #f39c12;
   cursor: pointer;
 }
-
 #closeButton:hover {
   color: #fff;
 }
-
-
 /*   LANGUAGE CARD SECTION     */
 .card {
   transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
@@ -171,7 +209,7 @@ body {
   flex-direction:   column;
   align-items:      center;
   justify-content:  space-between;
-  font-family:      'Arial', sans-serif;    
+  font-family:      'Roboto', sans-serif;    
   text-align:       center;
   padding-top:    10%;
   padding-bottom: 0%;
@@ -192,7 +230,7 @@ body {
 .card:hover {
 transform: translateY(-10px); /* Slight lift effect on hover */
 box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Thicker shadow */
-background-color: azure; /* Background color change on hover */
+background-color: rgb(32, 32, 32); /* Background color change on hover */
 border-color: #BA9653;
 color:#BA9653;
 }
@@ -216,7 +254,7 @@ color:#BA9653;
   flex-direction:   column;
   align-items:      center;
   justify-content:  space-between;
-  font-family:      'Arial', sans-serif;    
+  font-family:      'Roboto', sans-serif;    
   text-align:       center;
   padding-top:    10%;
   padding-bottom: 0%;
@@ -233,7 +271,7 @@ color:#BA9653;
 .card1:hover {
   transform: translateY(-10px); /* Slight lift effect on hover */
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Thicker shadow */
-  background-color: azure; /* Background color change on hover */
+  background-color: rgb(32, 32, 32); /* Background color change on hover */
   border-color: #BA9653;
   color:#BA9653;
   }
@@ -255,7 +293,7 @@ color:#BA9653;
   flex-direction:   column;
   align-items:      center;
   justify-content:  space-between;
-  font-family:      'Arial', sans-serif;    
+  font-family:      'Roboto', sans-serif;    
   text-align:       center;
   padding: 10% 10% 10% 10%;
   border:         solid;
@@ -289,6 +327,9 @@ color:#BA9653;
   background-color: #f8f9fa;  /* Matches Bootstrap's default card background */
   } 
 /*    SERVICES CARD SECTION     */
+.service-icon i {
+  font-size: 4rem; /* Adjust the size as needed */
+}
 .icon-color {
   color: #BA9653; 
   box-shadow: #000000;
@@ -304,7 +345,7 @@ color:#BA9653;
   flex-direction:   column;
   align-items:      center;
   justify-content:  space-between;
-  font-family:      'Arial', sans-serif;    
+  font-family:      'Roboto', sans-serif;    
   text-align:       center;
   padding: 10% 10% 10% 10%;
   border:         solid;
@@ -332,7 +373,6 @@ color:#BA9653;
   object-fit: cover;
   background-color: #f8f9fa;  
   }
-  
 /* General styles for the testimonial section */
 #testimonial {
   background-color: whitesmoke;
@@ -347,14 +387,12 @@ color:#BA9653;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Thicker shadow */
 
 }
-
 /* The container that holds all testimonials */
 .testimonial-container {
   display: flex;
   width: 500%; /* Make this width the same as 100% per card times number of cards */
   animation: slide 30s infinite; /* Adjusted time for smoother transition */
 }
-
 /* Individual testimonial card styling */
 .testimonial-card {
   flex: 0 0 20%; /* Each card takes 20% of the container width */
@@ -362,26 +400,22 @@ color:#BA9653;
   padding: 40px;
   box-sizing: border-box;
 }
-
 .testimonial-card img {
   width:  100px;
   height: 100px;
   border-radius: 50%;
   margin: 0 auto 15px;
 }
-
 .testimonial-text {
   font-size: 16px;
   color: black;
   margin-bottom: 10px;
 }
-
 .testimonial-author {
   font-size: 14px;
   font-weight: bold;
   color: #333;
 }
-
 /* Keyframes for sliding effect */
 @keyframes slide {
   0%, 10% {
@@ -415,8 +449,6 @@ color:#BA9653;
       transform: translateX(-180%); /* Slide to the fourth card */
   }
 }
-
-
 /*    BLOG CARD SECTION     */
 .card4 {
   transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
@@ -429,14 +461,14 @@ color:#BA9653;
   flex-direction:column;
   align-items:center;
   justify-content: space-between;
-  font-family: 'Arial', sans-serif;    
+  font-family: 'Roboto', sans-serif;    
   text-align: center;
   padding: 10% 10% 10% 10%;
   border:         solid;
   border-color: black;
   border-radius:  20px;
-  width:      500px;
-  height:     600px;
+  width:          400px;
+  height:         525px;
   max-width:      1000px;
   max-height:     1000px;
   margin:         10px;
@@ -462,9 +494,7 @@ color:#BA9653;
   object-fit: cover;
   background-color: #f8f9fa;  /* Matches Bootstrap's default card background */
   } 
-
 /*  CHANGELOG STYLING STARTS */
-
 #changelog-component {
   padding: 40px 20px;
   background-color: #f5f5f5;
@@ -472,7 +502,6 @@ color:#BA9653;
   justify-content: center;
   align-items: center;
 }
-
 .changelog {
   max-width: 1000px;
   height: 600px;
@@ -486,20 +515,17 @@ color:#BA9653;
   overflow: hidden; /* Prevent content overflow */
   position: relative;
 }
-
 .changelog-title {
   font-size: 1.8rem;
   font-weight: bold;
   margin-bottom: 5px;
   color: #333;
 }
-
 .changelog-subtitle {
   font-size: 1rem;
   margin-bottom: 20px;
   color: #666;
 }
-
 .changelog-timeline {
   list-style: none;
   padding: 0;
@@ -508,7 +534,6 @@ color:#BA9653;
   height: calc(100% - 150px); /* Keep it within bounds */
   overflow-y: auto; /* Add scrolling for overflow content */
 }
-
 .changelog-timeline::before {
   content: "";
   position: absolute;
@@ -518,14 +543,12 @@ color:#BA9653;
   width: 2px;
   background-color: #ddd;
 }
-
 .timeline-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 15px 0;
 }
-
 .timeline-item::before {
   content: "";
   position: absolute;
@@ -536,7 +559,6 @@ color:#BA9653;
   border-radius: 50%;
   transform: translate(-50%, 0);
 }
-
 .timeline-date {
   width: 45%;
   text-align: right;
@@ -544,14 +566,12 @@ color:#BA9653;
   color: #000000;
   padding-right: 15px;
 }
-
 .timeline-description {
   width: 45%;
   text-align: left;
   padding-left: 15px;
   color: #000000;
 }
-
 .changelog-button {
   margin-top: 20px;
   padding: 10px 20px;
@@ -563,13 +583,10 @@ color:#BA9653;
   cursor: pointer;
   transition: background 0.3s ease; /* Smooth transition for hover effect */
 }
-
 .changelog-button:hover {
   background: linear-gradient(135deg,#ffa633, #6610f2); /* Lighter gradient on hover */
   text-shadow: 0 2px 0 black;
 }
-
-
 /* Responsive Design */
 @media (max-width: 768px) {
   .changelog-timeline::before {
@@ -597,10 +614,7 @@ color:#BA9653;
     left: 10%;
   }
 }
-
 /*  CHANGELOG STYLING ENDS */
-
-
 footer {
   background: linear-gradient(to left, #000000, #6610f2);
   color: white;
@@ -612,7 +626,6 @@ footer a {
 footer a:hover {
   color: #ffffff;
   }
-
 /*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 #                   ABOUT SECTION STYLING                       #
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #   */
@@ -635,10 +648,6 @@ footer a:hover {
   flex: 50%;
   padding: 0 16px;
 }
-/* Hover Effect */
-.hover-opacity-off:hover {
-  opacity: 0.8;
-}
 /* Margin Right */
 .margin-right {
   margin-right: 8px;
@@ -655,7 +664,6 @@ footer a:hover {
   background-size: cover;
   position: relative;
 }
-
 .parallax-content {
   position: absolute;
   top: 50%;
@@ -671,7 +679,6 @@ footer a:hover {
   letter-spacing: 2px;
   animation: fadeIn 2s ease-in-out; /* Optional animation for fade-in effect */
 }
-
 /* Keyframe Animation */
   @keyframes fadeIn {
   0% {

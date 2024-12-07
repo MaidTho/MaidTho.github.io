@@ -14,26 +14,26 @@ body {
   margin: 50px auto;
   padding: 20px;
   background-color: #ffffff;
-  border: 4px solid #ccc;
+  border: 4px solid #000000;
   border-radius: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 /* Form Heading */
 .contact-form-container h3 {
   text-align: center;
   margin-bottom: 20px;
-  font-weight: 700;
+  font-weight: bold;
   font-size: 1.8rem;
-  color: #333;
+  color: #000000;
 }
 
 /* Labels */
 .contact-form-container label {
   display: block;
-  font-weight: 600;
+  font-weight: bold;
   margin-bottom: 8px;
-  color: #555;
+  color: #000000;
 }
 
 /* Inputs & Textarea */
@@ -41,10 +41,10 @@ body {
 .contact-form-container input[type="email"],
 .contact-form-container textarea {
   width: calc(100% - 20px);
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 4px solid #ccc;
-  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 10px;
+  border: 2px solid #000000;
+  border-radius: 30px;
   height: 50px;
   width: 100%;
   box-sizing: border-box;
@@ -69,10 +69,11 @@ body {
 .contact-form-container button[type="submit"] {
   width: 100%;
   padding: 12px;
-  background-color: #007bff;
+  background: linear-gradient(135deg, #000000, #6610f2);
   color: #ffffff;
-  border: none;
-  border-radius: 20px;
+  text-shadow: 0 2px 0 #000000;
+  border: solid 2px black;
+  border-radius: 25px;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
@@ -80,7 +81,8 @@ body {
 }
 
 .contact-form-container button[type="submit"]:hover {
-  background-color: #0056b3;
+  background: linear-gradient(135deg, goldenrod, #6610f2);
+  border: solid 2px goldenrod;
 }
 
 .contact-form-container button[type="submit"]:active {
@@ -91,8 +93,8 @@ body {
   width: 100%;
   font-size: 16px;
   padding: 10px;
-  border: 2px solid #ccc;
-  border-radius: 4px;
+  border: 2px solid #000000;
+  border-radius: 20px;
   outline: none;
   transition: border-color 0.3s ease;
 }
