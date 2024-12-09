@@ -38,6 +38,8 @@ body {
 
 /* Inputs & Textarea */
 .contact-form-container input[type="text"],
+.contact-form-container input[type="first-name"],
+.contact-form-container input[type="last-name"],
 .contact-form-container input[type="email"],
 .contact-form-container textarea {
   width: calc(100% - 20px);

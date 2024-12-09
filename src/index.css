@@ -57,6 +57,30 @@ code {
 #about {
   padding: 5% 5% 5% 5%;
 }
+.cv-btn {
+  padding: 20px 20px;
+  height: 60px;
+  width:  200px;
+  font-size: 1rem;
+  color: #fff;
+  text-shadow: 0 1px 0 #000000;
+  text-align: center;
+  text-decoration: none; /* Removes underline from the link */
+  background: linear-gradient(135deg, #000000, #6610f2); /* Gradient background */
+  border: none;
+  border-radius: 30px;
+  display: inline-block;
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+  cursor: pointer;
+}
+.cv-btn:hover {
+  background: linear-gradient(135deg, #ffa633, #6610f2); /* Lighter gradient on hover */
+  transform: translateY(-3px); /* Slight lifting effect on hover */
+  text-shadow: 0 1px 0 #000000;
+  color:whitesmoke;
+  border: solid;
+  border-color: #BA9653;
+}
 #portfolio img, #about img {
   width: 100%;
   height: auto;
