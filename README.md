@@ -1,33 +1,34 @@
-# Getting Started with Create React App
+# MaidTho.github.io
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<br>
+<br>
 
-## Available Scripts
+---------------------------------------------------
+<h1 align="center">PROJECT INTRODUCTION</h1>
+<p align="center"> "MadeToProject" is my own personal portfolio page where I display my knowledge on various different languages and continue on web development, deployment and hosting! </p>
+<br>
+<br>
 
-In the project directory, you can run:
+---------------------------------------------------
+<h1 align="center">PREREQUISITES</h1>
 
-### `npm start`
+    • None required, this website works on all devices!
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<br>
+<br>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---------------------------------------------------
+<h1 align="center">INSTALLATION</h1>
 
-### `npm test`
+    • Simply click the link to the website and it will take you there!
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<br>
+<br>
 
-### `npm run build`
+---------------------------------------------------
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+• Update 1.8.1 - Restricted Text Area in contact form added   @   06/12/24    10.15 AM to 11.15 AM / 2.45PM to 3.15PM
 
-<<<<<<< HEAD
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-=======
     •   Index.html
         •   START TIME: 		10.15 AM 06/12/24
         •   RESOLVE TIME: 		11.15 AM 06/12/24
@@ -58,17 +59,23 @@ Your app is ready to be deployed!
 
 ---------------------------------------------------
 <h1 align="center">FEATURES INCLUDED</h1>
->>>>>>> dc182c44d0d440660595a44db966f36a2b1f42f1
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<p align="center">
+    
+    • ABOUT ME SECTION.          (NEWLY UPDATED!)
+    • PORTFOLIO SECTION.         (NEWLY UPDATED!)
+    • SERVICES SECTION.          (NEWLY UPDATED!) 
+    • TESTIMONIAL SECTION        (NEWLY ADDED! @ 05/12/24)
+    • BLOG SECTION.              (NEWLY UPDATED!)
+    • CHANGELOG COMPONENT.       (NEWLY ADDED! @ 04/12/24)
+    • CONTACT FORM.              (NEWLY UPDATED! Restricted Text area included @ 06/12/24)
+    
+</p>
+<br>
 
-### `npm run eject`
+---------------------------------------------------
+<h1 align="center"> ROADMAP CHECKLIST </h1>
 
-<<<<<<< HEAD
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-=======
 ## https://roadmap.sh/projects/single-page-cv         [x] COMPLETED 03/12/24 Update 1.7.7
 ## https://roadmap.sh/projects/basic-html-website     [x] COMPLETED PRIOR Update 1.7.7
 ## https://roadmap.sh/projects/portfolio-website      [x] COMPLETED PRIOR Update 1.7.7
@@ -87,6 +94,64 @@ If you aren't satisfied with the build tool and configuration choices, you can `
 ## https://roadmap.sh/projects/image-grid             [ ]
 ## https://roadmap.sh/projects/age-calculator         [ ]
 ## https://roadmap.sh/projects/flash-cards            [ ]
+
+
+---------------------------------------------------
+
+    ~ ~ ~ Future Features ~ ~ ~
+        •  Custom Cursor.  
+        •  Single-Page CV.       (DONE!) 
+        •  Changelog Component.  (DONE!)
+        •  Testimonial Cards.    (DONE!)
+        •  Cookie consent        (DONE!)
+        •  Restricted textarea   (DONE!)
+        •  Application Page.
+        •  Task Tracker.
+        •  GitHub Random Repository.
+        •  Weather App.
+
+# Getting Started with Create React App
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
+
+### `npm test`
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+<<<<<<< HEAD
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+=======
+
+    
+
+
+
+### `npm run eject`
+
+<<<<<<< HEAD
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
 >>>>>>> dc182c44d0d440660595a44db966f36a2b1f42f1
 
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
