@@ -29,7 +29,7 @@ code {
   color: white;
   padding: 10px 10px;
   border-radius: 20px;
-  font-size: 14px;
+  font-size: 12px;
   white-space: nowrap;
   opacity: 0;
   pointer-events: none;
@@ -57,6 +57,15 @@ code {
 #about {
   padding: 5% 5% 5% 5%;
 }
+/*           ABOUT SECTION STYLING   */
+/* Center Text */
+.center {
+  text-align: center;
+  }
+/* Justified Text */
+.justified-text {
+  text-align: justify;
+  } 
 .cv-btn {
   padding: 20px 20px;
   height: 60px;
@@ -92,11 +101,11 @@ code {
 
 }
 #featureCarousel .carousel-inner img {
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Adds a shadow when focused */
-    height:500px;                /* Set desired height */
-    object-fit: contain;         /* Ensure images are fully visible without cropping */
-    width: 100px;                /* Ensure full width */
-    background-color: black;   /* Optional: Adds a background to fill any gaps */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Adds a shadow when focused */
+  height:500px;                /* Set desired height */
+  object-fit: contain;         /* Ensure images are fully visible without cropping */
+  width: 100px;                /* Ensure full width */
+  background-color: black;   /* Optional: Adds a background to fill any gaps */
 }
 .carousel-caption{
   position: absolute;         
@@ -226,40 +235,46 @@ code {
 }
 /*   LANGUAGE CARD SECTION     */
 .card {
-  transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  /*  Height / Width (TRBL) */
+  padding: 10% 0% 10% 0%;
+  margin:  10% 0px 0px 0px;
+  /*height: 0px;
+  width: 0px;*/
+  min-width: 100px;
+  min-height: 100px;
+  max-width: 1000px;
+  max-height: 1000px;    
+  /*  Dimension */
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+   /*  Font / Text */
+  justify-content: space-between;
+  font-family:'Roboto', sans-serif;    
+  text-align: center; 
+  /*  Border  */
+  border: solid 1px black;
+  border-radius: 5px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 10.1);  
+  /*  Color   */
   background-color: azure;
   color: rgb(0, 0, 0);
-  cursor:           pointer;
-  overflow:         hidden;
-  position:         relative;
-  display:          flex;
-  flex-direction:   column;
-  align-items:      center;
-  justify-content:  space-between;
-  font-family:      'Roboto', sans-serif;    
-  text-align:       center;
-  padding-top:    10%;
-  padding-bottom: 0%;
-  border:         solid;
-  border-color: #000000;
-  border-radius:  20px;
-  min-width:      100px;
-  min-height:     100px;
-  max-width:      1000px;
-  max-height:     1000px;
-  margin:         10px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 10.1);  
+  /*  OTHER EFFECTS   */
+  transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  cursor: pointer;
 
 } 
 .card-title{
   padding: 0% 0% 0% 0%;
 } 
 .card:hover {
-transform: translateY(-10px); /* Slight lift effect on hover */
-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Thicker shadow */
-background-color: rgb(32, 32, 32); /* Background color change on hover */
-border-color: #BA9653;
-color:#BA9653;
+  transform: translateY(-10px); /* Slight lift effect on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Thicker shadow */
+  background-color: rgb(32, 32, 32); /* Background color change on hover */
+  border-color: #BA9653;
+  color:#BA9653;
 }
 /* VVV PLACEHOLDER IN PORTFOLIO CARD VVV */
 .card-img-top {
@@ -269,45 +284,6 @@ color:#BA9653;
   background-color: #f8f9fa;  
   border: solid 2px black;
 } 
-/*   TECH STACK CARD SECTION     */
-.card1 {
-  transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
-  background-color: azure;
-  color: rgb(0, 0, 0);
-  cursor:           pointer;
-  overflow:         hidden;
-  position:         relative;
-  display:          flex;
-  flex-direction:   column;
-  align-items:      center;
-  justify-content:  space-between;
-  font-family:      'Roboto', sans-serif;    
-  text-align:       center;
-  padding-top:    10%;
-  padding-bottom: 0%;
-  border:         solid;
-  border-color: #000000;
-  border-radius:  20px;
-  min-width:      100px;
-  min-height:     100px;
-  max-width:      1000px;
-  max-height:     1000px;
-  margin:         10px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 10.1);  
-  }  
-.card1:hover {
-  transform: translateY(-10px); /* Slight lift effect on hover */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Thicker shadow */
-  background-color: rgb(32, 32, 32); /* Background color change on hover */
-  border-color: #BA9653;
-  color:#BA9653;
-  }
-.card1-img-top {
-    height: 20px;                /* Same height as other images */
-    width: 100%;                  /* Ensure full width */
-    object-fit: cover;
-    background-color: #f8f9fa;  /* Matches Bootstrap's default card background */
-  } 
 /*    PORTFOLIO CARD SECTION     */
 .card2 {
   transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
@@ -653,65 +629,4 @@ footer a {
 footer a:hover {
   color: #ffffff;
   }
-/*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
-#                   ABOUT SECTION STYLING                       #
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #   */
-/* Center Text */
-.center {
-  text-align: center;
-}
-/* Justified Text */
-.justified-text {
-  text-align: justify;
-}
-/* Row */
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 -16px;
-}
-/* Column */
-.col {
-  flex: 50%;
-  padding: 0 16px;
-}
-/* Margin Right */
-.margin-right {
-  margin-right: 8px;
-}
-/*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
-#                     PARALLAX STYLING                      #
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #   */
-.parallax {
-  background-image: url("Images/MainLogo3.png"); /* Replace with your actual image path */
-  height: 100vh; /* Full-screen height */
-  background-attachment: fixed; /* Creates the parallax effect */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-.parallax-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  white-space: nowrap;
-  text-align: center;
-  padding: 20px;
-  background: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
-  color: #fff;
-  font-size: 2rem;
-  font-weight: bold;
-  letter-spacing: 2px;
-  animation: fadeIn 2s ease-in-out; /* Optional animation for fade-in effect */
-}
-/* Keyframe Animation */
-  @keyframes fadeIn {
-  0% {
-      opacity: 0;
-  }
-  100% {
-      opacity: 1;
-  }
-  }
+

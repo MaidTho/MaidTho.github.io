@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="Website powered by React!"
     />
     <!-- Mobile Metas -->
     <meta name="viewport"           content="width=device-width, initial-scale=1">  
@@ -15,10 +15,10 @@
     <meta name="author"             content="Thomas Maidment">
     <!-- Open Graph Meta Tags -->
     <meta property="og:title"       content="MadeToProject">
-    <meta property="og:description" content="Explore my education, skills, and career history.">
+    <meta property="og:description" content="View my education, portfolio, skills, and career history.">
     <meta property="og:type"        content="website">
-    <meta property="og:url"         content="http://example.com/your-cv">
-    <meta property="og:image"       content="http://example.com/your-image.jpg">
+    <meta property="og:url"         content="http://MadeToProject.com.au/index">
+    <meta property="og:image"       content="http://MadeToProject.com.au/LogoRender.png">
       <!-- CSS Sheets -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" type='text/css' href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- FontAwesome Icons -->
@@ -27,70 +27,21 @@
     <link rel="stylesheet" type='text/css' href="contactform.css"><!-- CONTACTFORM CSS -->
     <link rel="stylesheet" type="text/css" href="index.css">
     <link rel="stylesheet" type="text/css" href="App.css">
+    <link rel="stylesheet" type="text/css" href="Blog.css">
     <link rel="icon" href="%PUBLIC_URL%/LogoRender.png" />
     <title>MadeToProject</title>
   </head>
-
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    
-<!-- //////////////////////////////////  NAVBAR SECTION \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
-
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-  <div class="container">
-      <a class="navbar-brand" href="#">MadeToProject</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                  <a class="nav-link" href="#about">About</a>
-                  <span class="tooltip">Learn About Me</span>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#portfolio">Portfolio</a>
-                  <span class="tooltip">View My Work</span>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#services">Services</a>
-                  <span class="tooltip">See What I Offer</span>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#blog">Blog</a>
-                  <span class="tooltip">Read My Articles</span>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#changelog-component">Changelog</a>
-                  <span class="tooltip">Latest Updates</span>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#contact">Contact</a>
-                  <span class="tooltip">Get in Touch</span>
-              </li>
-          <!-- 
-              <li class="nav-item">
-                <a class="nav-link" href="">Web Apps</a>
-                <span class="tooltip">Coming Soon!</span>
-              </li>
-          -->
-          </ul>
-      </div>
-  </div>
-</nav>
-
+    <div id="root"></div>  
 <!-- ////////////////////////////////////  COOKIES SECTION \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
-
 <!-- START OF COOKIES SECTION ID -->
-
 <div id="cookieConsent">
   <span id="closeButton">&times;</span> <!-- Close button (X) -->
   <i class="fas fa-cookie-bite cookie-icon"></i> <!-- FontAwesome Cookie Icon -->
   <p>We use cookies to improve your experience. By using our site, you accept our <a href="#" style="color: #4caf50; text-decoration: underline;">cookie policy</a>.</p>
   <button id="acceptCookies">Accept</button>
 </div>
-
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     console.log("DOM loaded");
@@ -124,29 +75,77 @@
     });
   });
 </script>
-
 <!--  END OF COOKIES SECTION ID -->
+<!-- //////////////////////////////////  NAVBAR SECTION \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+<!--  START OF NAVBAR SECTION ID -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+      <a class="navbar-brand" href="#">MadeToProject</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                  <a class="nav-link" href="#about">About</a>
+                  <span class="tooltip">Learn About Me</span>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#portfolio">Portfolio</a>
+                  <span class="tooltip">View My Work</span>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#services">Services</a>
+                  <span class="tooltip">See What I Offer</span>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#blog">Blog</a>
+                  <span class="tooltip">Read My Articles</span>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#changelog-component">Changelog</a>
+                  <span class="tooltip">Latest Updates</span>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#contact">Contact</a>
+                  <span class="tooltip">Get in Touch</span>
+              </li>
+<!--            
+              <li class="nav-item">
+                <a class="nav-link" target="_blank" href="WebApps.html">Web Apps</a>
+                <span class="tooltip">Coming Soon!</span>
+              </li>
+-->          
+          </ul>
+      </div>
+  </div>
+</nav>
+<!--   END OF NAVBAR SECTION ID -->
 <!-- ////////////////////////////////////  ABOUT SECTION \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
-
 <!-- START OF ABOUT SECTION ID -->
 <section id="about" class="bg-light">
     <div class="content container padding-64" id="about">
         <h1 class="center"><b>WELCOME!</b></h1>
         <br><br>        
         <h3 class="center"><b>Tom Maidment</b></h3>
-<p class="justified-text"> Welcome to my portfolio! I am a passionate and dedicated Developer with over 2 years of programming experience at a top Fortune 500 company.
-                            I am committed to writing clean, efficient code and possess a continuous desire to learn and master new technologies. 
-                          I specialize in crafting intuitive and responsive user interfaces using HTML, CSS, and JavaScript, ensuring seamless user experiences across various devices and platforms.
-                          In addition to my technical skills, I pride myself on my ability to collaborate effectively with cross-functional teams, including designers, back-end developers, front-end developers, clients, and product managers. 
-                          This collaborative spirit has enabled me to contribute to successful projects, from initial concept to final deployment.
-                          I am always eager to take on new challenges and stay updated with the latest industry trends. My portfolio showcases a selection of my best work, highlighting my expertise in front-end development and my passion for creating visually appealing and user-friendly web, and software applications.
-                          Thank you for taking the time to explore my portfolio. I look forward to the opportunity to work with you and bring your digital vision to life!</p>
-                          
+        <p class="justified-text"> 
+          Welcome to my portfolio! 
+          I am a passionate and dedicated Developer with over 2 years of programming experience at a top Fortune 500 company.
+          I am committed to writing clean, efficient code and possess a continuous desire to learn and master new technologies. 
+          I specialize in crafting intuitive and responsive user interfaces using HTML, CSS, and JavaScript.
+          Thus ensuring seamless user experiences across various devices and platforms.
+          In addition to my technical skills, I pride myself on my ability to collaborate effectively with cross-functional teams. 
+          Which includes designers, back-end developers, front-end developers, clients, and product managers. 
+          This collaborative spirit has enabled me to contribute to successful projects, from initial concept to final deployment.
+          I am always eager to take on new challenges and stay updated with the latest industry trends. 
+          My portfolio showcases a selection of my best work, highlighting my expertise in front-end development and my passion for creating visually appealing and user-friendly web, and software applications.
+          Thank you for taking the time to explore my portfolio. 
+          I look forward to the opportunity to work with you and bring your digital vision to life!
+          </p>
+        <br>
+        <h3 class="center"><a href="CV.html" target="_blank" class="btn cv-btn">CV</a></h3>
+        <br>       
 
-                          <a href="CV.html" target="_blank" class="btn cv-btn">CV</a>
-                          <br>
-                          
-                          
 <!-- START OF ACCORDION   -->
 
 <section id="Accordion" class="py-5">
@@ -156,25 +155,23 @@
         <div class="accordion-item1">
           <h2 class="accordion-header" id="AccordionOne">
             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-              <b>LANGUAGES</b>
-            </button>
-          </h2>
-          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#Accordion">
-            <div class="accordion-body center">
-                Below are the languages I use.
-                <div class="row">
-                <!-- HTML5 -->
-                <div class="col-md-4">
-                                    <div class="card text-center shadow-sm">
-                                        <div class="card-body">
-                                            <div class="service-icon mb-3">
-                                                <i class="devicon-html5-plain colored fa-2x"></i>
-                                            </div>
-                                            <h4 class="card-title"><b>HTML5</b></h4>
-                                            <p class="card-text"></p>
-                                        </div>
-                                    </div>
+              <b>LANGUAGES</b></button></h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#Accordion">
+        <div class="accordion-body center">
+            Below are the languages I use.
+              <div class="row">
+              <!-- HTML5 -->
+              <div class="col-md-4">
+                <div class="card text-center shadow-sm">
+                  <div class="card-body">
+                    <div class="service-icon mb-3">
+                      <i class="devicon-html5-plain colored fa-2x"></i>
+                        </div>
+                      <h4 class="card-title"><b>HTML5</b></h4>
+                    <p class="card-text"></p>
+                  </div>
                 </div>
+              </div>
                 <!-- CSS3 -->
                 <div class="col-md-4">
                   <div class="card text-center shadow-sm">
@@ -288,37 +285,37 @@
           <div class="row">
             <!-- VISUAL STUDIO CODE -->
             <div class="col-md-4">
-            <div class="card1 text-center shadow-sm">
-                <div class="card1-body">
+            <div class="card text-center shadow-sm">
+                <div class="card-body">
                     <div class="service-icon mb-3">            
                         <i class="devicon-vscode-plain-wordmark colored fa-2x"></i>
                     </div>
-                    <h4 class="card1-title"><b>Visual Studio Code</b></h4>
-                    <p class="card1-text"></p>
+                    <h4 class="card-title"><b>Visual Studio Code</b></h4>
+                    <p class="card-text"></p>
                 </div>
             </div>
             </div>
             <!-- GITHUB -->
             <div class="col-md-4">
-            <div class="card1 text-center shadow-sm">
-              <div class="card1-body">
+            <div class="card text-center shadow-sm">
+              <div class="card-body">
                   <div class="service-icon mb-3">
                       <i class="devicon-github-original-wordmark colored fa-2x"></i>     
                   </div>
-                  <h4 class="card1-title"><b>GitHub Version Control</b></h4>
-                  <p class="card1-text"></p>
+                  <h4 class="card-title"><b>GitHub Version Control</b></h4>
+                  <p class="card-text"></p>
               </div>
             </div>
             </div>
             <!-- GIMP -->
             <div class="col-md-4">
-            <div class="card1 text-center shadow-sm">
-            <div class="card1-body">
+            <div class="card text-center shadow-sm">
+            <div class="card-body">
                 <div class="service-icon mb-3">
                     <i class="devicon-gimp-plain colored fa-2x"></i>
                 </div>
-                <h4 class="card1-title"><b>GIMP</b></h4>
-                <p class="card1-text"></p>
+                <h4 class="card-title"><b>GIMP</b></h4>
+                <p class="card-text"></p>
             </div>
             </div>
             </div>
@@ -331,16 +328,13 @@
 
 </section>                                
 <!--  END OF ABOUT SECTION ID -->
-
 <!-- ///////////////////////////////////  PORTFILIO SECTION \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
-
 <!-- START OF PORTFOLIO SECTION ID -->
 <section id="portfolio" class="bg-light"> 
   <div class="container">
     <div class="text-center">
       <h1><b>PORTFOLIO</b></h1>
     </div>
-
     <!-- START OF PORTFOLIO ACCORDION -->
     <div class="accordion" id="PortfolioAccordion">
       <div class="accordion-item">
@@ -387,8 +381,8 @@
                   <div class="card2">
                       <div class="card-img-top"></div>
                       <div class="card-body">
-                          <h5 class="card2-title"><b>HTML/CSS/JavaScript Project 1 - Podcast Site</b></h5>
-                          <p class="card2-text">Coming Soon - A responsive podcasters site.</p>
+                          <h5 class="card2-title"><b>HTML/CSS/JavaScript Project 2</b></h5>
+                          <p class="card2-text">Coming Soon...</p>
                       </div>
                   </div>
               </div>   
@@ -396,8 +390,8 @@
                 <div class="card2">
                     <div class="card-img-top"></div>
                     <div class="card-body">
-                        <h5 class="card2-title"><b>HTML/CSS/JavaScript Project 2 - E-Commerce Site</b></h5>
-                        <p class="card2-text">Coming Soon - A responsive E-Commerce site.</p>
+                        <h5 class="card2-title"><b>HTML/CSS/JavaScript Project 3</b></h5>
+                        <p class="card2-text">Coming Soon...</p>
                     </div>
                 </div>
             </div>
@@ -405,7 +399,7 @@
               <div class="card2">
                   <div class="card-img-top"></div>
                   <div class="card-body">
-                      <h5 class="card2-title"><b>HTML/CSS/JavaScript Project 3</b></h5>
+                      <h5 class="card2-title"><b>HTML/CSS/JavaScript Project 4</b></h5>
                       <p class="card2-text">Coming Soon...</p>
                   </div>
               </div>
@@ -472,9 +466,7 @@
 </section> <!-- END OF CAROUSEL SECTION ID  -->
 </section>                               
 <!--  END OF PORTFOLIO SECTION ID -->
-
 <!-- ///////////////////////////////////  SERVICES SECTION \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
-
 <!-- START OF SERVICES SECTION ID -->
 <section id="services" class="bg-light">                   
     <div class="container">
@@ -542,9 +534,7 @@
     </div>
 </section>                                
 <!--  END OF SERVICES SECTION ID -->
-
 <!-- ////////////////////////////////// TESTIMONIAL SECTION \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
-
 <!-- START OF TESTIMONIAL SECTION ID -->
 <section id="testimonial">
   <h2 class="section-title"><b>TESTIMONIALS</b></h2>
@@ -578,9 +568,7 @@
   </div>
 </section>
 <!--  END OF TESTIMONIAL SECTION ID -->
-
 <!-- /////////////////////////////////////  BLOG SECTION \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
-
 <!-- START OF BLOG SECTION ID -->
 <section id="blog" class="bg-light">
   <div class="container">
@@ -618,7 +606,7 @@
           <img src="Images/AIBlog.png" class="card-img-top" alt="Blog Post 2">
           <div class="card-body">
             <h5 class="card4-title"><b>Blog 2:</b> AI Blog out now!</h5>
-            <p class="card4-text">AI Blog Site is now up and running! Click the button to check it out!</p>
+            <p class="card4-text">Hey everyone! My Artificial Intelligence Blog Site is now up and running! Click the button to check it out! </p>
             <a href="/AIBlog.html" class="btn custom-btn">Read More</a>
           </div>
         </div>
@@ -659,10 +647,7 @@
   </div>
 </section>
 <!-- END OF BLOG SECTION ID -->
-
-
 <!-- ///////////////////////////////  CHANGELOG COMPONENT SECTION \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
-
 <!-- START OF CHANGELOG COMPONENT SECTION ID -->
 <section id="changelog-component">
   <div class="changelog">
@@ -714,9 +699,7 @@
   </div>
 </section>
 <!--  END OF CHANGELOG COMPONENT SECTION ID -->
-
 <!-- ///////////////////////////////////  CONTACT SECTION \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
-
 <!-- START OF CONTACT SECTION ID -->
     <section id="contact" class="bg-light">
         <div class="text-center"><h1><b>CONTACT</b></h1></div>
@@ -740,13 +723,9 @@
             </form>
         </div>
     </section>
-
     <script src="restrictedtextarea.js"></script>
-
 <!--  END OF CONTACT SECTION ID -->
-
 <!-- //////////////////////////////////  FOOTER SECTION \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
-
 <!-- START OF FOOTER SECTION ID --> 
 <footer id="footer" class="text-center py-4">
   <div class="container">
@@ -761,29 +740,26 @@
     </p>
   </div>
 </footer>
-
 <!--  END OF FOOTER SECTION ID -->
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <!-- JS Scripts -->
 <!-- # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
      #                                    JAVASCRIPT SECTION                                                 #
      # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - # --> 
-
-<script>
-  // Smooth scrolling with offset for Contact section
-  document.querySelectorAll('a.nav-link').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        e.preventDefault();
-        window.scrollTo({
-          top: target.offsetTop - 100, // Offset to adjust for fixed navbar
-          behavior: 'smooth'
-        });
-      }
+  <script>
+    // Smooth scrolling with offset for Contact section
+    document.querySelectorAll('a.nav-link').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          window.scrollTo({
+            top: target.offsetTop - 100, // Offset to adjust for fixed navbar
+            behavior: 'smooth'
+          });
+        }
+      });
     });
-  });
-</script>
+  </script>
   </body>
 </html>

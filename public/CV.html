@@ -22,50 +22,49 @@
     <style>
         /* General Reset */
         body {
-            font-family: Helvetica, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 20px;
             padding: 0;
+            text-align: justify;
             line-height: 1.6;
             color: #333;
-            background-color: grey;
+            background: linear-gradient(135deg, goldenrod, #6610f2);
         }
-
         h1, h2, h3 {
             text-align: center;
             margin: 0;
         }
-
         h1 {
-            font-size: 28px;
+            text-transform: uppercase;
+            font-size: 40px;
             color: #333;
         }
-
         h2 {
-            font-size: 22px;
-            color: #007A33;
-            margin-top: 20px;
+            text-transform: uppercase;
+            font-size: 20px;
+            color: darkcyan;
+            margin-top: 10px;
         }
         h3 {
             font-size: 16px;
-            color: blue;
+            color: rgb(100, 100, 255);
             margin-top: 20px;
         }
         a {
             color: #2a7a2b;
             text-decoration: none;
         }
-
         header {
             text-align: center;
             border-bottom: 2px solid #000;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
+            border-top: 2px solid #000;
+            margin:  20px 20px 20px 20px;
+            padding: 20px 20px 20px 20px;
         }
-
         .container {
             max-width: 800px;
             margin: 0 auto;
-            border: 5px solid black;
+            border: 4px solid black;
             border-radius: 20px;
             padding-top: 20px;
             padding-left: 50px;
@@ -73,66 +72,58 @@
             padding-bottom: 20px;
             background-color: whitesmoke;
         }
-
         .section-title {
             font-size: 18px;
             color: #0073e6;
             margin-top: 15px;
         }
-
         ul {
             padding-left: 20px;
         }
-
         .subsection {
             margin-top: 10px;
         }
-
         .contact-info {
             margin-top: 10px;
             font-size: 14px;
         }
-
         .skills, .education, .experience, .internet {
             margin-top: 15px;
             padding: 15px;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
-
         .skills:hover, .education:hover, .experience:hover, .internet:hover {
             transform: scale(1.05);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            border: 4px solid #000000;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); 
+            border: 0px solid #000000;
             border-radius: 20px;
-            background-color: black;
-            color: aliceblue;
+            background-color: whitesmoke;
+            color: navy;
         }
-
         footer {
             margin-top: 30px;
             font-size: 14px;
             text-align: center;
-
         }
     </style>
 </head>
 <body>
-
-    <div class="container">
-        <header>
-            <h1>Thomas Maidment</h1>
-            <h2>Junior Frontend Developer</h2>
-            <div class="contact-info">
-                <p>Adelaide, SA, 5000</p>
-                <p>0414 372 810| <a href="mailto:tom.w.maidment@outlook.com">tom.w.maidment@outlook.com</a></p>
-            </div>
-        </header>
+    
+<div class="container">
+<header>
+    <h1>Thomas Maidment</h1>
+    <h2>Junior Frontend Developer</h2>
+        <div class="contact-info">    
+            <p>Adelaide, SA, 5000</p>
+            <p>0414 372 810| <a href="mailto:tom.w.maidment@outlook.com">tom.w.maidment@outlook.com</a></p>
+        </div>
+</header>
 
         <section class="skills">
             <h2>Skills</h2>
-            <p><b>Proficiencies:     </b>   Python | Java | C# | JavaScript | HTML5 | CSS3 | Bootstrap | SQL/MySQL | PHP | GitHub Version Control |  Microsoft Office Suite | Power Apps | Power Automate | SharePoint | Dataverse | Visual Studio | VS Code | Unity 6 | Software Lifestyle Development Cycle | Object Orientated Programming | Scrum | Remote Working | Time Management | Communication | Problem Solving.            </p>
-            <p><b>Working Knowledge: </b>   .Net | WordPress | PHP | AWS | Powershell | Bash | Cloud Computing | Unit Testing             </p>
-            <p><b>Other:             </b>   Front-end | Back-end | Full-Stack | English – Native / Professional proficiency | Flexible | Adaptable | Creative | Career Learner | Analytical Mindset                </p>
+            <p><b>Proficiencies:     </b> • Python • Java • C# • React • Node.JS • JavaScript • HTML5 • CSS3 • Bootstrap • SQL • PHP • GitHub Version Control • Power Apps • Power Automate • SharePoint • Dataverse • Visual Studio • VS Code • Unity 6 • SLDC • O.O.P • S.O.L.I.D • Scrum </p>
+            <p><b>Working Knowledge: </b> • .Net • WordPress • AWS • Powershell • Bash • Cloud Computing • Unit Testing </p>
+            <p><b>Other:             </b> • Front-end • Back-end • Full-Stack • English – Native proficiency • Flexible • Adaptable • Creative • Career Learner • Analytical Mindset • Time Management • Communication Skills • Problem Solving • Customer / Client Orientated.</p>
 
         </section>
 
@@ -141,15 +132,11 @@
             <div class="subsection">
                 <p><h3><strong>ACADEMY IT, ADELAIDE, CERTIFICATE IV IN INFORMATION TECHNOLOGY</strong></h3></p>
                 <p>FEB 2022 to FEB 2024</p>
-                <p>
-                    <ul>
-                        <li><b>Successful completion </b>of 20 Units to obtain Cert IV in IT.</li>
-                    </ul>
-                </p>
+                <p><ul><li><b>Successful completion </b>of 20 Units to obtain Cert IV in IT.</li></ul></p>
             </div>
 
             <div class="subsection">
-                <p><h3><strong>Microsoft, ADELAIDE, PL 400 Certfication</strong></h3></p>
+                <p><h3><strong>Microsoft, ADELAIDE, PL 400 Certification</strong></h3></p>
                 <p>DEC 2023 to DEC 2025</p>
                 <p>
                     <ul>
@@ -196,13 +183,15 @@
                 <a href="https://www.linkedin.com/in/tom-maidment-27577713a/" target="_blank">LinkedIn Profile</a>
             </p>
         </section>
-        
-        <footer id="footer" class="text-center py-4">
-            <div class="container">
-              <p>&copy; 2024 Maid To Project. All Rights Reserved.</p>
-              </p>
-            </div>
-          </footer>
-    </div>
+
+     <footer id="footer" class="text-center py-4">
+        <div class="footer">
+          <p>&copy; 2024 Maid To Project. All Rights Reserved.</p>
+          </p>
+        </div>
+    </footer>       
+
+    </div>        
+
 </body>
 </html>
