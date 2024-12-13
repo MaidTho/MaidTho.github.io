@@ -30,6 +30,8 @@
     <link rel="stylesheet" type="text/css" href="Blog.css">
     <link rel="icon" href="%PUBLIC_URL%/LogoRender.png" />
     <title>MadeToProject</title>
+
+
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -121,6 +123,19 @@
   </div>
 </nav>
 <!--   END OF NAVBAR SECTION ID -->
+<!-- //////////////////////////////  GRID IMAGES SECTION \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+<!--  START OF GRID IMAGES SECTION ID -->
+<section id="grid" class="bg-dark">
+  <div class="grid-container" >
+    <img class="grid-item1" src="./Images/griditem1.png" alt="The pure brilliance and beauty of the Pyramids.">
+    <img class="grid-item2" src="./Images/griditem2.png" alt="Space.">
+    <img class="grid-item3" src="./Images/griditem3.png" alt="A terrifying Velociraptor.">
+    <img class="grid-item4" src="./Images/griditem4.png" alt="The Matrix?">
+    <img class="grid-item5" src="./Images/griditem5.png" alt="A gorgeous little Otter.">
+    <img class="grid-item6" src="./Images/griditem6.png" alt="A beautiful lil Meerkat taking a meer-nap.">
+  </div>
+</section>
+<!--   END OF GRID IMAGES SECTION ID -->
 <!-- ////////////////////////////////////  ABOUT SECTION \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
 <!-- START OF ABOUT SECTION ID -->
 <section id="about" class="bg-light">
@@ -701,29 +716,31 @@
 <!--  END OF CHANGELOG COMPONENT SECTION ID -->
 <!-- ///////////////////////////////////  CONTACT SECTION \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
 <!-- START OF CONTACT SECTION ID -->
-    <section id="contact" class="bg-light">
-        <div class="text-center"><h1><b>CONTACT</b></h1></div>
-        <div class="contact-form-container">
-            <h3>Get in Touch!</h3>
-            <form action="https://formspree.io/f/xkgnwnoq" method="POST">
-                <label for="email">Your email:</label>
-                <input type="email" id="email" name="email" placeholder="Enter Email Address" required>
+<section id="contact" class="bg-light">
+  <div class="text-center"><h1><b>CONTACT</b></h1></div>
+    <div class="contact-form-container">
+    <h3>Get in Touch!</h3>
+      <form action="https://formspree.io/f/xkgnwnoq" method="POST">
+
+      <label for="email">Your email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter Email Address" required>
       
-                <label for="first-name">First Name:</label>
-                <input type="text" id="first-name" name="first_name" placeholder="Enter First Name" required>
+      <label for="firstname">First Name:</label>
+      <input type="firstname" id="firstname" name="firstname" placeholder="Enter First Name" required>
       
-                <label for="last-name">Last Name:</label>
-                <input type="text" id="last-name" name="last_name"  placeholder="Enter Last Name"required>
+      <label for="lastname">Last Name:</label>
+      <input type="lastname" id="lastname" name="lastname"  placeholder="Enter Last Name"required>
       
-                <label for="contact-message">Your message:</label>
-                <textarea id="restricted-message" maxlength="500" placeholder="Type your message... (max 500 char)"></textarea>
-                <div class="char-count" id="restricted-charCount">0 / 500</div>
+      <label for="contact-message">Your message:</label>
+      <textarea id="restricted-message" maxlength="500" placeholder="Type your message... (max 500 char)"></textarea>
+
+      <div class="char-count" id="restricted-charCount">0 / 500</div>
       
-                <button type="submit">Send</button>
-            </form>
-        </div>
-    </section>
-    <script src="restrictedtextarea.js"></script>
+      <button type="submit">Send</button>
+      </form>
+    </div>
+</section>
+<script src="restrictedtextarea.js"></script>
 <!--  END OF CONTACT SECTION ID -->
 <!-- //////////////////////////////////  FOOTER SECTION \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
 <!-- START OF FOOTER SECTION ID --> 

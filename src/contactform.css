@@ -37,7 +37,8 @@ body {
 }
 
 /* Inputs & Textarea */
-.contact-form-container input[type="text"],
+.contact-form-container input[type="firstname"],
+.contact-form-container input[type="lastname"],
 .contact-form-container input[type="email"],
 .contact-form-container textarea {
   width: calc(100% - 20px);
@@ -51,19 +52,13 @@ body {
   transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.contact-form-container input[type="text"]:focus,
+.contact-form-container input[type="firstname"]:focus,
+.contact-form-container input[type="lastname"]:focus,
 .contact-form-container input[type="email"]:focus,
 .contact-form-container textarea:focus {
   border-color: #007bff;
   box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
   outline: none;
-}
-
-/* Specific styles to ensure visibility */
-#first-name, #last-name {
-  display: block !important;
-  visibility: visible !important;
-  opacity: 1 !important;
 }
 
 /* Textarea */
@@ -101,8 +96,8 @@ body {
   width: 100%;
   font-size: 16px;
   padding: 10px;
-  border: 2px solid #000000;
-  border-radius: 20px;
+  border: 4px solid #6610f2;
+  border-radius: 30px;
   outline: none;
   transition: border-color 0.3s ease;
 }
