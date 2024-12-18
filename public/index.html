@@ -2,14 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Website powered by React!"
-    />
+    <meta name="viewport"           content="width=device-width, initial-scale=1" />
+    <meta name="theme-color"        content="#000000" />
     <!-- Mobile Metas -->
-    <meta name="viewport"           content="width=device-width, initial-scale=1">  
     <meta name="description"        content="A professional single-page CV highlighting education, skills, and career history.">
     <meta name="keywords"           content="top developer Adelaide, software engineer Adelaide, CV, resume, career growth, programming skills, education in tech, hire developer Adelaide">
     <meta name="author"             content="Thomas Maidment">
@@ -30,8 +25,6 @@
     <link rel="stylesheet" type="text/css" href="Blog.css">
     <link rel="icon" href="%PUBLIC_URL%/LogoRender.png" />
     <title>MadeToProject</title>
-
-
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -78,50 +71,201 @@
   });
 </script>
 <!--  END OF COOKIES SECTION ID -->
-<!-- //////////////////////////////////  NAVBAR SECTION \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
-<!--  START OF NAVBAR SECTION ID -->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+<!-- //////////////////////////////////  NAVBAR SECTION \\\\\\\\\\\\
+ -->
+ <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
   <div class="container">
-      <a class="navbar-brand" href="#">MadeToProject</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                  <a class="nav-link" href="#about">About</a>
-                  <span class="tooltip">Learn About Me</span>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#portfolio">Portfolio</a>
-                  <span class="tooltip">View My Work</span>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#services">Services</a>
-                  <span class="tooltip">See What I Offer</span>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#blog">Blog</a>
-                  <span class="tooltip">Read My Articles</span>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#changelog-component">Changelog</a>
-                  <span class="tooltip">Latest Updates</span>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#contact">Contact</a>
-                  <span class="tooltip">Get in Touch</span>
-              </li>
-<!--            
-              <li class="nav-item">
-                <a class="nav-link" target="_blank" href="WebApps.html">Web Apps</a>
-                <span class="tooltip">Coming Soon!</span>
-              </li>
--->          
-          </ul>
-      </div>
+    <!-- Updated to include time/date display -->
+    <a class="navbar-brand" href="#">MadeToProject <span id="currentDateTime" style="font-size: 0.8rem; margin-left: 10px; color: #f8f9fa;"></span></a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ms-auto">
+        <!-- Nav Items -->
+        <li class="nav-item">
+          <a class="nav-link" href="#about">
+            <div class="icon-border">
+              <i class="fa fa-user-circle"></i>
+            </div>
+          </a>
+          <span class="tooltip">Learn About Me</span>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#portfolio">
+            <div class="icon-border">
+              <i class="fa fa-briefcase"></i>
+            </div>
+          </a>
+          <span class="tooltip">View My Work</span>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#services">
+            <div class="icon-border">
+              <i class="fa fa-cogs"></i>
+            </div>
+          </a>
+          <span class="tooltip">See What I Offer</span>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#blog">
+            <div class="icon-border">
+              <i class="fa fa-pencil-alt"></i>
+            </div>
+          </a>
+          <span class="tooltip">Read My Articles</span>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#changelog-component">
+            <div class="icon-border">
+              <i class="fa fa-history"></i>
+            </div>
+          </a>
+          <span class="tooltip">Latest Updates</span>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">
+            <div class="icon-border">
+              <i class="fa fa-envelope"></i>
+            </div>
+          </a>
+          <span class="tooltip">Get in Touch</span>
+        </li>
+        
+        <li class="nav-item settings-item">
+          <a class="nav-link">
+            <div class="icon-border">
+              <i class="fa fa-cog"></i>
+            </div>
+          </a>
+          <span class="tooltip">Adjust Settings</span>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>
+<!--   END OF NAVBAR SECTION -->
+
+<!-- Settings Modal -->
+<div id="settingsModal" class="modal">
+  <div class="modal-content">
+    <button id="closeModal" class="close-button">&times;</button>
+    <h1><b>Settings</b></h1>
+    <p>Here you can adjust your settings.</p>
+
+    <!-- Time Format Toggle -->
+    <label for="timeFormat">Choose Time Format:</label>
+    <select id="timeFormat">
+      <option value="12">12-Hour</option>
+      <option value="24" selected>24-Hour</option>
+    </select>
+
+    <!-- Date Picker -->
+    <div style="margin-top: 20px;">
+      <label for="datePicker">Select Date:</label>
+      <input type="date" id="datePicker">
+    </div>
+  </div>
+</div>
+
+<!-- Custom CSS for Styled Close Button -->
+<style>
+  .close-button {
+    background-color: goldenrod; /* Red color */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:   10px;
+    right: 10px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+  }
+
+  .close-button:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+  }
+
+  .close-button:active {
+    transform: scale(0.95); /* Slightly shrink on click */
+  }
+</style>
+
+
+<!-- JavaScript for Modal and Date/Time -->
+<script>
+  // Modal Logic
+  const modal = document.getElementById("settingsModal");
+  const settingsLink = document.querySelector(".settings-item .nav-link");
+  const closeModal = document.getElementById("closeModal");
+  let isModalOpen = false;
+
+  settingsLink.addEventListener("click", (e) => {
+    e.preventDefault();
+    isModalOpen = !isModalOpen;
+    modal.style.display = isModalOpen ? "flex" : "none";
+  });
+
+  closeModal.addEventListener("click", () => {
+    isModalOpen = false;
+    modal.style.display = "none";
+  });
+
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      isModalOpen = false;
+      modal.style.display = "none";
+    }
+  });
+
+  // Date and Time Display
+  const timeFormatSelect = document.getElementById("timeFormat");
+  const datePicker = document.getElementById("datePicker");
+
+  function updateDateTime() {
+    const now = new Date(datePicker.value ? datePicker.value : Date.now());
+    const options = {
+      hour: 'numeric',
+      minute: 'numeric',
+      second: 'numeric',
+      hour12: timeFormatSelect.value === '12',
+      weekday: 'short',
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric'
+    };
+
+    const dateTimeString = now.toLocaleString('en-US', options);
+    document.getElementById("currentDateTime").textContent = dateTimeString;
+  }
+
+  // Update Time Every Second
+  setInterval(updateDateTime, 1000);
+  updateDateTime();
+
+  // Update Time Format or Date When Changed
+  timeFormatSelect.addEventListener("change", updateDateTime);
+  datePicker.addEventListener("change", updateDateTime);
+</script>
+
+
+
+
+
 <!--   END OF NAVBAR SECTION ID -->
 <!-- //////////////////////////////  GRID IMAGES SECTION \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
 <!--  START OF GRID IMAGES SECTION ID -->
@@ -139,44 +283,26 @@
 <!-- ////////////////////////////////////  ABOUT SECTION \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
 <!-- START OF ABOUT SECTION ID -->
 <section id="about" class="bg-light">
-    <div class="content container padding-64" id="about">
-        <h1 class="center"><b>WELCOME!</b></h1>
-        <br><br>        
-        <h3 class="center"><b>Tom Maidment</b></h3>
-        <p class="justified-text"> 
-          Welcome to my portfolio! 
-          I am a passionate and dedicated Developer with over 2 years of programming experience at a top Fortune 500 company.
-          I am committed to writing clean, efficient code and possess a continuous desire to learn and master new technologies. 
-          I specialize in crafting intuitive and responsive user interfaces using HTML, CSS, and JavaScript.
-          Thus ensuring seamless user experiences across various devices and platforms.
-          In addition to my technical skills, I pride myself on my ability to collaborate effectively with cross-functional teams. 
-          Which includes designers, back-end developers, front-end developers, clients, and product managers. 
-          This collaborative spirit has enabled me to contribute to successful projects, from initial concept to final deployment.
-          I am always eager to take on new challenges and stay updated with the latest industry trends. 
-          My portfolio showcases a selection of my best work, highlighting my expertise in front-end development and my passion for creating visually appealing and user-friendly web, and software applications.
-          Thank you for taking the time to explore my portfolio. 
-          I look forward to the opportunity to work with you and bring your digital vision to life!
-          </p>
-        <br>
-        <h3 class="center"><a href="CV.html" target="_blank" class="btn cv-btn">CV</a></h3>
-        <br>       
+<div class="content container padding" id="about">
+<h1 class="center"><b>Hello I'm Tom! &#x1F44B;</b></h1>
+<p class="center">
+I am a frontend software engineer specializing in web development using HTML, CSS, JavaScript & React.</p>
+<p class="center">
+I'm passionate about building scalable interfaces and design systems to make using software simple and enjoyable.</p>
+<p class="center">With 2 years experience working at a top Fortune 500 company I am committed to writing clean, efficient code and possess a continuous desire to learn and master new technologies.</p>
+<p class="center">Thank you for taking the time to explore my portfolio. I look forward to the opportunity to work with you and bring your digital vision to life!</p>
+<br><h1 class="center"><a href="CV.html" target="_blank" class="btn custom-btn">CV</a></h1><br>       
 
 <!-- START OF ACCORDION   -->
-
 <section id="Accordion" class="py-5">
-  <div class="container">
-    <h2 class="text-center mb-4"><b>ABOUT ME</b></h2>
+  <div class="container"><h1 class="text-center mb-4"><b>ABOUT ME</b></h1>
     <div class="accordion" id="Accordion">
-        <div class="accordion-item1">
-          <h2 class="accordion-header" id="AccordionOne">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-              <b>LANGUAGES</b></button></h2>
-      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#Accordion">
-        <div class="accordion-body center">
-            Below are the languages I use.
-              <div class="row">
-              <!-- HTML5 -->
-              <div class="col-md-4">
+      <div class="accordion-item1"><h2 class="accordion-header" id="AccordionOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"><b>LANGUAGES</b></button></h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#Accordion">
+            <div class="accordion-body center"><p>Below are the languages I use.</p>
+            <div class="row">
+              <div class="col-md-4"><!-- HTML5 -->
                 <div class="card text-center shadow-sm">
                   <div class="card-body">
                     <div class="service-icon mb-3">
@@ -187,160 +313,122 @@
                   </div>
                 </div>
               </div>
-                <!-- CSS3 -->
-                <div class="col-md-4">
-                  <div class="card text-center shadow-sm">
-                                      <div class="card-body">
-                                          <div class="service-icon mb-3">
-                                              <i class="devicon-css3-plain colored fa-2x"></i>
-                                          </div>
-                                          <h4 class="card-title"><b>CSS3</b></h4>
-                                          <p class="card-text"></p>
-                                      </div>
+              <div class="col-md-4"> <!-- CSS3 -->
+                <div class="card text-center shadow-sm">
+                  <div class="card-body">
+                    <div class="service-icon mb-3"><i class="devicon-css3-plain colored fa-2x"></i></div>
+                      <h4 class="card-title"><b>CSS3</b></h4>
+                    <p class="card-text"></p>
                   </div>
                 </div>
-                <!-- JavaScript -->
-                <div class="col-md-4">
-                                  <div class="card text-center shadow-sm">
-                                    <div class="card-body">
-                                        <div class="service-icon mb-3">
-                                            <i class="devicon-javascript-plain colored fa-2x"></i>
-                                        </div>
-                                        <h4 class="card-title"><b>JavaScript</b></h4>
-                                        <p class="card-text"></p>
-                                    </div>
-                                  </div>
-                </div>       
-                <!-- Java -->
-                <div class="col-md-4">
-                        <div class="card text-center shadow-sm">
-                            <div class="card-body">
-                                <div class="service-icon mb-3">
-                                    <i class="devicon-java-plain colored fa-2x"></i>
-                                </div>
-                                <h4 class="card-title"><b>Java</b></h4>
-                                <p class="card-text"></p>
-                            </div>
-                        </div>
+              </div>                
+              <div class="col-md-4"><!-- JavaScript -->
+                <div class="card text-center shadow-sm">
+                  <div class="card-body">
+                    <div class="service-icon mb-3"><i class="devicon-javascript-plain colored fa-2x"></i></div>
+                      <h4 class="card-title"><b>JavaScript</b></h4>
+                    <p class="card-text"></p>
+                  </div>
                 </div>
-                <!-- Python -->
-                <div class="col-md-4">
-                        <div class="card text-center shadow-sm">
-                          <div class="card-body">
-                              <div class="service-icon mb-3">
-                                  <i class="devicon-python-plain colored fa-2x"></i>
-                              </div>
-                              <h4 class="card-title"><b>Python</b></h4>
-                              <p class="card-text"></p>
-                          </div>
-                        </div>
+              </div>                       
+              <div class="col-md-4"><!-- Java -->
+                <div class="card text-center shadow-sm">
+                  <div class="card-body">
+                    <div class="service-icon mb-3"><i class="devicon-java-plain colored fa-2x"></i></div>
+                      <h4 class="card-title"><b>Java</b></h4>
+                    <p class="card-text"></p>
+                  </div>
                 </div>
-                <!-- SQL -->
-                <div class="col-md-4">
-                        <div class="card text-center shadow-sm">
-                        <div class="card-body">
-                            <div class="service-icon mb-3">
-                                <i class="devicon-azuresqldatabase-plain colored fa-2x"></i>
-                            </div>
-                            <h4 class="card-title"><b>SQL</b></h4>
-                            <p class="card-text"></p>
-                        </div>
-                        </div>
+              </div>                
+              <div class="col-md-4"><!-- Python -->
+                <div class="card text-center shadow-sm">
+                  <div class="card-body">
+                    <div class="service-icon mb-3"><i class="devicon-python-plain colored fa-2x"></i></div>
+                      <h4 class="card-title"><b>Python</b></h4>
+                    <p class="card-text"></p>
+                  </div>
                 </div>
-                <!-- Bootstrap 5 -->
-                <div class="col-md-4">
-                          <div class="card text-center shadow-sm">
-                              <div class="card-body">
-                                  <div class="service-icon mb-3">
-                                      <i class="devicon-bootstrap-plain colored fa-2x"></i>
-                                  </div>
-                                  <h4 class="card-title"><b>Bootstrap</b></h4>
-                                  <p class="card-text"></p>
-                              </div>
-                          </div>
+              </div>                
+              <div class="col-md-4"><!-- SQL -->
+                <div class="card text-center shadow-sm">
+                  <div class="card-body">
+                    <div class="service-icon mb-3"><i class="devicon-azuresqldatabase-plain colored fa-2x"></i></div>
+                      <h4 class="card-title"><b>SQL</b></h4>
+                    <p class="card-text"></p>
+                  </div>
                 </div>
-                <!-- PHP -->
-                <div class="col-md-4">
-                        <div class="card text-center shadow-sm">
-                            <div class="card-body">
-                                <div class="service-icon mb-3">
-                                    <i class="devicon-php-plain colored fa-2x"></i>
-                                </div>
-                                <h4 class="card-title"><b>PHP</b></h4>
-                                <p class="card-text"></p>
-                            </div>
-                        </div>
+              </div>                
+              <div class="col-md-4"><!-- Bootstrap 5 -->
+                <div class="card text-center shadow-sm">
+                  <div class="card-body">
+                    <div class="service-icon mb-3"><i class="devicon-bootstrap-plain colored fa-2x"></i></div>
+                      <h4 class="card-title"><b>Bootstrap</b></h4>
+                    <p class="card-text"></p>
+                  </div>
                 </div>
-                <!-- .Net -->
-                <div class="col-md-4">
-                      <div class="card text-center shadow-sm">
-                        <div class="card-body">
-                            <div class="service-icon mb-3">
-                                <i class="devicon-dotnetcore-plain colored fa-2x"></i>
-                            </div>
-                            <h4 class="card-title"><b>.Net</b></h4>
-                            <p class="card-text"></p>
-                        </div>
-                      </div>
+              </div>                
+              <div class="col-md-4"><!-- PHP -->
+                <div class="card text-center shadow-sm">
+                  <div class="card-body">
+                    <div class="service-icon mb-3"><i class="devicon-php-plain colored fa-2x"></i></div>
+                      <h4 class="card-title"><b>PHP</b></h4>
+                    <p class="card-text"></p>
+                  </div>
                 </div>
-              </div>
+              </div>                
+              <div class="col-md-4"><!-- .Net -->
+                <div class="card text-center shadow-sm">
+                  <div class="card-body">
+                    <div class="service-icon mb-3"><i class="devicon-dotnetcore-plain colored fa-2x"></i></div>
+                      <h4 class="card-title"><b>.Net</b></h4>
+                    <p class="card-text"></p>
+                  </div>
+                </div>
+              </div><!-- END OF CARDS ADD NEW ONES ON NEXT LINE-->           
             </div>
           </div>
         </div>
-
-  <div class="accordion-item2">
-    <h2 class="accordion-header" id="AccordionTwo">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
-        <b>TECH STACK</b>
-      </button>
-    </h2>
-    <div id="collapseTwo" class="accordion-collapse collapse show" data-bs-parent="#Accordion">
-      <div class="accordion-body center">
-        Below are the programs I use to make magic
-          <div class="row">
-            <!-- VISUAL STUDIO CODE -->
-            <div class="col-md-4">
-            <div class="card text-center shadow-sm">
-                <div class="card-body">
-                    <div class="service-icon mb-3">            
-                        <i class="devicon-vscode-plain-wordmark colored fa-2x"></i>
-                    </div>
-                    <h4 class="card-title"><b>Visual Studio Code</b></h4>
-                    <p class="card-text"></p>
-                </div>
-            </div>
-            </div>
-            <!-- GITHUB -->
-            <div class="col-md-4">
-            <div class="card text-center shadow-sm">
-              <div class="card-body">
-                  <div class="service-icon mb-3">
-                      <i class="devicon-github-original-wordmark colored fa-2x"></i>     
-                  </div>
-                  <h4 class="card-title"><b>GitHub Version Control</b></h4>
-                  <p class="card-text"></p>
-              </div>
-            </div>
-            </div>
-            <!-- GIMP -->
-            <div class="col-md-4">
-            <div class="card text-center shadow-sm">
-            <div class="card-body">
-                <div class="service-icon mb-3">
-                    <i class="devicon-gimp-plain colored fa-2x"></i>
-                </div>
-                <h4 class="card-title"><b>GIMP</b></h4>
-                <p class="card-text"></p>
-            </div>
-            </div>
-            </div>
-          </div>     
       </div>
+
+<div class="accordion-item2">
+<h2 class="accordion-header" id="AccordionTwo">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"><b>TECH STACK</b></button></h2>
+  <div id="collapseTwo" class="accordion-collapse collapse show" data-bs-parent="#Accordion">
+    <div class="accordion-body center"><p>Below are the programs I use to make magic</p>
+      <div class="row">  
+        <div class="col-md-4"><!-- VISUAL STUDIO CODE -->
+          <div class="card text-center shadow-sm">
+            <div class="card-body">
+              <div class="service-icon mb-3"><i class="devicon-vscode-plain-wordmark colored fa-2x"></i></div>
+                <h4 class="card-title"><b>Visual Studio Code</b></h4>
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4"><!-- GITHUB -->
+          <div class="card text-center shadow-sm">
+            <div class="card-body">
+              <div class="service-icon mb-3"><i class="devicon-github-original-wordmark colored fa-2x"></i>     </div>
+                <h4 class="card-title"><b>GitHub Version Control</b></h4>
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>      
+        <div class="col-md-4"><!-- GIMP -->
+          <div class="card text-center shadow-sm">
+            <div class="card-body">
+              <div class="service-icon mb-3"><i class="devicon-gimp-plain colored fa-2x"></i></div>
+                <h4 class="card-title"><b>GIMP</b></h4>
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div> <!-- END OF CARDS ADD NEW ONES ON NEXT LINE-->
+      </div>     
+    </div>
   </div>
 </div>
 
 </section>  <!-- END OF ABOUT ACCORDION SECTION ID -->
-
 </section>                                
 <!--  END OF ABOUT SECTION ID -->
 <!-- ///////////////////////////////////  PORTFILIO SECTION \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
@@ -392,6 +480,7 @@
                     </div>
                   </div>
                 </div>
+ <!--               
                 <div class="col-md-4">
                   <div class="card2">
                       <div class="card-img-top"></div>
@@ -401,24 +490,7 @@
                       </div>
                   </div>
               </div>   
-              <div class="col-md-4">
-                <div class="card2">
-                    <div class="card-img-top"></div>
-                    <div class="card-body">
-                        <h5 class="card2-title"><b>HTML/CSS/JavaScript Project 3</b></h5>
-                        <p class="card2-text">Coming Soon...</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card2">
-                  <div class="card-img-top"></div>
-                  <div class="card-body">
-                      <h5 class="card2-title"><b>HTML/CSS/JavaScript Project 4</b></h5>
-                      <p class="card2-text">Coming Soon...</p>
-                  </div>
-              </div>
-            </div>
+            -->
                   </div>
                 </div>
               </div>
@@ -552,7 +624,7 @@
 <!-- ////////////////////////////////// TESTIMONIAL SECTION \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
 <!-- START OF TESTIMONIAL SECTION ID -->
 <section id="testimonial">
-  <h2 class="section-title"><b>TESTIMONIALS</b></h2>
+  <h1 class="section-title"><b>TESTIMONIALS</b></h1>
   <p class="section-description">Here's what our clients have to say about us!</p>
   <div class="testimonial-container">
       <div class="testimonial-card">
@@ -706,8 +778,8 @@
       </li>
 
     </ul>
-    <a href="https://github.com/MaidTho/MaidTho.github.io/releases" target="_blank" class="changelog-button-link">
-      <button class="changelog-button">Visit Complete Changelog</button>
+    <a href="https://github.com/MaidTho/MaidTho.github.io/releases" target="_blank" >
+      <button class="btn custom-btn">Visit Complete Changelog</button>
     </a>
     
     
@@ -742,6 +814,46 @@
 </section>
 <script src="restrictedtextarea.js"></script>
 <!--  END OF CONTACT SECTION ID -->
+<!-- ///////////////////////////////////  DATE PICKER SECTION \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+<!-- START OF DATE PICKER SECTION ID 
+<section id="date-picker">
+  <div class="modalcontainer">
+    <h1>Current Time: </h1>
+    <div class="time-label" id="timeLabel"></div>
+    <button class="modalbtn" onclick="openModal()">Change Date/Time</button>
+  </div>
+  
+  <div class="modal-overlay" id="modalOverlay" onclick="closeModal()"></div>
+  <div class="modal" id="modal">
+    <h3>Change Date Feature Coming Soon!</h3>
+    <button class="btn-close" onclick="closeModal()">Close</button>
+  </div>
+  
+  <script>
+    // Function to update time
+    function updateTime() {
+        const now = new Date();
+        const formattedTime = now.toLocaleTimeString();
+        document.getElementById('timeLabel').textContent = formattedTime;
+    }
+  
+    // Update time every second
+    setInterval(updateTime, 1000);
+    updateTime(); // Initial call
+  
+    // Functions for modal
+    function openModal() {
+        document.getElementById('modal').classList.add('show');
+        document.getElementById('modalOverlay').classList.add('show');
+    }
+  
+    function closeModal() {
+        document.getElementById('modal').classList.remove('show');
+        document.getElementById('modalOverlay').classList.remove('show');
+    }
+  </script>
+</section>
+ END OF DATE PICKER SECTION ID -->
 <!-- //////////////////////////////////  FOOTER SECTION \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
 <!-- START OF FOOTER SECTION ID --> 
 <footer id="footer" class="text-center py-4">

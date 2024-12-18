@@ -6,23 +6,76 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+h1 {
+  font-size: 60px;
+  padding: 20px 20px 20px 20px;
+}
+
+h2 {
+  font-size: 20px;
+  padding: 20px 20px 20px 20px;
+}
+
+h3{
+  font-size: 40px;
+  padding: 20px 20px 20px 20px;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 .navbar {
   background: linear-gradient(to right, #000000, #6610f2);
-  height: 100px;
-  font-size: 20px;
-  color: whitesmoke;
+  height: 75px;
+  font-size: 25px;
+  color: white;
+  text-shadow: 0 2px 0 #000000;
+}
+
+/* Glow effect at the bottom of the navbar */
+.navbar::after {
+  content: ''; /* Empty content */
+  padding: 0px 0px 0px 0px; 
+  position: absolute; 
+  bottom: 0; /* Position at the bottom of the navbar */
+  left: 0; 
+  width: 100%; /* Full width */
+  height: 0px; /* Height of the glow effect */
+/*   background: rgba(255, 255, 255, 0.5); Light color for glow */
+  box-shadow: 0px 0px 25px 5px goldenrod; /* Glow effect */
 }
 /* General Tooltip Styles */
 .nav-item {
   position: relative; /* Ensure tooltips are positioned relative to the nav items */
+  cursor: pointer;
+}
+.icon-border {
+  display: inline-block;
+  padding: 0px 0px 0px 0px;
+  margin:  5px 0px 5px 0px;
+  height: 40px;
+  width:  40px;
+  border: 1px solid white;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+.icon-border:hover {
+/*background-color: white;*/  
+  border: 4px solid goldenrod;
+  transform: scale(1.3);
+}
+.icon-border i {
+  font-size: 20px;
+  color: white;
+}
+.icon-border:hover i {
+  color: goldenrod;
 }
 .tooltip {
   position: absolute;
-  bottom: -100%; /* Position above the nav link */
+  bottom: -50%; /* Position above the nav link */
   left: 50%;
   transform: translateX(-50%);
   background: #333;
@@ -52,6 +105,83 @@ code {
   border-color: #33333310 transparent transparent transparent;
 }
 
+/*  DATE PICKER UI LAYOUT  */ 
+
+.modalbtn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: #007BFF;
+  border: 4px solid black;
+  border-radius: 23px;
+  cursor: pointer;
+}
+.modalbtn:hover {
+  background-color: #0056b3;
+}
+.modal-content {
+  color: black;
+  background-color: whitesmoke;
+  border: 4px solid goldenrod;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 90px 20px 20px 80px; /* Original mobile-friendly margins */
+  padding: 20px; /* Original padding */
+  width: 75%; /* Original width */
+  height: 60%; /* Original height */
+  text-align: center;
+  overflow-y: auto; /* Enable scrolling for longer content */
+}
+
+/* Tablet Screens and Above */
+@media (min-width: 768px) {
+  .modal-content {
+    width: 60%; /* Slightly narrower for larger screens */
+    height: 65%; /* Slightly taller for more content display */
+    margin: 50px auto; /* Center horizontally */
+    padding: 25px; /* Increase padding slightly */
+  }
+}
+
+/* Desktop Screens */
+@media (min-width: 1200px) {
+  .modal-content {
+    width: 50%; /* Narrower for large screens */
+    height: 50%; /* Keep a balanced aspect ratio */
+    max-width:  600px; /* Cap maximum width */
+    max-height: 500px; /* Cap maximum height */
+    margin:     100px auto; /* Adjust margins for spacing */
+    padding:    auto; /* More spacious padding */
+  }
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+.modal.show, .modal-overlay.show {
+  display: block;
+}
+.modal .btn-close {
+  margin:  20px 20px 20px 20px;
+  padding: 20px 20px 20px 20px;
+  height: 25px;
+  width:  100px;
+  font-size: 20;
+  background-color: #dc3545;
+  color: white;
+  border: 2px solid black;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.modal .btn-close:hover {
+  background-color: #b02a37;
+}
+
 /*  GRID LAYOUT   */
 #grid {
   display: flex;
@@ -73,45 +203,37 @@ code {
   padding: 100px 200px 100px 200px; /* Padding around the grid */
   justify-items: center;
 }
-
 .grid-container img {
   width: 100%; /* Image takes full width of its container */
   height: 100%; /* Image takes full height of its container */
   object-fit: cover; /* Crop image to fit without distortion */
   border-radius: 20px; /* Optional: Rounded corners for styling */
 }
-
 /* Individual item styles */
 .grid-item1 {
   grid-area: 1 / 1 / 3 / 2;
   border: 4px solid black;
 }
-
 .grid-item2 {
   grid-area: 3 / 1 / 4 / 2;
   border: 4px solid red;
 }
-
 .grid-item3 {
   grid-area: 1 / 2 / 2 / 3;
   border: 4px solid magenta;
 }
-
 .grid-item4 {
   grid-area: 2 / 2 / 4 / 3;
   border: 4px solid navy;
 }
-
 .grid-item5 {
   grid-area: 1 / 3 / 3 / 4;
   border: 4px solid darkcyan;
 }
-
 .grid-item6 {
   grid-area: 3 / 3 / 4 / 4;
   border: 4px solid darkgreen;
 }
-
 /* Mobile-friendly styles */
 @media (max-width: 768px) {
   .grid-container {
@@ -139,7 +261,6 @@ code {
     grid-area: 3 / 2 / 4 / 3;
   }
 }
-
 @media (max-width: 480px) {
   .grid-container {
     grid-template-columns: 1fr; /* Single column on very small screens */
@@ -154,9 +275,8 @@ code {
     grid-area: auto; /* Allow each item to occupy full width */
   }
 }
-
 #about, #portfolio, #services, #blog, #contact {
-  padding: 30px 0;
+  padding: 0px 0px 0px 0px;
 }
 #about {
   padding: 5% 5% 5% 5%;
@@ -165,35 +285,8 @@ code {
 /* Center Text */
 .center {
   text-align: center;
-  }
-/* Justified Text */
-.justified-text {
-  text-align: justify;
-  } 
-.cv-btn {
-  padding: 20px 20px;
-  height: 60px;
-  width:  200px;
-  font-size: 1rem;
-  color: #fff;
-  text-shadow: 0 1px 0 #000000;
-  text-align: center;
-  text-decoration: none; /* Removes underline from the link */
-  background: linear-gradient(135deg, #000000, #6610f2); /* Gradient background */
-  border: none;
-  border-radius: 30px;
-  display: inline-block;
-  transition: all 0.3s ease; /* Smooth transition for hover effect */
-  cursor: pointer;
 }
-.cv-btn:hover {
-  background: linear-gradient(135deg, #ffa633, #6610f2); /* Lighter gradient on hover */
-  transform: translateY(-3px); /* Slight lifting effect on hover */
-  text-shadow: 0 1px 0 #000000;
-  color:whitesmoke;
-  border: solid;
-  border-color: #BA9653;
-}
+
 #portfolio img, #about img {
   width: 100%;
   height: auto;
@@ -242,15 +335,15 @@ code {
 .custom-btn {
   padding: 20px 20px;
   height: 60px;
-  width:  200px;
+  width: 250px;
   font-size: 1rem;
   color: #fff;
+  background: linear-gradient(135deg, #000000, #6610f2); /* Gradient background */
   text-shadow: 0 1px 0 #000000;
   text-align: center;
-  background: linear-gradient(135deg, #000000, #6610f2); /* Gradient background */
-  border: none;
+  text-decoration: none; /* Removes underline from the link */  
+  border: 2px solid black;
   border-radius: 30px;
-  text-decoration: none; /* Removes underline from the link */
   display: inline-block;
   transition: all 0.3s ease; /* Smooth transition for hover effect */
   cursor: pointer;
@@ -258,7 +351,7 @@ code {
 .custom-btn:hover {
   background: linear-gradient(135deg, #ffa633, #6610f2); /* Lighter gradient on hover */
   transform: translateY(-3px); /* Slight lifting effect on hover */
-  text-shadow: 0 1px 0 #000000;
+  text-shadow: 0 2px 0 #000000;
   color:whitesmoke;
   border: solid;
   border-color: #BA9653;
@@ -340,13 +433,13 @@ code {
 /*   LANGUAGE CARD SECTION     */
 .card {
   /*  Height / Width (TRBL) */
-  padding: 10% 0% 10% 0%;
-  margin:  10% 0px 0px 0px;
-  /*height: 0px;
-  width: 0px;*/
-  min-width: 100px;
+  padding: 0% 0% 0% 0%;
+  margin:  10% -50% 10% 0%;
+  height: 150px;
+  width:  350px;
+  min-width:  100px;
   min-height: 100px;
-  max-width: 1000px;
+  max-width:  1000px;
   max-height: 1000px;    
   /*  Dimension */
   overflow: hidden;
@@ -359,8 +452,8 @@ code {
   font-family:'Roboto', sans-serif;    
   text-align: center; 
   /*  Border  */
-  border: solid 4px black;
-  border-radius: 10px;
+  border: solid 2px black;
+  border-radius: 20px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 10.1);  
   /*  Color   */
   background-color: azure;
@@ -368,7 +461,6 @@ code {
   /*  OTHER EFFECTS   */
   transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
   cursor: pointer;
-
 } 
 .card-title{
   padding: 0% 0% 0% 0%;
@@ -393,24 +485,24 @@ code {
   transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
   background-color:azure;
   color: rgb(0, 0, 0);
-  cursor:           pointer;
-  overflow:         hidden;
-  position:         relative;
-  display:          flex;
-  flex-direction:   column;
-  align-items:      center;
-  justify-content:  space-between;
-  font-family:      'Roboto', sans-serif;    
-  text-align:       center;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Roboto', sans-serif;    
+  text-align: center;
   padding: 10% 10% 10% 10%;
-  border:         solid;
+  border: solid;
   border-color: #000000;
-  border-radius:  20px;
-  width:          100%;
-  height:         500px;
-  max-width:      1000px;
-  max-height:     1000px;
-  margin:         10px;
+  border-radius: 20px;
+  width: 100%;
+  height: 500px;
+  max-width: 1000px;
+  max-height: 1000px;
+  margin: 10px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 10.1);  
   }  
 .card2-title{
@@ -445,26 +537,25 @@ code {
   transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
   background-color:azure;
   color: rgb(0, 0, 0);
-  cursor:           pointer;
-  overflow:         hidden;
-  position:         relative;
-  display:          flex;
-  flex-direction:   column;
-  align-items:      center;
-  justify-content:  space-between;
-  font-family:      'Roboto', sans-serif;    
-  text-align:       center;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Roboto', sans-serif;    
+  text-align: center;
   padding: 10% 10% 10% 10%;
-  border:         solid;
-  border-color: #000000;
-  border-radius:  20px;
-  width:      90%;
-  height:     90%;
-  max-width:      1000px;
-  max-height:     1000px;
-  margin-top:     60px;
-  margin-left:    10%;
-  margin-right:   10%;
+  border: 2px solid black;
+  border-radius: 20px;
+  width: 90%;
+  height: 90%;
+  max-width: 1000px;
+  max-height: 1000px;
+  margin-top: 60px;
+  margin-left: 10%;
+  margin-right: 10%;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 10.1);  
   }     
 .card3:hover {
@@ -484,7 +575,7 @@ code {
 #testimonial {
   background-color: whitesmoke;
   width: 100%;
-  height: 400px;
+  height: 500px;
   max-width: 2000px;
   padding: 20px 20px 20px 20px;
   text-align: center;
@@ -492,7 +583,6 @@ code {
   position: relative;
   overflow: hidden;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Thicker shadow */
-
 }
 /* The container that holds all testimonials */
 .testimonial-container {
@@ -612,10 +702,10 @@ code {
 .changelog {
   max-width: 1000px;
   height: 600px;
-  width: 500px;
+  width:  500px;
   background-color: #ffffff;
-  padding: 20px;
-  border: solid black;
+  padding: 0px 20px 60px 20px;
+  border: 4px solid black;
   border-radius: 20px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -680,9 +770,9 @@ code {
   color: #000000;
 }
 .changelog-button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  font-size: 1rem;
+  margin: 10px 10px 10px 10px;
+  padding: 10px 10px 10px 10px;
+  font-size: 5px;
   color: #fff;
   background: linear-gradient(135deg, #000000, #6610f2); /* Gradient from black to gray */
   border: none;
@@ -733,4 +823,3 @@ footer a {
 footer a:hover {
   color: #ffffff;
   }
-
