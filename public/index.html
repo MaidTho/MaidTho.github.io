@@ -71,9 +71,8 @@
   });
 </script>
 <!--  END OF COOKIES SECTION ID -->
-<!-- //////////////////////////////////  NAVBAR SECTION \\\\\\\\\\\\
- -->
- <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+<!-- //////////////////////////////////  NAVBAR SECTION \\\\\\\\\\\\-->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
   <div class="container">
     <!-- Updated to include time/date display -->
     <a class="navbar-brand" href="#">MadeToProject <span id="currentDateTime" style="font-size: 0.8rem; margin-left: 10px; color: #f8f9fa;"></span></a>
@@ -147,12 +146,44 @@
           </a>
           <span class="tooltip">Adjust Settings</span>
         </li>
+
+        <li class="nav-item mode-item">
+          <a class="nav-link" id="mode-toggle">
+            <div class="icon-border">
+              <i class="fa fa-moon" id="mode-icon"></i>
+            </div>
+          </a>
+          <span class="tooltip">Change Mode</span>
+        </li>
       </ul>
     </div>
   </div>
 </nav>
 <!--   END OF NAVBAR SECTION -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const modeToggle = document.querySelector('#mode-toggle');
+    const modeIcon = document.querySelector('#mode-icon');
+    const body = document.body;
 
+    // Set dark mode as default
+    body.classList.add('dark-mode');
+    modeIcon.classList.add('fa-sun');
+
+    // Toggle between dark and light mode
+    modeToggle.addEventListener('click', function() {
+      body.classList.toggle('dark-mode');
+      body.classList.toggle('light-mode');
+      if (body.classList.contains('dark-mode')) {
+        modeIcon.classList.remove('fa-sun');
+        modeIcon.classList.add('fa-moon');
+      } else {
+        modeIcon.classList.remove('fa-moon');
+        modeIcon.classList.add('fa-sun');
+      }
+    });
+  });
+</script>
 <!-- Settings Modal -->
 <div id="settingsModal" class="modal">
   <div class="modal-content">
@@ -165,10 +196,31 @@
     <select id="timeFormat">
       <option value="12">12-Hour</option>
       <option value="24" selected>24-Hour</option>
-    </select>
+    </select> 
+    <!-- Time Format Toggle Styling -->
+    <style>
 
+      #timeFormat {
+        display: block;
+        margin: 20px auto;
+        padding: 10px;
+        font-size: 0.9rem;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        background-color: #f8f9fa;
+        color: #333;
+        width: 100%;
+        max-width: 300px;
+      }
+
+      #timeFormat:focus {
+        outline: none;
+        border-color: #4caf50;
+        box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+      }
+    </style>
     <!-- Date Picker -->
-    <div style="margin-top: 20px;">
+    <div style="margin: 20px auto;">
       <label for="datePicker">Select Date:</label>
       <input type="date" id="datePicker">
     </div>
@@ -264,12 +316,10 @@
 
 
 
-
-
 <!--   END OF NAVBAR SECTION ID -->
 <!-- //////////////////////////////  GRID IMAGES SECTION \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
 <!--  START OF GRID IMAGES SECTION ID -->
-<section id="grid" class="bg-dark">
+<section id="grid">
   <div class="grid-container" >
     <img class="grid-item1" src="./Images/griditem1.png" alt="The pure brilliance and beauty of the Pyramids.">
     <img class="grid-item2" src="./Images/griditem2.png" alt="Space.">
@@ -282,15 +332,14 @@
 <!--   END OF GRID IMAGES SECTION ID -->
 <!-- ////////////////////////////////////  ABOUT SECTION \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
 <!-- START OF ABOUT SECTION ID -->
-<section id="about" class="bg-light">
+<section id="about">
 <div class="content container padding" id="about">
 <h1 class="center"><b>Hello I'm Tom! &#x1F44B;</b></h1>
 <p class="center">
-I am a frontend software engineer specializing in web development using HTML, CSS, JavaScript & React.</p>
-<p class="center">
-I'm passionate about building scalable interfaces and design systems to make using software simple and enjoyable.</p>
-<p class="center">With 2 years experience working at a top Fortune 500 company I am committed to writing clean, efficient code and possess a continuous desire to learn and master new technologies.</p>
-<p class="center">Thank you for taking the time to explore my portfolio. I look forward to the opportunity to work with you and bring your digital vision to life!</p>
+I am a frontend software engineer specializing in web development using HTML, CSS, JavaScript & React.
+I'm passionate about building scalable interfaces and design systems to make using software simple and enjoyable.
+With 2 years experience working at a top Fortune 500 company I am committed to writing clean, efficient code and possess a continuous desire to learn and master new technologies.
+Thank you for taking the time to explore my portfolio. I look forward to the opportunity to work with you and bring your digital vision to life!</p>
 <br><h1 class="center"><a href="CV.html" target="_blank" class="btn custom-btn">CV</a></h1><br>       
 
 <!-- START OF ACCORDION   -->
@@ -433,73 +482,63 @@ I'm passionate about building scalable interfaces and design systems to make usi
 <!--  END OF ABOUT SECTION ID -->
 <!-- ///////////////////////////////////  PORTFILIO SECTION \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
 <!-- START OF PORTFOLIO SECTION ID -->
-<section id="portfolio" class="bg-light"> 
+<section id="portfolio"> 
   <div class="container">
     <div class="text-center">
       <h1><b>PORTFOLIO</b></h1>
+      <p>Below are some of the latest projects I have completed or been working on!</p>
     </div>
-    <!-- START OF PORTFOLIO ACCORDION -->
-    <div class="accordion" id="PortfolioAccordion">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="portfolioHeading">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#portfolioCollapse" aria-expanded="true" aria-controls="portfolioCollapse">
-            <b>PROJECTS</b>
-          </button>
-        </h2>
-        <div id="portfolioCollapse" class="accordion-collapse collapse show" data-bs-parent="#PortfolioAccordion">
-          <div class="accordion-body center">
-            Below are some of the latest projects I have completed or been working on!
-            <div class="row g-4">
-                <!-- Portfolio Item 1-->
-                <div class="col-md-4">
-                  <div class="card2">
-                    <img src="Images/FGFull.png" class="card-img-top" alt="Python Project 1">
-                    <div class="card-body">
-                      <h5 class="card2-title"><b>PYTHON PROJECT 1 - Fishing Game Revamped</b> </h5>
-                      <p class="card2-text">A revised Terminal based Fishing Game done within a GUI equipped with login / leaderboard feature.</p>
-                    </div>
-                  </div>
-                </div>
-                <!-- Portfolio Item 2-->
-                <div class="col-md-4">
-                  <div class="card2">
-                    <img src="Images/BG.png" class="card-img-top" alt="PHP Project 1">
-                    <div class="card-body">
-                      <h5 class="card2-title"><b>PHP PROJECT 1 - Button Game Project</b></h5>
-                      <p class="card2-text">A simple button game built using PHP, XAMPP and SQL where you increase score each time you press the button with user login and leaderboard capabilities.</p>
-                    </div>
-                  </div>
-                </div>
-                <!-- Portfolio Item 3-->
-                <div class="col-md-4">
-                  <div class="card2">
-                    <img src="Images/AIBlog.png" class="card-img-top" alt="Project 1">
-                    <div class="card-body">
-                      <h5 class="card2-title"><b>HTML/CSS/JavaScript Project 1 - AIBlog</b></h5>
-                      <p class="card2-text">Just a simple blog-site about Artificial Intelligence.</p>
-                    </div>
-                  </div>
-                </div>
- <!--               
-                <div class="col-md-4">
-                  <div class="card2">
-                      <div class="card-img-top"></div>
-                      <div class="card-body">
-                          <h5 class="card2-title"><b>HTML/CSS/JavaScript Project 2</b></h5>
-                          <p class="card2-text">Coming Soon...</p>
-                      </div>
-                  </div>
-              </div>   
-            -->
-                  </div>
-                </div>
+
+    <div class="accordion-body center">
+      <div class="row g-4">
+          <!-- Portfolio Item 1-->
+          <div class="col-md-4">
+            <div class="card2">
+              <img src="Images/FGFull.png" class="card-img-top" alt="Python Project 1">
+              <div class="card-body">
+                <h5 class="card2-title"><b>PYTHON PROJECT 1 - Fishing Game Revamped</b> </h5>
+                <p class="card2-text">A revised Terminal based Fishing Game done within a GUI equipped with login / leaderboard feature.</p>
               </div>
             </div>
-    </div>
+          </div>
+          <!-- Portfolio Item 2-->
+          <div class="col-md-4">
+            <div class="card2">
+              <img src="Images/BG.png" class="card-img-top" alt="PHP Project 1">
+              <div class="card-body">
+                <h5 class="card2-title"><b>PHP PROJECT 1 - Button Game Project</b></h5>
+                <p class="card2-text">A simple button game built using PHP, XAMPP and SQL where you increase score each time you press the button with user login and leaderboard capabilities.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Portfolio Item 3-->
+          <div class="col-md-4">
+            <div class="card2">
+              <img src="Images/AIBlog.png" class="card-img-top" alt="Project 1">
+              <div class="card-body">
+                <h5 class="card2-title"><b>HTML/CSS/JavaScript Project 1 - AIBlog</b></h5>
+                <p class="card2-text">Just a simple blog-site about Artificial Intelligence.</p>
+              </div>
+            </div>
+          </div>
+<!--               
+          <div class="col-md-4">
+            <div class="card2">
+                <div class="card-img-top"></div>
+                <div class="card-body">
+                    <h5 class="card2-title"><b>HTML/CSS/JavaScript Project 2</b></h5>
+                    <p class="card2-text">Coming Soon...</p>
+                </div>
+            </div>
+        </div>   
+      -->
+            </div>
+          </div>
+
+
   </div>
       </div>
     </div>
-    <!-- END OF ACCORDION -->
   </div>
 
 <!-- Carousel Section -->    
@@ -555,77 +594,52 @@ I'm passionate about building scalable interfaces and design systems to make usi
 <!--  END OF PORTFOLIO SECTION ID -->
 <!-- ///////////////////////////////////  SERVICES SECTION \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
 <!-- START OF SERVICES SECTION ID -->
-<section id="services" class="bg-light">                   
-    <div class="container">
-        <div class="text-center">
-            <h1><b>SERVICES</b></h1>
-            <p>My expertise covers these range of skills and services.</p>
-        </div>
-        <!-- START OF ACCORDION   -->
-        <section id="Accordion" class="py-5">
-          <div class="container">
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="AccordionFour">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
-                  <b>SERVICES</b>
-                </button>
-              </h2>
-
-              <div id="collapseFour" class="accordion-collapse collapse show" data-bs-parent="#Accordion">
-                <div class="accordion-body center">
-                  Below are the services I can provide for you / your company if you require assistance, reach out to me via Contact form further down!
-                 
-                  <div class="row">
-                    <!-- Service 1 -->
-                    <div class="col-md-4">
-                        <div class="card3 text-center shadow-sm">
-                            <div class="card-body">
-                                <div class="service-icon mb-3">
-                                  <i class="fas fa-code fa-2x icon-color"></i>
-                                </div>
-                                <h4 class="card-title"><b>Web Development</b></h4>
-                                <p class="card-text">I can create high-quality & responsive websites built using modern frameworks.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Service 2 -->
-                    <div class="col-md-4">
-                        <div class="card3 text-center shadow-sm">
-                            <div class="card-body">
-                                <div class="service-icon mb-3"><i class="fas fa-paint-brush fa-2x icon-color"></i></div>
-                                <h4 class="card-title"><b>UI/UX Design</b></h4>
-                                <p class="card-text">Creative user interface designs for an engaging user experience.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Service 3 -->
-                    <div class="col-md-4">
-                        <div class="card3 text-center shadow-sm">
-                            <div class="card-body">
-                                <div class="service-icon mb-3"><i class="fas fa-cog fa-2x icon-color"></i></div>
-                                <h4 class="card-title"><b>Code Cleaning</b></h4>
-                                <p class="card-text">Got a working product but messy code? Contact me and I'll make it easier to read!</p>
-                            </div>
-                        </div>
-                    </div>
-                  </div><!-- End of Row -->
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>  <!-- END OF ACCORDION SECTION ID-->
-        
-      </div>
+<section id="services">                   
+  <div class="container">
+    <div class="text-center">
+    <h1><b>SERVICES</b></h1>
+    <p>My expertise covers these range of skills and services.</p>
     </div>
+    <div class="row">    
+      <div class="col-md-4"> <!-- Service 1 -->
+        <div class="card3 text-center shadow-sm">
+          <div class="card-body">
+            <div class="service-icon mb-3"><i class="fas fa-code fa-2x icon-color"></i></div>
+              <h4 class="card-title"><b>Web Development</b></h4>
+              <p class="card-text">I can create high-quality & responsive websites built using modern frameworks.</p>
+          </div>
+        </div>
+      </div>
+          
+      <div class="col-md-4"> <!-- Service 2 -->
+        <div class="card3 text-center shadow-sm">
+          <div class="card-body">
+            <div class="service-icon mb-3"><i class="fas fa-paint-brush fa-2x icon-color"></i></div>
+              <h4 class="card-title"><b>UI/UX Design</b></h4>
+              <p class="card-text">Creative user interface designs for an engaging user experience.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4"> <!-- Service 3 -->
+        <div class="card3 text-center shadow-sm">
+          <div class="card-body">
+            <div class="service-icon mb-3"><i class="fas fa-cog fa-2x icon-color"></i></div>
+              <h4 class="card-title"><b>Code Cleaning</b></h4>
+              <p class="card-text">Got a working product but messy code? Contact me and I'll make it easier to read!</p>
+          </div>
+        </div>
+      </div>
+    </div><!-- End of Row -->        
+  </div>
 </section>                                
 <!--  END OF SERVICES SECTION ID -->
 <!-- ////////////////////////////////// TESTIMONIAL SECTION \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
 <!-- START OF TESTIMONIAL SECTION ID -->
-<section id="testimonial">
+<section id="testimonial" class="bg-dark">
   <h1 class="section-title"><b>TESTIMONIALS</b></h1>
-  <p class="section-description">Here's what our clients have to say about us!</p>
+  <p class="section-description">Here's what people have said about my work!</p>
+
   <div class="testimonial-container">
       <div class="testimonial-card">
         <img src="Images/BlackBG.png" alt="Person 1">
@@ -651,22 +665,19 @@ I'm passionate about building scalable interfaces and design systems to make usi
         <img src="Images/BlackBG.png" alt="Person 5">
         <p class="testimonial-text">"Very professional experience!"</p>
         <p class="testimonial-author">- Zoronoa Roro</p>
-    </div>
+      </div>
   </div>
 </section>
 <!--  END OF TESTIMONIAL SECTION ID -->
 <!-- /////////////////////////////////////  BLOG SECTION \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
-<!-- START OF BLOG SECTION ID -->
-<section id="blog" class="bg-light">
+<!-- START OF BLOG SECTION ID (79 LINES)-->
+<section id="blog">
   <div class="container">
-    <div class="text-center">
-      <h1><b>BLOGS</b></h1>
-      <p>This is where I will post latest updates on this site, GitHub releases, etc.</p>
-    </div>
+    <div class="text-center"><h1><b>BLOGS</b></h1>
+      <p>This is where I will post latest updates on this site, GitHub releases, etc.</p></div>
     <!-- BLOG ITEMS IN COLUMNS OF 3 -->
     <div class="row">
-      <!-- LATEST BLOG -->
-      <div class="col-md-4 mb-4">
+      <div class="col-md-4 mb-4"><!-- LATEST BLOG -->
         <div class="card4 mx-auto">
           <img src="Images/FGFull.png" class="card-img-top" alt="Latest Blog">
           <div class="card-body">
@@ -676,8 +687,7 @@ I'm passionate about building scalable interfaces and design systems to make usi
           </div>
         </div>
       </div>
-      <!-- BLOG ITEM 3 -->
-      <div class="col-md-4 mb-4">
+      <div class="col-md-4 mb-4"><!-- BLOG ITEM 3 -->
         <div class="card4 mx-auto">
           <img src="Images/BG.png" class="card-img-top" alt="Blog Post 1">
           <div class="card-body">
@@ -687,8 +697,7 @@ I'm passionate about building scalable interfaces and design systems to make usi
           </div>
         </div>
       </div>
-      <!-- BLOG ITEM 2 -->
-      <div class="col-md-4 mb-4">
+      <div class="col-md-4 mb-4"><!-- BLOG ITEM 2 -->
         <div class="card4 mx-auto">
           <img src="Images/AIBlog.png" class="card-img-top" alt="Blog Post 2">
           <div class="card-body">
@@ -698,8 +707,7 @@ I'm passionate about building scalable interfaces and design systems to make usi
           </div>
         </div>
       </div>
-      <!-- BLOG ITEM 1 -->
-      <div class="col-md-4 mb-4">
+      <div class="col-md-4 mb-4"><!-- BLOG ITEM 1 -->
         <div class="card4 mx-auto">
           <img src="Images/MainLogo3.png" class="card-img-top" alt="Blog Post 3">
           <div class="card-body">
@@ -709,7 +717,7 @@ I'm passionate about building scalable interfaces and design systems to make usi
           </div>
         </div>
       </div>
-
+<!--
       <div class="col-md-4">
         <div class="card4">
             <div class="card-img-top"></div>
@@ -729,11 +737,11 @@ I'm passionate about building scalable interfaces and design systems to make usi
             </div>
         </div>
       </div>
-
+-->
     </div>
   </div>
 </section>
-<!-- END OF BLOG SECTION ID -->
+<!--  END OF BLOG SECTION ID -->
 <!-- ///////////////////////////////  CHANGELOG COMPONENT SECTION \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
 <!-- START OF CHANGELOG COMPONENT SECTION ID -->
 <section id="changelog-component">
@@ -778,82 +786,29 @@ I'm passionate about building scalable interfaces and design systems to make usi
       </li>
 
     </ul>
-    <a href="https://github.com/MaidTho/MaidTho.github.io/releases" target="_blank" >
-      <button class="btn custom-btn">Visit Complete Changelog</button>
-    </a>
-    
-    
+<a href="https://github.com/MaidTho/MaidTho.github.io/releases" target="_blank"><button class="btn custom-btn">Visit Complete Changelog</button></a>
   </div>
 </section>
 <!--  END OF CHANGELOG COMPONENT SECTION ID -->
 <!-- ///////////////////////////////////  CONTACT SECTION \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
 <!-- START OF CONTACT SECTION ID -->
-<section id="contact" class="bg-light">
+<section id="contact" >
   <div class="text-center"><h1><b>CONTACT</b></h1></div>
     <div class="contact-form-container">
-    <h3>Get in Touch!</h3>
+    <p>Did my work impress you? Do you have a question or want to work together? Leave your details and I'll get back to you as soon as possible.</p>   
       <form action="https://formspree.io/f/xkgnwnoq" method="POST">
+      <input type="firstname" id="firstname" name="firstname" placeholder="Ando D. Rando" required>     
+      <input type="email" id="email" name="email" placeholder="AndoDRando@outlook.com" required>
 
-      <label for="email">Your email:</label>
-      <input type="email" id="email" name="email" placeholder="Enter Email Address" required>
+      <textarea id="restricted-message" maxlength="500" placeholder="Enter Your Message..." required></textarea>
       
-      <label for="firstname">First Name:</label>
-      <input type="firstname" id="firstname" name="firstname" placeholder="Enter First Name" required>
-      
-      <label for="lastname">Last Name:</label>
-      <input type="lastname" id="lastname" name="lastname"  placeholder="Enter Last Name"required>
-      
-      <label for="contact-message">Your message:</label>
-      <textarea id="restricted-message" maxlength="500" placeholder="Type your message... (max 500 char)"></textarea>
-
-      <div class="char-count" id="restricted-charCount">0 / 500</div>
-      
-      <button type="submit">Send</button>
+      <div class="char-count" id="restricted-charCount">0 / 500</div>    
+      <button type="submit">Hit me to Send!</button>
       </form>
-    </div>
+   </div> 
 </section>
 <script src="restrictedtextarea.js"></script>
 <!--  END OF CONTACT SECTION ID -->
-<!-- ///////////////////////////////////  DATE PICKER SECTION \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
-<!-- START OF DATE PICKER SECTION ID 
-<section id="date-picker">
-  <div class="modalcontainer">
-    <h1>Current Time: </h1>
-    <div class="time-label" id="timeLabel"></div>
-    <button class="modalbtn" onclick="openModal()">Change Date/Time</button>
-  </div>
-  
-  <div class="modal-overlay" id="modalOverlay" onclick="closeModal()"></div>
-  <div class="modal" id="modal">
-    <h3>Change Date Feature Coming Soon!</h3>
-    <button class="btn-close" onclick="closeModal()">Close</button>
-  </div>
-  
-  <script>
-    // Function to update time
-    function updateTime() {
-        const now = new Date();
-        const formattedTime = now.toLocaleTimeString();
-        document.getElementById('timeLabel').textContent = formattedTime;
-    }
-  
-    // Update time every second
-    setInterval(updateTime, 1000);
-    updateTime(); // Initial call
-  
-    // Functions for modal
-    function openModal() {
-        document.getElementById('modal').classList.add('show');
-        document.getElementById('modalOverlay').classList.add('show');
-    }
-  
-    function closeModal() {
-        document.getElementById('modal').classList.remove('show');
-        document.getElementById('modalOverlay').classList.remove('show');
-    }
-  </script>
-</section>
- END OF DATE PICKER SECTION ID -->
 <!-- //////////////////////////////////  FOOTER SECTION \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
 <!-- START OF FOOTER SECTION ID --> 
 <footer id="footer" class="text-center py-4">
@@ -890,5 +845,6 @@ I'm passionate about building scalable interfaces and design systems to make usi
       });
     });
   </script>
+
   </body>
 </html>

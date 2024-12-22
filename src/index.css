@@ -6,17 +6,40 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-h1 {
-  font-size: 60px;
-  padding: 20px 20px 20px 20px;
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
 }
+body.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+/* Additional styles for dark mode */
+.navbar.dark-mode {
+  background-color: #333333;
+}
+.navbar.light-mode {
+  background-color: linear-gradient(to right, whitesmoke, #6610f2);
 
+}
+p {
+  color: whitesmoke;
+  font-size: 18px;
+  padding: 20px 20px 20px 20px;
+  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+
+}
+h1 {
+  color: whitesmoke;
+  text-shadow: 2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  font-size: 50px;
+  padding: 50px 20px 20px 20px;
+}
 h2 {
+  color: whitesmoke;
   font-size: 20px;
   padding: 20px 20px 20px 20px;
 }
-
 h3{
   font-size: 40px;
   padding: 20px 20px 20px 20px;
@@ -32,7 +55,6 @@ code {
   color: white;
   text-shadow: 0 2px 0 #000000;
 }
-
 /* Glow effect at the bottom of the navbar */
 .navbar::after {
   content: ''; /* Empty content */
@@ -56,6 +78,7 @@ code {
   margin:  5px 0px 5px 0px;
   height: 40px;
   width:  40px;
+  background-color: #6610f2;
   border: 1px solid white;
   border-radius: 8px;
   transition: all 0.3s ease;
@@ -68,6 +91,7 @@ code {
 }
 .icon-border i {
   font-size: 20px;
+  padding: 10px;
   color: white;
 }
 .icon-border:hover i {
@@ -104,9 +128,7 @@ code {
   border-style: solid;
   border-color: #33333310 transparent transparent transparent;
 }
-
 /*  DATE PICKER UI LAYOUT  */ 
-
 .modalbtn {
   padding: 10px 20px;
   font-size: 1rem;
@@ -132,7 +154,6 @@ code {
   text-align: center;
   overflow-y: auto; /* Enable scrolling for longer content */
 }
-
 /* Tablet Screens and Above */
 @media (min-width: 768px) {
   .modal-content {
@@ -142,7 +163,6 @@ code {
     padding: 25px; /* Increase padding slightly */
   }
 }
-
 /* Desktop Screens */
 @media (min-width: 1200px) {
   .modal-content {
@@ -181,7 +201,6 @@ code {
 .modal .btn-close:hover {
   background-color: #b02a37;
 }
-
 /*  GRID LAYOUT   */
 #grid {
   display: flex;
@@ -286,7 +305,6 @@ code {
 .center {
   text-align: center;
 }
-
 #portfolio img, #about img {
   width: 100%;
   height: auto;
@@ -300,48 +318,84 @@ code {
 #featureCarousel .carousel-inner img {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Adds a shadow when focused */
   height:500px;                /* Set desired height */
+  width: 100px;                /* Ensure full width */  
   object-fit: contain;         /* Ensure images are fully visible without cropping */
-  width: 100px;                /* Ensure full width */
   background-color: black;   /* Optional: Adds a background to fill any gaps */
 }
 .carousel-caption{
   position: absolute;         
-  top:  90%;                     
-  left: 50%;         
+  top:  85%;                     
+  left: 50%;   
+ /* margin: auto;    
+  padding: 20px 20px 20px 20px;  */ 
   transform: translate(-50%, -80%); 
-  height:100px;
-  width: 500px;
+  height: 100px;
+  width:  400px;
+  color: goldenrod;   
   background-color: rgba(0, 0, 0, 0.7);          
-  border: 4px goldenrod solid;  
-  border-radius: 60px;        
+  border: 2px solid goldenrod ;  
+  border-radius: 20px;        
   text-align: center;       
-  color: goldenrod;          
+         
 }
 .carousel-control-prev, 
 .carousel-control-next {
   background-color: #0000002a;
-  border: solid 5px goldenrod;
+  border: 4px solid  goldenrod;
+  border-radius: 60px;
   color: goldenrod;
-  height: 100%;
-  width: 100px;
+  height: 100px;
+  width:  100px;
+  margin: 200px auto;
+  padding: 20px 20px 20px 20px;
+}
+.carousel-control-prev:hover, 
+.carousel-control-next:hover {
+  transform: scale(1.3); /* Slightly enlarge the controls */
+  background-color: black; 
+  border: 8px solid goldenrod;
+}
+@media (max-width: 600px) {
+  .carousel-caption {
+    width: 50%; /* Adjust width for smaller screens */
+    font-size: 14px; /* Adjust font size for readability */
+    top: 50%; /* Adjust position for better visibility */
+    transform: translate(-50%, -70%);
+  }
 }
 .accordion-header {
   text-align: center;
 }
 .accordion-button {
-  font-size: 1.5rem; /* Adjust font size as needed */
+  background-color: #222;
+  color: whitesmoke;
+  font-size: 30px; /* Adjust font size as needed */
   justify-content: center; /* Centers button contents */
 }
+.accordion-button:focus {
+  background-color: #333;
+  color: whitesmoke;
+}
+.accordion-button:not(.collapsed) {
+  background-color: #444;
+  color: whitesmoke;
+  border: 4px solid whitesmoke;
+}
+.accordion-button:not(.collapsed):after {
+  content: '_';
+  color: whitesmoke;
+}
 .custom-btn {
-  padding: 20px 20px;
+  margin:  20px 20px 20px 20px;
+  padding: 20px 20px 20px 20px;
   height: 60px;
   width: 250px;
   font-size: 1rem;
   color: #fff;
   background: linear-gradient(135deg, #000000, #6610f2); /* Gradient background */
-  text-shadow: 0 1px 0 #000000;
   text-align: center;
   text-decoration: none; /* Removes underline from the link */  
+  text-shadow: 0 2px 0 #000000;
   border: 2px solid black;
   border-radius: 30px;
   display: inline-block;
@@ -433,10 +487,10 @@ code {
 /*   LANGUAGE CARD SECTION     */
 .card {
   /*  Height / Width (TRBL) */
-  padding: 0% 0% 0% 0%;
-  margin:  10% -50% 10% 0%;
-  height: 150px;
-  width:  350px;
+  padding: 5% 5% 5% 5%;
+  margin:  20px auto;
+  height: 200px;
+  width:  300px;
   min-width:  100px;
   min-height: 100px;
   max-width:  1000px;
@@ -446,18 +500,18 @@ code {
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;  
+  /*align-items: center; */ 
    /*  Font / Text */
   justify-content: space-between;
   font-family:'Roboto', sans-serif;    
   text-align: center; 
   /*  Border  */
-  border: solid 2px black;
+  border: solid 4px mediumslateblue;
   border-radius: 20px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 10.1);  
   /*  Color   */
-  background-color: azure;
-  color: rgb(0, 0, 0);
+  color: mediumslateblue;  
+  background-color: white;
   /*  OTHER EFFECTS   */
   transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
   cursor: pointer;
@@ -495,15 +549,14 @@ code {
   font-family: 'Roboto', sans-serif;    
   text-align: center;
   padding: 10% 10% 10% 10%;
-  border: solid;
-  border-color: #000000;
+  margin: 20px auto;
+  border: 2px solid black;
   border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 10.1);  
   width: 100%;
   height: 500px;
   max-width: 1000px;
   max-height: 1000px;
-  margin: 10px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 10.1);  
   }  
 .card2-title{
   padding-top: 20%;
@@ -535,8 +588,8 @@ code {
 }
 .card3 {
   transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  color: black;
   background-color:azure;
-  color: rgb(0, 0, 0);
   cursor: pointer;
   overflow: hidden;
   position: relative;
@@ -546,17 +599,15 @@ code {
   justify-content: space-between;
   font-family: 'Roboto', sans-serif;    
   text-align: center;
+  margin: 20px auto;
   padding: 10% 10% 10% 10%;
   border: 2px solid black;
   border-radius: 20px;
-  width: 90%;
-  height: 90%;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 10.1);  
+  width:  80%;
+  height: 80%;
   max-width: 1000px;
   max-height: 1000px;
-  margin-top: 60px;
-  margin-left: 10%;
-  margin-right: 10%;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 10.1);  
   }     
 .card3:hover {
   transform: translateY(-10px); /* Slight lift effect on hover */
@@ -573,13 +624,12 @@ code {
   }
 /* General styles for the testimonial section */
 #testimonial {
-  background-color: whitesmoke;
   width: 100%;
-  height: 500px;
+  height: 600px;
   max-width: 2000px;
   padding: 20px 20px 20px 20px;
   text-align: center;
-  margin: 50px auto;
+  margin: 0px auto;
   position: relative;
   overflow: hidden;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Thicker shadow */
@@ -594,7 +644,7 @@ code {
 .testimonial-card {
   flex: 0 0 20%; /* Each card takes 20% of the container width */
   text-align: center;
-  padding: 40px;
+  padding: 0px;
   box-sizing: border-box;
 }
 .testimonial-card img {
@@ -604,14 +654,13 @@ code {
   margin: 0 auto 15px;
 }
 .testimonial-text {
-  font-size: 16px;
-  color: black;
+  color: white;font-size: 16px;
   margin-bottom: 10px;
 }
 .testimonial-author {
+  color: beige;
   font-size: 14px;
   font-weight: bold;
-  color: #333;
 }
 /* Keyframes for sliding effect */
 @keyframes slide {
@@ -660,15 +709,16 @@ code {
   justify-content: space-between;
   font-family: 'Roboto', sans-serif;    
   text-align: center;
-  padding: 10% 10% 10% 10%;
+  margin:  20px auto;
+  padding: 20px 20px 20px 20px ;
   border:         solid;
   border-color: black;
-  border-radius:  20px;
+  border-radius:  40px;
   width:          400px;
   height:         525px;
   max-width:      1000px;
   max-height:     1000px;
-  margin:         10px;
+  
   box-shadow: 0 8px 16px rgba(0, 0, 0, 10.1);  
   }    
 .card4-title{
@@ -693,8 +743,9 @@ code {
   } 
 /*  CHANGELOG STYLING STARTS */
 #changelog-component {
-  padding: 40px 20px;
-  background-color: #f5f5f5;
+  padding: 0px;
+  border-top: 4px solid black;
+  border-bottom: 4px solid black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -704,29 +755,38 @@ code {
   height: 600px;
   width:  500px;
   background-color: #ffffff;
-  padding: 0px 20px 60px 20px;
+  margin:  20px auto;
+  padding: 0px 0px 100px 0px;
   border: 4px solid black;
-  border-radius: 20px;
+  border-radius: 40px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   text-align: center;
   overflow: hidden; /* Prevent content overflow */
   position: relative;
 }
+
+.changelog:hover {
+  color: white;
+  background-color: #222;
+  border: 4px solid goldenrod;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Thicker shadow */
+}
+
 .changelog-title {
-  font-size: 1.8rem;
+  font-size: 30px;
   font-weight: bold;
-  margin-bottom: 5px;
-  color: #333;
+  margin: 10px auto;
+  color: white;
+  text-shadow: 2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 .changelog-subtitle {
-  font-size: 1rem;
-  margin-bottom: 20px;
-  color: #666;
+  font-size: 20px;
+  margin: 0px;
 }
 .changelog-timeline {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  list-style: none; 
+  padding: 20px auto;
+  margin:  0px auto;
   position: relative;
   height: calc(100% - 150px); /* Keep it within bounds */
   overflow-y: auto; /* Add scrolling for overflow content */
@@ -734,51 +794,43 @@ code {
 .changelog-timeline::before {
   content: "";
   position: absolute;
-  left: 50%;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background-color: #ddd;
+  top:    30px;  
+  left:   49.6%;
+  right:  49.4%;  
+  bottom: 60px;
+  width:  4px;
+  background-color: mediumslateblue;
 }
 .timeline-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 15px 0;
+  margin: 20px 0;
 }
 .timeline-item::before {
   content: "";
   position: absolute;
   left: 50%;
-  width: 10px;
-  height: 10px;
-  background-color: #000000;
+  width: 20px;
+  height: 20px;
+  background-color: goldenrod;
+  border: 2px solid mediumslateblue;
   border-radius: 50%;
   transform: translate(-50%, 0);
 }
 .timeline-date {
-  width: 45%;
+  color: goldenrod;
+  width: 40%;
   text-align: right;
   font-weight: bold;
-  color: #000000;
-  padding-right: 15px;
+  padding-right: 0px;
 }
 .timeline-description {
-  width: 45%;
+  color: mediumslateblue;
+  font-weight: bold;
+  width: 50%;
   text-align: left;
-  padding-left: 15px;
-  color: #000000;
-}
-.changelog-button {
-  margin: 10px 10px 10px 10px;
-  padding: 10px 10px 10px 10px;
-  font-size: 5px;
-  color: #fff;
-  background: linear-gradient(135deg, #000000, #6610f2); /* Gradient from black to gray */
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: background 0.3s ease; /* Smooth transition for hover effect */
+  padding: 0px 0px 0px 20px; 
 }
 .changelog-button:hover {
   background: linear-gradient(135deg,#ffa633, #6610f2); /* Lighter gradient on hover */
@@ -815,11 +867,11 @@ code {
 footer {
   background: linear-gradient(to left, #000000, #6610f2);
   color: white;
-  }
+}
 footer a {
   color: #adb5bd;
   text-decoration: none;
-  }
+}
 footer a:hover {
   color: #ffffff;
-  }
+}
