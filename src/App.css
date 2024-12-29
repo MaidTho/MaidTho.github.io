@@ -3,12 +3,20 @@
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  width: auto; /* Adjust size as needed */
+  height: auto;
+  transition: box-shadow 0.3s ease-in-out; /* Smooth transition */
+}
+
+.App-logo:hover {
+  width: 25%;
+  height: 25%;
+  box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.7); /* Glow effect */
+  /*cursor: pointer;  Optional, indicates interactivity */
 }
 
 .App-header {
-  background-color: #000000;
+  background-color: #0000004a;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -16,6 +24,7 @@
   justify-content: center;
   padding-top: 100px;
   margin-top: 0px;
+  border-bottom: 100px solid black;
   font-size: calc(20px + 5vmin);
   color: white;
 }
