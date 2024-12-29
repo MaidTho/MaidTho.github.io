@@ -29,11 +29,20 @@
 ---------------------------------------------------
 <h1 align="center">LATEST RELEASES</h1>
 
-• Update 2.0.0 - React fully integrated! 
+• Update 2.0.2 - Contact Form Updated & Cool React Features!
+    
+    •   Contact Form updated.
+    •   Changelog UI Improved (mobile).
+    •   NEW Navbar / Footer Interactivity.
+    •   NEW Logo React Interactivity (Now it has a glow and increases size on hover!)
+    •   General UI Theme update
+    •   General Code Clean Up
+    
 
-    •   Integrated Website under react.js framework.
-    •   The M logo spins!
-    •   New Grid layout added.
+• Update 2.0.1 - Contact Form Updated & Dark/Light Mode added! 
+
+    •   Dark Mode / Light Mode button added to navbar.
+    •   Contact form UI updated.
     •   General UI theme formatting. 
     •   General Code Clean Up. 
 
@@ -68,9 +77,10 @@
 ## https://roadmap.sh/projects/cookie-consent         [x] COMPLETED 06/12/24 Update 1.8.1
 ## https://roadmap.sh/projects/tooltip-ui             [x] COMPLETED 07/12/24 Update 1.8.2
 ## https://roadmap.sh/projects/image-grid             [x] COMPLETED 13/12/24 Update 2.0.0
+## https://roadmap.sh/projects/datepicker-ui          [x] COMPLETED 14/12/24 Update 2.0.0
 
 <br>
-## https://roadmap.sh/projects/datepicker-ui          [ ]
+
 ## https://roadmap.sh/projects/accessible-form-ui     [ ]
 ## https://roadmap.sh/projects/age-calculator         [ ]
 ## https://roadmap.sh/projects/flash-cards            [ ]
@@ -85,9 +95,6 @@
         •  Testimonial Cards.    (DONE!)
         •  Cookie consent        (DONE!)
         •  Restricted textarea   (DONE!)
-        •  Application Page.
-        •  Task Tracker.
-        •  GitHub Random Repository.
-        •  Weather App.
+
 
 
