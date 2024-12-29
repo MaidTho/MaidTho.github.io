@@ -29,6 +29,16 @@
 ---------------------------------------------------
 <h1 align="center">LATEST RELEASES</h1>
 
+• Update 2.0.2 - Contact Form Updated & Cool React Features!
+    
+    •   Contact Form updated.
+    •   Changelog UI Improved (mobile).
+    •   NEW Navbar / Footer Interactivity.
+    •   NEW Logo React Interactivity (Now it has a glow and increases size on hover!)
+    •   General UI Theme update
+    •   General Code Clean Up
+    
+
 • Update 2.0.1 - Contact Form Updated & Dark/Light Mode added! 
 
     •   Dark Mode / Light Mode button added to navbar.
