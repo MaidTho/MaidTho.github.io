@@ -55,6 +55,15 @@ body {
     color: white;
     text-shadow: 0 2px 0 #000000;
   }
+  .navbar:hover {
+    background: linear-gradient(to right, goldenrod, #6610f2);
+    /*cursor: pointer;*/
+    color: white;
+    text-shadow: 0 2px 0 #000000;
+    /*transform: scale(1.0);  Slightly increase the size */
+    transition: transform 0.3s ease; /* Smooth transition */
+    box-shadow: 0px 0px 25px 5px goldenrod; /* Glow effect */
+  }
   /* Glow effect at the bottom of the navbar */
   .navbar::after {
     content: ''; /* Empty content */
@@ -64,13 +73,15 @@ body {
     left: 0; 
     width: 100%; /* Full width */
     height: 0px; /* Height of the glow effect */
-  /*   background: rgba(255, 255, 255, 0.5); Light color for glow */
-    box-shadow: 0px 0px 25px 5px goldenrod; /* Glow effect */
   }
   /* General Tooltip Styles */
   .nav-item {
     position: relative; /* Ensure tooltips are positioned relative to the nav items */
     cursor: pointer;
+  }
+  .nav-item:hover .tooltip {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-5px); /* Add slight animation */
   }
   .icon-border {
     display: inline-block;
@@ -99,7 +110,7 @@ body {
   }
   .tooltip {
     position: absolute;
-    bottom: -50%; /* Position above the nav link */
+    bottom: -70%; /* Position above the nav link */
     left: 50%;
     transform: translateX(-50%);
     background: #333;
