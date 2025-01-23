@@ -29,6 +29,12 @@
 ---------------------------------------------------
 <h1 align="center">LATEST RELEASES</h1>
 
+• Update 2.0.3 - Blog Section overhaul!
+    
+    •   NEW! Blog Search Section (with blogs!)   
+    •   General UI Theme (Mobile & Desktop) update.
+    •   General Code Clean Up
+
 • Update 2.0.2 - Contact Form Updated & Cool React Features!
     
     •   Contact Form updated.
