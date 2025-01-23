@@ -1,0 +1,312 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    text-align: center;
+    padding: 20px 20px 20px 20px;
+}
+/* Light Mode */
+body.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.icon-border.light-mode {
+    background-color: #cccccc;
+    border: 2px solid #000000;
+}
+
+.icon-border.light-mode:hover {
+    border: 4px solid #888888;
+}
+
+.tooltip.light-mode {
+    background: #eeeeee;
+    color: #000000;
+}
+
+.tooltip.light-mode::after {
+    border-color: #eeeeee transparent transparent transparent;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.icon-border.dark-mode {
+    background-color: #555555;
+    border: 2px solid #ffffff;
+}
+
+.icon-border.dark-mode:hover {
+    border: 4px solid #aaaaaa;
+}
+
+.tooltip.dark-mode {
+    background: #444444;
+    color: #ffffff;
+}
+
+.tooltip.dark-mode::after {
+    border-color: #444444 transparent transparent transparent;
+}
+
+.navbar {
+    background: linear-gradient(to right, #000000, #6610f2);
+    height: 75px;
+    font-size: 25px;
+    color: white;
+    text-shadow: 0 2px 0 #000000;
+}
+  
+.navbar:hover {
+    background: linear-gradient(to right, goldenrod, #6610f2);
+    color: white;
+    text-shadow: 0 2px 0 #000000;
+    transition: transform 0.3s ease; /* Smooth transition */
+    box-shadow: 0px 0px 25px 5px goldenrod; /* Glow effect */
+}
+  
+.navbar::after {  /* Glow effect at the bottom of the navbar */
+    content: ''; /* Empty content */
+    padding: 0px 0px 0px 0px; 
+    position: absolute; 
+    bottom: 0; /* Position at the bottom of the navbar */
+    left: 0; 
+    width: 100%; /* Full width */
+    height: 0px; /* Height of the glow effect */
+}
+  /* General Tooltip Styles */
+.nav-item {
+    position: relative; /* Ensure tooltips are positioned relative to the nav items */
+    cursor: pointer;
+}
+
+.nav-item:hover .tooltip {
+    opacity: 1;
+  
+}
+
+.icon-border {
+    display: inline-block;
+    padding: 0px 0px 0px 0px;
+    margin:  5px 0px 5px 0px;
+    height: 40px;
+    width:  40px;
+    background-color: #6610f2;
+    border: 2px solid white;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+  
+.icon-border:hover {
+    border: 4px solid goldenrod;
+    transform: scale(2.0); /* Slight zoom effect on hover */
+    transition: transform 0.2s ease; /* Smooth transition */
+}
+  
+.icon-border i {
+    font-size: 20px;
+    padding: 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.icon-border:hover i {
+    transform: scale(1.5); /* Slight zoom effect on hover */
+    transition: transform 0.2s ease; /* Smooth transition */
+}
+
+.tooltip {
+    position: absolute;
+    bottom: -50%; /* Position above the nav link */
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: white;
+    padding: 10px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+}
+
+.tooltip::after { /* Tooltip Arrow */
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: #33333310 transparent transparent transparent;
+}
+
+.container {
+    width: 85%;
+    height: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.blog-card.light-mode:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.blog-card.dark-mode:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+.blog-card {
+    border-radius: 10px;
+    margin: 50px 10px 25px 10px;
+    padding: 20px 20px 20px 20px;
+    height: 300px;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    /*border: 4px outset goldenrod;*/
+    /* Other border line styles that can be used */
+
+    /* Solid border 
+    border-style: solid;
+    /* Dotted border 
+    border-style: dotted;
+    /* Dashed border 
+    border-style: dashed;
+    /* Double border 
+    border-style: double;
+    /* Groove border 
+    border-style: groove;
+    /* Ridge border 
+    border-style: ridge;
+    /* Inset border 
+    border-style: inset;
+    /* Outset border 
+    border-style: outset;
+    /* None border 
+    border-style: none;
+    /* Hidden border 
+    border-style: hidden;*/
+}
+
+.blog-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px grey;
+    cursor: pointer;
+}
+
+.blog-card h2 {
+    margin-top: 20px;
+    padding-bottom: 40px;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 4px solid #6610f2;
+}
+
+.blog-card p {
+    margin-top: 20px;
+    padding: 20px auto;
+    text-align: center;
+    font-weight: bold;
+}
+
+.blog-card.light-mode p {
+    color: #333333;
+}
+
+.blog-card.dark-mode p {
+    color: whitesmoke;
+}
+
+.blog-card a {
+    margin-top: 20px;
+    margin-left: 40%;
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+    text-align: center;
+}
+
+.blog-card a:hover {
+    text-align: center;
+    text-decoration: underline;
+}
+
+/* FOOTER SECTION */
+
+footer {
+    background: linear-gradient(to left, #000000, #6610f2);
+    height: 250px;
+}
+
+footer:hover {
+    background: linear-gradient(to left, goldenrod, #6610f2);
+    box-shadow: 0px 0px 25px 5px goldenrod; /* Glow effect */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+footer i {
+    color: white;
+    background-color: #6610f2;
+    border: 4px solid black;
+    border-radius: 60px;
+    transition: border 0.3s ease; /* Smooth transition for border */
+    margin-top: 25px;
+}
+
+footer i:hover {
+    color: #ffffff;
+    background-color: goldenrod;
+    border: 6px solid black;
+    transform: scale(2.0); /* Slight zoom effect on hover */
+    transition: transform 0.2s ease; /* Smooth transition */
+}
+
+footer p {
+    color: goldenrod;
+    text-shadow: 2px 2px 5px #6610f2;
+}
+
+@media (max-width: 600px) {
+    p {
+        font-size: 20px;
+        padding: 0px 0px 0px 0px;
+        margin: 0px 0px 0px 0px;
+        min-width: 100%;
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+    .tooltip {
+      bottom: -20%; 
+      left: 72.5%;
+      font-size: 15px; 
+      padding: 10px 10px 10px 10px; 
+      transform: translateX(-50%);
+    }
+    .nav-item:hover .tooltip {
+      transform: translateX(-50%) translateY(0); 
+    }
+    .nav-item {
+      margin: 8% 2.5% 0% 0%; 
+      height: 50px; 
+      text-align: right;
+    } 
+}
