@@ -8,14 +8,12 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-
+        <br></br>
         <img src={logo} className="App-logo" alt="logo" />
-        <canvas id="connected-dots"></canvas>
-        <script src="script.js"></script>  
         <br></br>
         <h1><b>MadeToProject</b></h1>
-        <h1>Hello I'm <span>Tom</span>!&#x1F44B;</h1>
-        <h2>I am a Frontend Software Engineer from <span>Adelaide</span>, South Australia!</h2>
+        <h2>Hello I'm <code>Tom</code>!&#x1F44B;</h2>
+        <h2>I am a Frontend Software Engineer from <code>Adelaide</code>, South Australia!</h2>
         <br></br>
     </header>
     </div>

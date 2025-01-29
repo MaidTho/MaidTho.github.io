@@ -34,14 +34,12 @@
         color: #d4d4d4; /* Light text color */
         line-height: 1.6;
     }
-
     nav {
         display: flex;
         justify-content: center;
         background-color: #1a1a1a; /* Darker navbar */
         padding: 1rem;
     }
-
     nav a {
         color: #32cd32; /* Neon green links */
         text-decoration: none;
@@ -49,26 +47,21 @@
         font-weight: bold;
         transition: color 0.3s ease;
     }
-
     nav a:hover {
         color: #d4d4d4; /* Light hover effect */
     }
-
     header {
         text-align: center;
         padding: 2rem 1rem;
         background: linear-gradient(180deg, #1a1a1a, #121212);
         color: #32cd32; /* Neon green header text */
     }
-
     header h1 {
         font-size: 3rem;
     }
-
     header p {
         font-size: 1.2rem;
     }
-
     .container {
         display: flex;
         gap: 2rem;
@@ -78,21 +71,18 @@
         justify-content: center;
         align-items: center;
     }
-
     main {
         flex: 3;
     }
-
     main article {
         background-color: #1a1a1a; /* Dark article background */
-        height: 400px;
-        width: 800px;
+        height: 90%;
+        width:  90%;
         margin: 20px 20px 20px 20px;
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     }
-
     main article:hover {
         background-color: #000000; 
         margin: 20px 20px 20px 20px;
@@ -102,47 +92,15 @@
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
         cursor: pointer;
     }
-
     main article h2 {
         color: #32cd32; /* Neon green headings */
         margin-bottom: 0.5rem;
     }
-
     main article .post-meta {
         font-size: 0.9rem;
         color: #888; /* Subtle post metadata */
         margin-bottom: 1rem;
     }
-
-    aside {
-        flex: 1;
-        background-color: #1a1a1a;
-        padding: 1.5rem;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-    }
-
-    aside h2 {
-        color: #32cd32;
-    }
-
-    aside ul {
-        list-style: none;
-        padding: 0;
-    }
-
-    aside ul li a {
-        color: #32cd32;
-        text-decoration: none;
-        display: block;
-        padding: 0.5rem 0;
-        transition: transform 0.3s ease;
-    }
-
-    aside ul li a:hover {
-        transform: translateX(5px);
-    }
-
     footer {
         text-align: center;
         padding: 1rem 0;
@@ -150,7 +108,6 @@
         color: #888;
         margin-top: 2rem;
     }
-
     .dark-mode-toggle {
         position: fixed;
         height: 50px;
@@ -169,7 +126,6 @@
         display: block;
         transition: background-color 0.3s ease, transform 0.3s ease;
     }
-
     .back-to-top {
         position: fixed;
         height: 50px;
@@ -188,23 +144,19 @@
         display: none; /* Initially hidden */
         transition: background-color 0.3s ease, transform 0.3s ease;
     }
-
     .dark-mode-toggle:hover,
     .back-to-top:hover {
         background-color: #1a1a1a;
         color: #32cd32;
         transform: scale(1.1);
     }
-
     .back-to-top {
         display: none; /* Initially hidden */
     }
-
     .dark-mode {
         background-color: #000000; /* Even darker mode */
         color: #32cd32;
     }
-
     .herocontainer {
         display: flex;
         gap: 2rem;
@@ -214,7 +166,6 @@
         justify-content: center;
         align-items: center;
     }    
- 
     #hero {
         display: flex;
         flex-direction: column;
@@ -222,30 +173,25 @@
         padding-top: 7.5px;
         padding-bottom: 7.5px;
     }
-
     #hero div {
         display: flex;
         flex-direction: row;
         padding-top: 15px;
         padding-bottom: 20px;
     }
-
     #hero p {
         padding: 5px;
         color: var(--text-color);
     }
-
     #typed-text-wrapper {
         position: relative;
         display: inline-block;
     }
-
     #typed-text {
         display: inline;
         word-wrap: break-word; /* Ensure long words wrap correctly */
         min-height: 120px;
     }
-
     #cursor {
         position: absolute;
         display: inline;
@@ -253,18 +199,15 @@
         top: 0;
         animation: blink 0.7s steps(2, start) infinite;
     }
-
     #typed-text {
        
         white-space: pre-wrap; /* Preserve line breaks and wrapping */
     }
-
     @keyframes blink {
         50% {
             opacity: 0;
         }
     }
-
     @media screen and (max-width: 480px) {
     #intro {
         justify-content: center;
@@ -282,18 +225,14 @@
     #app-list {
         grid-template-columns: 1fr;
     }
-}
+    }
     </style>
 </head>
 <body>
  
 <!-- NAVBAR STARTS HERE -->
 <nav>
-    <a href="#Home">Home</a>
-    <a href="#Gemini">Gemini</a>
-    <a href="#ChatGPT">ChatGPT</a>
-    <a href="#CoPilot">CoPilot</a>
-    <a href="#GenAI">GenAI</a>
+    <a href="index.html">Home</a>
 </nav>
 <!-- NAVBAR ENDS HERE -->
 <!-- HEADER STARTS HERE -->
@@ -310,38 +249,134 @@
 </header>
 <!-- HEADER ENDS HERE -->
 <!-- CONTAINER STARTS HERE --> 
+
+
+
 <div class="container">
     <main>
-        <article>
+        
+        <article onclick="openModal('geminiModal')">
+            <h2>Gemini</h2>
+            <p class="post-meta">Published on Septxxxxx XX, XXXX by NotAnAIRobot.</p>
+            <p>Gemini is Google's advanced ... Click to Read More</p>
+        </article>
+
+        <!-- Modal Structure -->
+        <div id="geminiModal" class="modal">
+            <div class="modal-content">
+            <span class="close" onclick="closeModal('geminiModal')">&times;</span>
             <h2>Gemini</h2>
             <p class="post-meta">Published on Septxxxxx XX, XXXX by NotAnAIRobot.</p>
             <p>Gemini is Google's advanced multimodal AI model designed to understand and generate text, images, audio, and video, enhancing productivity and creativity...</p>
+            </div>
+        </div>
+
+        <article onclick="openModal('chatgptModal')">
+            <h2>ChatGPT</h2>
+            <p class="post-meta">Published on Septxxxxx XX, XXXX by NotAnAIRobot.</p>
+            <p>ChatGPT, developed by OpenAI ... Click to Read More</p>
         </article>
-        <article>
+
+        <!-- Modal Structure -->
+        <div id="chatgptModal" class="modal">
+            <div class="modal-content">
+            <span class="close" onclick="closeModal('chatgptModal')">&times;</span>
             <h2>ChatGPT</h2>
             <p class="post-meta">Published on Septxxxxx XX, XXXX by NotAnAIRobot.</p>
             <p>ChatGPT, developed by OpenAI, is a conversational AI model that can generate human-like text responses, assist with various tasks, and provide information based on user prompts...</p>
+            </div>
+        </div>
+
+        <article onclick="openModal('copilotModal')">
+            <h2>Co-Pilot</h2>
+            <p class="post-meta">Published on Septxxxxx XX, XXXX by NotAnAIRobot.</p>
+            <p>Microsoft Copilot is an AI assistant ... Click to Read More</p>
         </article>
-        <article>
+
+        <!-- Modal Structure -->
+        <div id="copilotModal" class="modal">
+            <div class="modal-content">
+            <span class="close" onclick="closeModal('copilotModal')">&times;</span>
             <h2>Co-Pilot</h2>
             <p class="post-meta">Published on Septxxxxx XX, XXXX by NotAnAIRobot.</p>
             <p>Microsoft Copilot is an AI assistant that boosts productivity and creativity by providing real-time assistance, generating content, and helping users understand information better...</p>
+            </div>
+        </div>
+
+        <article onclick="openModal('genaiModal')">
+            <h2>GenAI</h2>
+            <p class="post-meta">Published on Septxxxxx XX, XXXX by NotAnAIRobot.</p>
+            <p>Generative AI (Gen AI) refers to AI models ... Click to Read More</p>
         </article>
-        <article>
+
+        <!-- Modal Structure -->
+        <div id="genaiModal" class="modal">
+            <div class="modal-content">
+            <span class="close" onclick="closeModal('genaiModal')">&times;</span>
             <h2>GenAI</h2>
             <p class="post-meta">Published on Septxxxxx XX, XXXX by NotAnAIRobot.</p>
             <p>Generative AI (Gen AI) refers to AI models capable of creating original content such as text, images, videos, and audio by learning patterns from large datasets and generating new data with similar characteristics...</p>
-        </article>
+            </div>
+        </div>
+
+
+        
+        <style>
+            .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+            }
+            .modal-content {
+            background-color: #1a1a1a;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 90%;
+            height: 60%;
+            color: #d4d4d4;
+            border-radius: 10px;
+            }
+            .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            }
+            .close:hover,
+            .close:focus {
+            color: #32cd32;
+            text-decoration: none;
+            cursor: pointer;
+            }
+        </style>
+
+        <script>
+            function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+            }
+
+            function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+            }
+
+            window.onclick = function(event) {
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(modal => {
+                if (event.target == modal) {
+                modal.style.display = "none";
+                }
+            });
+            }
+        </script>
+
     </main>
-    <aside>
-        <h2>Recent Posts</h2>
-        <ul>
-            <li><a href="#Gemini">Gemini</a></li>
-            <li><a href="#ChatGPT">ChatGPT</a></li>
-            <li><a href="#CoPilot">CoPilot</a></li>
-            <li><a href="#GenAI">GenAI</a></li>
-        </ul>
-    </aside>
 </div>
 <!-- FOOTER STARTS -->
 <footer>

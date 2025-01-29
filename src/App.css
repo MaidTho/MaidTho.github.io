@@ -1,18 +1,25 @@
+
+
 .App {
   text-align: center;
 }
 
 .App-logo {
-  width: auto; /* Adjust size as needed */
-  height: auto;
+  width: 25%;
+  height: 25%;
+  border: 4px solid black;
+  border-radius: 500px;
+  box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.7); /* Glow effect */
   transition: box-shadow 0.3s ease-in-out; /* Smooth transition */
 }
 
 .App-logo:hover {
-  width: 25%;
-  height: 25%;
+  width: 35%;
+  height: 35%;
+  border: 8px solid goldenrod;
+  border-radius: 500px;
   box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.7); /* Glow effect */
-  /*cursor: pointer;  Optional, indicates interactivity */
+  cursor: pointer; /* Optional, indicates interactivity */
 }
 
 .App-header {
@@ -25,25 +32,141 @@
   padding-top: 100px;
   margin-top: 0px;
   border-bottom: 100px solid black;
-  font-size: calc(20px + 5vmin);
+  font-size: 10px;
   color: white;
 }
 
 .App-link {
   color: #61dafb;
 }
-
+/*  ANIMATION   */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 5s linear;
   }
 }
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+@keyframes dropBounce {
+  0% {
+    transform: translateY(-100vh);
+  }
+  60% {
+    transform: translateY(0);
+  }
+  80% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+h1 {
+  opacity: 0; /* Initially hidden */
+  animation: fadeInLeft 1s ease-out;
+  animation-delay: 1s; /* Delay to start after h1 */
+  animation-fill-mode: forwards; /* Retain the final state after animation */
+}
+h2 {
+  opacity: 0; /* Initially hidden */
+  animation: fadeInRight 1s ease-out;
+  animation-delay: 3s; /* Delay to start after h1 */
+  animation-fill-mode: forwards; /* Retain the final state after animation */
+}
+.App-logo {
+  animation: dropBounce 1s ease-out, App-logo-spin infinite 5s linear;
+  animation-delay: 0s, 1s; /* Start spinning after bounce */
+}
+
+/*  RESPONSIVE DESIGN SECTION   */
+
+/* Responsive customization for Android phones */
+@media only screen and (max-width: 480px) {
+  .App-logo {
+    width: 60%;
+    height: 60%;
+  }
+
+  .App-header {
+    font-size: calc(10px + 5vmin);
+    padding-top: 50px;
+  }
+}
+
+/* Responsive customization for Apple phones */
+@media only screen and (max-width: 375px) {
+  .App-logo {
+    width: 60%;
+    height: 60%;
+  }
+
+  .App-header {
+    font-size: calc(10px + 5vmin);
+    padding-top: 40px;
+  }
+}
+
+/* Responsive customization for Tablets */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .App-logo {
+    width: 40%;
+    height: 40%;
+  }
+
+  .App-header {
+    font-size: calc(18px + 5vmin);
+    padding-top: 70px;
+  }
+}
+
+/* Responsive customization for Laptops */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .App-logo {
+    width: 30%;
+    height: 30%;
+  }
+
+  .App-header {
+    font-size: calc(20px + 5vmin);
+    padding-top: 80px;
+  }
+}
+
+/* Responsive customization for Desktop monitors */
+@media only screen and (min-width: 1025px) {
+  .App-logo {
+    width: 25%;
+    height: 25%;
+  }
+
+  .App-header {
+    font-size: calc(22px + 5vmin);
+    padding-top: 100px;
   }
 }

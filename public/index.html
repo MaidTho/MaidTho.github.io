@@ -19,10 +19,9 @@
     <link rel="stylesheet" type='text/css' href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- FontAwesome Icons -->
     <link rel="stylesheet" type='text/css' href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" ><!-- Google Fonts -->
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" /><!-- ICON CSS -->
+    <link rel="stylesheet" type="text/css" href="App.css">
     <link rel="stylesheet" type='text/css' href="contactform.css"><!-- CONTACTFORM CSS -->
     <link rel="stylesheet" type="text/css" href="index.css">
-    <link rel="stylesheet" type="text/css" href="App.css">
-    <link rel="stylesheet" type="text/css" href="Blog.css">
     <link rel="icon" href="%PUBLIC_URL%/LogoRender.png" />
     <title>MadeToProject</title>
   </head>
@@ -75,7 +74,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
   <div class="container">
     <!-- Updated to include time/date display -->
-    <a class="navbar-brand" href="#">MadeToProject <span id="currentDateTime" style="font-size: 0.8rem; margin-left: 10px; color: #f8f9fa;"></span></a>
+    <a class="navbar-brand" href="#">MadeToProject <span id="currentDateTime" style="font-size: 0.8rem; margin-left: 0px; color: #f8f9fa;"></span></a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -179,8 +178,8 @@
 <div id="settingsModal" class="modal">
   <div class="modal-content">
     <button id="closeModal" class="close-button">&times;</button>
-    <h1><b>Settings</b></h1>
-    <p>Here you can adjust your settings.</p>
+    <h3><b>Settings</b></h3>
+    <strong> Here you can adjust your settings. </strong> <br>
     <!-- Time Format Toggle -->
     <label for="timeFormat">Choose Time Format:</label>
     <select id="timeFormat">
@@ -194,35 +193,6 @@
     </div>
   </div>
 </div>
-<!-- Custom CSS for Styled Close Button -->
-<style>
-  .close-button {
-    background-color: goldenrod; /* Red color */
-    color: white;
-    border: none;
-    border-radius: 50%;
-    font-size: 1.5rem;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top:   10px;
-    right: 10px;
-    cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease;
-  }
-
-  .close-button:hover {
-    background-color: #d32f2f; /* Darker red on hover */
-  }
-
-  .close-button:active {
-    transform: scale(0.95); /* Slightly shrink on click */
-  }
-</style>
 <!-- JavaScript for Modal and Date/Time -->
 <script>
   // Modal Logic
@@ -279,256 +249,279 @@
   datePicker.addEventListener("change", updateDateTime);
 </script>
 <!--   END OF NAVBAR SECTION ID -->
-<!-- ////////////////////////////////////  ABOUT SECTION \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
-<!-- START OF ABOUT SECTION ID -->
+
+<!-- ABOUT SECTION -->
 <section id="about">
-<h1 class="center"><b>ABOUT ME</b></h1>
-<div class="content container" id="about">
-<p class="center">
-I am a frontend software engineer specializing in web development using HTML, CSS, JavaScript & React.
-I'm passionate about building scalable interfaces and design systems to make using software simple and enjoyable.
-With 2 years experience working at a top Fortune 500 company I am committed to writing clean, efficient code and possess a continuous desire to learn and master new technologies.
-Thank you for taking the time to explore my portfolio. I look forward to the opportunity to work with you and bring your digital vision to life!</p>
-<br>
-<p class="center"><a href="CV.html" target="_blank" class="btn custom-btn">CV</a></p>
-<p class="center"><a href="portfolio.html" target="_blank" class="btn custom-btn">Old RoadMap Portfolio</a></p><br>       
-
-<!-- START OF ACCORDION   -->
-<section id="Accordion" class="py-5">
   <div class="container">
-    <div class="accordion" id="Accordion">
-      <div class="accordion-item1"><h2 class="accordion-header" id="AccordionOne">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"><b>LANGUAGES</b></button></h2>
-        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#Accordion">
-        <div class="accordion-body center"><p>Below are the languages I use.</p>
-            <div class="row justify-content-center">
-              <div class="col-md-4 d-flex justify-content-center"><!-- HTML5 -->
-                <div class="languagecard text-center shadow-sm">
-                  <div class="languagecard-body">
-                    <div class="service-icon mb-3">
-                      <i class="devicon-html5-plain colored fa-2x"></i>
-                        </div>
-                      <h4 class="languagecard-title"><b>HTML5</b></h4>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 d-flex justify-content-center"> <!-- CSS3 -->
-                <div class="languagecard text-center shadow-sm">
-                  <div class="languagecard-body">
-                    <div class="service-icon mb-3"><i class="devicon-css3-plain colored fa-2x"></i></div>
-                      <h4 class="languagecard-title"><b>CSS3</b></h4>
-                  </div>
-                </div>
-              </div>                
-              <div class="col-md-4 d-flex justify-content-center"><!-- JavaScript -->
-                <div class="languagecard text-center shadow-sm">
-                  <div class="languagecard-body">
-                    <div class="service-icon mb-3"><i class="devicon-javascript-plain colored fa-2x"></i></div>
-                      <h4 class="languagecard-title"><b>JavaScript</b></h4>
-                  </div>
-                </div>
-              </div>                       
-              <div class="col-md-4 d-flex justify-content-center"><!-- Java -->
-                <div class="languagecard text-center shadow-sm">
-                  <div class="languagecard-body">
-                    <div class="service-icon mb-3"><i class="devicon-java-plain colored fa-2x"></i></div>
-                      <h4 class="languagecard-title"><b>Java</b></h4>
-                  </div>
-                </div>
-              </div>                
-              <div class="col-md-4 d-flex justify-content-center"><!-- Python -->
-                <div class="languagecard text-center shadow-sm">
-                  <div class="languagecard-body">
-                    <div class="service-icon mb-3"><i class="devicon-python-plain colored fa-2x"></i></div>
-                      <h4 class="languagecard-title"><b>Python</b></h4>
-                  </div>
-                </div>
-              </div>                
-              <div class="col-md-4 d-flex justify-content-center"><!-- SQL -->
-                <div class="languagecard text-center shadow-sm">
-                  <div class="languagecard-body">
-                    <div class="service-icon mb-3"><i class="devicon-azuresqldatabase-plain colored fa-2x"></i></div>
-                      <h4 class="languagecard-title"><b>SQL</b></h4>
-                  </div>
-                </div>
-              </div>                
-              <div class="col-md-4 d-flex justify-content-center"><!-- Bootstrap 5 -->
-                <div class="languagecard text-center shadow-sm">
-                  <div class="languagecard-body">
-                    <div class="service-icon mb-3"><i class="devicon-bootstrap-plain colored fa-2x"></i></div>
-                      <h4 class="languagecard-title"><b>Bootstrap</b></h4>
-                  </div>
-                </div>
-              </div>                
-              <div class="col-md-4 d-flex justify-content-center"><!-- PHP -->
-                <div class="languagecard text-center shadow-sm">
-                  <div class="languagecard-body">
-                    <div class="service-icon mb-3"><i class="devicon-php-plain colored fa-2x"></i></div>
-                      <h4 class="languagecard-title"><b>PHP</b></h4>
-                  </div>
-                </div>
-              </div>                
-              <div class="col-md-4 d-flex justify-content-center"><!-- .Net -->
-                <div class="languagecard text-center shadow-sm">
-                  <div class="languagecard-body">
-                    <div class="service-icon mb-3"><i class="devicon-dotnetcore-plain colored fa-2x"></i></div>
-                      <h4 class="languagecard-title"><b>.Net</b></h4>
-                  </div>
-                </div>
-              </div><!-- END OF CARDS ADD NEW ONES ON NEXT LINE-->           
-            </div>
-        </div>
-        </div>
-      </div>
-
-<div class="accordion-item2">
-<h2 class="accordion-header" id="AccordionTwo">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"><b>TECH STACK</b></button></h2>
-  <div id="collapseTwo" class="accordion-collapse collapse show" data-bs-parent="#Accordion">
-    <div class="accordion-body center"><p>Below are the programs I use to make magic</p>
-      <div class="row justify-content-center">  
-        <div class="col-md-4 d-flex justify-content-center"><!-- VISUAL STUDIO CODE -->
-          <div class="languagecard text-center shadow-sm">
-            <div class="languagecard-body">
-              <div class="service-icon mb-3"><i class="devicon-vscode-plain-wordmark colored fa-2x"></i></div>
-                <h4 class="languagecard-title"><b>Visual Studio Code</b></h4>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 d-flex justify-content-center"><!-- GITHUB -->
-          <div class="languagecard text-center shadow-sm">
-            <div class="languagecard-body">
-              <div class="service-icon mb-3"><i class="devicon-github-original-wordmark colored fa-2x"></i>     </div>
-                <h4 class="languagecard-title"><b>GitHub Version Control</b></h4>
-            </div>
-          </div>
-        </div>      
-        <div class="col-md-4 d-flex justify-content-center"><!-- GIMP -->
-          <div class="languagecard text-center shadow-sm">
-            <div class="languagecard-body">
-              <div class="service-icon mb-3"><i class="devicon-gimp-plain colored fa-2x"></i></div>
-                <h4 class="languagecard-title"><b>GIMP</b></h4>
-            </div>
-          </div>
-        </div> <!-- END OF CARDS ADD NEW ONES ON NEXT LINE-->
-      </div>     
+    <div class="text-center">
+      <h1><b>ABOUT ME</b></h1>
+    </div>
+  </div>
+</section>
+       
+<section id="hero-container">   
+<div class="hero-left">
+    <p>I am a frontend software engineer specializing in web development using HTML, CSS, JavaScript & React.
+      I'm passionate about building scalable interfaces and design systems to make using software simple and enjoyable. <br> <br>
+      With 2 years experience working at a top Fortune 500 company I am committed to writing clean, efficient code and possess a continuous desire to learn and master new technologies. <br> <br>
+      Thank you for taking the time to explore my portfolio. I look forward to the opportunity to work with you and bring your digital vision to life!
+      <br> <br> <br>  
+      <a href="CV.html" target="_blank" class="btn custom-btn">CV</a>
+    </p>
+</div>
+<div class="hero-right">
+  <div class="skills-grid">
+    <div class="skill-box">
+      <i class="devicon-html5-plain colored"></i>
+      <p>HTML5</p>
+    </div>
+    <div class="skill-box">
+      <i class="devicon-css3-plain colored"></i>
+      <p>CSS3</p>
+    </div>
+    <div class="skill-box">
+      <i class="devicon-javascript-plain colored"></i>
+      <p>JavaScript</p>
+    </div>
+    <div class="skill-box">
+      <i class="devicon-react-original colored"></i>
+      <p>React</p>
+    </div>
+    <div class="skill-box">
+      <i class="devicon-nodejs-plain colored"></i>
+      <p>Node.js</p>
+     </div>
+    <div class="skill-box">
+      <i class="devicon-git-plain colored"></i>
+      <p>Git</p>
+    </div>
+    <div class="skill-box">
+      <i class="devicon-github-original colored"></i>
+      <p>GitHub</p>
+    </div>
+    
+    <div class="skill-box">
+      <i class="devicon-bootstrap-plain colored"></i>
+      <p>Bootstrap5</p>
+    </div>
+    <div class="skill-box">
+      <i class="devicon-java-plain colored"></i>
+      <p>Java</p>
+    </div>
+    <div class="skill-box">
+      <i class="devicon-python-plain colored"></i>
+      <p>Python</p>
+    </div>
+    <div class="skill-box">
+      <i class="devicon-azuresqldatabase-plain colored"></i>
+      <p>SQL</p>
+    </div>
+    <div class="skill-box">
+      <i class="devicon-php-plain colored"></i>
+      <p>PHP</p>
+    </div>
+    <div class="skill-box">
+      <i class="devicon-dotnetcore-plain colored"></i>
+      <p>.Net</p>
+    </div>
+    <div class="skill-box">
+      <i class="devicon-vscode-plain colored"></i>
+      <p>VS.Code</p>
+    </div>
+    <div class="skill-box">
+      <i class="devicon-gimp-plain colored"></i>
+      <p>GIMP</p>
     </div>
   </div>
 </div>
+</section>
 
-</section>  <!-- END OF ABOUT ACCORDION SECTION ID -->
-
-</section>                                
-<!--  END OF ABOUT SECTION ID -->
 <!-- ///////////////////////////////////  PORTFILIO SECTION \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
-<!-- START OF PORTFOLIO SECTION ID -->
-<section id="portfolio"> 
-  <div class="container">
-  <div class="text-center"><h1><b>PORTFOLIO</b></h1><p>Below are some of the latest projects I have completed or been working on!</p></div>
-    <div class="accordion-body center">
-      <div class="row g-4">
-        <div class="col-md-4"> <!-- Portfolio Item 1 -->
-          <div class="card2">
-            <img src="Images/FGFull.png" class="card-img-top" alt="Python Project 1">
-            <div class="card-body">
-              <h5 class="card2-title"><b>PYTHON PROJECT 1 - Fishing Game Revamped</b> </h5>
-              <p class="card2-text">A revised Terminal based Fishing Game done within a GUI equipped with login / leaderboard feature.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4"> <!-- Portfolio Item 2 -->
-          <div class="card2">
-            <img src="Images/BG.png" class="card-img-top" alt="PHP Project 2">
-            <div class="card-body">
-              <h5 class="card2-title"><b>PHP PROJECT 1 - Button Game Project</b></h5>
-              <p class="card2-text">A simple button game built using PHP, XAMPP and SQL where you increase score each time you press the button with user login and leaderboard capabilities.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4"> <!-- Portfolio Item 3 -->
-          <div class="card2">
-            <img src="Images/AIBlog.png" class="card-img-top" alt="Project 3">
-            <div class="card-body">
-              <h5 class="card2-title"><b>HTML/CSS/JavaScript Project 1 - AIBlog</b></h5>
-              <p class="card2-text">Just a simple blog-site about Artificial Intelligence.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4"> <!-- Portfolio Item 4 -->
-          <div class="card2">
-            <img src="Images/CD.png" class="card-img-top" alt="Project 4">
-            <div class="card-body">
-              <h5 class="card2-title"><b>HTML/CSS/JavaScript Mini Project</b> Connect Dots</h5>
-              <p class="card2-text">A small feature where you hover over the red dots to delete them!</p>
-                <a href="connectdots.html" target="_blank" class="btn custom-btn">Go to</a>
-            </div>
+<!-- START OF PORTFOLIO SECTION ID -->                
+<section id="portfolio">
+  <div class="text-center"><h1><b>PORTFOLIO</b></h1>
+    <br><p>Below are some of the latest projects I have completed or been working on!</p></div>
+    <br><p class="center"><a href="portfolio.html" target="_blank" class="btn custom-btn">RoadMap Portfolio</a></p>
+    <div class="col-md-4 fade-in"> 
+  
+    <div class="portfoliocard1"> <!--Portfolio Item 1 -->
+      <img src="Images/FGFull.png" class="portfoliocard1-img-top" alt="Project 1">
+      <div class="card-body">
+        <div class="info">
+          <p>Fishing Game made in Python with a GUI done over the course of two weeks in Early November 2024.</p>
+          <div class="extrainfo">
+            Python Fishing Game
           </div>
         </div>
       </div>
+      <a href="https://github.com/MaidTho/Fishing-Game-Revamped" class="btn portfolio-btn" target="_blank">Go to</a>
     </div>
-  </div>
-</section>                               
+    
+
+    <div class="portfoliocard1"> <!-- Portfolio Item 2 -->
+      <img src="Images/BG.png" class="portfoliocard1-img-top" alt="Project 2">
+      <div class="card-body">
+        <div class="info">
+          <p>A simple button game built using PHP, XAMPP and SQL where you increase score each time you press the button with user login and leaderboard capabilities.</p>
+          <div class="extrainfo">
+            PHP PROJECT 1 - Button Game Project
+          </div>
+        </div>
+      </div>
+      <a href="https://github.com/MaidTho/PHP-Project-1-ButtonGame" class="btn portfolio-btn" target="_blank">Go to</a>
+    </div>
+
+    <div class="portfoliocard1" > <!-- Portfolio Item 3 -->
+      <img src="Images/AIBlog.png" class="portfoliocard1-img-top" alt="Project 3">
+      <div class="card-body">
+        <div class="info">
+          <p>Just a simple blog-site about Artificial Intelligence.</p>
+          <div class="extrainfo">
+            AI Blogsite
+          </div>
+        </div>
+      </div>
+      <a href="AIBlog.html" class="btn portfolio-btn" target="_blank">Go to</a>
+    </div>
+
+    <div class="portfoliocard1"> <!-- Portfolio Item 4 -->
+      <img src="Images/CD.png" class="portfoliocard1-img-top" alt="Project 4">
+      <div class="card-body">
+        <div class="info">
+          <p>A small feature where you hover over the red dots to delete them!</p>
+          <div class="extrainfo">
+            HTML/CSS/JavaScript Mini Project - Connected Dots
+          </div>
+        </div>
+      </div>
+      <a href="connectdots.html" class="btn portfolio-btn" target="_blank">Go to</a>
+    </div>
+
+<style>
+.fade-in {
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: fadeIn 2s forwards, popOut 0.5s 2s forwards;
+}
+
+.fade-in:nth-child(even) {
+  transform: translateX(100%);
+}
+
+@keyframes fadeIn {
+  to {
+opacity: 1;
+transform: translateX(0);
+  }
+}
+
+@keyframes popOut {
+  0% {
+transform: scale(1);
+  }
+  50% {
+transform: scale(1.1);
+  }
+  100% {
+transform: scale(1);
+  }
+}
+</style>
+</section> 
 <!--  END OF PORTFOLIO SECTION ID -->
 <!-- /////////////////////////////////////  BLOG SECTION \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
 <!-- START OF BLOG SECTION ID -->
+
+<!-- BLOG POST SIMULATION -->
 <section id="blog">
   <div class="container">
     <div class="text-center"><h1><b>BLOGS</b></h1>
       <p>This is where I will post latest updates on this site, GitHub releases, etc.</p></div>
-    <!-- BLOG ITEMS IN COLUMNS OF 3 -->
-    <div class="row">
-      <div class="col-md-4 mb-4"><!-- LATEST BLOG -->
-        <div class="blogcard mx-auto">
-          <img src="Images/FGFull.png" class="card-img-top" alt="Latest Blog">
-          <div class="card-body">
-            <h5 class="blogcard-title"><b>LATEST BLOG:</b>Python Fishing Game Revamped!</h5>
-            <p class="blogcard-text">
-Check out this Python Fishing Game within one week from November 1 - November 8!</p>
-            <a href="https://github.com/MaidTho/Fishing-Game-Revamped" class="btn custom-btn">Go to</a>
-          </div>
+
+      <div id="search-wrapper">
+        <div id="search">
+            <label for="search-input" aria-hidden="true">
+                <!-- magnifier -->
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="rgba(128,128,128,0.8)"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-search"
+                >
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line
+                        x1="21"
+                        y1="21"
+                        x2="16.65"
+                        y2="16.65"
+                    ></line>
+                </svg>
+            </label>
+            <input
+                type="search"
+                id="search-input"
+                placeholder="Search by title..."
+                aria-label="Search"
+            />
         </div>
-      </div>
-      <div class="col-md-4 mb-4"><!-- BLOG ITEM 3 -->
-        <div class="blogcard mx-auto">
-          <img src="Images/BG.png" class="card-img-top" alt="Blog Post 1">
-          <div class="card-body">
-            <h5 class="blogcard-title"><b>BLOG 3: </b>PHP Button Game!</h5>
-            <p class="blogcard-text">
-Hey everyone! I have completed the PHP button game, give it a look! Click the button to check it out!</p>
-            <a href="https://github.com/MaidTho/PHP-Project-1-ButtonGame" class="btn custom-btn">Go to</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 mb-4"><!-- BLOG ITEM 2 -->
-        <div class="blogcard mx-auto">
-          <img src="Images/AIBlog.png" class="card-img-top" alt="Blog Post 2">
-          <div class="card-body">
-            <h5 class="blogcard-title"><b>Blog 2:</b> AI Blog out now!</h5>
-            <p class="blogcard-text">Hey everyone! My Artificial Intelligence Blog Site is now up and running! Click the button to check it out! </p>
-            <a href="/AIBlog.html" class="btn custom-btn">Read More</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 mb-4"><!-- BLOG ITEM 1 -->
-        <div class="blogcard mx-auto">
-          <img src="Images/MainLogo3.png" class="card-img-top" alt="Blog Post 3">
-          <div class="card-body">
-            <h5 class="blogcard-title"><b>Blog 1:</b> Hello World! I have a New Logo!</h5>
-            <p class="blogcard-text justify">We have a cool new logo for the site! Check it out!</p>
-            <a href="#" class="btn custom-btn">Read More</a>
-          </div>
-        </div>
-      </div>
     </div>
+    <ul id="post-list" style="display: block; text-align: left; margin: 0 auto; max-width: 600px;">
+        <li>
+            <a href="blog1.html" class="clickable-text" data-blog="1st BLOG - Hello World!">#1st BLOG - Hello World!</a>
+            <time datetime="2024-09-01T00:00:00+00:00">AUG 1st, 2024</time>
+        </li>
+        <li>
+            <a href="blog2.html">#2nd BLOG - AI Blog Out Now!</a>
+            <time datetime="2024-09-14T00:00:00+00:00">AUG 14th, 2024</time>
+        </li>
+        <li>
+            <a href="blog3.html">#3rd BLOG - PHP Project - Button Game Now Live!</a>
+            <time datetime="2024-09-31T00:00:00+00:00">AUG 31st, 2024</time>
+        </li>
+        <li>
+            <a href="blog4.html">#4th BLOG - Python Project - Fishing Game Now Live!</a>
+            <time datetime="2024-11-15T00:00:00+00:00">NOV 15, 2024</time>
+        </li>
+        <li>
+            <a href="blog5.html">#5th BLOG - React Project - This Website is now in React!</a>
+            <time datetime="2024-12-09T00:00:00+00:00">DEC 9, 2024</time>
+        </li>
+    </ul>
+  <div class="text-center">
+      <br> <br> <a href="blogs.html" target="_blank" class="btn custom-btn">View All Blogs</a>
   </div>
 </section>
+  
+  <script>
+    document.getElementById('search-input').addEventListener('input', function() {
+      const filter = this.value.toLowerCase();
+      const posts = document.querySelectorAll('#post-list li');
+  
+      posts.forEach(post => {
+        const title = post.querySelector('a').textContent.toLowerCase();
+        if (title.includes(filter)) {
+          post.style.display = '';
+        } else {
+          post.style.display = 'none';
+        }
+      });
+    });
+  </script>
+
 <!--  END OF BLOG SECTION ID -->
 <!-- ///////////////////////////////  CHANGELOG COMPONENT SECTION \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
 <!-- START OF CHANGELOG COMPONENT SECTION ID -->
 <section id="changelog-component">
-  <div class="text-center"><h1><b>CHANGELOG</b></h1>  
+  <div class="text-center">
+    <h1><b>CHANGELOG</b></h1>  
     <div class="changelog">  
-    <h1 class="changelog-title"><b>Latest Updates!</b></h1>
+    <div class="changelog-title">Latest Updates!</div>
     <p class="changelog-subtitle">Here are all the changes I have made to the website!</p>
     <ul class="changelog-timeline">
       
@@ -599,7 +592,7 @@ Hey everyone! I have completed the PHP button game, give it a look! Click the bu
       <i class="fab fa-linkedin-in" style="font-size: 25px;"></i></a>  
       <a href="https://github.com/MaidTho" class="mx-2" target="_blank">
       <i class="fab fa-github" style="font-size: 25px;"></i></a> <br><br>
-    Tom Maidment &copy; 2024</p>
+    Made To Project &copy; 2024</p>
   </div>
 </footer>
 <!--  END OF FOOTER SECTION ID -->

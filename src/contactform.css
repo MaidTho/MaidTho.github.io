@@ -1,6 +1,7 @@
 /* General Styles for Contact Form */
 body {
   font-family: 'Roboto', sans-serif;
+  font-size: 20px;
   margin: 0px auto;
   padding: 0px 0px 0px 0px;
   line-height: 1.0;
@@ -10,11 +11,9 @@ body {
   width: 90%;
   max-width: 500px;
   margin: 50px auto;
-  padding: 20px 20px 20px 20px;
+  padding: 10px 20px 10px 20px;
 }
 .contact-form-container p {
-  color: whitesmoke;
-  text-shadow: 10px 10px 10px 10px black;
   margin: 0px auto;
   padding: 20px 20px 20px 20px;
   text-align: center;
@@ -26,22 +25,24 @@ body {
 .contact-form-container input[type="email"] {
   width: calc(100% - 20px);
   padding: 20px;
-  margin: 20px auto;
+  margin: 5px auto;
   height: 40px;
   width: 100%; 
-  color: black;
+  color: rgba(0, 0, 0, 0.550);
+  font-size: 15px;
   background-color: whitesmoke;
-  border: 4px solid #6610f2;
+  border: 2px solid #6610f2;
   border-radius: 10px;
   box-sizing: border-box;
   transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 .contact-form-container input[type="message"]  {
   padding: 20px;
-  margin: 20px auto;
+  margin: 5px auto;
   height: 200px;
   width: 100%; 
   color: black;
+  font-size: 15px;
   background-color: whitesmoke;
   border: 2px solid #6610f2;
   border-radius: 10px;
@@ -49,39 +50,37 @@ body {
   transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 .contact-form-container input[type="firstname"]:focus,
-.contact-form-container input[type="email"]:focus,
-.contact-form-container input[type="message"]:focus {
-  border: 8px solid whitesmoke;
+.contact-form-container input[type="email"]:focus {
+  border: 4px solid whitesmoke;
   box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
   outline: none;
 }
 /* Textarea */
 .contact-form-container textarea {
-  margin: 15px auto;
+  margin: 5px auto;
   resize: vertical;
   height: 200px;
-  width:  100%;
-  color: black;
+  width:  100%;  
 }
-
 /* Textarea Placeholder */
 .contact-form-container textarea::placeholder {
-  margin: 200px auto;
+  margin: 20px auto;
   padding: 0px 0px 0px 0px;
-  color: black;
+  color: rgba(0, 0, 0, 0.550);
+  font-family: 'Roboto', sans-serif;
   font-size: 15px;
-  font-weight: bold;  
 }
+
 /* Submit Button */
 .contact-form-container button[type="submit"] {
-  width: 150px;
+  width: 100%;
   height: 60px;
-  padding: 20px 20px 20px 20px;
-  margin: 0px 0px 100px 65%;
+  padding: 0px 0px 0px 0px;
+  margin: 50px 0px 0px 0px;
   background: linear-gradient(135deg, black, #6610f2);
   color: #ffffff;
   text-shadow: 0 2px 0 black;
-  border: solid 2px black;
+  border: solid 2px whitesmoke;
   border-radius: 40px;
   font-size: 15px;
   font-weight: bold;
@@ -97,9 +96,10 @@ body {
 }
 #contact textarea {
   width: 100%;
-  font-size: 15px;
-  font-weight: bold;
-  padding: 20px;
+  font-size: 20px;
+  padding: 20px 20px 20px 20px;
+  color: #000;
+  background-color: whitesmoke;
   border: 2px solid #6610f2;
   border-radius: 10px;
   outline: none;
@@ -107,18 +107,22 @@ body {
 }
 #contact textarea:focus {
   border: 4px solid whitesmoke;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+  outline: none;
 }
 #contact textarea.limit-reached {
   border: 4px solid red;
   color: red;
 }
 #contact .char-count {
-  margin: 0px auto;
+  margin: 20px auto;
   font-size: 20px;
   color: whitesmoke;
+  text-shadow: 1px 1px 2px black;
 }
 #contact .char-count.limit-reached {
   color: red;
+  text-shadow: 1px 1px 2px black;
 }
 /* Responsiveness */
 @media (max-width: 600px) {
@@ -128,5 +132,28 @@ body {
 
   .contact-form-container h3 {
     font-size: 1.5rem;
+  }
+
+  .contact-form-container button[type="submit"] {
+    width: 100%;
+    height: 60px;
+    padding: 0px 0px 0px 0px;
+    margin: 50px 0px 0px 0px;
+    background: linear-gradient(135deg, black, #6610f2);
+    color: #ffffff;
+    text-shadow: 0 2px 0 black;
+    border: solid 2px whitesmoke;
+    border-radius: 40px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.1s;
+  }
+  .contact-form-container button[type="submit"]:hover {
+    background: linear-gradient(135deg, goldenrod, #6610f2);
+    border: solid 2px goldenrod;
+  }
+  .contact-form-container button[type="submit"]:active {
+    transform: translateY(2px);
   }
 }
