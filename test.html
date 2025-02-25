@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Cube with Quote</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #111;
+            overflow: hidden;
+            color: white;
+        }
+
+        h1 {
+            position: absolute;
+            top: 150px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 5em;
+            font-family: Arial;
+            text-shadow: 4px 4px 0 #000, -2px -2px 0 #000, -2px 2px 0 #000, 2px -2px 0 #000;
+        }
+
+        p {
+            position: absolute;
+            top: 275px;
+            font-size: 1.5rem;
+            font-family: Arial;
+            font-style: italic;
+        }
+
+        .container {
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(3, 50px);
+            gap: 20px;
+        }
+
+        .cube {
+            position: relative;
+            width: 50px;
+            height: 50px;
+            background: #dcdcdc;
+            transition: 0.3s;
+        }
+
+        .cube:hover {
+            background: #ef4149;
+            filter: drop-shadow(0 0 30px #ef4149);
+            cursor: pointer;
+            transform: scale(1.8);
+        }
+
+        .quote {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            display: none;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Thinkube</h1>
+
+<p>Stuck in a rut? Need an idea for a project? Hover over any of the cubes for one!</p>
+    <div class="container">
+        <div class="cube" data-quote="Believe in yourself."></div>
+        <div class="cube" data-quote="Keep pushing forward."></div>
+        <div class="cube" data-quote="Success is a journey."></div>
+        <div class="cube" data-quote="Dream big."></div>
+        <div class="cube" data-quote="Never give up."></div>
+        <div class="cube" data-quote="Work hard, stay humble."></div>
+        <div class="cube" data-quote="Stay positive."></div>
+        <div class="cube" data-quote="You are capable."></div>
+        <div class="cube" data-quote="Make today amazing."></div>
+    </div>
+    <div class="quote" id="quote"></div>
+
+    <script>
+        const cubes = document.querySelectorAll(".cube");
+        const quoteBox = document.getElementById("quote");
+
+        cubes.forEach(cube => {
+            cube.addEventListener("mouseenter", (e) => {
+                const quote = cube.getAttribute("data-quote");
+                quoteBox.textContent = quote;
+                quoteBox.style.display = "block";
+                quoteBox.style.left = `${e.pageX + 10}px`;
+                quoteBox.style.top = `${e.pageY - 30}px`;
+            });
+
+            cube.addEventListener("mousemove", (e) => {
+                quoteBox.style.left = `${e.pageX + 10}px`;
+                quoteBox.style.top = `${e.pageY - 30}px`;
+            });
+
+            cube.addEventListener("mouseleave", () => {
+                quoteBox.style.display = "none";
+            });
+        });
+    </script>
+</body>
+</html>
