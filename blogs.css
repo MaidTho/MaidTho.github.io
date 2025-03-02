@@ -136,7 +136,74 @@ body.dark-mode {    /* Dark Mode */
     height: 90%;
     margin: auto;
     overflow: hidden;
+    background-color: none;
 }
+
+
+.card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background: linear-gradient(-45deg, goldenrod 0%, #6610f2 100% );
+    border-radius: 10px;
+    margin: 20px 20px 60px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+    cursor: pointer;
+  }
+  
+  .card svg {
+    width: 48px;
+    fill: #333;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .card:hover {
+    transform: rotate(-5deg) scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #222;
+    opacity: 0;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .card:hover .card__content {
+    transform: translate(-50%, -50%) rotate(0deg);
+    opacity: 1;
+  }
+  
+  .card__title {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+    font-weight: 700;
+  }
+  
+  .card__description {
+    margin: 10px 0 0;
+    font-size: 14px;
+    color: #777;
+    line-height: 1.4;
+  }
+  
+  .card:hover svg {
+    scale: 0;
+    transform: rotate(-45deg);
+  }
+
 .blog-card.light-mode:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
@@ -153,29 +220,7 @@ body.dark-mode {    /* Dark Mode */
     width: 100%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
-    /*border: 4px outset goldenrod;*/
-    /* Other border line styles that can be used */
 
-    /* Solid border 
-    border-style: solid;
-    /* Dotted border 
-    border-style: dotted;
-    /* Dashed border 
-    border-style: dashed;
-    /* Double border 
-    border-style: double;
-    /* Groove border 
-    border-style: groove;
-    /* Ridge border 
-    border-style: ridge;
-    /* Inset border 
-    border-style: inset;
-    /* Outset border 
-    border-style: outset;
-    /* None border 
-    border-style: none;
-    /* Hidden border 
-    border-style: hidden;*/
 }
 .blog-card:hover {
     transform: translateY(-10px);
