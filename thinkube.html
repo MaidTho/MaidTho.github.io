@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hover Cube with Quote</title>
+    <title>Thinkube | Cure to Procrastination!</title>
     <style>
         body {
             display: flex;
@@ -49,8 +49,8 @@
         }
 
         .cube:hover {
-            background: #ef4149;
-            filter: drop-shadow(0 0 30px #ef4149);
+            background: mediumaquamarine;
+            filter: drop-shadow(0 0 30px black);
             cursor: pointer;
             transform: scale(1.8);
         }
@@ -64,11 +64,49 @@
             display: none;
             white-space: nowrap;
         }
+
+        .typewriter {
+            display: flex;
+            position: absolute;
+            top: 100px;
+            justify-content: center;
+        }
+
+        .typewriter h2 {
+            font-family: monospace;
+            font-size: 4rem;
+            /*margin-inline: auto;*/
+            overflow: hidden;
+            white-space: nowrap; /* Keeps on a single line */
+            border-right: 20px solid green; /* The Cursor */
+            animation: typing 0.5s steps(22) forwards, blink 1s step-end infinite;    /* steps = number of characters */
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+
     </style>
 </head>
-<body>
+<body>   
 
-<h1>Thinkube</h1>
+    <div class="typewriter">
+        <div>
+            <h2>Thinkube</h2>
+        </div>
+    </div>
 
 <p>Stuck in a rut? Need an idea for a project? Hover over any of the cubes for one!</p>
     <div class="container">
