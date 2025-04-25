@@ -29,6 +29,12 @@
 ---------------------------------------------------
 <h1 align="center">LATEST RELEASES</h1>
 
+• Update 2.1.0 - General UI Update! @ 25/04/25
+    
+    •   NEW: Theme Change now moved into Settings Cog.   
+    •   NEW: Date / Time moved into Settings Cog. 
+    •   General Code Clean Up.
+
 • Update 2.0.3 - Blog Section overhaul!
     
     •   NEW! Blog Search Section (with blogs!)   
@@ -58,13 +64,11 @@
 
 <p align="center">
     
-    • ABOUT ME SECTION.          (NEWLY UPDATED!)
-    • PORTFOLIO SECTION.         (NEWLY UPDATED!)
-    • SERVICES SECTION.          (NEWLY UPDATED!) 
-    • TESTIMONIAL SECTION        (NEWLY ADDED! @ 05/12/24)
-    • BLOG SECTION.              (NEWLY UPDATED!)
-    • CHANGELOG COMPONENT.       (NEWLY ADDED! @ 04/12/24)
-    • CONTACT FORM.              (NEWLY UPDATED! Restricted Text area included @ 06/12/24)
+    • ABOUT ME SECTION.          (NEWLY UPDATED! @25/04/25)
+    • PORTFOLIO SECTION.         
+    • BLOG SECTION.              (NEWLY UPDATED! @25/04/25)
+    • CHANGELOG COMPONENT.       (NEWLY UPDATED! @25/04/25)
+    • CONTACT FORM.              
     
 </p>
 <br>
@@ -96,11 +100,6 @@
 
     ~ ~ ~ Future Features ~ ~ ~
         •  Custom Cursor.  
-        •  Single-Page CV.       (DONE!) 
-        •  Changelog Component.  (DONE!)
-        •  Testimonial Cards.    (DONE!)
-        •  Cookie consent        (DONE!)
-        •  Restricted textarea   (DONE!)
 
 
 
