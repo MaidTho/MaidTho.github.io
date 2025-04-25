@@ -28,7 +28,6 @@
 <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>  
-<!-- ////////////////////////////////////  COOKIES SECTION \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
 <!-- START OF COOKIES SECTION ID -->
 <div id="cookieConsent">
   <span id="closeButton">&times;</span> <!-- Close button (X) -->
@@ -70,20 +69,17 @@
   });
 </script>
 <!--  END OF COOKIES SECTION ID -->
-<!-- //////////////////////////////////  NAVBAR SECTION \\\\\\\\\\\\-->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
   <div class="container">
     <!-- Updated to include time/date display -->
-    <a class="navbar-brand" href="#">MadeToProject <span id="currentDateTime" style="font-size: 0.8rem; margin-left: 0px; color: #f8f9fa;"></span></a>
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
+    <a class="navbar-brand" href="#">MadeToProject </a>      
+    <button class="navbar-toggler" type="button" 
+    data-bs-toggle="collapse" data-bs-target="#navbarResponsive" 
+    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav ms-auto">
-        <!-- Nav Items -->
-        <li class="nav-item">
+      <ul class="navbar-nav ms-auto"><!-- Here is where the Nav Items list resides -->
+        <li class="nav-item"> <!-- Here is the About nav item -->
           <a class="nav-link" href="#about">
             <div class="icon-border">
               <i class="fa fa-user-circle"></i>
@@ -91,95 +87,62 @@
           </a>
           <span class="tooltip">Learn About Me</span>
         </li>
-        
-        <li class="nav-item">
+        <li class="nav-item"><!-- Here is the portfolio nav item -->
           <a class="nav-link" href="#portfolio">
-            <div class="icon-border">
-              <i class="fa fa-briefcase"></i>
-            </div>
+            <div class="icon-border"><i class="fa fa-briefcase"></i></div>
           </a>
           <span class="tooltip">View My Work</span>
         </li>
-       
-        <li class="nav-item">
+        <li class="nav-item"><!-- Here is the blog nav item-->
           <a class="nav-link" href="#blog">
-            <div class="icon-border">
-              <i class="fa fa-pencil-alt"></i>
-            </div>
+            <div class="icon-border"><i class="fa fa-pencil-alt"></i></div>
           </a>
           <span class="tooltip">Read My Articles</span>
         </li>
-        
-        <li class="nav-item">
+        <li class="nav-item"><!-- Here is the changelog nav item -->
           <a class="nav-link" href="#changelog-component">
-            <div class="icon-border">
-              <i class="fa fa-history"></i>
-            </div>
+            <div class="icon-border"><i class="fa fa-history"></i></div>
           </a>
           <span class="tooltip">Latest Updates</span>
         </li>
-
-        <li class="nav-item">
+        <li class="nav-item"> <!-- Here is the Contact nav item -->
           <a class="nav-link" href="#contact">
-            <div class="icon-border">
-              <i class="fa fa-envelope"></i>
-            </div>
+            <div class="icon-border"><i class="fa fa-envelope"></i></div>
           </a>
           <span class="tooltip">Get in Touch</span>
         </li>
-        
-        <li class="nav-item settings-item">
+        <li class="nav-item settings-item"> <!-- Here is the settings cog -->
           <a class="nav-link">
-            <div class="icon-border">
-              <i class="fa fa-cog"></i>
-            </div>
+            <div class="icon-border"><i class="fa fa-cog"></i></div>
           </a>
           <span class="tooltip">Adjust Settings</span>
         </li>
-
-        <li class="nav-item mode-item">
+<!--       <li class="nav-item mode-item">
           <a class="nav-link" id="mode-toggle">
-            <div class="icon-border">
-              <i class="fa fa-moon" id="mode-icon"></i>
+            <div class="icon-border2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-stars-fill" viewBox="0 0 16 16">
+                <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/>
+                <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.73 1.73 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.73 1.73 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.73 1.73 0 0 0 1.097-1.097zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z"/>
+              </svg>
             </div>
           </a>
           <span class="tooltip">Change Mode</span>
-        </li>
+        </li>--> 
       </ul>
     </div>
   </div>
 </nav>
 <!--   END OF NAVBAR SECTION -->
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const modeToggle = document.querySelector('#mode-toggle');
-    const modeIcon = document.querySelector('#mode-icon');
-    const body = document.body;
-
-    // Set dark mode as default
-    body.classList.add('dark-mode');
-    modeIcon.classList.add('fa-sun');
-
-    // Toggle between dark and light mode
-    modeToggle.addEventListener('click', function() {
-      body.classList.toggle('dark-mode');
-      body.classList.toggle('light-mode');
-      if (body.classList.contains('dark-mode')) {
-        modeIcon.classList.remove('fa-sun');
-        modeIcon.classList.add('fa-moon');
-      } else {
-        modeIcon.classList.remove('fa-moon');
-        modeIcon.classList.add('fa-sun');
-      }
-    });
-  });
-</script>
 <!-- Settings Modal -->
 <div id="settingsModal" class="modal">
   <div class="modal-content">
     <button id="closeModal" class="close-button">&times;</button>
     <h3><b>Settings</b></h3>
     <strong> Here you can adjust your settings. </strong> <br>
+
+    <span id="currentDateTime" style="color: black; margin: 20px auto;"></span>
+
+
     <!-- Time Format Toggle -->
     <label for="timeFormat">Choose Time Format:</label>
     <select id="timeFormat">
@@ -191,6 +154,41 @@
       <label for="datePicker">Select Date:</label>
       <input type="date" id="datePicker">
     </div>
+    
+    <div class="nav-item mode-item">
+      <label for="nav-item">Theme Select</label>
+      <a class="nav-link" id="mode-toggle">
+        <div class="icon-border">
+          <i class="fa fa-moon" id="mode-icon"></i>
+        </div>
+      </a>
+      <span class="tooltip">Change Mode</span>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const modeToggle = document.querySelector('#mode-toggle');
+        const modeIcon = document.querySelector('#mode-icon');
+        const body = document.body;
+    
+        // Set dark mode as default
+        body.classList.add('dark-mode');
+        modeIcon.classList.add('fa-sun');
+    
+        // Toggle between dark and light mode
+        modeToggle.addEventListener('click', function() {
+          body.classList.toggle('dark-mode');
+          body.classList.toggle('light-mode');
+          if (body.classList.contains('dark-mode')) {
+            modeIcon.classList.remove('fa-sun');
+            modeIcon.classList.add('fa-moon');
+          } else {
+            modeIcon.classList.remove('fa-moon');
+            modeIcon.classList.add('fa-sun');
+          }
+        });
+      });
+    </script>
   </div>
 </div>
 <!-- JavaScript for Modal and Date/Time -->
@@ -249,26 +247,29 @@
   datePicker.addEventListener("change", updateDateTime);
 </script>
 <!--   END OF NAVBAR SECTION ID -->
-
 <!-- ABOUT SECTION -->
 <section id="about">
   <div class="container">
     <div class="text-center">
-      <h1><b>ABOUT ME</b></h1>
+      <h1>
+        <b>ABOUT ME</b>
+      </h1>
     </div>
   </div>
 </section>
-       
+
 <section id="hero-container">   
-<div class="hero-left">
-    <p>I am a frontend software engineer specializing in web development using HTML, CSS, JavaScript & React.
-      I'm passionate about building scalable interfaces and design systems to make using software simple and enjoyable. <br> <br>
-      With 2 years experience working at a top Fortune 500 company I am committed to writing clean, efficient code and possess a continuous desire to learn and master new technologies. <br> <br>
-      Thank you for taking the time to explore my portfolio. I look forward to the opportunity to work with you and bring your digital vision to life!
-      <br> <br> <br>  
-      <a href="CV.html" target="_blank" class="btn custom-btn">CV</a>
-    </p>
-</div>
+  <div class="hero-left">
+      <p>I am a frontend software engineer specializing in web development using HTML, CSS, JavaScript & React.
+        I'm passionate about building scalable interfaces and design systems to make using software simple and enjoyable. 
+        <br> <br>
+        With 2 years experience working at a top Fortune 500 company I am committed to writing clean, efficient code and possess a continuous desire to learn and master new technologies. 
+        <br> <br>
+        Thank you for taking the time to explore my portfolio. I look forward to the opportunity to work with you and bring your digital vision to life!
+        <br> <br>  
+        <a href="CV.html" target="_blank" class="btn custom-btn">CV</a>
+      </p>
+  </div>
 <div class="hero-right">
   <div class="skills-grid">
     <div class="skill-box">
@@ -335,15 +336,17 @@
   </div>
 </div>
 </section>
-
-<!-- ///////////////////////////////////  PORTFILIO SECTION \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
-<!-- START OF PORTFOLIO SECTION ID -->                
+<!-- START OF PORTFOLIO SECTION ID -->
 <section id="portfolio">
-  <div class="text-center"><h1><b>PORTFOLIO</b></h1>
+  <div class="text-center">
+    <h1>
+      <b>PORTFOLIO</b>
+    </h1>
     <br><p>Below are some of the latest projects I have completed or been working on!</p></div>
     <br><p class="center"><a href="portfolio.html" target="_blank" class="btn custom-btn">RoadMap Portfolio</a></p>
-    <div class="col-md-4 fade-in"> 
   
+    <div class="col-md-4 fade-in"> 
+      
     <div class="portfoliocard1"> <!--Portfolio Item 1 -->
       <img src="Images/FGFull.png" class="portfoliocard1-img-top" alt="Project 1">
       <div class="card-body">
@@ -354,9 +357,10 @@
           </div>
         </div>
       </div>
-      <a href="https://github.com/MaidTho/Fishing-Game-Revamped" class="btn portfolio-btn" target="_blank">Go to</a>
+      <div class="card-footer">
+      <a href="https://github.com/MaidTho/Fishing-Game-Revamped" class="btn portfolio-btn" target="_blank">Go to</a> 
+      </div>
     </div>
-    
 
     <div class="portfoliocard1"> <!-- Portfolio Item 2 -->
       <img src="Images/BG.png" class="portfoliocard1-img-top" alt="Project 2">
@@ -368,7 +372,9 @@
           </div>
         </div>
       </div>
-      <a href="https://github.com/MaidTho/PHP-Project-1-ButtonGame" class="btn portfolio-btn" target="_blank">Go to</a>
+      <div class="card-footer">
+        <a href="https://github.com/MaidTho/PHP-Project-1-ButtonGame" class="btn portfolio-btn" target="_blank">Go to</a> 
+      </div>
     </div>
 
     <div class="portfoliocard1" > <!-- Portfolio Item 3 -->
@@ -381,7 +387,9 @@
           </div>
         </div>
       </div>
-      <a href="AIBlog.html" class="btn portfolio-btn" target="_blank">Go to</a>
+      <div class="card-footer">
+        <a href="AIBlog.html" class="btn portfolio-btn" target="_blank">Go to</a> 
+      </div>
     </div>
 
     <div class="portfoliocard1"> <!-- Portfolio Item 4 -->
@@ -394,9 +402,12 @@
           </div>
         </div>
       </div>
-      <a href="connectdots.html" class="btn portfolio-btn" target="_blank">Go to</a>
+      <div class="card-footer">
+        <a href="connectdots.html" class="btn portfolio-btn" target="_blank">Go to</a> 
+      </div>
     </div>
-
+  
+<!-- -->
 <style>
 .fade-in {
   opacity: 0;
@@ -429,10 +440,7 @@ transform: scale(1);
 </style>
 </section> 
 <!--  END OF PORTFOLIO SECTION ID -->
-<!-- /////////////////////////////////////  BLOG SECTION \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
 <!-- START OF BLOG SECTION ID -->
-
-<!-- BLOG POST SIMULATION -->
 <section id="blog">
   <div class="container">
     <div class="text-center"><h1><b>BLOGS</b></h1>
@@ -497,7 +505,6 @@ transform: scale(1);
       <br> <br> <a href="blogs.html" target="_blank" class="btn custom-btn">View All Blogs</a>
   </div>
 </section>
-  
   <script>
     document.getElementById('search-input').addEventListener('input', function() {
       const filter = this.value.toLowerCase();
@@ -513,9 +520,7 @@ transform: scale(1);
       });
     });
   </script>
-
 <!--  END OF BLOG SECTION ID -->
-<!-- ///////////////////////////////  CHANGELOG COMPONENT SECTION \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
 <!-- START OF CHANGELOG COMPONENT SECTION ID -->
 <section id="changelog-component">
   <div class="text-center">
@@ -566,7 +571,6 @@ transform: scale(1);
 
 </section>
 <!--  END OF CHANGELOG COMPONENT SECTION ID -->
-<!-- ///////////////////////////////////  CONTACT SECTION \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
 <!-- START OF CONTACT SECTION ID -->
 <section id="contact" >
   <div class="contact-form-container">
@@ -575,16 +579,16 @@ transform: scale(1);
     <form action="https://formspree.io/f/xkgnwnoq" method="POST">
     <input type="firstname" id="firstname" name="firstname" placeholder="Ando D. Rando" required>     
     <input type="email" id="email" name="email" placeholder="AndoDRando@outlook.com" required>
-    <textarea id="restricted-message" maxlength="500" input type="message" id="message" name="message" placeholder="Enter Your Message..." required></textarea>    
-<!--<textarea id="restricted-message" maxlength="500" placeholder="Enter Your Message..." required></textarea>-->    
+    <textarea id="restricted-message" maxlength="500" input type="message" id="message" name="message" placeholder="Enter Your Message..." required></textarea>       
     <div class="char-count" id="restricted-charCount">0 / 500</div>    
-    <button type="submit">Hit me to Send!</button>
+    <div style="text-align: center;">
+      <button class="btn custom-btn">Send</button>
+    </div>
     </form>
   </div> 
 </section>
 <script src="restrictedtextarea.js"></script>
 <!--  END OF CONTACT SECTION ID -->
-<!-- //////////////////////////////////  FOOTER SECTION \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
 <!-- START OF FOOTER SECTION ID --> 
 <footer id="footer" class="text-center py-4">
   <div class="container">
@@ -613,6 +617,7 @@ transform: scale(1);
       });
     });
   </script>
+  
 
   </body>
 </html>

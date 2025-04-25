@@ -1,4 +1,4 @@
-/* General Styles for Contact Form */
+/* GENERAL FEATURES */
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
@@ -7,7 +7,7 @@ body {
   line-height: 1.0;
 }
 /* Form Container */
-.contact-form-container {
+.contact-form-container { 
   width: 90%;
   max-width: 500px;
   margin: 50px auto;
@@ -20,28 +20,15 @@ body {
   font-weight: 0px;
   font-size: 20px; 
 }
-/* Inputs & Textarea */
+/* Inputs & Textarea (FULL NAME AND EMAIL )*/
 .contact-form-container input[type="firstname"],
 .contact-form-container input[type="email"] {
   width: calc(100% - 20px);
   padding: 20px;
   margin: 5px auto;
-  height: 40px;
+  height: 50px;
   width: 100%; 
-  color: rgba(0, 0, 0, 0.550);
-  font-size: 15px;
-  background-color: whitesmoke;
-  border: 2px solid #6610f2;
-  border-radius: 10px;
-  box-sizing: border-box;
-  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-.contact-form-container input[type="message"]  {
-  padding: 20px;
-  margin: 5px auto;
-  height: 200px;
-  width: 100%; 
-  color: black;
+  color: rgba(0, 0, 0, 0.55);
   font-size: 15px;
   background-color: whitesmoke;
   border: 2px solid #6610f2;
@@ -55,7 +42,7 @@ body {
   box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
   outline: none;
 }
-/* Textarea */
+/* Textarea (MESSAGE) */
 .contact-form-container textarea {
   margin: 5px auto;
   resize: vertical;
@@ -66,50 +53,17 @@ body {
 .contact-form-container textarea::placeholder {
   margin: 20px auto;
   padding: 0px 0px 0px 0px;
-  color: rgba(0, 0, 0, 0.550);
-  font-family: 'Roboto', sans-serif;
   font-size: 15px;
-}
-
-/* Submit Button */
-.contact-form-container button[type="submit"] {
-  width: 100%;
-  height: 60px;
-  padding: 0px 0px 0px 0px;
-  margin: 50px 0px 0px 0px;
-  background: linear-gradient(135deg, black, #6610f2);
-  color: #ffffff;
-  text-shadow: 0 2px 0 black;
-  border: solid 2px whitesmoke;
-  border-radius: 40px;
-  font-size: 15px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out, transform 0.1s;
-}
-.contact-form-container button[type="submit"]:hover {
-  background: linear-gradient(135deg, goldenrod, #6610f2);
-  border: solid 2px goldenrod;
-}
-.contact-form-container button[type="submit"]:active {
-  transform: translateY(2px);
 }
 #contact textarea {
   width: 100%;
-  font-size: 20px;
+  font-size: 15px;
   padding: 20px 20px 20px 20px;
-  color: #000;
-  background-color: whitesmoke;
-  border: 2px solid #6610f2;
   border-radius: 10px;
   outline: none;
   transition: border-color 0.3s ease;
 }
-#contact textarea:focus {
-  border: 4px solid whitesmoke;
-  box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
-  outline: none;
-}
+
 #contact textarea.limit-reached {
   border: 4px solid red;
   color: red;
@@ -124,6 +78,65 @@ body {
   color: red;
   text-shadow: 1px 1px 2px black;
 }
+
+
+/*  DARK MODE */
+
+
+body.dark-mode .contact-form-container input[type="firstname"],
+body.dark-mode .contact-form-container input[type="email"]{
+  background-color: #333;
+  color: goldenrod;
+  border: 2px solid white;
+}
+body.dark-mode #contact textarea {
+  background-color: #333;
+  color: goldenrod;
+  border: 2px solid white;
+}
+body.dark-mode .contact-form-container input[type="firstname"]:hover,
+body.dark-mode .contact-form-container input[type="email"]:hover{
+  box-shadow: 0 0 20px goldenrod;
+  background-color: #333;
+  border: 4px solid goldenrod;
+  border-radius: 20px;
+}
+body.dark-mode #contact textarea:hover {
+  box-shadow: 0 0 20px goldenrod;
+  background-color: #333;
+  border: 4px solid goldenrod;
+  border-radius: 20px;
+}
+
+
+/*  LIGHT MODE */
+
+
+body.light-mode .contact-form-container input[type="firstname"],
+body.light-mode .contact-form-container input[type="email"] {
+  background-color: whitesmoke;
+  color: #6610f2;
+  border: 2px solid navy;
+}
+body.light-mode #contact textarea {
+  background-color: whitesmoke;
+  color: #6610f2;
+  border: 2px solid navy;
+}
+body.light-mode .contact-form-container input[type="firstname"]:hover,
+body.light-mode .contact-form-container input[type="email"]:hover{
+  box-shadow: 0 0 20px #6610f2;
+  /*background-color: #333;*/
+  border: 4px solid #6610f2;
+  border-radius: 20px;
+}
+body.light-mode #contact textarea:hover {
+  box-shadow: 0 0 20px #6610f2;
+/*background-color: #333;*/
+  border: 4px solid #6610f2;
+  border-radius: 20px;
+}
+
 /* Responsiveness */
 @media (max-width: 600px) {
   .contact-form-container {

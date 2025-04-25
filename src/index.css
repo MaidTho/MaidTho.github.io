@@ -6,33 +6,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-p {
-  font-size: 16px;
-  padding: 0px 0px 0px 0px;
-  margin: 0px auto;
-}
 span {
   color: whitesmoke;
-}
-h1 {
-  padding: 20px 20px 50px 20px;
-}
-h1:hover { 
-  transform: scale(1.8); /* Slightly increase size on hover */
-  transition: all 0.3s ease; /* Smooth transition */
-  cursor: none;
-  font-size: 4rem; /* Increase font size on hover */
-}
-h2 {
-  color: whitesmoke;
-  text-shadow: 2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-  font-size: 20px;
-  padding: 10px 10px 10px 10px;
- 
-}
-h3 {
-  font-size: 40px;
-  padding: 20px 20px 20px 20px;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
@@ -47,6 +22,34 @@ code:hover {
   cursor: none;
   font-size: 2rem; /* Increase font size on hover */
 }
+p {
+  background-color: none;
+  font-size: 16px;
+  padding: 20px 20px 20px 20px;
+  margin: 0px auto;
+}
+h1 {
+  background-color: none;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+}
+h1:hover { 
+  transform: scale(1.8); 
+  transition: all 0.3s ease; 
+  cursor: none;
+  font-size: 4rem; 
+}
+h2 {
+  color: whitesmoke;
+  text-shadow: 2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  font-size: 20px;
+  padding: 10px 10px 10px 10px;
+}
+h3 {
+  font-size: 40px;
+  padding: 20px 20px 20px 20px;
+}
+
 body.dark-mode {
   background-color: #121212;
   color: #ffffff;
@@ -61,27 +64,38 @@ body.dark-mode p {
 }
 body.light-mode p {
   color: #6610f2;
-  text-shadow: 2px 2px 4px #000;
+  text-shadow: 2px 2px 4px grey;
 }
 body.dark-mode h1 {
   color: goldenrod;
-  text-shadow: 2px 2px 0 #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;  
+  text-shadow: 2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; 
   font-size: 60px;
   transition: font-size 0.3s ease; 
+  padding: 20px;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 body.dark-mode h1:hover {
-  font-size: 70px; /* Increase font size on hover */
+  font-size: 70px; 
   cursor: pointer;
+  text-shadow: 2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  transition: font-size 0.3s ease; 
 }
 body.light-mode h1 {
   color: #6610f2;
   text-shadow: 2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   font-size: 60px;
-  transition: font-size 0.3s ease; /* Smooth transition */
+  transition: font-size 0.3s ease; 
+  padding: 20px;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 body.light-mode h1:hover {
+  color: #6610f2;
+  text-shadow: 2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   font-size: 70px; /* Increase font size on hover */
   cursor: pointer;
+  transition: font-size 0.3s ease; 
 }
 /* Custom Scrollbar Styles */
 body::-webkit-scrollbar {
@@ -121,38 +135,57 @@ body.light-mode::-webkit-scrollbar-thumb {
 body.light-mode::-webkit-scrollbar-thumb:hover {
   background-color: #8a2be2; 
 }
+
 .custom-btn {
-  margin: 0px 0px 10px 0px;
-  padding: 20px 20px 20px 20px;
-  height: 60px;
-  width: 250px;
-  font-size: 1rem;
-  color: #fff;
-  background: linear-gradient(135deg, #000000, #6610f2); /* Gradient background */
-  text-align: center;
-  text-decoration: none; /* Removes underline from the link */  
-  text-shadow: 0 2px 0 #000000;
-  border: 2px solid whitesmoke;
-  border-radius: 30px;
-  display: inline-block;
-  transition: all 0.3s ease; /* Smooth transition for hover effect */
+  text-decoration: none;
+  position: relative;
+  border: none;
+  font-size: 14px;
+  font-family: inherit;
   cursor: pointer;
+  color: #fff;
+  width: 14em;
+  height: 3em;
+  line-height: 2em;
+  text-align: center;
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 300%;
+  border-radius: 30px;
+  z-index: 1; 
 }
 .custom-btn:hover {
-  background: linear-gradient(135deg, #ffa633, #6610f2); /* Lighter gradient on hover */
-  transform: translateY(-3px); /* Slight lifting effect on hover */
-  text-shadow: 0 2px 0 #000000;
-  color:whitesmoke;
-  border: solid;
-  border-color: #BA9653;
+  animation: ani 8s linear infinite;
+  border: none;
+}
+.custom-btn:before{
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1;
+  background: linear-gradient(90deg, mediumslateblue, #f441a5, #ffeb3b, mediumslateblue);
+  background-size: 400%;
+  border-radius: 35px;
+  transition: 1s;
+}
+.custom-btn:hover::before {
+  filter: blur(20px);
 }
 .custom-btn:active {
-  transform: translateY(1px); /* Button pushes down slightly on click */
+  background: linear-gradient(32deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
 }
-.custom-btn:focus {
-  outline: none; /* Removes the focus outline */
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Adds a shadow when focused */
+@keyframes ani {
+  0% {
+    background-position: 0%;
+  }
+
+  100% {
+    background-position: 400%;
+  }
 }
+
 .navbar {
   background: linear-gradient(to right, #000000, #6610f2);
   height: 75px;
@@ -167,7 +200,7 @@ body.light-mode::-webkit-scrollbar-thumb:hover {
   transition: transform 0.3s ease; /* Smooth transition */
   box-shadow: 0px 0px 25px 5px goldenrod; /* Glow effect */
 }
-.navbar::after {  /* Glow effect at the bottom of the navbar */
+.navbar::after {  
   content: ''; /* Empty content */
   padding: 0px 0px 0px 0px; 
   position: absolute; 
@@ -176,29 +209,29 @@ body.light-mode::-webkit-scrollbar-thumb:hover {
   width: 100%; /* Full width */
   height: 0px; /* Height of the glow effect */
 }
-/* General Tooltip Styles */
 .nav-item {
   position: relative; /* Ensure tooltips are positioned relative to the nav items */
   cursor: pointer;
 }
 .nav-item:hover .tooltip {
   opacity: 1;
-
 }
+
 .icon-border {
   display: inline-block;
   padding: 0px 0px 0px 0px;
   margin:  5px 0px 5px 0px;
   height: 40px;
   width:  40px;
-  background-color: #6610f2;
-  border: 2px solid white;
+  background: #6610f2;
+  border: 4px solid whitesmoke;
   border-radius: 20px;
   transition: all 0.3s ease;
   text-align: center;
 }
 .icon-border:hover {
-  border: 4px solid goldenrod;
+  background: linear-gradient(135deg, #ffa633, #6610f2); 
+  border: 6px solid midnightblue;
   transform: scale(1.5); /* Slight zoom effect on hover */
   transition: transform 0.2s ease; /* Smooth transition */
 }
@@ -212,6 +245,37 @@ body.light-mode::-webkit-scrollbar-thumb:hover {
   height: 100%;
 }
 .icon-border:hover i {
+  transform: scale(1.0); /* Slight zoom effect on hover */
+  transition: transform 0.2s ease; /* Smooth transition */
+}
+.icon-border2 {
+  display: inline-block;
+  padding: 0px 0px 0px 0px;
+  margin:  5px 0px 5px 0px;
+  height: 40px;
+  width:  40px;
+  background: #6610f2;
+  border: 4px solid whitesmoke;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+.icon-border2:hover {
+  background: linear-gradient(135deg, #ffa633, #6610f2); 
+  border: 6px solid midnightblue;
+  transform: scale(1.5); /* Slight zoom effect on hover */
+  transition: transform 0.1s ease; /* Smooth transition */
+}
+.icon-border2 i {
+  font-size: 20px;
+  padding: 10px;
+  color: rgb(255, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.icon-border2:hover i {
   transform: scale(1.4); /* Slight zoom effect on hover */
   transition: transform 0.2s ease; /* Smooth transition */
 }
@@ -231,7 +295,7 @@ body.light-mode::-webkit-scrollbar-thumb:hover {
   transition: opacity 0.3s ease, transform 0.3s ease;
   z-index: 1000;
 }
-.tooltip::after { /* Tooltip Arrow */
+.tooltip::after { 
   content: '';
   position: absolute;
   top: -100%;
@@ -241,7 +305,6 @@ body.light-mode::-webkit-scrollbar-thumb:hover {
   border-style: solid;
   border-color: #33333310 transparent transparent transparent;
 }
-/*  Time Format Toggle Styling  */ 
 #timeFormat {
   display: block;
   margin: 20px auto;
@@ -261,51 +324,24 @@ body.light-mode::-webkit-scrollbar-thumb:hover {
   box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
   cursor: pointer;
 }
-/*  DATE PICKER UI LAYOUT  */ 
-.modalbtn {
-  padding: 10px 20px;
-  font-size: 1rem;
-  color: white;
-  background-color: #007BFF;
-  border: 4px solid black;
-  border-radius: 23px;
-  cursor: pointer;
-}
-.modalbtn:hover {
-  background-color: #0056b3;
-  cursor: pointer;
-}
 .modal-content {
   color: black;
   background-color: whitesmoke;
-  border: 4px solid goldenrod;
-  border-radius: 1px;
+  border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin: 90px 20px 20px 80px; /* Original mobile-friendly margins */
+  margin: 75px 80px 0px 80px; /* Original mobile-friendly margins */
   padding: 20px; /* Original padding */
   width: 75%; /* Original width */
   height: 60%; /* Original height */
   text-align: center;
   overflow-y: auto; /* Enable scrolling for longer content */
 }
-/* Tablet Screens and Above */
 @media (min-width: 768px) {
   .modal-content {
-    width: 60%; /* Slightly narrower for larger screens */
+    width: 50%; /* Slightly narrower for larger screens */
     height: 65%; /* Slightly taller for more content display */
     margin: 50px auto; /* Center horizontally */
     padding: 25px; /* Increase padding slightly */
-  }
-}
-/* Desktop Screens */
-@media (min-width: 1200px) {
-  .modal-content {
-    width: 50%; /* Narrower for large screens */
-    height: 50%; /* Keep a balanced aspect ratio */
-    max-width:  600px; /* Cap maximum width */
-    max-height: 500px; /* Cap maximum height */
-    margin:     100px auto; /* Adjust margins for spacing */
-    padding:    auto; /* More spacious padding */
   }
 }
 .close-button {
@@ -313,35 +349,41 @@ body.light-mode::-webkit-scrollbar-thumb:hover {
   color: white;
   border: none;
   border-radius: 50%;
-  font-size: 1.5rem;
-  width: 40px;
-  height: 40px;
+  font-size: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  top:   10px;
+  width: 30px;
+  height: 30px;
   right: 10px;
+  top: 10px;
   cursor: pointer;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease;  
 }
 .close-button:hover {
   background-color: #d32f2f;
 }
 .close-button:active {
-  transform: scale(0.95); /* Slightly shrink on click */  
+  transform: scale(0.5); /* Slightly shrink on click */  
+  transition: 0.1s;
 }
-#about, #portfolio, #services, #blog, #changelog-component, #contact {
-  padding: 150px 0px 0px 0px;
+
+#hero-container, #blog, #contact {    /*  Potential for Alternate Pattern   */
+  padding: 0px 0px 250px 0px;
+  /*border-bottom: 2px solid goldenrod;
+  border-top: 2px solid goldenrod;*/
+  background-color: none;
 }
-#portfolio {
+#portfolio, #changelog-component {    /*  Potential for Alternate Pattern   */
+  padding: 0px 0px 180px 0px;
+  /*border-bottom: 2px solid goldenrod;
+  border-top: 2px solid goldenrod;*/
+  background-color: none;
   text-align: center;
   align-items: center;
 }
-/*                            */
-/*    COOKIE CONSENT FORM     */
-/*                            */
+
 #cookieConsent {
   position: fixed;
   top: 50%;
@@ -408,74 +450,72 @@ body.light-mode::-webkit-scrollbar-thumb:hover {
 #closeButton:hover {
   color: #fff;
 }
-/*                               */
-/*    HERO CONTAINER SECTION     */
-/*                               */
+
 #hero-container {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 0.1rem;
-  color: #fff;
 }
 .hero-left {
   flex: 1;
   max-width: 50%;
+  max-height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px 20px 20px 20px;
-}
-.hero-right {
-  flex: 1;
-  padding-top: 100px;
-  padding-left: 300px;
-  padding-right: 250px;
-  padding-bottom: 100px;
-  margin: 20px 20px 20px 20px;
-  max-width: 50%;
-  /*border: 2px solid goldenrod;*/
 }
 .hero-left p {
-  line-height: 30px;
   text-align: justify;
   font-size: 20px;
-  /*background-color: #380093;*/
-  padding: 300px 100px 100px 200px;
+  background-color: none;
+  border-radius: 20px;
+}
 
+.hero-right {
+  flex: 1;  
+  /*padding-top: 100px;
+  padding-left: 300px;
+  padding-right: 250px;
+  padding-bottom: 100px;*/
+  max-width: 100%;
+  max-height: 100%;
+  border: none;
+  border-radius: 20px;
 }
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns for the icons */    
+  grid-template-columns: repeat(3, 1fr);   
   gap: 1px;
   align-items: center;
+  height: 800px;
+  width:  800px;
+  background-color: none;
+  border-radius: 20px;
 }
 .skill-box {
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  border: 3px solid;
-  border-image: linear-gradient(to right, mediumslateblue, goldenrod) 1;
-  border-radius: 0px;
-  margin: 0px 0px 20px 0px;
-  height: 100px;
-  width: 150px;
-  cursor: pointer;
-  transition: transform 0.3s;
+  border: none;
+  margin: 20px 20px 40px 80px;
+/*  height: 200px;
+  width:  200px;*/
+  transition: transform 0.5s;
 }
 .skill-box:hover {
-  transform: scale(1.1); /* Slight zoom effect on hover */
-  transform: translateY(-20px); /* Slight lift effect on hover */
-  border: 4px solid;
-  border-image: linear-gradient(to right, goldenrod, mediumslateblue) 1;
- 
+  transform: scale(1.1); 
+  transform: translateY(-20px); 
+  border: none; 
+  border-radius: 20px;
+  background-color: midnightblue;
 }
 .skill-box i {
   font-size: 2rem;
-  margin-bottom: 0.1rem;
-  background-color: whitesmoke;
   padding: 6px 6px 6px 6px;
+  margin-bottom: 1rem;
+  background-color: whitesmoke;
   border: 2px solid black;
   border-radius: 80%;
 }
@@ -483,123 +523,26 @@ body.light-mode::-webkit-scrollbar-thumb:hover {
   box-shadow: 0 0 10px 5px goldenrod;
 }
 .skill-box p {
-  font-size: 1rem;
-  margin: 1px auto;
+  font-size: 20px;
+  margin: -25px auto;
 }
-@media (max-width: 430px) {
-  #hero-container {
-    flex-direction: column;
-    align-items: center;
-  }
 
-  .hero-left {
-    max-width: 50%;
-    margin-bottom: 1rem;
-  }
-  
-  .hero-right {
-    max-width: 100%; 
-    min-width: 100%;
-    margin: 0px auto;
-    text-align: justify;
-    font-size: 10px;
-    padding: 0rem;
-    line-height: 10px;
-  }
-
-  .hero-left p {
-    padding: 1rem;
-    line-height: 25px;
-    text-align: justify;
-    font-size: 14px;
-  }
-
-  .skills-grid {
-    max-width: 90%;
-    grid-template-columns: repeat(3, 1fr); /* 2 columns for the icons */
-    gap: 0rem;
-  }
-
-  .skill-box {
-    padding: 0.5rem;
-    line-height: 20px;
-    text-align: center;
-    font-size: 0.8rem;
-    height: 80px;
-    width: 100px;
-  }
-}
-@media (min-width: 1200px) {
-  #hero-container {
-    max-width: 100%;
-    margin: 0 auto;
-  }
-
-  .hero-left {
-    flex: 1;
-    max-width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0px 20px 20px 20px;
-  }
-  
-  .hero-left p {
-    padding: 5rem;
-    line-height: 30px;
-    text-align: center;
-    font-size: 20px;
-  }
-  
-  .hero-right {
-    flex: 1;
-    max-width: 100%;
-    margin: 0px auto;
-    text-align: justify;
-    font-size: 12px;
-    padding: 0.1rem;
-    line-height: 10px;
-  }
-  .skills-grid {
-    max-width: 100%;
-    grid-template-columns: repeat(3, 1fr); /* 2 columns for the icons */
-    padding: 1px;
-    margin: 1px 1px 1px 1px;
-    gap: 0.1rem;
-
-  }
-  
-  .skill-box {
-    padding: 0.5rem;
-    line-height: 20px;
-    text-align: center;
-    font-size: 0.5rem;
-    height: 80px;
-    width: 150px;
-  }
-}
 .portfoliocard1 {
   transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
-  background-color:#6610f2;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Add a thicker shadow effect */
+  background-color: #6610f2;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
   color: black;
   cursor: pointer;
   overflow: hidden;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  text-align: center;
-  margin:  20% 10% 10% 75%; 
-  padding: 0px 0px 0px 0px;
-  width:  1000px;
+  margin-right: 50px;
+  width:  600px;
   height: 600px;
   z-index: 1;
 }
 .portfoliocard1:hover {
-  transform: translateY(10px) scale(0.95); /* Slight lift and zoom-in effect on hover */
-  background-color: #380093; /* Background color change on hover */
+  transform: translateY(10px) scale(0.95); 
+  background-color: #380093; 
   z-index: 10;
 } 
 .info {
@@ -638,30 +581,47 @@ body.light-mode::-webkit-scrollbar-thumb:hover {
   bottom: 5%;
   border: 4px solid black;
 } 
-.portfolio-btn {
-  padding: 5px 10px 10px 10px;
-  height: 40px;
-  width: 100px;
-  font-size: 1rem;
-  color: #fff;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-shadow: 0 2px 0 #000000;
-  text-align: center;
-  border-bottom: 4px solid whitesmoke;
-  display: inline-block;
-  transition: all 0.3s ease; /* Smooth transition for hover effect */
-  cursor: pointer;
+.card-footer {
   position: absolute;
-  bottom: 10px;
-  left: 45%;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+/*  background-color: #333; 
+  color: white;*/
+  text-align: center;
+  padding: 10px;
+/*border-top: 1px solid #555;*/  
 }
-.portfolio-btn:hover {
-  background: whitesmoke; 
-  transform: translateY(-3px); /* Slight lifting effect on hover */
-  text-shadow: 0 2px 0 #000000;
-  color: black;
-  border: 4px solid whitesmoke;
+.portfolio-btn {
+  display: inline-block;
+  padding: 0.5rem 4rem;
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: bold;
+  color: whitesmoke;
+  background-color: transparent;
+  border: 4px solid goldenrod;
+  border-radius: 10%;
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+  overflow: hidden;
+  z-index: 1;  
+}
+.portfolio-btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: goldenrod;
+  transform: translateX(-100%);
+  transition: all .3s;
+  z-index: -1;
+}
+.portfolio-btn:hover::before {
+  transform: translateX(0);
 }
 .portfoliocard2-img-top {
   height: 90%;                
@@ -672,54 +632,7 @@ body.light-mode::-webkit-scrollbar-thumb:hover {
   bottom: 5%;
   right: 0%;
 } 
-/*    BLOG CARD SECTION     */
-.blogcard {
-  transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
-  background-color: #333;
-  color: black;
-  cursor: pointer;
-  overflow: hidden;
-  position: relative;
-  display: flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content: space-between;   
-  text-align: center;
-  margin: 40px 10px 10px 10px;
-  padding: 10px 10px 10px 10px;
-  border: 4px solid black;
-  border-radius: 40px;
-  width: 400px;
-  height: 600px;
-  max-width: 900px;
-  max-height: 1000px;  
- 
-}    
-.blogcard-title{
-  padding: 10px 10px 10px 10px;
-  margin:  10px 20px 10px 20px;
-  border: 0px solid black;
-}  
-.blogcard-text{
-  padding: 20px 20px 20px 20px;
-  margin:  20px 20px 20px 20px;
-  height: 150px;
-  width:  350px;
-  border: 0px solid black;
-}    
-.blogcard:hover {
-  transform: translateY(-10px); /* Slight lift effect on hover */
-  box-shadow: 0 0 16px 8px goldenrod;  
-  background-color: black; /* Background color change on hover */
-  border: 4px solid goldenrod;
-  color: #BA9653;
-}   
-.blogcard-img-top {
-  height: 20px;                /* Same height as other images */
-  width: 100%;                  /* Ensure full width */
-  object-fit: cover;
-  background-color: #f8f9fa;  /* Matches Bootstrap's default card background */
-} 
+
 #search-wrapper {
   margin: 50px 0px;
 }
@@ -760,12 +673,6 @@ body.light-mode::-webkit-scrollbar-thumb:hover {
   margin: 0px -25% 0px -25%; 
   padding: 20px 0;
 }
-@media (min-width: 1200px) {
-  #post-list li {
-    margin: 0px -15% 0px -15%;
-    padding: 30px 0;
-  }
-}
 #post-list li a {
   font-weight: bold;  
   font-size: 1rem;
@@ -791,34 +698,33 @@ body.light-mode::-webkit-scrollbar-thumb:hover {
 }
 /*  CHANGELOG STYLING STARTS */
 #changelog-component {
-  padding: 200px 0px 200px 0px;
+  padding: 0px 0px 500px 0px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: smaller;
-/*border: 4px solid whitesmoke; */
-} 
+}
 .changelog {
-  transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
-  max-width: 1000px;
-  max-height: 1000px;  
-  width:  600px;
-  height: 600px;
-  margin:  20px auto;
-  padding: 0px 0px 0px 0px;
-  border: 4px solid black;
-  border-radius: 60px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  overflow: hidden; /* Prevent content overflow */
-  position: relative;
+  width: 600px;
+  height: 140px;
+  padding: 0.5rem;
+  margin-bottom: 5rem;
+  background-color: midnightblue;
+  border-radius: 8px;
+  backdrop-filter: blur(5px);
+  border-bottom: 3px solid rgba(255, 255, 255, 0.440);
+  border-left: 2px  rgba(255, 255, 255, 0.545) outset;
+  box-shadow: -40px 50px 30px rgba(0, 0, 0, 0.280);
+  transform: skewX(10deg);
+  transition: .4s;
+  overflow: hidden;
+  color: white;
+  cursor: pointer;
 }
 .changelog:hover {
-  transform: translateY(-10px); /* Slight lift effect on hover */
-  color: white;
-  background-color: black;
-  border: 4px solid goldenrod;
-  box-shadow: 0 0 16px 8px goldenrod;  
+  height: 600px;
+  transform: skew(0deg);
+  border: 2px solid black;
 }
 .changelog-title {
   font-size: 40px;
@@ -839,7 +745,7 @@ body.light-mode::-webkit-scrollbar-thumb:hover {
   height: calc(100% - 150px); /* Keep it within bounds */
   overflow-y: auto; /* Add scrolling for overflow content */
 }
-.changelog-timeline::before { /*  EDIT THE LINE   */
+.changelog-timeline::before { /*  This edits the line   */
   content: "";
   position: absolute;
   top:    5%;  
@@ -847,7 +753,6 @@ body.light-mode::-webkit-scrollbar-thumb:hover {
   bottom: 20%;
   width: 10px;
   background-color: goldenrod;
-  border: 2px solid black;
   border-radius: 10px; 
 }
 .timeline-item {
@@ -856,14 +761,14 @@ body.light-mode::-webkit-scrollbar-thumb:hover {
   justify-content: space-between;
   margin: 0px 0;
 }
-.timeline-item::before {  /*  EDIT THE DOTS */
+.timeline-item::before {  /*  This edits the dots */
   content: "";
   position: absolute;
   left: 50%;
   width: 20px;
   height: 20px;
   background-color: goldenrod;
-  border: 4px solid black;
+  border: 2px solid black;
   border-radius: 50%;
   transform: translate(-50%, 0);
 }
@@ -884,6 +789,7 @@ body.light-mode::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(135deg,#ffa633, #6610f2); /* Lighter gradient on hover */
   text-shadow: 0 2px 0 black;
 }
+
 footer {
   background: linear-gradient(to left, #000000, #6610f2);
 }
@@ -906,12 +812,8 @@ footer i:hover {
   transform: scale(2.0); /* Slight zoom effect on hover */
   transition: transform 0.2s ease; /* Smooth transition */
 }
-/*  Mobile CSS  */
-@media (max-width: 600px) {
-/*  MOBILE FONTS  */  
+@media only screen and (max-width: 600px) { /*  Here is the Mobile CSS Styling.  */  
   body.dark-mode h1 {
-    color: goldenrod;
-    text-shadow: 2px 2px 0 #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;  
     font-size: 40px;
     transition: font-size 0.3s ease; 
   }
@@ -920,8 +822,6 @@ footer i:hover {
     cursor: pointer;
   }
   body.light-mode h1 {
-    color: #6610f2;
-    text-shadow: 2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     font-size: 40px;
     transition: font-size 0.3s ease; /* Smooth transition */
   }
@@ -930,13 +830,10 @@ footer i:hover {
     cursor: pointer;
   }
   h2 {
-    color: whitesmoke;
     font-size: 20px;
-    padding: 10px 10px 10px 10px;
   }
   h3 {
     font-size: 40px;
-    padding: 20px 20px 20px 20px;
   }
   p {
     padding: 1rem;
@@ -961,32 +858,40 @@ footer i:hover {
   }
 /*  NAVBAR   */  
   .navbar-brand {
-    font-size: 12px;
+    background-color: none;
+    color: whitesmoke;
+    font-size: 1.3rem; 
     padding: 10px 10px 10px 10px;
-
+    border-radius: 10px; 
+  }
+  #currentDateTime {
+    background-color: none;
+    color: whitesmoke;
+    font-size: 1rem; 
+    padding: 10px 10px 10px 10px;   
+    border-radius: 10px;
+    margin-right: 100px;
   }
   .navbar-toggler {
     border-radius: 20px;
-    border: 2px solid whitesmoke;
+    border: 4px solid whitesmoke;
     position: absolute;
-    right: 0;
-    top: 0;
-    right: 0;
-    z-index: 1000;
-  }
+    right: 20px;
+    top: 20px;
+    z-index: 10;
+  }  
   .tooltip {
-    bottom: -15%; 
-    left: 62%;
-    font-size: 15px; 
+    bottom: 0px; 
+    left: 75%;
+    font-size: 14px; 
     padding: 10px 10px 10px 10px; 
     transform: translateX(-50%);
   }
   .nav-item:hover .tooltip {
-    transform: translateX(-50%) translateY(0); 
+    transform: translateX(20) translateY(-10%); 
   }
   .nav-item {
-    margin: 8% 2.5% 0% 0%; 
-    height: 50px; 
+    margin: 20px 15px 0px 0px; 
     text-align: right;
   }
 /*  HERO SECTION  */  
@@ -995,41 +900,52 @@ footer i:hover {
     align-items: center;
   }
   .hero-left {
-    max-width: 50%;
+    max-width: 75%;
+/*    border: 2px solid silver;*/
+    border-radius: 20px;
     margin-bottom: 1rem;
-  } 
-  .hero-right {
-    max-width: 100%;
-    margin: 0px auto;
-    text-align: center;
-    padding: 1rem;
-    line-height: 10px;
-  }
+  }   
   .hero-left p {
-    padding: 1rem;
+    padding: 1px 20px 20px 20px;
     line-height: 25px;
-    text-align: justify;
-    font-size: 14px;
+    text-align: center;
+    font-size: 20px;
+  }
+  .hero-right {
+    flex: 1;
+    padding: 20px 20px 20px 20px;
+    margin: 200px 20px 100px 20px;
+    max-width: 100%;
+    background-color: none;
   }
   .hero-right p {
-    padding: 0rem;
-    line-height: 10px;
+    padding: 0px 0px 0px 0px;
+    line-height: 50px;
     text-align: center;
-    font-size: 12px;
+    font-size: 16px;
   }
   .skills-grid {
     max-width: 100%;
-    grid-template-columns: repeat(3, 1fr); /* 2 columns for the icons */
-    gap: 1rem;
-    
+    max-height: 100%;
+    height: 1500px;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for the icons */
+    gap: 0rem;
   }
   .skill-box {
-    line-height: 0px;
-    text-align: center;
-    font-size: 1rem;
-    height: 100%;
-    width: 100%;
-
+    border: 3px solid beige;  
+    border-radius: 60px;
+    /*border-image: linear-gradient(to right, mediumslateblue, goldenrod) 1;*/
+    background-color: #222;
+    height: 100px;
+    width:  100px;
+  }
+  .skill-box:hover {
+    border: 4px solid beige;  
+    border-radius: 60px;
+    /*border-image: linear-gradient(to right, mediumslateblue, goldenrod) 1;*/
+    background-color: midnightblue;
+    height: 100px;
+    width:  100px;
   }
 /*  PORTFOLIO SECTION  */
   .portfoliocard1 {
@@ -1077,32 +993,7 @@ footer i:hover {
   .info:hover .extrainfo {
     display: block;
     z-index: 10;
-  }
-  .portfolio-btn {
-    padding: 5px 10px 10px 10px;
-    height: 40px;
-    width: 100px;
-    font-size: 1rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-shadow: 0 2px 0 #000000;
-    text-align: center;
-    color: #fff;
-    border-bottom: 4px solid whitesmoke;
-    display: inline-block;
-    transition: all 0.3s ease; /* Smooth transition for hover effect */
-    cursor: pointer;
-    position: absolute;
-    bottom: 10px;
-    left: 35%;
-  }
-  .portfolio-btn:hover {
-    background: whitesmoke; 
-    transform: translateY(-3px); /* Slight lifting effect on hover */
-    text-shadow: 0 2px 0 #000000;
-    color: black;
-    border: 4px solid whitesmoke;
-  }
+  } 
 /*  BLOG SECTION  */
   #search {
     display: flex;
@@ -1138,38 +1029,97 @@ footer i:hover {
     transform: translateY(-5px);
   }
 /*  CHANGELOG SECTION  */
+  #changelog-component {
+    padding: 200px 0px 200px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: smaller;
+  }
   .changelog {
-    width: 90%;
-    height: 90%;
-    margin: 20px 20px 20px 20px;
-    border-radius: 10px;
+    width: 400px;
+    height: 120px;
+    padding: 0.5rem;
+    margin-bottom: 5rem;
+    background-color: midnightblue;
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+    border-bottom: 3px solid rgba(255, 255, 255, 0.440);
+    border-left: 2px  rgba(255, 255, 255, 0.545) outset;
+    box-shadow: -40px 50px 30px rgba(0, 0, 0, 0.280);
+    transform: skewX(10deg);
+    transition: .4s;
+    overflow: hidden;
+    color: white;
+    cursor: pointer;
+  }
+  .changelog:hover {
+    height: 600px;
+    transform: skew(0deg);
   }
   .changelog-title {
-    font-size: 30px;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 40px auto;
+    color: white;
+    text-shadow: 2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   }
   .changelog-subtitle {
-    font-size: 16px;
-  }
-  .timeline-date {
-    font-size: medium;
-    text-align: center;
-    width: 50%;
+    font-size: 20px;
     padding: 20px 20px 20px 20px;
   }
-  .timeline-description {
-    font-size: medium;
-    text-align: center;
-    width: 40%;
-    padding: 20px 20px 20px 20px;
-  } 
-  .changelog-timeline::before {
+  .changelog-timeline {
+    list-style: none; 
+    padding: 20px 0;
+    margin: 10px auto;
+    position: relative;
+    height: calc(100% - 150px); /* Keep it within bounds */
+    overflow-y: auto; /* Add scrolling for overflow content */
+  }
+  .changelog-timeline::before { /*  This edits the line   */
     content: "";
     position: absolute;
-    top:    8%;  
-    left:   48.2%;  
-    bottom: 5%;
-    width: 10px;
-    border-radius: 20px; 
+    top:    5%;  
+    left:   49.2%;
+    bottom: 25%;
+    width: 8px;
+    background-color: #6610f2;
+    border-radius: 10px; 
+  }
+  .timeline-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px 0;
+  }
+  .timeline-item::before {  /*  This edits the dots */
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: goldenrod;
+    border-radius: 50%;
+    transform: translate(-50%, 0);
+  }
+  .timeline-date {
+    color: goldenrod;
+    width: 50%;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px 20px 20px 50px;
+    text-shadow: 2px 2px 4px #000;
+  }  
+  .timeline-description {
+    color: mediumslateblue;
+    text-shadow: 2px 2px 4px #000;
+    text-align: center;
+    width: 45%;
+    padding: 5px 20px 0px 0px;
+  }
+  .changelog-button:hover {
+    background: linear-gradient(135deg,#ffa633, #6610f2); /* Lighter gradient on hover */
+    text-shadow: 0 2px 0 black;
   }
   footer {
     text-align: center;
@@ -1177,5 +1127,139 @@ footer i:hover {
   footer i {
     margin: 0 auto;
     display: block;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+  /* CSS Styles for size between 600px and 900px*/
+}
+@media only screen and (min-width: 900px) {
+  /* CSS Styles for size larger than 900px*/
+}
+@media (min-width: 1200px) {
+  .modal-content {
+    width: 50%; /* Narrower for large screens */
+    height: 50%; /* Keep a balanced aspect ratio */
+    max-width:  600px; /* Cap maximum width */
+    max-height: 500px; /* Cap maximum height */
+    margin:     100px auto; /* Adjust margins for spacing */
+    padding:    auto; /* More spacious padding */
+  }
+  #hero-container {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .hero-left {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 20px 20px 20px;
+  }
+  .hero-left p {
+    padding: 5rem;
+    line-height: 30px;
+    text-align: center;
+    font-size: 20px;
+  }  
+  .hero-right {
+    flex: 1;
+    max-width: 100%;
+    margin: 0px auto;
+    text-align: justify;
+    font-size: 12px;
+    padding: 0.1rem;
+    line-height: 10px;
+  }
+  .skills-grid {
+    max-width: 100%;
+    grid-template-columns: repeat(3, 1fr); /* 2 columns for the icons */
+    padding: 1px;
+    margin: 1px 1px 1px 1px;
+    gap: 0.1rem;
+  }
+  .skill-box {
+    padding: 0.5rem;
+    line-height: 20px;
+    text-align: center;
+    font-size: 0.5rem;
+    height: 80px;
+    width: 150px;
+  }
+  .portfoliocard1 {
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    background-color:#6610f2;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Add a thicker shadow effect */
+    color: black;
+    cursor: pointer;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+
+    margin: 100px 0px 0px 655px;
+    width:  100%;
+    min-width: 800px;
+    max-width: 1200px;
+    height: 100%;
+    min-height: 600px;
+    max-height: 1200px;
+    z-index: 1;
+  }
+  .portfoliocard1:hover {
+    transform: translateY(10px) scale(0.95); /* Slight lift and zoom-in effect on hover */
+    background-color: #380093; /* Background color change on hover */
+    z-index: 10;
+  } 
+  .info {
+    color: whitesmoke;
+    background-color: black;
+    height: 20%;
+    width: 100%;
+    min-height: 100px;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .info p {
+    padding: 50px;
+    margin: 10px 10px 10px 10px;
+  }
+  .extrainfo {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0; /* Changed from bottom to top */
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  .info:hover .extrainfo {
+    z-index: 10;
+  }
+  .portfoliocard1-img-top {
+    height: 90%;                
+    width: 90%;                 
+    object-fit: cover;
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    bottom: 5%;
+    border: 4px solid black;
+  } 
+  .portfoliocard2-img-top {
+    height: 90%;                
+    width: 70%;                 
+    object-fit: cover;
+    position: absolute;
+    top: 5%;
+    bottom: 5%;
+    right: 0%;
+  } 
+  #post-list li {
+    margin: 0px -15% 0px -15%;
+    padding: 30px 0;
   }
 }

@@ -69,7 +69,6 @@
   });
 </script>
 <!--  END OF COOKIES SECTION ID -->
-<!-- //////////////////////////////////  NAVBAR SECTION \\\\\\\\\\\\-->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
   <div class="container">
     <!-- Updated to include time/date display -->
@@ -133,7 +132,7 @@
 <div id="settingsModal" class="modal">
   <div class="modal-content">
     <button id="closeModal" class="close-button">&times;</button>
-    <h1><b>Settings</b></h1>
+    <h3><b>Settings</b></h3>
     <p>Here you can adjust your settings.</p>
 
     <!-- Time Format Toggle -->
@@ -171,7 +170,6 @@
     </div>
   </div>
 </div>
-
 <!-- Custom CSS for Styled Close Button -->
 <style>
   .close-button {
@@ -201,8 +199,6 @@
     transform: scale(0.95); /* Slightly shrink on click */
   }
 </style>
-
-
 <!-- JavaScript for Modal and Date/Time -->
 <script>
   // Modal Logic
@@ -258,43 +254,22 @@
   timeFormatSelect.addEventListener("change", updateDateTime);
   datePicker.addEventListener("change", updateDateTime);
 </script>
-
 <!-- HERO SECTION -->
 <section id="hero" class="d-flex align-items-center">
   <div class="container text-center">
     <h1 class="display-4"><b>Welcome to MadeToProject</b></h1>
-    <p class="lead">Showcasing my skills, projects, and career journey.</p>
+    <h2>On this page I'll showcase what I have created using https://roadmap.sh/frontend/projects as a guide</h2>
     <a href="#accordion-section" class="btn btn-primary btn-lg mt-3">View My Work</a>
   </div>
 </section>
-
-<!-- Custom CSS for Hero Section -->
-<style>
-  #hero {
-    background: url('Images/hero-bg.jpg') no-repeat center center/cover;
-    height: 100vh;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  }
-
-  #hero .btn-primary {
-    background-color: #4caf50;
-    border: none;
-  }
-
-  #hero .btn-primary:hover {
-    background-color: #45a049;
-  }
-</style>
-
 <!--   END OF NAVBAR SECTION ID -->
-<!-- //////////////////////////////  GRID IMAGES SECTION \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
-<!--  START OF GRID IMAGES SECTION ID -->
 <!-- Accordion Section -->
 <section id="accordion-section">
   <div class="container">
     <div class="accordion" id="portfolioAccordion">
-      <div class="accordion-item">
+      <h1 class="text-center mb-4">My Projects</h1>
+
+      <div class="accordion-item">  <!-- Project 1 -->
         <h2 class="accordion-header" id="headingOne">
           <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
             Project 1: Grid Item Layout
@@ -311,12 +286,13 @@
               <img class="grid-item6" src="./Images/griditem6.png" alt="A beautiful lil Meerkat taking a meer-nap.">
             </div>
           
-            <strong>Grid Item Layout</strong> - This project demonstrates a responsive grid layout using CSS Grid. The layout features six images, each representing different themes and subjects. The grid adapts to various screen sizes, ensuring a visually appealing and organized presentation of the images. This project showcases the ability to create flexible and modern web layouts using CSS Grid.
+            <p><b>Grid Item Layout -</b> This project demonstrates a responsive grid layout using CSS Grid. The layout features six images, each representing different themes and subjects. The grid adapts to various screen sizes, ensuring a visually appealing and organized presentation of the images. This project showcases the ability to create flexible and modern web layouts using CSS Grid.</p>
           
           </div>
         </div>
       </div>
-      <div class="accordion-item">
+      
+      <div class="accordion-item"> <!-- Project 2 -->
         <h2 class="accordion-header" id="headingTwo">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
             Project 2: Carousel
@@ -333,22 +309,30 @@
               </div>
               <div class="carousel-inner">
                 <div class="carousel-item active"><img src="Images/FGFull.png" class="d-block w-100" alt="Feature 1">
-                  <div class="carousel-caption d-none d-md-block"><h5><b>Fishing-Game-Revamped</b></h5>
+                  <div class="carousel-caption d-none d-md-block">
+                    <h1 class="carousel-section-title"><b>Fishing Game</b></h1>
+                    <!--<h5><b>Fishing-Game-Revamped</b></h5>-->
                     <p>Showcasing my Fishing Game!.</p>
                   </div>
                 </div>
                 <div class="carousel-item"><img src="Images/BG.png" class="d-block w-100" alt="Feature 2">
-                  <div class="carousel-caption d-none d-md-block"><h5><b>PHP Button Game</b></h5>
+                  <div class="carousel-caption d-none d-md-block">
+                    <h1 class="carousel-section-title"><b>Button Game</b></h1>
+                  <!--<h5><b>PHP Button Game</b></h5>-->  
                     <p>Showcasing my Button Game made in PHP</p>
                   </div>
                 </div>
                 <div class="carousel-item"><img src="Images/AIBlog.png" class="d-block w-100" alt="Feature 3">
-                  <div class="carousel-caption d-none d-md-block"><h5><b>AIBlog</b></h5>
+                  <div class="carousel-caption d-none d-md-block">
+                    <h1 class="carousel-section-title"><b>AI Blog</b></h1>
+                  <!--<h5><b>AIBlog</b></h5>-->
                     <p>Here's a preview of my AI Blogsite</p>
                   </div>
                 </div>
                 <div class="carousel-item"><img src="Images/MainLogo3.png" class="d-block w-100" alt="Feature 4">
-                  <div class="carousel-caption d-none d-md-block"><h5><b>Website Logo!</b></h5>
+                  <div class="carousel-caption d-none d-md-block">
+                    <h1 class="carousel-section-title"><b>Website Logo</b></h1>
+                  <!--<h5><b>Website Logo!</b></h5>-->
                     <p>Showcasing my website logo!</p>
                   </div>
                 </div>
@@ -363,12 +347,13 @@
                 </button>
             </div>
 
-            <strong>Carousel</strong> - This project showcases a responsive image carousel using Bootstrap. The carousel features multiple slides with images and captions, allowing users to navigate through the slides using previous and next controls. This project demonstrates the ability to create interactive and visually appealing image galleries using Bootstrap's carousel component.
+            <p><b>Carousel -</b> This project showcases a responsive image carousel using Bootstrap. The carousel features multiple slides with images and captions, allowing users to navigate through the slides using previous and next controls. This project demonstrates the ability to create interactive and visually appealing image galleries using Bootstrap's carousel component.</p> 
           
           </div>
         </div>
       </div>
-      <div class="accordion-item">
+      
+      <div class="accordion-item"> <!-- Project 3 -->
         <h2 class="accordion-header" id="headingThree">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
             Project 3: Testimonial Cards
@@ -409,32 +394,241 @@
               </div>
             </section>
             <br>
-            <strong>Testimonial Cards</strong> - This project features a collection of testimonial cards that display feedback from various individuals. Each card includes an image, a testimonial text, and the author's name. The layout is responsive and visually appealing, showcasing the ability to create engaging and user-friendly testimonial sections.
+            <p><b>Testimonial Cards -</b> This project features a collection of testimonial cards that display feedback from various individuals. Each card includes an image, a testimonial text, and the author's name. The layout is responsive and visually appealing, showcasing the ability to create engaging and user-friendly testimonial sections.</p>
 
           </div>
         </div>
       </div>
+      
+      <div class="accordion-item"> <!-- Project 4 -->
+        <h2 class="accordion-header" id="headingFour">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            Project 4: Single Page CV
+          </button></h2>
+        
+        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#portfolioAccordion">
+          <div class="accordion-body">
+            <div class="text-center">
+              <img src="./Images/griditem4.png" alt="Centered Image" class="img-fluid" style="max-width: 100%; height: auto;">
+              <p><b>Single Page CV -</b> This project features a professional single-page CV designed to highlight education, skills, and career history in a clean and organized layout. It demonstrates the ability to create a visually appealing and responsive resume using modern web development techniques. Click the button below to view my CV.</p> 
+              <h2><a href="CV.html" target="_blank" class="btn custom-btn">CV</a></h2>
+            
+            </div>
+            
+            
+          </div>
+        </div>
+      </div>
+            
+      <div class="accordion-item"> <!-- Project 5 -->
+        <h2 class="accordion-header" id="headingFive">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+            Project 5: Basic HTML Website
+          </button>
+        </h2>
+        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#portfolioAccordion">
+          <div class="accordion-body">
+
+            <div class="text-center">
+              <img src="./Images/griditem4.png" alt="Centered Image" class="img-fluid" style="max-width: 100%; height: auto;">
+            </div>
+            <p><b>Basic HTML Website -</b> This project features a simple yet effective HTML website that demonstrates the foundational principles of web development. It includes a clean structure, semantic HTML elements, and basic styling to create a functional and visually appealing webpage. This project highlights the ability to build a static website from scratch using only HTML and CSS.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="accordion-item"> <!-- Project 6 -->
+        <h2 class="accordion-header" id="headingSix">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix">
+            Project 6: Personal Portfolio
+          </button>
+        </h2>
+        <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#portfolioAccordion">
+          <div class="accordion-body">
+            <div class="text-center">
+              <img src="./Images/portfolio.png" alt="Centered Image" class="img-fluid" style="max-width: 100%; height: auto;">
+            </div>
+            <p><b>Personal Portfolio -</b> This project showcases a personal portfolio website designed to highlight skills, projects, and achievements. It features a clean and responsive layout, interactive elements, and modern design principles to create an engaging user experience. The portfolio serves as a professional platform to demonstrate expertise and creativity in web development.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="accordion-item"> <!-- Project 7 -->
+        <h2 class="accordion-header" id="headingSeven">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven">
+            Project 7: Changelog Component
+          </button>
+        </h2>
+        <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#portfolioAccordion">
+          <div class="accordion-body">
+            <div class="text-center">
+              <img src="./Images/griditem4.png" alt="Centered Image" class="img-fluid" style="max-width: 100%; height: auto;">
+            </div>
+            <p><b>Changelog Component - </b> This project features a changelog component designed to display updates, improvements, and new features in a structured and user-friendly format. It demonstrates the ability to create a visually appealing and organized changelog section, ensuring users can easily track the progress and changes made to a project or application.</p>
+          </div>
+        </div>
+      </div>
+     
+      <div class="accordion-item"> <!-- Project 8 -->
+        <h2 class="accordion-header" id="headingEight">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight">
+            Project 8: Datepicker UI
+          </button>
+        </h2>
+        <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#portfolioAccordion">
+          <div class="accordion-body">
+            <div class="text-center">
+              <img src="./Images/griditem4.png" alt="Centered Image" class="img-fluid" style="max-width: 100%; height: auto;">
+            </div>
+            <p><b>Datepicker UI - </b> This project showcases a custom Datepicker UI component that allows users to select dates in an intuitive and visually appealing manner. The datepicker is designed to be responsive and user-friendly, ensuring compatibility across various devices and screen sizes. It demonstrates the ability to create interactive and accessible UI elements, enhancing the overall user experience on web applications.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="accordion-item"> <!-- Project 9 -->
+        <h2 class="accordion-header" id="headingNine">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine">
+            Project 9: Accessible Form UI
+          </button>
+        </h2>
+        <div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#portfolioAccordion">
+          <div class="accordion-body">
+            <div class="text-center">
+              <img src="./Images/griditem4.png" alt="Centered Image" class="img-fluid" style="max-width: 100%; height: auto;">
+            </div>
+            <p><b>Accessible Form UI -</b> This project demonstrates the creation of a user-friendly and accessible form interface. It includes features such as proper labeling, keyboard navigation, and ARIA attributes to ensure compatibility with assistive technologies. The form is designed to provide an inclusive experience for all users, showcasing the importance of accessibility in modern web development.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="accordion-item"> <!-- Project 10 -->
+        <h2 class="accordion-header" id="headingTen">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen">
+            Project 10: Tooltip UI
+          </button>
+        </h2>
+        <div id="collapseTen" class="accordion-collapse collapse" data-bs-parent="#portfolioAccordion">
+          <div class="accordion-body">
+            <div class="text-center">
+              <img src="./Images/griditem4.png" alt="Centered Image" class="img-fluid" style="max-width: 100%; height: auto;">
+            </div>
+            <p><b>Tooltip UI - </b> This project demonstrates the creation of a custom tooltip user interface. It includes interactive tooltips that appear when users hover over specific elements, providing additional information or context. The tooltips are styled for a modern look and are designed to be responsive, ensuring a seamless user experience across different devices and screen sizes.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="accordion-item"> <!-- Project 11 -->
+        <h2 class="accordion-header" id="headingEleven">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven">
+            Project 11: Tabs
+          </button>
+        </h2>
+        <div id="collapseEleven" class="accordion-collapse collapse" data-bs-parent="#portfolioAccordion">
+          <div class="accordion-body">
+            <div class="text-center">
+              <img src="./Images/griditem4.png" alt="Centered Image" class="img-fluid" style="max-width: 100%; height: auto;">
+            </div>
+            <p><b>Tabs - </b> This project demonstrates the implementation of a tabbed interface, allowing users to switch between different content sections seamlessly. The tabs are designed to be responsive and user-friendly, providing a clean and organized way to display information. This project highlights the ability to create interactive and accessible UI components that enhance the user experience.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="accordion-item"> <!-- Project 12 -->
+        <h2 class="accordion-header" id="headingTwelve">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwelve">
+            Project 12: Cookie Consent Form
+          </button>
+        </h2>
+        <div id="collapseTwelve" class="accordion-collapse collapse" data-bs-parent="#portfolioAccordion">
+          <div class="accordion-body">
+            <div class="text-center">
+              <img src="./Images/griditem4.png" alt="Centered Image" class="img-fluid" style="max-width: 100%; height: auto;">
+            </div>
+            <p><b>Cookie Consent Form - </b> This project demonstrates the implementation of a cookie consent form to comply with privacy regulations. It includes a customizable banner that informs users about the use of cookies and provides options to accept or decline. The form is designed to be user-friendly, responsive, and ensures that user preferences are stored using local storage for a seamless experience.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="accordion-item"> <!-- Project 13 -->
+        <h2 class="accordion-header" id="headingThirteen">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThirteen">
+            Project 13: Restricted Textarea
+          </button>
+        </h2>
+        <div id="collapseThirteen" class="accordion-collapse collapse" data-bs-parent="#portfolioAccordion">
+          <div class="accordion-body">
+            <div class="text-center">
+              <img src="./Images/griditem4.png" alt="Centered Image" class="img-fluid" style="max-width: 100%; height: auto;">
+            </div>
+            <p><b>Restricted Textarea - </b> This project demonstrates the implementation of a restricted textarea component that limits the number of characters a user can input. It includes a live character counter to provide real-time feedback, ensuring users stay within the allowed limit. This feature is useful for forms or applications where concise input is required, showcasing the ability to create user-friendly and interactive form elements.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item"> <!-- Project 14 -->
+        <h2 class="accordion-header" id="headingFourteen">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourteen">
+            Project 14: Accordion
+          </button>
+        </h2>
+        <div id="collapseFourteen" class="accordion-collapse collapse" data-bs-parent="#portfolioAccordion">
+          <div class="accordion-body">
+            <div class="text-center">
+              <img src="./Images/griditem4.png" alt="Centered Image" class="img-fluid" style="max-width: 100%; height: auto;">
+            </div>
+            <p><b>Accordion - </b> This project demonstrates the implementation of an accordion component, allowing users to expand and collapse sections of content. It is designed to be responsive and user-friendly, providing a clean and organized way to display information. This project highlights the ability to create interactive and accessible UI components that enhance the user experience.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="accordion-item"> <!-- Project 15 -->
+        <h2 class="accordion-header" id="headingFifteen">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFifteen">
+            Project 15: Age Calculator
+          </button>
+        </h2>
+        <div id="collapseFifteen" class="accordion-collapse collapse" data-bs-parent="#portfolioAccordion">
+          <div class="accordion-body">
+            <div class="text-center">
+              <img src="./Images/griditem4.png" alt="Centered Image" class="img-fluid" style="max-width: 100%; height: auto;">
+            </div>
+            <p><b>Age Calculator - </b> This project features an interactive age calculator that allows users to input their date of birth and instantly calculate their age in years, months, and days. It demonstrates the ability to work with date and time functions in JavaScript, providing a practical and user-friendly tool for age calculation.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item"> <!-- Project 16 -->
+        <h2 class="accordion-header" id="headingSixteen">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSixteen">
+            Project 16: Flash Cards
+          </button>
+        </h2>
+        <div id="collapseSixteen" class="accordion-collapse collapse" data-bs-parent="#portfolioAccordion">
+          <div class="accordion-body">
+            <div class="text-center">
+              <img src="./Images/griditem4.png" alt="Centered Image" class="img-fluid" style="max-width: 100%; height: auto;">
+            </div>
+            <p><b>Flash Cards - </b> This project features an interactive flash card application designed to help users learn and memorize information effectively. Each card displays a question or term on one side and the corresponding answer or explanation on the other. The application is responsive and user-friendly, showcasing the ability to create engaging educational tools using modern web development techniques.</p>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
-<br><br><br><br><br>
-<!-- //////////////////////////////////  FOOTER SECTION \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
 <!-- START OF FOOTER SECTION ID --> 
 <footer id="footer" class="text-center py-4">
   <div class="container">
-  <p> <a href="https://www.linkedin.com/in/tom-maidment-27577713a/" class="mx-2" target="_blank">
+  <h2> <a href="https://www.linkedin.com/in/tom-maidment-27577713a/" class="mx-2" target="_blank">
       <i class="fab fa-linkedin-in" style="font-size: 25px;"></i></a>  
       <a href="https://github.com/MaidTho" class="mx-2" target="_blank">
       <i class="fab fa-github" style="font-size: 25px;"></i></a> <br><br>
-    Tom Maidment &copy; 2024</p>
+    Tom Maidment &copy; 2024</h2>
   </div>
 </footer>
 <!--  END OF FOOTER SECTION ID -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <!-- JS Scripts -->
-<!-- # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
-     #                                    JAVASCRIPT SECTION                                                 #
-     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - # --> 
   <script>
     // Smooth scrolling with offset for Contact section
     document.querySelectorAll('a.nav-link').forEach(anchor => {

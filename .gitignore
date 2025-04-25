@@ -10,6 +10,7 @@
 
 # production
 /build
+/new_feature_tests
 
 # misc
 .DS_Store
